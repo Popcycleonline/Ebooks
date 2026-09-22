@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Best Business & Side Hustle Tools in 2026 | Popcycle</title>
+<meta name="description" content="We reviewed the best tools for entrepreneurs, freelancers, and side hustlers — e-commerce, email marketing, AI tools, funnels, and more. These are the ones we'd actually recommend to someone starting or growing a business.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0D1F3C;
+    --deepnavy: #080F1E;
+    --midnavy: #1A3666;
+    --slate: #6B7A99;
+    --amber: #D97706;
+    --lightamber: #F59E0B;
+    --paleamber: #FEF3C7;
+    --cream: #FFFBF2;
+    --paper: #FEF7E6;
+    --white: #ffffff;
+    --text: #0D1F3C;
+    --soft: #4A5568;
+    --border: #E8D5A3;
+    --spark: #D97706;
+    --lightspark: #F59E0B;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .product-card, .pick-card, .comparison-row, .key-concept,
+  .pull-quote, .faq-item, .trust-item, .stat, .sub-band,
+  .product-score-block, .product-meta, .product-cta, .pscore-ring,
+  .picks-grid, .hero-stats, .hero-pills, .trust-grid,
+  .comparison-wrap, .comparison-header, .stack-box, .stack-step {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .product-name, .product-tagline, .product-num, h1, h2, h3, h4,
+  .section-eyebrow, .pick-badge, .kc-label, .score-label, .pscore-label {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  @media print {
+    .no-print { display: none !important; }
+    body { font-size: 11px; }
+    .hero { min-height: auto; padding: 40px; }
+  }
+
+  .print-bar {
+    background: var(--deepnavy);
+    color: var(--white);
+    padding: 10px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    letter-spacing: 1px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .print-btn {
+    background: var(--amber);
+    color: var(--white);
+    border: none;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: var(--deepnavy);
+    min-height: 88vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 40px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 18% 65%, rgba(217,119,6,0.2) 0%, transparent 52%),
+      radial-gradient(ellipse at 82% 20%, rgba(43,82,160,0.32) 0%, transparent 55%),
+      radial-gradient(ellipse at 50% 108%, rgba(8,15,30,0.88) 0%, transparent 60%);
+  }
+  .hero-motion {
+    position: absolute;
+    width: 100%; height: 100%;
+    top: 0; left: 0;
+    opacity: 0.08;
+  }
+  .hero-inner { position: relative; z-index: 2; max-width: 820px; }
+  .hero-eyebrow {
+    font-size: 10px; font-weight: 500; letter-spacing: 5px;
+    text-transform: uppercase; color: var(--lightamber); margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.4rem, 6.5vw, 4.8rem);
+    font-weight: 300; line-height: 1.08;
+    color: var(--white); letter-spacing: -1.5px; margin-bottom: 10px;
+  }
+  .hero h1 em { color: var(--lightamber); font-style: italic; }
+  .hero-divider {
+    width: 60px; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--amber), transparent);
+    margin: 28px auto;
+  }
+  .hero-sub {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.1rem, 3vw, 1.45rem);
+    font-weight: 300; font-style: italic;
+    color: rgba(255,255,255,0.75); margin-bottom: 20px; line-height: 1.5;
+  }
+  .hero-desc {
+    font-size: 0.92rem; color: rgba(255,255,255,0.55);
+    max-width: 560px; margin: 0 auto 44px; line-height: 1.75; font-weight: 300;
+  }
+  .hero-pills {
+    display: flex; justify-content: center;
+    flex-wrap: wrap; gap: 8px; margin-bottom: 50px;
+  }
+  .hero-pill {
+    font-size: 10px; font-weight: 500; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--lightamber);
+    border: 1px solid rgba(217,119,6,0.45);
+    padding: 7px 16px; border-radius: 20px;
+    background: rgba(217,119,6,0.1);
+  }
+  .hero-stats {
+    display: flex; justify-content: center; gap: 48px;
+    padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .stat { text-align: center; }
+  .stat-num {
+    font-family: 'Fraunces', serif; font-size: 2rem;
+    font-weight: 600; color: var(--lightamber); line-height: 1; margin-bottom: 4px;
+  }
+  .stat-label {
+    font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase; color: rgba(255,255,255,0.45);
+  }
+
+  .container { max-width: 900px; margin: 0 auto; padding: 0 36px; }
+
+  /* ===== TRUST BAND ===== */
+  .trust-band { background: var(--navy); padding: 48px 0; color: var(--white); }
+  .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+  .trust-item { padding: 24px 28px; background: rgba(255,255,255,0.04); }
+  .trust-icon { font-size: 1.6rem; margin-bottom: 10px; }
+  .trust-title { font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 600; color: var(--white); margin-bottom: 6px; }
+  .trust-desc { font-size: 0.82rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
+
+  /* ===== SECTION ===== */
+  .section { padding: 72px 0; }
+  .section-eyebrow {
+    font-size: 10px; font-weight: 500; letter-spacing: 4px;
+    text-transform: uppercase; color: var(--amber); margin-bottom: 10px;
+  }
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 300; line-height: 1.1; color: var(--navy); margin-bottom: 12px;
+  }
+  .section-title em { color: var(--amber); font-style: italic; }
+  .section-divider {
+    height: 2px;
+    background: linear-gradient(90deg, var(--amber), transparent);
+    margin: 20px 0 32px;
+  }
+  .section-intro {
+    font-family: 'Fraunces', serif; font-size: 1.18rem;
+    font-weight: 300; font-style: italic; color: var(--soft);
+    border-left: 3px solid var(--amber);
+    padding-left: 20px; margin-bottom: 36px; line-height: 1.65;
+  }
+
+  /* ===== TOP PICKS ===== */
+  .picks-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 24px 0; }
+  .pick-card {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 8px; padding: 24px;
+    position: relative; overflow: hidden; break-inside: avoid;
+  }
+  .pick-card.featured { grid-column: span 2; background: var(--navy); color: var(--white); border-color: var(--navy); }
+  .pick-badge {
+    display: inline-block; font-size: 9px; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    padding: 4px 12px; border-radius: 20px; margin-bottom: 12px;
+  }
+  .pick-card.featured .pick-badge { background: var(--amber); color: var(--white); }
+  .pick-card:not(.featured) .pick-badge { background: var(--paleamber); color: var(--navy); }
+  .pick-name { font-family: 'Fraunces', serif; font-size: 1.35rem; font-weight: 600; margin-bottom: 6px; color: var(--navy); }
+  .pick-card.featured .pick-name { color: var(--white); }
+  .pick-why { font-size: 0.88rem; line-height: 1.65; color: var(--soft); margin-bottom: 14px; }
+  .pick-card.featured .pick-why { color: rgba(255,255,255,0.75); }
+  .pick-score { display: flex; align-items: center; gap: 8px; margin-top: auto; }
+  .score-label { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--slate); font-weight: 500; }
+  .pick-card.featured .score-label { color: rgba(255,255,255,0.5); }
+  .score-num { font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 600; color: var(--amber); line-height: 1; }
+  .score-bar { flex: 1; height: 4px; background: rgba(0,0,0,0.08); border-radius: 2px; overflow: hidden; }
+  .pick-card.featured .score-bar { background: rgba(255,255,255,0.15); }
+  .score-fill { height: 100%; background: var(--amber); border-radius: 2px; }
+  .pick-link {
+    display: inline-block; margin-top: 14px; font-size: 11px;
+    font-weight: 500; letter-spacing: 1px; text-transform: uppercase;
+    color: var(--amber); text-decoration: none;
+    border-bottom: 1px solid rgba(217,119,6,0.3); padding-bottom: 1px;
+  }
+
+  /* ===== COMPARISON TABLE ===== */
+  .comparison-wrap {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 8px; overflow: hidden; margin: 24px 0;
+  }
+  .comparison-header {
+    display: grid; grid-template-columns: 2fr 1.2fr 1.2fr 1.2fr 1.5fr;
+    background: var(--navy); color: var(--white);
+    padding: 14px 20px; gap: 12px;
+  }
+  .comparison-header span {
+    font-size: 9px; font-weight: 500; letter-spacing: 2px;
+    text-transform: uppercase; color: rgba(255,255,255,0.6);
+  }
+  .comparison-header span:first-child { color: var(--white); }
+  .comparison-row {
+    display: grid; grid-template-columns: 2fr 1.2fr 1.2fr 1.2fr 1.5fr;
+    padding: 16px 20px; gap: 12px;
+    border-bottom: 1px solid var(--border);
+    align-items: center; break-inside: avoid;
+  }
+  .comparison-row:last-child { border-bottom: none; }
+  .comparison-row:nth-child(even) { background: var(--paleamber); }
+  .comp-name { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; color: var(--navy); margin-bottom: 2px; }
+  .comp-cat { font-size: 10px; color: var(--slate); letter-spacing: 1px; text-transform: uppercase; }
+  .comp-score { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 600; color: var(--amber); }
+  .comp-price { font-size: 0.85rem; color: var(--soft); }
+  .comp-best { font-size: 0.8rem; color: var(--navy); font-weight: 500; }
+  .comp-link { font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--amber); text-decoration: none; }
+
+  /* ===== PRODUCT CARDS ===== */
+  .product-grid { display: flex; flex-direction: column; gap: 2px; margin: 24px 0; }
+  .product-card {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 6px; padding: 28px 32px;
+    display: grid; grid-template-columns: 1fr 80px;
+    gap: 24px; align-items: start; break-inside: avoid;
+  }
+  .product-num {
+    font-family: 'Fraunces', serif; font-size: 0.75rem;
+    font-weight: 300; color: var(--slate);
+    letter-spacing: 2px; text-transform: uppercase; margin-bottom: 4px;
+  }
+  .product-name {
+    font-family: 'Fraunces', serif; font-size: 1.5rem;
+    font-weight: 600; color: var(--navy); margin-bottom: 4px; line-height: 1.2;
+  }
+  .product-tagline {
+    font-size: 10px; font-weight: 500; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--amber); margin-bottom: 14px;
+  }
+  .product-desc { font-size: 0.92rem; color: var(--soft); line-height: 1.75; margin-bottom: 16px; }
+  .product-meta { display: flex; gap: 16px; flex-wrap: wrap; }
+  .meta-item { font-size: 10px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: var(--slate); }
+  .meta-item strong { color: var(--navy); }
+  .product-cta {
+    display: inline-block; margin-top: 16px; background: var(--navy);
+    color: var(--white); text-decoration: none;
+    font-size: 10px; font-weight: 600; letter-spacing: 2px;
+    text-transform: uppercase; padding: 10px 20px; border-radius: 20px;
+  }
+  .product-score-block { text-align: center; padding-top: 4px; }
+  .pscore-label { font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: var(--slate); margin-bottom: 4px; }
+  .pscore-num {
+    font-family: 'Fraunces', serif; font-size: 2.8rem;
+    font-weight: 700; color: var(--amber); line-height: 1; margin-bottom: 2px;
+  }
+  .pscore-ring { width: 56px; height: 56px; margin: 0 auto 6px; }
+
+  /* ===== SUB-BAND ===== */
+  .sub-band {
+    background: var(--paper); border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 36px; display: flex; align-items: center; gap: 16px; margin: 8px 0;
+  }
+  .sub-label { font-size: 9px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--navy); white-space: nowrap; }
+  .sub-line { flex: 1; height: 1px; background: var(--border); }
+
+  /* ===== KEY CONCEPT ===== */
+  .key-concept {
+    background: var(--navy); color: var(--white);
+    border-radius: 8px; padding: 28px 32px; margin: 28px 0;
+    position: relative; overflow: hidden; break-inside: avoid;
+  }
+  .key-concept::before {
+    content: ''; position: absolute; top: 0; right: 0;
+    width: 180px; height: 180px;
+    background: radial-gradient(circle at 100% 0%, rgba(217,119,6,0.25) 0%, transparent 70%);
+  }
+  .kc-label {
+    font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--lightamber); margin-bottom: 8px; font-weight: 500;
+  }
+  .key-concept h3 {
+    font-family: 'Fraunces', serif; font-size: 1.5rem;
+    font-weight: 400; color: var(--white); margin-bottom: 10px;
+  }
+  .key-concept p { font-size: 0.92rem; color: rgba(255,255,255,0.8); line-height: 1.75; }
+
+  /* ===== PULL QUOTE ===== */
+  .pull-quote {
+    border-left: 4px solid var(--amber); padding: 18px 24px;
+    margin: 28px 0; background: var(--paper); border-radius: 0 6px 6px 0;
+  }
+  .pull-quote p {
+    font-family: 'Fraunces', serif; font-size: 1.2rem;
+    font-style: italic; font-weight: 300; color: var(--navy); line-height: 1.6; margin: 0;
+  }
+  .pull-quote cite {
+    display: block; font-size: 0.75rem; font-style: normal;
+    font-weight: 500; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--amber); margin-top: 8px;
+  }
+
+  /* ===== STACK BOX ===== */
+  .stack-box {
+    background: var(--navy); border-radius: 8px; padding: 32px;
+    margin: 28px 0; break-inside: avoid;
+  }
+  .stack-label {
+    font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--lightamber); font-weight: 500; margin-bottom: 8px;
+  }
+  .stack-box h3 {
+    font-family: 'Fraunces', serif; font-size: 1.5rem;
+    font-weight: 400; color: var(--white); margin-bottom: 6px;
+  }
+  .stack-box > p {
+    font-size: 0.88rem; color: rgba(255,255,255,0.65);
+    margin-bottom: 24px; line-height: 1.65;
+  }
+  .stack-steps { display: flex; flex-direction: column; gap: 2px; }
+  .stack-step {
+    display: grid; grid-template-columns: 36px 1fr;
+    gap: 14px; align-items: start;
+    background: rgba(255,255,255,0.05);
+    padding: 14px 18px; border-radius: 4px;
+    break-inside: avoid;
+  }
+  .step-num {
+    font-family: 'Fraunces', serif; font-size: 1.4rem;
+    font-weight: 600; color: var(--amber); line-height: 1.2;
+  }
+  .step-content h4 {
+    font-family: 'Fraunces', serif; font-size: 1rem;
+    font-weight: 600; color: var(--white); margin-bottom: 2px;
+  }
+  .step-content p {
+    font-size: 0.82rem; color: rgba(255,255,255,0.65); line-height: 1.5;
+  }
+  .step-tool {
+    font-size: 9px; font-weight: 600; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--lightamber); margin-top: 4px;
+  }
+
+  /* ===== FAQ ===== */
+  .faq-item { border-bottom: 1px solid var(--border); padding: 22px 0; break-inside: avoid; }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q {
+    font-family: 'Fraunces', serif; font-size: 1.1rem;
+    font-weight: 600; color: var(--navy); margin-bottom: 10px; display: flex; gap: 14px;
+  }
+  .faq-q .qmark { color: var(--amber); font-style: italic; flex-shrink: 0; }
+  .faq-a { font-size: 0.9rem; color: var(--soft); line-height: 1.75; padding-left: 28px; }
+
+  /* ===== CLOSING ===== */
+  .closing {
+    background: var(--deepnavy); color: var(--white);
+    padding: 80px 0; text-align: center; position: relative; overflow: hidden;
+  }
+  .closing::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(217,119,6,0.22) 0%, transparent 60%);
+  }
+  .closing-inner { position: relative; max-width: 600px; margin: 0 auto; }
+  .closing h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2rem, 5vw, 3rem); font-weight: 300; margin-bottom: 18px;
+  }
+  .closing h2 em { color: var(--lightamber); font-style: italic; }
+  .closing p { font-size: 0.95rem; color: rgba(255,255,255,0.7); line-height: 1.8; margin-bottom: 30px; }
+  .closing-btn {
+    display: inline-block; background: var(--amber); color: var(--white);
+    text-decoration: none; font-weight: 600; font-size: 12px;
+    letter-spacing: 2px; text-transform: uppercase; padding: 16px 36px; border-radius: 30px;
+  }
+  .closing-brand { margin-top: 48px; font-weight: 500; font-size: 13px; letter-spacing: 6px; color: var(--lightamber); }
+  .closing-sub { font-family: 'Fraunces', serif; font-style: italic; font-size: 0.85rem; color: rgba(255,255,255,0.4); margin-top: 4px; }
+</style>
+</head>
+<body>
+
+<div class="print-bar no-print">
+  <span>Popcycle — Business & Side Hustle Guide 2026</span>
+  <button class="print-btn" onclick="window.print()">Save as PDF</button>
+</div>
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <svg class="hero-motion" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
+    <!-- Ascending staircase of widening lines -->
+    <line x1="100" y1="620" x2="280" y2="620" stroke="#D97706" stroke-width="3"/>
+    <line x1="280" y1="620" x2="280" y2="510" stroke="#D97706" stroke-width="1"/>
+    <line x1="280" y1="510" x2="520" y2="510" stroke="#D97706" stroke-width="3"/>
+    <line x1="520" y1="510" x2="520" y2="390" stroke="#D97706" stroke-width="1"/>
+    <line x1="520" y1="390" x2="780" y2="390" stroke="#D97706" stroke-width="3"/>
+    <line x1="780" y1="390" x2="780" y2="260" stroke="#D97706" stroke-width="1"/>
+    <line x1="780" y1="260" x2="1080" y2="260" stroke="#D97706" stroke-width="3"/>
+    <line x1="1080" y1="260" x2="1080" y2="130" stroke="#D97706" stroke-width="1"/>
+    <line x1="1080" y1="130" x2="1200" y2="130" stroke="#F59E0B" stroke-width="3"/>
+    <!-- Faint echo lines -->
+    <line x1="100" y1="680" x2="400" y2="680" stroke="#D97706" stroke-width="0.5"/>
+    <line x1="400" y1="680" x2="400" y2="570" stroke="#D97706" stroke-width="0.3"/>
+    <line x1="400" y1="570" x2="680" y2="570" stroke="#D97706" stroke-width="0.5"/>
+    <line x1="680" y1="570" x2="680" y2="440" stroke="#D97706" stroke-width="0.3"/>
+    <line x1="680" y1="440" x2="950" y2="440" stroke="#D97706" stroke-width="0.5"/>
+    <circle cx="1080" cy="130" r="5" fill="#F59E0B"/>
+    <circle cx="100" cy="620" r="3" fill="#D97706"/>
+  </svg>
+
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Popcycle Curated Guide — 2026</div>
+    <h1>The Best <em>Business & Side Hustle</em> Tools</h1>
+    <div class="hero-divider"></div>
+    <div class="hero-sub">Someone less qualified than you is already doing it.</div>
+    <p class="hero-desc">We reviewed the tools that actually help people start, grow, and scale — from first dollar to real business. These are the ones with genuine track records, fair pricing, and the kind of functionality that earns its place in a real workflow.</p>
+    <div class="hero-pills">
+      <span class="hero-pill">E-Commerce</span>
+      <span class="hero-pill">Email Marketing</span>
+      <span class="hero-pill">AI Tools</span>
+      <span class="hero-pill">Funnels & Conversion</span>
+      <span class="hero-pill">Freelancing</span>
+      <span class="hero-pill">Courses & Coaching</span>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">13+</div><div class="stat-label">Products Reviewed</div></div>
+      <div class="stat"><div class="stat-num">6</div><div class="stat-label">Subcategories</div></div>
+      <div class="stat"><div class="stat-num">100</div><div class="stat-label">Popcycle Score</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TRUST BAND ===== -->
+<div class="trust-band">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <div class="trust-icon">⚡</div>
+        <div class="trust-title">Proven in Real Businesses</div>
+        <div class="trust-desc">Every tool here is used by real entrepreneurs generating real revenue. We prioritize track record and market share over feature lists and marketing claims.</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🔗</div>
+        <div class="trust-title">Designed to Work Together</div>
+        <div class="trust-desc">We built this list with integration in mind. These tools talk to each other, which matters enormously when you are trying to build a cohesive business system.</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🤝</div>
+        <div class="trust-title">No Hidden Agenda</div>
+        <div class="trust-desc">Some links are affiliate links. Our scores are not. No product bought its way onto this page, even in a category with some of the highest affiliate commissions available.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TOP PICKS ===== -->
+<div class="section">
+  <div class="container">
+    <p class="section-eyebrow">Where to Start</p>
+    <h2 class="section-title">Our <em>top picks</em> at a glance</h2>
+    <div class="section-divider"></div>
+    <p class="section-intro">The right first tool depends entirely on what you are building. Here are our picks for the most common starting points.</p>
+
+    <div class="picks-grid">
+      <div class="pick-card featured">
+        <div class="pick-badge">Best for E-Commerce</div>
+        <div class="pick-name">Shopify</div>
+        <div class="pick-why">Two million businesses worldwide chose Shopify because it removes almost every technical barrier between an idea and a functioning online store. Payments, inventory, shipping, analytics, and hundreds of integrations — all in one place. The platform scales from your first product to millions in revenue without requiring you to move to a different system. If you are selling physical or digital products online, this is the platform most people will not outgrow for years, if ever.</div>
+        <div class="pick-score">
+          <div class="score-label">Popcycle Score</div>
+          <div class="score-num">96</div>
+          <div class="score-bar"><div class="score-fill" style="width:96%"></div></div>
+        </div>
+        <a href="https://www.shopify.com" class="pick-link">Try Shopify</a>
+      </div>
+
+      <div class="pick-card">
+        <div class="pick-badge">Best Email Platform</div>
+        <div class="pick-name">Kit (ConvertKit)</div>
+        <div class="pick-why">The email platform built specifically for creators and entrepreneurs who want to own their audience. 30% recurring lifetime commission for affiliates, and more importantly, the best automation and segmentation available at this price point. Your email list is your most valuable business asset.</div>
+        <div class="pick-score">
+          <div class="score-label">Score</div>
+          <div class="score-num">94</div>
+          <div class="score-bar"><div class="score-fill" style="width:94%"></div></div>
+        </div>
+        <a href="https://kit.com" class="pick-link">Try Kit</a>
+      </div>
+
+      <div class="pick-card">
+        <div class="pick-badge">Best for SEO & Traffic</div>
+        <div class="pick-name">Semrush</div>
+        <div class="pick-why">If your business needs to be found online — and almost all of them do — Semrush shows you exactly what your potential customers are searching for and exactly how your competitors are capturing that traffic. The most comprehensive SEO intelligence platform available to independent operators.</div>
+        <div class="pick-score">
+          <div class="score-label">Score</div>
+          <div class="score-num">93</div>
+          <div class="score-bar"><div class="score-fill" style="width:93%"></div></div>
+        </div>
+        <a href="https://www.semrush.com" class="pick-link">Try Semrush</a>
+      </div>
+
+      <div class="pick-card">
+        <div class="pick-badge">Best Course Platform</div>
+        <div class="pick-name">Kajabi</div>
+        <div class="pick-why">The all-in-one platform for knowledge businesses. Courses, memberships, email marketing, podcasts, and your website — all in one system. For anyone whose expertise is the product, Kajabi is the platform that does not require stitching five different tools together.</div>
+        <div class="pick-score">
+          <div class="score-label">Score</div>
+          <div class="score-num">92</div>
+          <div class="score-bar"><div class="score-fill" style="width:92%"></div></div>
+        </div>
+        <a href="https://kajabi.com" class="pick-link">Try Kajabi</a>
+      </div>
+
+      <div class="pick-card">
+        <div class="pick-badge">Best AI Writing Tool</div>
+        <div class="pick-name">Jasper AI</div>
+        <div class="pick-why">Writing content for a business is one of the most time-consuming tasks most entrepreneurs face. Jasper writes the first draft — ads, emails, product descriptions, blog posts — in your voice. The "brand voice" training is what separates it from generic AI tools.</div>
+        <div class="pick-score">
+          <div class="score-label">Score</div>
+          <div class="score-num">89</div>
+          <div class="score-bar"><div class="score-fill" style="width:89%"></div></div>
+        </div>
+        <a href="https://www.jasper.ai" class="pick-link">Try Jasper</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== COMPARISON TABLE ===== -->
+<div style="background: var(--white); padding: 56px 0; border-top: 1px solid var(--border);">
+  <div class="container">
+    <p class="section-eyebrow">Side by Side</p>
+    <h2 class="section-title">The full <em>comparison</em></h2>
+    <div class="section-divider"></div>
+
+    <div class="comparison-wrap">
+      <div class="comparison-header">
+        <span>Product</span>
+        <span>Score</span>
+        <span>Price</span>
+        <span>Best For</span>
+        <span>Link</span>
+      </div>
+      <div class="comparison-row">
+        <div><div class="comp-name">Shopify</div><div class="comp-cat">E-Commerce Platform</div></div>
+        <div class="comp-score">96</div>
+        <div class="comp-price">$39-399/month</div>
+        <div class="comp-best">Selling Products Online</div>
+        <a href="https://www.shopify.com" class="comp-link">Visit Site</a>
+      </div>
+      <div class="comparison-row">
+        <div><div class="comp-name">Kit (ConvertKit)</div><div class="comp-cat">Email Marketing</div></div>
+        <div class="comp-score">94</div>
+        <div class="comp-price">Free to 10K / $29+/mo</div>
+        <div class="comp-best">Audience Building</div>
+        <a href="https://kit.com" class="comp-link">Visit Site</a>
+      </div>
+      <div class="comparison-row">
+        <div><div class="comp-name">Semrush</div><div class="comp-cat">SEO & Marketing</div></div>
+        <div class="comp-score">93</div>
+        <div class="comp-price">$139-499/month</div>
+        <div class="comp-best">Traffic & SEO</div>
+        <a href="https://www.semrush.com" class="comp-link">Visit Site</a>
+      </div>
+      <div class="comparison-row">
+        <div><div class="comp-name">Kajabi</div><div class="comp-cat">Course Platform</div></div>
+        <div class="comp-score">92</div>
+        <div class="comp-price">$149-399/month</div>
+        <div class="comp-best">Knowledge Business</div>
+        <a href="https://kajabi.com" class="comp-link">Visit Site</a>
+      </div>
+      <div class="comparison-row">
+        <div><div class="comp-name">HubSpot</div><div class="comp-cat">CRM & Sales</div></div>
+        <div class="comp-score">91</div>
+        <div class="comp-price">Free / $45-3,600+/mo</div>
+        <div class="comp-best">Sales Pipeline</div>
+        <a href="https://www.hubspot.com" class="comp-link">Visit Site</a>
+      </div>
+      <div class="comparison-row">
+        <div><div class="comp-name">Teachable</div><div class="comp-cat">Course Platform</div></div>
+        <div class="comp-score">90</div>
+        <div class="comp-price">$39-299/month</div>
+        <div class="comp-best">First Course Launch</div>
+        <a href="https://www.teachable.com" class="comp-link">Visit Site</a>
+      </div>
+      <div class="comparison-row">
+        <div><div class="comp-name">ClickFunnels</div><div class="comp-cat">Sales Funnels</div></div>
+        <div class="comp-score">89</div>
+        <div class="comp-price">$97-297/month</div>
+        <div class="comp-best">Lead to Sale Conversion</div>
+        <a href="https://www.clickfunnels.com" class="comp-link">Visit Site</a>
+      </div>
+      <div class="comparison-row">
+        <div><div class="comp-name">Jasper AI</div><div class="comp-cat">AI Writing</div></div>
+        <div class="comp-score">89</div>
+        <div class="comp-price">$39-99/month</div>
+        <div class="comp-best">Marketing Content</div>
+        <a href="https://www.jasper.ai" class="comp-link">Visit Site</a>
+      </div>
+      <div class="comparison-row">
+        <div><div class="comp-name">Canva Pro</div><div class="comp-cat">Design</div></div>
+        <div class="comp-score">91</div>
+        <div class="comp-price">$12.99-149/month</div>
+        <div class="comp-best">Visual Content</div>
+        <a href="https://www.canva.com" class="comp-link">Visit Site</a>
+      </div>
+      <div class="comparison-row">
+        <div><div class="comp-name">Fiverr</div><div class="comp-cat">Freelance Marketplace</div></div>
+        <div class="comp-score">88</div>
+        <div class="comp-price">Project-based</div>
+        <div class="comp-best">Hiring Specialists</div>
+        <a href="https://www.fiverr.com" class="comp-link">Visit Site</a>
+      </div>
+      <div class="comparison-row">
+        <div><div class="comp-name">Leadpages</div><div class="comp-cat">Landing Pages</div></div>
+        <div class="comp-score">87</div>
+        <div class="comp-price">$49-99/month</div>
+        <div class="comp-best">Lead Generation</div>
+        <a href="https://www.leadpages.com" class="comp-link">Visit Site</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FULL REVIEWS ===== -->
+<div class="section">
+  <div class="container">
+    <p class="section-eyebrow">The Full Breakdown</p>
+    <h2 class="section-title">Every product, <em>reviewed honestly</em></h2>
+    <div class="section-divider"></div>
+    <p class="section-intro">Here is exactly why each one made the cut, and who it is actually right for.</p>
+
+    <!-- E-COMMERCE -->
+    <div class="sub-band"><span class="sub-label">E-Commerce & Selling Online</span><div class="sub-line"></div></div>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <div>
+          <div class="product-num">01 of 11</div>
+          <div class="product-name">Shopify</div>
+          <div class="product-tagline">Turn an Idea Into an Online Business</div>
+          <div class="product-desc">Shopify's dominance in e-commerce is not accidental — it has spent 20 years solving every friction point between "I have something to sell" and "I am making money." The store builder requires no coding. The checkout is optimized for conversion. The payment processing is built in. The analytics tell you what is working. And the app ecosystem adds almost anything your specific business needs. Two million businesses, from solo Etsy escapees to brands doing eight figures, run on Shopify. The $39/month starting price is one of the best entry points in business software for the value it delivers.</div>
+          <div class="product-meta">
+            <div class="meta-item"><strong>Price:</strong> $39-399/month</div>
+            <div class="meta-item"><strong>Best For:</strong> Any product business, physical or digital</div>
+            <div class="meta-item"><strong>Affiliate:</strong> $150+ per referral</div>
+          </div>
+          <a href="https://www.shopify.com" class="product-cta">Try Shopify</a>
+        </div>
+        <div class="product-score-block">
+          <svg class="pscore-ring" viewBox="0 0 56 56">
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#E8D5A3" stroke-width="4"/>
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#D97706" stroke-width="4" stroke-dasharray="150.8" stroke-dashoffset="6" stroke-linecap="round" transform="rotate(-90 28 28)"/>
+          </svg>
+          <div class="pscore-label">Score</div>
+          <div class="pscore-num">96</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EMAIL MARKETING -->
+    <div class="sub-band"><span class="sub-label">Email Marketing & Audience Building</span><div class="sub-line"></div></div>
+
+    <div class="key-concept">
+      <div class="kc-label">The Most Important Business Asset You Will Ever Build</div>
+      <h3>An email list cannot be taken from you.</h3>
+      <p>Social media platforms can change their algorithm, deactivate your account, or cease to exist. Your email list is yours. The businesses that survive platform shifts, algorithm changes, and economic uncertainty are almost always the ones that invested early in a direct relationship with their audience. The right email tool is not a nice-to-have. It is infrastructure.</p>
+    </div>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <div>
+          <div class="product-num">02 of 11</div>
+          <div class="product-name">Kit (formerly ConvertKit)</div>
+          <div class="product-tagline">Build an Audience You Own</div>
+          <div class="product-desc">Kit was built specifically for creators and entrepreneurs who want to turn an audience into a business — not for enterprise marketing departments. The automation is genuinely powerful, the segmentation is intuitive, and the free tier supports up to 10,000 subscribers, which means you can build a significant list before spending a dollar. The creator commerce features let you sell digital products and subscriptions directly, making Kit not just an email tool but a complete creator revenue platform. For anyone who has a newsletter, a podcast, a course, or an audience of any kind, Kit is the infrastructure that makes it sustainable.</div>
+          <div class="product-meta">
+            <div class="meta-item"><strong>Price:</strong> Free to 10K / $29-79/month</div>
+            <div class="meta-item"><strong>Best For:</strong> Creators, coaches, consultants</div>
+            <div class="meta-item"><strong>Affiliate:</strong> 30% recurring lifetime</div>
+          </div>
+          <a href="https://kit.com" class="product-cta">Try Kit Free</a>
+        </div>
+        <div class="product-score-block">
+          <svg class="pscore-ring" viewBox="0 0 56 56">
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#E8D5A3" stroke-width="4"/>
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#D97706" stroke-width="4" stroke-dasharray="150.8" stroke-dashoffset="9" stroke-linecap="round" transform="rotate(-90 28 28)"/>
+          </svg>
+          <div class="pscore-label">Score</div>
+          <div class="pscore-num">94</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEO -->
+    <div class="sub-band"><span class="sub-label">SEO & Digital Marketing</span><div class="sub-line"></div></div>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <div>
+          <div class="product-num">03 of 11</div>
+          <div class="product-name">Semrush</div>
+          <div class="product-tagline">Discover What Customers Are Searching For</div>
+          <div class="product-desc">The gap between businesses that get found online and businesses that do not is almost always a gap in understanding what their potential customers are actually searching for. Semrush closes that gap. It shows you the exact keywords your competitors rank for, the content they produce that drives traffic, the backlinks that give them authority, and the opportunities they have missed that you could capture. At $140/month it is not cheap, but for any business whose customers come from online search, it pays for itself quickly once you start acting on the data it provides.</div>
+          <div class="product-meta">
+            <div class="meta-item"><strong>Price:</strong> $139.95-499/month</div>
+            <div class="meta-item"><strong>Best For:</strong> Content-driven and SEO-dependent businesses</div>
+            <div class="meta-item"><strong>Affiliate:</strong> $200 per subscription</div>
+          </div>
+          <a href="https://www.semrush.com" class="product-cta">Try Semrush</a>
+        </div>
+        <div class="product-score-block">
+          <svg class="pscore-ring" viewBox="0 0 56 56">
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#E8D5A3" stroke-width="4"/>
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#D97706" stroke-width="4" stroke-dasharray="150.8" stroke-dashoffset="10.6" stroke-linecap="round" transform="rotate(-90 28 28)"/>
+          </svg>
+          <div class="pscore-label">Score</div>
+          <div class="pscore-num">93</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CRM -->
+    <div class="sub-band"><span class="sub-label">CRM & Business Operations</span><div class="sub-line"></div></div>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <div>
+          <div class="product-num">04 of 11</div>
+          <div class="product-name">HubSpot</div>
+          <div class="product-tagline">Organize Your Entire Sales Process</div>
+          <div class="product-desc">HubSpot's free CRM is one of the most generous free business tools available. You can manage up to a million contacts, track every interaction, set up deal pipelines, and see your entire sales process in one view — all for free, indefinitely. The paid tiers add marketing automation, email sequences, reporting, and deeper integrations. For any business with a sales process longer than a single transaction — consulting, B2B services, high-ticket products — a CRM is essential infrastructure, and HubSpot's free tier removes every excuse not to start.</div>
+          <div class="product-meta">
+            <div class="meta-item"><strong>Price:</strong> Free / $45-3,600+/month</div>
+            <div class="meta-item"><strong>Best For:</strong> Service businesses, B2B, high-ticket sales</div>
+            <div class="meta-item"><strong>Free tier:</strong> Genuinely powerful, no expiration</div>
+          </div>
+          <a href="https://www.hubspot.com" class="product-cta">Try HubSpot Free</a>
+        </div>
+        <div class="product-score-block">
+          <svg class="pscore-ring" viewBox="0 0 56 56">
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#E8D5A3" stroke-width="4"/>
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#D97706" stroke-width="4" stroke-dasharray="150.8" stroke-dashoffset="13.6" stroke-linecap="round" transform="rotate(-90 28 28)"/>
+          </svg>
+          <div class="pscore-label">Score</div>
+          <div class="pscore-num">91</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COURSE & KNOWLEDGE -->
+    <div class="sub-band"><span class="sub-label">Course Creation & Knowledge Monetization</span><div class="sub-line"></div></div>
+
+    <div class="pull-quote">
+      <p>If someone would pay you for an hour of your expertise, there is a course inside you. The question is only which platform gets it built and in front of the people who need it fastest.</p>
+      <cite>Why this subcategory matters</cite>
+    </div>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <div>
+          <div class="product-num">05 of 11</div>
+          <div class="product-name">Kajabi</div>
+          <div class="product-tagline">Everything You Need to Run a Knowledge Business</div>
+          <div class="product-desc">Kajabi is the platform for people who are ready to treat their expertise as a real business. Courses, memberships, coaching programs, podcasts, email marketing, and your website all live in one system that was designed to work together from the start. The monthly cost is higher than alternatives, but the math changes when you stop paying separately for a course platform, an email tool, a membership site, and a website host. For knowledge entrepreneurs generating or planning to generate more than a few thousand dollars per month, Kajabi is the serious choice.</div>
+          <div class="product-meta">
+            <div class="meta-item"><strong>Price:</strong> $149-399/month</div>
+            <div class="meta-item"><strong>Best For:</strong> Established knowledge entrepreneurs</div>
+            <div class="meta-item"><strong>Affiliate:</strong> 30% recurring lifetime</div>
+          </div>
+          <a href="https://kajabi.com" class="product-cta">Try Kajabi</a>
+        </div>
+        <div class="product-score-block">
+          <svg class="pscore-ring" viewBox="0 0 56 56">
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#E8D5A3" stroke-width="4"/>
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#D97706" stroke-width="4" stroke-dasharray="150.8" stroke-dashoffset="12.1" stroke-linecap="round" transform="rotate(-90 28 28)"/>
+          </svg>
+          <div class="pscore-label">Score</div>
+          <div class="pscore-num">92</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div>
+          <div class="product-num">06 of 11</div>
+          <div class="product-name">Teachable</div>
+          <div class="product-tagline">Turn Knowledge Into Revenue</div>
+          <div class="product-desc">Teachable is the right choice for people launching their first course who want simplicity over all-in-one power. The course builder is genuinely straightforward, the student experience is clean, and the pricing starts low enough to test the market before committing to a full platform. The trade-off versus Kajabi is integration — you will likely need separate tools for email marketing and your website. But for a first launch, or for someone who already has those tools and just needs a course delivery mechanism, Teachable is an excellent, frictionless starting point.</div>
+          <div class="product-meta">
+            <div class="meta-item"><strong>Price:</strong> $39-299/month</div>
+            <div class="meta-item"><strong>Best For:</strong> First course launch, simpler needs</div>
+            <div class="meta-item"><strong>Affiliate:</strong> 30% recurring</div>
+          </div>
+          <a href="https://www.teachable.com" class="product-cta">Try Teachable</a>
+        </div>
+        <div class="product-score-block">
+          <svg class="pscore-ring" viewBox="0 0 56 56">
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#E8D5A3" stroke-width="4"/>
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#D97706" stroke-width="4" stroke-dasharray="150.8" stroke-dashoffset="15.1" stroke-linecap="round" transform="rotate(-90 28 28)"/>
+          </svg>
+          <div class="pscore-label">Score</div>
+          <div class="pscore-num">90</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI TOOLS -->
+    <div class="sub-band"><span class="sub-label">AI Tools for Business</span><div class="sub-line"></div></div>
+
+    <div class="key-concept">
+      <div class="kc-label">The Honest Take on AI Business Tools</div>
+      <h3>AI does not replace the thinking. It removes the blank page.</h3>
+      <p>The entrepreneurs getting the most value from AI tools in 2026 are not the ones using it to replace their judgment or creativity. They are the ones using it to eliminate the time between an idea and a first draft — of an ad, an email, a product description, a proposal. That 10x speed increase on execution is where the real competitive advantage lives. The tools below have earned their place because they deliver that advantage consistently and reliably.</p>
+    </div>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <div>
+          <div class="product-num">07 of 11</div>
+          <div class="product-name">Jasper AI</div>
+          <div class="product-tagline">Write 10x Faster Without Losing Your Voice</div>
+          <div class="product-desc">Jasper is the AI writing tool built specifically for marketing and business content, which makes it meaningfully different from general-purpose AI tools. The brand voice training feature is the key differentiator — you teach Jasper how your business sounds, and it generates content that actually sounds like you rather than generic AI output. The template library covers almost every marketing use case: Google ads, email sequences, product descriptions, landing page copy, social posts, blog posts. For any business spending significant time on written content, Jasper typically pays for itself within the first week of use.</div>
+          <div class="product-meta">
+            <div class="meta-item"><strong>Price:</strong> $39-99/month</div>
+            <div class="meta-item"><strong>Best For:</strong> Marketing-heavy businesses, content creators</div>
+            <div class="meta-item"><strong>Affiliate:</strong> 25% recurring</div>
+          </div>
+          <a href="https://www.jasper.ai" class="product-cta">Try Jasper</a>
+        </div>
+        <div class="product-score-block">
+          <svg class="pscore-ring" viewBox="0 0 56 56">
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#E8D5A3" stroke-width="4"/>
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#D97706" stroke-width="4" stroke-dasharray="150.8" stroke-dashoffset="16.6" stroke-linecap="round" transform="rotate(-90 28 28)"/>
+          </svg>
+          <div class="pscore-label">Score</div>
+          <div class="pscore-num">89</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div>
+          <div class="product-num">08 of 11</div>
+          <div class="product-name">Canva Pro</div>
+          <div class="product-tagline">Design Like a Professional. No Degree Required.</div>
+          <div class="product-desc">Canva Pro democratized professional design for independent operators in a way nothing else has. The template library covers every business use case — social media, presentations, proposals, ads, email headers, product mockups — and the AI-powered design tools now handle resizing, background removal, and content generation automatically. The brand kit feature keeps your colors, fonts, and logos consistent across everything. For the vast majority of business visual needs, Canva Pro produces results that are genuinely hard to distinguish from agency work, at a fraction of the cost and time.</div>
+          <div class="product-meta">
+            <div class="meta-item"><strong>Price:</strong> $12.99-149/month</div>
+            <div class="meta-item"><strong>Best For:</strong> Every business with visual content needs</div>
+            <div class="meta-item"><strong>Affiliate:</strong> 30% per subscription</div>
+          </div>
+          <a href="https://www.canva.com" class="product-cta">Try Canva Pro</a>
+        </div>
+        <div class="product-score-block">
+          <svg class="pscore-ring" viewBox="0 0 56 56">
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#E8D5A3" stroke-width="4"/>
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#D97706" stroke-width="4" stroke-dasharray="150.8" stroke-dashoffset="13.6" stroke-linecap="round" transform="rotate(-90 28 28)"/>
+          </svg>
+          <div class="pscore-label">Score</div>
+          <div class="pscore-num">91</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FREELANCING -->
+    <div class="sub-band"><span class="sub-label">Freelancing & Hiring</span><div class="sub-line"></div></div>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <div>
+          <div class="product-num">09 of 11</div>
+          <div class="product-name">Fiverr</div>
+          <div class="product-tagline">Hire Talent Without Hiring Employees</div>
+          <div class="product-desc">The most underutilized leverage for solo entrepreneurs and small business owners is the ability to hire specialists for exactly what they need, exactly when they need it, with no long-term commitment. Fiverr puts that capability in reach at almost every budget. Logo design, video editing, copywriting, web development, voiceover, social media management, bookkeeping — thousands of categories with verified providers and genuine review systems. The businesses that scale fastest are almost always the ones that learn earliest to delegate execution so they can focus on what only they can do.</div>
+          <div class="product-meta">
+            <div class="meta-item"><strong>Price:</strong> Project-based (from $5)</div>
+            <div class="meta-item"><strong>Best For:</strong> Delegating execution tasks</div>
+            <div class="meta-item"><strong>Affiliate:</strong> $15-50 per first buyer</div>
+          </div>
+          <a href="https://www.fiverr.com" class="product-cta">Browse Fiverr</a>
+        </div>
+        <div class="product-score-block">
+          <svg class="pscore-ring" viewBox="0 0 56 56">
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#E8D5A3" stroke-width="4"/>
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#D97706" stroke-width="4" stroke-dasharray="150.8" stroke-dashoffset="18.1" stroke-linecap="round" transform="rotate(-90 28 28)"/>
+          </svg>
+          <div class="pscore-label">Score</div>
+          <div class="pscore-num">88</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== STACK SECTION ===== -->
+<div style="background: var(--white); padding: 56px 0; border-top: 1px solid var(--border);">
+  <div class="container">
+    <p class="section-eyebrow">Build Your System</p>
+    <h2 class="section-title">How to <em>stack</em> these tools</h2>
+    <div class="section-divider"></div>
+    <p style="color:var(--soft);font-size:0.95rem;line-height:1.8;margin-bottom:28px;">Individual tools are useful. A connected system is transformative. Here are the two most common business stacks built from this list — one for product businesses, one for knowledge businesses.</p>
+
+    <div class="stack-box">
+      <div class="stack-label">Stack One</div>
+      <h3>The Product Business System</h3>
+      <p>For anyone selling physical or digital products online — from handmade goods to dropshipping to branded merchandise.</p>
+      <div class="stack-steps">
+        <div class="stack-step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h4>Build your store</h4>
+            <p>Set up your products, checkout, and payments in one place. This is your revenue engine.</p>
+            <div class="step-tool">Tool: Shopify</div>
+          </div>
+        </div>
+        <div class="stack-step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h4>Capture email from day one</h4>
+            <p>Add a Kit signup form to your Shopify store. Every customer email you capture is an asset you own forever.</p>
+            <div class="step-tool">Tool: Kit</div>
+          </div>
+        </div>
+        <div class="stack-step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h4>Get found by the right people</h4>
+            <p>Use Semrush to understand what your target customers search for, then create content and product pages that answer those searches.</p>
+            <div class="step-tool">Tool: Semrush</div>
+          </div>
+        </div>
+        <div class="stack-step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h4>Create all your visual content</h4>
+            <p>Product images, social posts, ads, email graphics — all done in Canva in a fraction of the time and cost of hiring a designer for everything.</p>
+            <div class="step-tool">Tool: Canva Pro</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stack-box" style="margin-top:16px;">
+      <div class="stack-label">Stack Two</div>
+      <h3>The Knowledge Business System</h3>
+      <p>For coaches, consultants, course creators, and anyone whose expertise is the product.</p>
+      <div class="stack-steps">
+        <div class="stack-step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h4>Build your platform</h4>
+            <p>Host your courses, coaching programs, and content in one place. Your clients get a professional, unified experience from day one.</p>
+            <div class="step-tool">Tool: Kajabi (established) or Teachable (starting out)</div>
+          </div>
+        </div>
+        <div class="stack-step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h4>Build your list and nurture it</h4>
+            <p>Your email list is your pipeline. Kit's automation sends the right message to the right person at the right time without you being in the room.</p>
+            <div class="step-tool">Tool: Kit</div>
+          </div>
+        </div>
+        <div class="stack-step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h4>Track your clients and deals</h4>
+            <p>Never let a promising lead fall through the cracks. HubSpot's free CRM keeps every conversation, follow-up, and opportunity visible.</p>
+            <div class="step-tool">Tool: HubSpot (free)</div>
+          </div>
+        </div>
+        <div class="stack-step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h4>Create content at scale</h4>
+            <p>Use Jasper for written marketing content and Canva for visual content. Together they reduce your content production time dramatically.</p>
+            <div class="step-tool">Tool: Jasper AI + Canva Pro</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FAQ ===== -->
+<div style="background: var(--cream); padding: 60px 0; border-top: 1px solid var(--border);">
+  <div class="container">
+    <p class="section-eyebrow">Honest Answers</p>
+    <h2 class="section-title">Questions we <em>actually get</em></h2>
+    <div class="section-divider"></div>
+
+    <div class="faq-item">
+      <div class="faq-q"><span class="qmark">Q.</span> Which tool should I buy first?</div>
+      <div class="faq-a">It depends entirely on what stage you are at. If you have something to sell and no way to sell it online, Shopify first. If you have an audience but no way to communicate with them directly, Kit first. If you have expertise and no platform to deliver it, Kajabi or Teachable first. If you have none of the above and you are still in the "idea" phase, start with HubSpot free (zero cost, zero risk) and a Canva Pro account to start producing content. The mistake is buying tools before you know what problem they are solving.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q"><span class="qmark">Q.</span> Do I need a CRM?</div>
+      <div class="faq-a">If you have more than 20 active prospects or clients at any given time, yes. If your sales cycle is longer than a single conversation, yes. If you have ever lost a deal because you forgot to follow up, definitively yes. HubSpot's free tier handles almost every small business CRM need with no expiration date, so the barrier to starting is essentially zero.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q"><span class="qmark">Q.</span> Are sales funnels still relevant in 2026?</div>
+      <div class="faq-a">Yes, though the terminology has evolved. The underlying concept — a deliberate, structured path from first awareness to purchase — is more relevant than ever because the attention environment is more competitive than ever. ClickFunnels and Leadpages both represent this category well. The question is not whether you need a funnel, but whether you need dedicated funnel software or whether your existing tools (email platform, website builder) are sufficient for your current volume.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q"><span class="qmark">Q.</span> Kajabi or Teachable — which should I choose?</div>
+      <div class="faq-a">The decision comes down to where you are in the business. Teachable is the right choice if you are launching your first course and want the simplest possible path from "course content" to "paying students." Kajabi is the right choice if you are building a knowledge business as a primary income source and want everything — courses, community, email, coaching, podcasts, website — in one system. The price difference ($39 vs $149/month) reflects that difference in scope.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q"><span class="qmark">Q.</span> Do you earn commissions from these recommendations?</div>
+      <div class="faq-a">Yes, and we want to be transparent about it: this category has some of the highest affiliate commissions available in any market, which creates an obvious conflict of interest for most review sites. Our Popcycle Scores are set independently of commission rates — Shopify's $150+ referral fee did not make it score higher, and a product that pays lower commissions can score higher if it is genuinely the better tool. We turned down several products in this category with strong affiliate programs because we would not actually recommend them. They are not on this page.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CLOSING ===== -->
+<div class="closing">
+  <div class="closing-inner">
+    <h2>Someone less qualified than you is <em>already doing it.</em></h2>
+    <p>The tools are here. The gap between the idea you have been sitting on and a real business generating real revenue is narrower than it has ever been. Not because starting is easy — it is not — but because the infrastructure required is now accessible to almost anyone willing to start.</p>
+    <p style="margin-bottom: 36px;">Visit the Popcycle Business & Side Hustle hub for our free Start Here resources, book recommendations, podcast picks, and more — all in one place.</p>
+    <a href="https://popcycle.online" class="closing-btn">Back to Popcycle</a>
+    <div class="closing-brand">POPCYCLE</div>
+    <div class="closing-sub">sweeten your life</div>
+  </div>
+</div>
+
+</body>
+</html>

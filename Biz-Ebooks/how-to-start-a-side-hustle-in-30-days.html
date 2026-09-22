@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Start a Side Hustle in 30 Days | Popcycle</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --deep-char:#111820;--charcoal:#1E2E3A;--char-mid:#2E4255;--char-light:#4E6580;
+    --lime:#6DBF50;--lime-light:#90D870;--electric:#4A9EE0;--sage:#52654B;--gold:#C8A030;
+    --paper:#F0F4F0;--warm-paper:#E4EEE4;--border:#B0C8B0;
+    --soft:#182825;--white:#ffffff;--text:#111820;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--text);font-size:15px;line-height:1.7;}
+  .chapter-card,.key-concept,.pull-quote,.faq-item,.step-card,.truth-item{break-inside:avoid;page-break-inside:avoid;}
+  h2,h3,.section-eyebrow{break-after:avoid;page-break-after:avoid;}
+  .section-intro,.chapter-desc,.step-body{orphans:3;widows:3;}
+  @media print{.no-print{display:none!important;}body{font-size:11px;}.hero{min-height:auto;padding:48px 40px;}.section{padding:48px 0;}}
+  .print-bar{background:var(--deep-char);color:var(--white);padding:10px 24px;display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:1px;position:sticky;top:0;z-index:100;font-weight:500;text-transform:uppercase;}
+  .print-btn{background:var(--charcoal);color:var(--white);border:none;padding:6px 16px;border-radius:20px;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:1px;cursor:pointer;}
+  .hero{background:var(--deep-char);min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 40px 80px;position:relative;overflow:hidden;}
+  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 25% 60%,rgba(109,191,80,.15) 0%,transparent 55%),radial-gradient(ellipse at 78% 20%,rgba(30,46,58,.6) 0%,transparent 50%),radial-gradient(ellipse at 50% 110%,rgba(5,8,10,.95) 0%,transparent 55%);}
+  .hero::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(109,191,80,.05) 1px,transparent 0);background-size:32px 32px;}
+  .hero-inner{position:relative;z-index:2;max-width:820px;}
+  .hero-eyebrow{font-size:10px;font-weight:500;letter-spacing:5px;text-transform:uppercase;color:var(--lime-light);margin-bottom:20px;}
+  .price-badge{display:inline-block;background:rgba(109,191,80,.15);border:1px solid rgba(144,216,112,.35);color:var(--lime-light);font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;padding:6px 18px;border-radius:20px;margin-bottom:28px;}
+  .hero h1{font-family:'Fraunces',serif;font-size:clamp(2.6rem,7vw,4.8rem);font-weight:300;line-height:1.02;color:var(--white);letter-spacing:-1.5px;margin-bottom:10px;}
+  .hero h1 em{color:var(--lime-light);font-style:italic;}
+  .hero-divider{width:60px;height:2px;background:linear-gradient(90deg,transparent,var(--lime),transparent);margin:28px auto;}
+  .hero-sub{font-family:'Fraunces',serif;font-size:clamp(1.1rem,3vw,1.45rem);font-weight:300;font-style:italic;color:rgba(255,255,255,.7);margin-bottom:20px;line-height:1.5;}
+  .hero-desc{font-size:.91rem;color:rgba(255,255,255,.47);max-width:560px;margin:0 auto 44px;line-height:1.82;font-weight:300;}
+  .hero-pills{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:50px;}
+  .hero-pill{font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--lime-light);border:1px solid rgba(109,191,80,.35);padding:7px 16px;border-radius:20px;background:rgba(109,191,80,.1);}
+  .hero-stats{display:flex;justify-content:center;gap:48px;padding-top:40px;border-top:1px solid rgba(255,255,255,.07);flex-wrap:wrap;}
+  .stat{text-align:center;}
+  .stat-num{font-family:'Fraunces',serif;font-size:2rem;font-weight:600;color:var(--lime-light);line-height:1;margin-bottom:4px;}
+  .stat-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.38);}
+  .container{max-width:860px;margin:0 auto;padding:0 36px;}
+  .section{padding:64px 0;}
+  .section-eyebrow{font-size:10px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:var(--charcoal);margin-bottom:10px;}
+  .section-title{font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,3rem);font-weight:300;line-height:1.1;color:var(--deep-char);margin-bottom:12px;}
+  .section-title em{color:var(--charcoal);font-style:italic;}
+  .section-divider{height:2px;background:linear-gradient(90deg,var(--charcoal),transparent);margin:20px 0 32px;}
+  .section-intro{font-family:'Fraunces',serif;font-size:1.12rem;font-weight:300;font-style:italic;color:var(--soft);border-left:3px solid var(--lime);padding-left:20px;margin-bottom:32px;line-height:1.65;}
+  .truth-band{background:var(--deep-char);padding:52px 0;}
+  .truth-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+  .truth-item{padding:28px;background:rgba(255,255,255,.04);break-inside:avoid;text-align:center;}
+  .truth-icon{font-size:1.8rem;margin-bottom:12px;}
+  .truth-title{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;color:var(--white);margin-bottom:8px;}
+  .truth-desc{font-size:.83rem;color:rgba(255,255,255,.58);line-height:1.65;}
+  .chapters-grid{display:flex;flex-direction:column;gap:4px;margin:24px 0;}
+  .chapter-card{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:26px 30px;display:grid;grid-template-columns:76px 1fr;gap:22px;align-items:start;}
+  .chapter-num-block{text-align:center;padding-top:4px;}
+  .chapter-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--charcoal);line-height:1;display:block;}
+  .chapter-num-label{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--char-light);display:block;margin-top:2px;}
+  .chapter-tagline{font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--lime);margin-bottom:10px;}
+  .chapter-title{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:600;color:var(--deep-char);margin-bottom:8px;line-height:1.2;}
+  .chapter-desc{font-size:.91rem;color:var(--soft);line-height:1.75;margin-bottom:14px;}
+  .chapter-takeaway{background:var(--warm-paper);border-left:3px solid var(--sage);padding:12px 16px;border-radius:0 4px 4px 0;font-size:.85rem;color:var(--deep-char);font-weight:500;}
+  .chapter-takeaway strong{display:block;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--sage);margin-bottom:4px;}
+  .key-concept{background:var(--deep-char);color:var(--white);border-radius:8px;padding:30px 34px;margin:24px 0;position:relative;overflow:hidden;}
+  .key-concept::before{content:'';position:absolute;top:0;right:0;width:200px;height:200px;background:radial-gradient(circle at 100% 0%,rgba(109,191,80,.2) 0%,transparent 70%);}
+  .kc-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--lime-light);margin-bottom:10px;font-weight:500;}
+  .key-concept h3{font-family:'Fraunces',serif;font-size:1.45rem;font-weight:400;color:var(--white);margin-bottom:12px;}
+  .key-concept p{font-size:.92rem;color:rgba(255,255,255,.78);line-height:1.78;}
+  .key-concept ul{margin-top:12px;padding-left:0;list-style:none;}
+  .key-concept ul li{font-size:.9rem;color:rgba(255,255,255,.72);line-height:1.7;padding:4px 0 4px 20px;position:relative;}
+  .key-concept ul li::before{content:'→';position:absolute;left:0;color:var(--lime-light);font-size:.8rem;}
+  .pull-quote{border-left:4px solid var(--lime);padding:20px 26px;margin:26px 0;background:var(--warm-paper);border-radius:0 6px 6px 0;}
+  .pull-quote p{font-family:'Fraunces',serif;font-size:1.22rem;font-style:italic;font-weight:300;color:var(--deep-char);line-height:1.6;margin:0;}
+  .pull-quote cite{display:block;font-size:.75rem;font-style:normal;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--charcoal);margin-top:10px;}
+  .steps-list{display:flex;flex-direction:column;gap:12px;margin:24px 0;}
+  .step-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:22px 26px;display:grid;grid-template-columns:50px 1fr;gap:18px;align-items:start;}
+  .step-num-circle{width:42px;height:42px;border-radius:50%;background:var(--charcoal);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;color:var(--white);flex-shrink:0;margin-top:2px;}
+  .step-title{font-family:'Fraunces',serif;font-size:1.12rem;font-weight:600;color:var(--deep-char);margin-bottom:6px;}
+  .step-body{font-size:.9rem;color:var(--soft);line-height:1.75;}
+  .step-example{margin-top:10px;font-size:.85rem;color:var(--deep-char);background:var(--warm-paper);border-radius:4px;padding:10px 14px;border-left:2px solid var(--sage);font-weight:500;}
+  .step-example strong{display:block;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--sage);margin-bottom:3px;}
+  .sub-band{background:#D8ECD8;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:13px 36px;display:flex;align-items:center;gap:16px;margin:8px 0;}
+  .sub-label{font-size:9px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--deep-char);white-space:nowrap;}
+  .sub-line{flex:1;height:1px;background:var(--border);}
+  .char-band{background:var(--charcoal);padding:36px 0;text-align:center;}
+  .char-band .band-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:10px;font-weight:500;}
+  .char-band p{font-family:'Fraunces',serif;font-size:1.18rem;font-style:italic;font-weight:300;color:rgba(255,255,255,.92);max-width:620px;margin:0 auto;line-height:1.6;}
+  .faq-item{border-bottom:1px solid var(--border);padding:20px 0;}
+  .faq-item:last-child{border-bottom:none;}
+  .faq-q{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;color:var(--deep-char);margin-bottom:8px;display:flex;gap:12px;}
+  .faq-q .qmark{color:var(--sage);font-style:italic;flex-shrink:0;}
+  .faq-a{font-size:.9rem;color:var(--soft);line-height:1.78;padding-left:26px;}
+  .closing{background:var(--deep-char);color:var(--white);padding:80px 0;text-align:center;position:relative;overflow:hidden;}
+  .closing::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(109,191,80,.15) 0%,transparent 65%);}
+  .closing-inner{position:relative;max-width:620px;margin:0 auto;padding:0 36px;}
+  .closing h2{font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,3rem);font-weight:300;margin-bottom:18px;line-height:1.15;}
+  .closing h2 em{color:var(--lime-light);font-style:italic;}
+  .closing p{font-size:.95rem;color:rgba(255,255,255,.65);line-height:1.82;margin-bottom:30px;}
+  .closing-btn{display:inline-block;background:var(--charcoal);color:var(--white);text-decoration:none;font-weight:600;font-size:12px;letter-spacing:2px;text-transform:uppercase;padding:15px 38px;border-radius:30px;}
+  .closing-brand{margin-top:48px;font-weight:500;font-size:13px;letter-spacing:6px;color:var(--lime-light);}
+  .closing-sub{font-family:'Fraunces',serif;font-style:italic;font-size:.85rem;color:rgba(255,255,255,.32);margin-top:6px;}
+  @media(max-width:640px){.truth-grid{grid-template-columns:1fr;}.chapter-card{grid-template-columns:1fr;}.step-card{grid-template-columns:1fr;}.container{padding:0 20px;}}
+</style>
+</head>
+<body>
+<div class="print-bar no-print"><span>Popcycle · Business & Side Hustle</span><button class="print-btn" onclick="window.print()">Save as PDF</button></div>
+<section class="hero"><div class="hero-inner">
+  <div class="hero-eyebrow">Popcycle · Business & Side Hustle</div>
+  <div class="price-badge">eBook · $12</div>
+  <h1>How to Start a Side Hustle<br><em>in 30 Days</em></h1>
+  <div class="hero-divider"></div>
+  <p class="hero-sub">A day-by-day framework for people with full-time jobs, limited time, and something valuable to offer.</p>
+  <p class="hero-desc">You don't need to quit your job. You don't need a business plan. You need a clear idea, your first customer, and a system that fits around your actual life. This guide gives you all three — in 30 days.</p>
+  <div class="hero-pills"><span class="hero-pill">Week by Week</span><span class="hero-pill">First Customer</span><span class="hero-pill">10 Hrs/Week</span><span class="hero-pill">Zero Cost Start</span></div>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">30</div><div class="stat-label">Days to First Dollar</div></div>
+    <div class="stat"><div class="stat-num">10hrs</div><div class="stat-label">Per Week — That's Enough</div></div>
+    <div class="stat"><div class="stat-num">$0</div><div class="stat-label">Required to Start</div></div>
+  </div>
+</div></section>
+
+<div class="truth-band"><div class="container"><div class="truth-grid">
+  <div class="truth-item"><div class="truth-icon">⏱</div><div class="truth-title">Time is not the constraint</div><div class="truth-desc">10 hours a week is enough to build something real. The constraint is usually clarity — knowing exactly what to do with the time you have.</div></div>
+  <div class="truth-item"><div class="truth-icon">💡</div><div class="truth-title">The idea matters less than the start</div><div class="truth-desc">Most people wait for the perfect idea. The people making money started with a good-enough idea and refined it through doing.</div></div>
+  <div class="truth-item"><div class="truth-icon">🎯</div><div class="truth-title">First customer is everything</div><div class="truth-desc">Your first paying customer proves the concept, provides feedback, and generates momentum that no amount of planning can replace.</div></div>
+</div></div></div>
+
+<section class="section"><div class="container">
+  <div class="section-eyebrow">The Real Reason People Don't Start</div>
+  <h2 class="section-title">It's not time. It's not money.<br><em>It's decision fatigue.</em></h2>
+  <div class="section-divider"></div>
+  <p class="section-intro">The gap between people who say "I've been thinking about starting a side hustle" and people who actually start isn't talent or resources — it's the absence of a clear next action.</p>
+  <p style="font-size:.93rem;color:var(--soft);line-height:1.82;margin-bottom:18px;">The 30-day framework below is designed for people with full-time jobs, moderate free time (10 hours per week is enough), and something — a skill, knowledge, or experience — that other people would pay to access. The goal of Day 30 is not a finished business. It's your first paying customer. Everything after that is refinement.</p>
+  <p style="font-size:.93rem;color:var(--soft);line-height:1.82;margin-bottom:24px;">Almost every business that appears to have come out of nowhere was built during evenings and weekends over months before it became visible. The 30 days ahead are your invisible phase. That's normal. That's how it works.</p>
+  <div class="pull-quote"><p>"Someone less qualified than you is already doing it — and getting paid. The difference is they started."</p><cite>Popcycle · Business & Side Hustle</cite></div>
+  <div class="key-concept">
+    <div class="kc-label">The Foundation</div>
+    <h3>The three decisions you make in Week 1 determine everything else.</h3>
+    <p>Most 30-day side hustle plans fail because they start with tactics before the three foundational decisions are made. Decision 1: What will you offer? Decision 2: Who specifically will you offer it to? Decision 3: How will you reach them? Every hour spent on tactics before these are answered is wasted.</p>
+    <ul>
+      <li>The offer: what specific result will you produce for someone?</li>
+      <li>The customer: who specifically has that problem and can afford your solution?</li>
+      <li>The channel: where do those people spend time, and how will you reach them?</li>
+      <li>The price: what's the minimum you'd accept, and what would feel like fair value?</li>
+      <li>The goal: one paying customer by Day 30 — not a finished business</li>
+    </ul>
+  </div>
+</div></section>
+
+<div class="sub-band"><span class="sub-label">Week One</span><span class="sub-line"></span><span class="sub-label">Days 1–7: Decide and Declare</span></div>
+<section class="section" style="padding-top:44px;"><div class="container">
+  <div class="section-eyebrow">The Foundation Week</div>
+  <h2 class="section-title">The decisions that make<br><em>everything else possible</em></h2>
+  <div class="section-divider"></div>
+  <p class="section-intro">Nothing gets built until these decisions are made. Each one takes 30-60 minutes of honest thinking. Do them in order.</p>
+  <div class="chapters-grid">
+    <div class="chapter-card"><div class="chapter-num-block"><span class="chapter-num">1–2</span><span class="chapter-num-label">Day</span></div><div><div class="chapter-tagline">The Offer</div><h3 class="chapter-title">Define What You're Actually Selling</h3><p class="chapter-desc">Write one sentence: "I help [specific person] achieve [specific result] through [specific method]." A real offer has a specific customer, a specific outcome, and a specific delivery method. "I help solo real estate agents write listing descriptions that sell faster, in 24 hours or less" is an offer. "I write copy" is not. The sharper the offer, the easier everything else becomes.</p><div class="chapter-takeaway"><strong>Key Point</strong>Spend the full two days on this. It's the highest-leverage decision in the process — it tells you exactly who to talk to, what to say, and what to charge.</div></div></div>
+    <div class="chapter-card"><div class="chapter-num-block"><span class="chapter-num">3–4</span><span class="chapter-num-label">Day</span></div><div><div class="chapter-tagline">The Customer</div><h3 class="chapter-title">Name Your First 10 Potential Customers</h3><p class="chapter-desc">Not a demographic. Not a persona. Real people you could contact today. Former colleagues, people in communities you belong to, people you know who fit the problem you're solving. Write 10 names. These are your Week 2 outreach targets. If you can't name 10 people, your offer may be too abstract. Refine until you can picture specific people who have the problem.</p><div class="chapter-takeaway"><strong>Key Point</strong>"Small business owners" is not a customer. "Yoga studio owners in my city who run their own social media" is a customer. Name 10 of them.</div></div></div>
+    <div class="chapter-card"><div class="chapter-num-block"><span class="chapter-num">5</span><span class="chapter-num-label">Day</span></div><div><div class="chapter-tagline">The Price</div><h3 class="chapter-title">Set Your Price Before You Talk to Anyone</h3><p class="chapter-desc">Price your offer before outreach — not after. Without a price in mind, you'll inevitably undercharge when someone shows interest (because excitement overrides judgment). For service businesses, a working price is what feels slightly uncomfortable to say out loud. If it feels comfortable, it's probably too low. For digital products, start at $27-$97 for entry-level offers.</p><div class="chapter-takeaway"><strong>Key Point</strong>Price based on the value of the outcome, not the cost of your time. Charge what you'd pay for the result yourself.</div></div></div>
+    <div class="chapter-card"><div class="chapter-num-block"><span class="chapter-num">6–7</span><span class="chapter-num-label">Day</span></div><div><div class="chapter-tagline">The Page</div><h3 class="chapter-title">Build the Simplest Possible Landing Page</h3><p class="chapter-desc">One page. Headline that states the result you deliver. Three bullet points of what's included. Your price. A call to action. Done. Carrd.co free tier builds this in 2 hours. This is not your brand. This is not your website. This is the minimum needed to send someone a link that explains your offer. Perfectionism at this stage costs money.</p><div class="chapter-takeaway"><strong>Key Point</strong>The test: if a stranger reads it in 30 seconds, do they know what you offer, who it's for, and what it costs? If not, rewrite until they do.</div></div></div>
+  </div>
+</div></section>
+
+<div class="sub-band"><span class="sub-label">Week Two</span><span class="sub-line"></span><span class="sub-label">Days 8–14: Reach Out</span></div>
+<section class="section" style="padding-top:44px;"><div class="container">
+  <div class="section-eyebrow">The Outreach Week</div>
+  <h2 class="section-title">The conversations that lead<br><em>to your first customer</em></h2>
+  <div class="section-divider"></div>
+  <p class="section-intro">Week 2 is pure outreach. Every hour goes toward direct conversations with potential customers. No content creation, no website tweaking. Conversations only.</p>
+  <div class="chapters-grid">
+    <div class="chapter-card"><div class="chapter-num-block"><span class="chapter-num">8–10</span><span class="chapter-num-label">Day</span></div><div><div class="chapter-tagline">Direct Outreach</div><h3 class="chapter-title">Contact Your First 10 Prospects</h3><p class="chapter-desc">Write a personal message to each person on your list. Not a template blast — a genuine, individualized note that references something specific to them and explains concisely what you're offering. "Hey [name] — I've been thinking about the listing description challenge you mentioned last year. I just launched a service specifically for that and wanted to offer you a free first one to see if it's useful." Direct. Personal. Low pressure. Send all 10 before Day 10.</p><div class="chapter-takeaway"><strong>Key Point</strong>Expect 20-40% response rate on warm outreach. Of 10 messages, 2-4 responses is normal. Of those, 1-2 conversations booked. That's your goal.</div></div></div>
+    <div class="chapter-card"><div class="chapter-num-block"><span class="chapter-num">11–12</span><span class="chapter-num-label">Day</span></div><div><div class="chapter-tagline">The Conversation</div><h3 class="chapter-title">Have the Discovery Call — Not a Sales Pitch</h3><p class="chapter-desc">When someone agrees to talk, your goal is to understand their problem deeply, not to sell your solution immediately. Ask: "What's happening around [the problem]?" "What have you tried?" "What would it look like if this was solved?" Listen more than you talk. At the end, if the fit is clear: "Based on what you've told me, I think I can help. Want to hear what working together looks like?"</p><div class="chapter-takeaway"><strong>Key Point</strong>The most common failure: not asking for the business. After a good conversation, people wait for the prospect to ask to buy. They almost never do. You have to offer it. "Would you like to move forward?" is sufficient.</div></div></div>
+    <div class="chapter-card"><div class="chapter-num-block"><span class="chapter-num">13–14</span><span class="chapter-num-label">Day</span></div><div><div class="chapter-tagline">The Follow-Up</div><h3 class="chapter-title">Follow Up With Everyone Who Didn't Respond</h3><p class="chapter-desc">Of the 10 people you contacted in Days 8-10, most who are interested will have missed or not yet responded to your first message. A single follow-up 3-4 days after the first message recovers roughly 30% of non-responses. "Hey — just following up on my last message in case it got buried. Happy to jump on a quick call if useful." Don't apologize for following up. One follow-up is standard professional practice.</p><div class="chapter-takeaway"><strong>Key Point</strong>If you still haven't booked a conversation by Day 14, expand your outreach list to 10 more people. The issue is usually list size, not message quality.</div></div></div>
+  </div>
+</div></section>
+
+<div class="char-band"><div class="container"><div class="band-label">The Mindset</div><p>"The goal of Week 2 is conversations, not sales. One good conversation is a week well spent."</p></div></div>
+
+<div class="sub-band"><span class="sub-label">Week Three</span><span class="sub-line"></span><span class="sub-label">Days 15–21: Deliver and Refine</span></div>
+<section class="section" style="padding-top:44px;"><div class="container">
+  <div class="section-eyebrow">The Delivery Week</div>
+  <h2 class="section-title">Land the first customer and<br><em>deliver exceptionally</em></h2>
+  <div class="section-divider"></div>
+  <p class="section-intro">If Week 2 went well, you have a paying customer. Week 3 is about delivery, feedback, and the refinements that turn a first engagement into a repeatable product.</p>
+  <div class="steps-list">
+    <div class="step-card"><div class="step-num-circle">1</div><div><div class="step-title">Deliver More Than You Promised</div><p class="step-body">Your first customer is not just a source of revenue — they're a source of a testimonial, a referral, and the product feedback that shapes everything going forward. Over-deliver on the first engagement by being exceptionally responsive, communicating clearly, and producing work that exceeds what they expected for the price. The goal of the first delivery is a customer who tells someone else.</p><div class="step-example"><strong>After Delivery</strong>Ask directly: "Is it okay if I ask for a short testimonial?" Most people are happy when asked specifically. A real testimonial from a real customer is worth more than any marketing copy you'll ever write.</div></div></div>
+    <div class="step-card"><div class="step-num-circle">2</div><div><div class="step-title">Collect Feedback and Refine</div><p class="step-body">After delivery, ask the customer three questions: What was most valuable? What would have made this more useful? Is there anything you'd want done differently? These answers shape your offer. The second version of your service should be meaningfully better than the first. Most side hustles that fail skip this step and deliver the same product repeatedly without improving it.</p><div class="step-example"><strong>The Refinement Questions</strong>"What was most valuable?" → emphasize in your offer. "What was missing?" → add or fix. "Who else do you know who has this problem?" → this is how referrals happen naturally.</div></div></div>
+    <div class="step-card"><div class="step-num-circle">3</div><div><div class="step-title">Set Up the Basics</div><p class="step-body">By end of Week 3 you should have: a simple way to take payment (Gumroad or Stripe), a place to send people (your landing page), a way to communicate (email and scheduling link), and one completed delivery to point to. That's a functioning business. It's not fancy. Fancy comes later. Functioning comes now.</p><div class="step-example"><strong>The Minimum Viable Business</strong>Offer defined → page live → payment working → one delivery done. If all four are true, you have a side hustle. Everything from here is growth.</div></div></div>
+  </div>
+</div></section>
+
+<div class="sub-band"><span class="sub-label">Week Four</span><span class="sub-line"></span><span class="sub-label">Days 22–30: Repeat and Systematize</span></div>
+<section class="section" style="padding-top:44px;"><div class="container">
+  <div class="section-eyebrow">The Growth Week</div>
+  <h2 class="section-title">Turn one customer into<br><em>a repeatable model</em></h2>
+  <div class="section-divider"></div>
+  <p class="section-intro">Week 4 is not about scaling. It's about repeating what worked and identifying what needs to be systematized before you grow.</p>
+  <div class="steps-list">
+    <div class="step-card"><div class="step-num-circle">4</div><div><div class="step-title">Ask for Referrals Directly</div><p class="step-body">The fastest path to customer 2 is through customer 1. "Who else do you know who might have this problem?" asked after a successful delivery converts at a dramatically higher rate than cold outreach. Referred customers have shorter sales cycles, lower price sensitivity, and higher lifetime value. If your first customer had a good experience and you don't ask for a referral, you've left the highest-probability next sale on the table.</p><div class="step-example"><strong>The Script</strong>"This has been great. Do you know anyone else who might be dealing with [the same problem]? Even one introduction would mean a lot." Simple. Direct. Specific.</div></div></div>
+    <div class="step-card"><div class="step-num-circle">5</div><div><div class="step-title">Document Your Process</div><p class="step-body">Write down every step of how you delivered the first engagement — from initial conversation to final delivery. This documentation is the foundation of future systematization: onboarding materials, templates, checklists, and eventually delegation. A side hustle that lives entirely in your head cannot grow or be handed off. Document it as if you were training someone else.</p><div class="step-example"><strong>What to Document</strong>Client intake questions · delivery checklist · communication templates · revision process · delivery format. 30-60 minutes now saves hours of reinvention later.</div></div></div>
+    <div class="step-card"><div class="step-num-circle">6</div><div><div class="step-title">Set the Goal for Month 2</div><p class="step-body">By Day 30 you should have: at least one paying customer, a functional offer and landing page, a documented delivery process, and one or more referral conversations started. Month 2's goal is not to double your customers immediately — it's to improve the offer, refine the delivery, and build a small consistent outreach habit (5-10 contacts per week). Compounding is quiet, consistent motion over time.</p><div class="step-example"><strong>Month 2 Focus</strong>Outreach: 5-10 warm contacts per week. Delivery: improve based on Month 1 feedback. Content: optionally, one piece per week that demonstrates your expertise — not required in Month 2, highly recommended by Month 3.</div></div></div>
+  </div>
+</div></section>
+
+<div class="sub-band"><span class="sub-label">Part Four</span><span class="sub-line"></span><span class="sub-label">Straight Answers</span></div>
+<section class="section" style="padding-top:44px;"><div class="container">
+  <div class="section-eyebrow">Real Questions</div>
+  <h2 class="section-title">What people actually<br><em>want to know</em></h2>
+  <div class="section-divider"></div>
+  <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>What if I don't know what to offer?</div><div class="faq-a">Start with what you've been paid to do. What skills or knowledge have earned you money in your career? That's your baseline offer. You don't have to love it — you have to be meaningfully better at it than most people. Then ask: who else might pay for this? The people most likely to pay are those with an acute version of the problem you solve — they're already spending money trying to fix it, which means the category is validated.</div></div>
+  <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>What if I can only work on this 5 hours per week?</div><div class="faq-a">Five hours per week is enough for Month 1 if those hours are focused. The 30-day plan requires roughly 10 hours total for Weeks 1-2 (mostly thinking and messaging, done in short windows) and more focused time in Weeks 3-4 for delivery. Prioritize outreach above all else in the early weeks. Content creation, website building, and branding are optional in Month 1. Direct conversations are not.</div></div>
+  <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>How do I price something when I have no track record?</div><div class="faq-a">Price based on the value of the outcome, not the cost of your time. If your service saves someone 5 hours per week and their time is worth $100/hour, the value is $500/week. Charging $500 for a month of that service is cheap relative to value. The mistake is thinking "I'm new, so I should charge less." A low price signals low value to many buyers. Charge what you'd pay for the result yourself — and deliver it.</div></div>
+  <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>What if my first customer says no?</div><div class="faq-a">That's useful information. "No" from one person means nothing. "No" from 10 people in a row means something is wrong — usually the offer, the targeting, or the price. After 5-7 rejections, ask the last person who said no: "Can I ask what held you back?" Their answer is the most valuable market research available. Most people will tell you honestly when asked directly. The feedback is worth more than the sale you didn't get.</div></div>
+  <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>Do I need to tell my employer?</div><div class="faq-a">Depends on your employment agreement. Many contracts include clauses about outside work, particularly in the same industry. Review your contract carefully for non-compete and conflict of interest policies. When in doubt, choose a side hustle that doesn't compete with your employer or use their clients, tools, or IP. Most employers don't object to outside work that doesn't create a conflict — but you need to know what your agreement says before you find out the hard way.</div></div>
+</div></section>
+
+<section class="closing"><div class="closing-inner">
+  <h2>Day 1 is a decision.<br><em>Day 30 is a business.</em></h2>
+  <p>The gap between people who talk about starting and people who do is almost never talent or resources. It's the first move. Make the first move. Popcycle's Business & Side Hustle category covers the tools, resources, and platforms that support every stage — reviewed for real outcomes, not commission rates.</p>
+  <a href="https://popcycle.online" class="closing-btn">Explore Popcycle.online</a>
+  <div class="closing-brand">POPCYCLE</div>
+  <div class="closing-sub">Sweeten your life.</div>
+</div></section>
+</body></html>

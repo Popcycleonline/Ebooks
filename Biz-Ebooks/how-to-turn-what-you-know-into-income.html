@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Turn What You Know Into Income | Popcycle</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--deep-burg:#180810;--burgundy:#6B1A38;--burg-mid:#8E2850;--burg-light:#B86080;--wine:#9B2045;--rose-gold:#C89070;--rose-light:#E0B090;--sage:#52654B;--gold:#C8A030;--paper:#FAF2F5;--warm-paper:#F5E8EE;--border:#DCC0C8;--soft:#200818;--white:#fff;--text:#180810;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--text);font-size:15px;line-height:1.7;}
+  .chapter-card,.key-concept,.pull-quote,.faq-item,.step-card,.truth-item{break-inside:avoid;page-break-inside:avoid;}
+  h2,h3,.section-eyebrow{break-after:avoid;page-break-after:avoid;}
+  @media print{.no-print{display:none!important;}body{font-size:11px;}.hero{min-height:auto;padding:48px 40px;}.section{padding:48px 0;}}
+  .print-bar{background:var(--deep-burg);color:var(--white);padding:10px 24px;display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:1px;position:sticky;top:0;z-index:100;font-weight:500;text-transform:uppercase;}
+  .print-btn{background:var(--burgundy);color:var(--white);border:none;padding:6px 16px;border-radius:20px;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;cursor:pointer;}
+  .hero{background:var(--deep-burg);min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 40px 80px;position:relative;overflow:hidden;}
+  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 25% 60%,rgba(107,26,56,.4) 0%,transparent 55%),radial-gradient(ellipse at 78% 20%,rgba(155,32,69,.2) 0%,transparent 50%),radial-gradient(ellipse at 50% 110%,rgba(8,2,5,.95) 0%,transparent 55%);}
+  .hero::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(184,96,128,.06) 1px,transparent 0);background-size:32px 32px;}
+  .hero-inner{position:relative;z-index:2;max-width:820px;}
+  .hero-eyebrow{font-size:10px;font-weight:500;letter-spacing:5px;text-transform:uppercase;color:var(--burg-light);margin-bottom:20px;}
+  .price-badge{display:inline-block;background:rgba(107,26,56,.2);border:1px solid rgba(142,40,80,.4);color:var(--burg-light);font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;padding:6px 18px;border-radius:20px;margin-bottom:28px;}
+  .hero h1{font-family:'Fraunces',serif;font-size:clamp(2.6rem,7vw,4.8rem);font-weight:300;line-height:1.02;color:var(--white);letter-spacing:-1.5px;margin-bottom:10px;}
+  .hero h1 em{color:var(--burg-light);font-style:italic;}
+  .hero-divider{width:60px;height:2px;background:linear-gradient(90deg,transparent,var(--burg-mid),transparent);margin:28px auto;}
+  .hero-sub{font-family:'Fraunces',serif;font-size:clamp(1.1rem,3vw,1.45rem);font-weight:300;font-style:italic;color:rgba(255,255,255,.7);margin-bottom:20px;line-height:1.5;}
+  .hero-desc{font-size:.91rem;color:rgba(255,255,255,.47);max-width:560px;margin:0 auto 44px;line-height:1.82;font-weight:300;}
+  .hero-pills{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:50px;}
+  .hero-pill{font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--burg-light);border:1px solid rgba(107,26,56,.4);padding:7px 16px;border-radius:20px;background:rgba(107,26,56,.12);}
+  .hero-stats{display:flex;justify-content:center;gap:48px;padding-top:40px;border-top:1px solid rgba(255,255,255,.07);flex-wrap:wrap;}
+  .stat{text-align:center;}
+  .stat-num{font-family:'Fraunces',serif;font-size:2rem;font-weight:600;color:var(--burg-light);line-height:1;margin-bottom:4px;}
+  .stat-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.38);}
+  .container{max-width:860px;margin:0 auto;padding:0 36px;}
+  .section{padding:64px 0;}
+  .section-eyebrow{font-size:10px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:var(--burgundy);margin-bottom:10px;}
+  .section-title{font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,3rem);font-weight:300;line-height:1.1;color:var(--deep-burg);margin-bottom:12px;}
+  .section-title em{color:var(--burgundy);font-style:italic;}
+  .section-divider{height:2px;background:linear-gradient(90deg,var(--burgundy),transparent);margin:20px 0 32px;}
+  .section-intro{font-family:'Fraunces',serif;font-size:1.12rem;font-weight:300;font-style:italic;color:var(--soft);border-left:3px solid var(--burgundy);padding-left:20px;margin-bottom:32px;line-height:1.65;}
+  .truth-band{background:var(--deep-burg);padding:52px 0;}
+  .truth-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+  .truth-item{padding:28px;background:rgba(255,255,255,.04);break-inside:avoid;text-align:center;}
+  .truth-icon{font-size:1.8rem;margin-bottom:12px;}
+  .truth-title{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;color:var(--white);margin-bottom:8px;}
+  .truth-desc{font-size:.83rem;color:rgba(255,255,255,.58);line-height:1.65;}
+  .chapters-grid{display:flex;flex-direction:column;gap:4px;margin:24px 0;}
+  .chapter-card{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:26px 30px;display:grid;grid-template-columns:76px 1fr;gap:22px;align-items:start;}
+  .chapter-num-block{text-align:center;padding-top:4px;}
+  .chapter-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--burgundy);line-height:1;display:block;}
+  .chapter-num-label{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--burg-light);display:block;margin-top:2px;}
+  .chapter-tagline{font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--rose-gold);margin-bottom:10px;}
+  .chapter-title{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:600;color:var(--deep-burg);margin-bottom:8px;line-height:1.2;}
+  .chapter-desc{font-size:.91rem;color:var(--soft);line-height:1.75;margin-bottom:14px;}
+  .chapter-takeaway{background:var(--warm-paper);border-left:3px solid var(--sage);padding:12px 16px;border-radius:0 4px 4px 0;font-size:.85rem;color:var(--deep-burg);font-weight:500;}
+  .chapter-takeaway strong{display:block;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--sage);margin-bottom:4px;}
+  .key-concept{background:var(--deep-burg);color:var(--white);border-radius:8px;padding:30px 34px;margin:24px 0;position:relative;overflow:hidden;}
+  .key-concept::before{content:'';position:absolute;top:0;right:0;width:200px;height:200px;background:radial-gradient(circle at 100% 0%,rgba(107,26,56,.35) 0%,transparent 70%);}
+  .kc-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--burg-light);margin-bottom:10px;font-weight:500;}
+  .key-concept h3{font-family:'Fraunces',serif;font-size:1.45rem;font-weight:400;color:var(--white);margin-bottom:12px;}
+  .key-concept p{font-size:.92rem;color:rgba(255,255,255,.78);line-height:1.78;}
+  .key-concept ul{margin-top:12px;padding-left:0;list-style:none;}
+  .key-concept ul li{font-size:.9rem;color:rgba(255,255,255,.72);line-height:1.7;padding:4px 0 4px 20px;position:relative;}
+  .key-concept ul li::before{content:'→';position:absolute;left:0;color:var(--burg-light);font-size:.8rem;}
+  .pull-quote{border-left:4px solid var(--burgundy);padding:20px 26px;margin:26px 0;background:var(--warm-paper);border-radius:0 6px 6px 0;}
+  .pull-quote p{font-family:'Fraunces',serif;font-size:1.22rem;font-style:italic;font-weight:300;color:var(--deep-burg);line-height:1.6;margin:0;}
+  .pull-quote cite{display:block;font-size:.75rem;font-style:normal;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--burgundy);margin-top:10px;}
+  .steps-list{display:flex;flex-direction:column;gap:12px;margin:24px 0;}
+  .step-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:22px 26px;display:grid;grid-template-columns:50px 1fr;gap:18px;align-items:start;}
+  .step-num-circle{width:42px;height:42px;border-radius:50%;background:var(--burgundy);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;color:var(--white);flex-shrink:0;margin-top:2px;}
+  .step-title{font-family:'Fraunces',serif;font-size:1.12rem;font-weight:600;color:var(--deep-burg);margin-bottom:6px;}
+  .step-body{font-size:.9rem;color:var(--soft);line-height:1.75;}
+  .step-example{margin-top:10px;font-size:.85rem;color:var(--deep-burg);background:var(--warm-paper);border-radius:4px;padding:10px 14px;border-left:2px solid var(--sage);font-weight:500;}
+  .step-example strong{display:block;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--sage);margin-bottom:3px;}
+  .sub-band{background:#F0DDE5;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:13px 36px;display:flex;align-items:center;gap:16px;margin:8px 0;}
+  .sub-label{font-size:9px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--deep-burg);white-space:nowrap;}
+  .sub-line{flex:1;height:1px;background:var(--border);}
+  .burg-band{background:var(--burgundy);padding:36px 0;text-align:center;}
+  .burg-band .band-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:10px;font-weight:500;}
+  .burg-band p{font-family:'Fraunces',serif;font-size:1.18rem;font-style:italic;font-weight:300;color:rgba(255,255,255,.92);max-width:620px;margin:0 auto;line-height:1.6;}
+  .faq-item{border-bottom:1px solid var(--border);padding:20px 0;}
+  .faq-item:last-child{border-bottom:none;}
+  .faq-q{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;color:var(--deep-burg);margin-bottom:8px;display:flex;gap:12px;}
+  .faq-q .qmark{color:var(--sage);font-style:italic;flex-shrink:0;}
+  .faq-a{font-size:.9rem;color:var(--soft);line-height:1.78;padding-left:26px;}
+  .closing{background:var(--deep-burg);color:var(--white);padding:80px 0;text-align:center;position:relative;overflow:hidden;}
+  .closing::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(107,26,56,.3) 0%,transparent 65%);}
+  .closing-inner{position:relative;max-width:620px;margin:0 auto;padding:0 36px;}
+  .closing h2{font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,3rem);font-weight:300;margin-bottom:18px;line-height:1.15;}
+  .closing h2 em{color:var(--burg-light);font-style:italic;}
+  .closing p{font-size:.95rem;color:rgba(255,255,255,.65);line-height:1.82;margin-bottom:30px;}
+  .closing-btn{display:inline-block;background:var(--burgundy);color:var(--white);text-decoration:none;font-weight:600;font-size:12px;letter-spacing:2px;text-transform:uppercase;padding:15px 38px;border-radius:30px;}
+  .closing-brand{margin-top:48px;font-weight:500;font-size:13px;letter-spacing:6px;color:var(--burg-light);}
+  .closing-sub{font-family:'Fraunces',serif;font-style:italic;font-size:.85rem;color:rgba(255,255,255,.32);margin-top:6px;}
+  @media(max-width:640px){.truth-grid{grid-template-columns:1fr;}.chapter-card{grid-template-columns:1fr;}.step-card{grid-template-columns:1fr;}.container{padding:0 20px;}}
+</style>
+</head>
+<body>
+<div class="print-bar no-print"><span>Popcycle · Business & Side Hustle</span><button class="print-btn" onclick="window.print()">Save as PDF</button></div>
+<section class="hero"><div class="hero-inner">
+  <div class="hero-eyebrow">Popcycle · Business & Side Hustle</div>
+  <div class="price-badge">eBook · $12</div>
+  <h1>How to Turn What You Know<br><em>Into Income</em></h1>
+  <div class="hero-divider"></div>
+  <p class="hero-sub">You've spent years becoming good at something. The question is how to get paid for it beyond a salary.</p>
+  <p class="hero-desc">The knowledge economy rewards expertise, experience, and the ability to teach what you know. This guide maps the specific pathways from what you already know to income streams that don't require you to start from scratch.</p>
+  <div class="hero-pills"><span class="hero-pill">Consulting</span><span class="hero-pill">Courses</span><span class="hero-pill">Coaching</span><span class="hero-pill">6 Income Models</span></div>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">Every</div><div class="stat-label">Career Creates Transferable Expertise</div></div>
+    <div class="stat"><div class="stat-num">6</div><div class="stat-label">Income Models for Knowledge Workers</div></div>
+    <div class="stat"><div class="stat-num">You</div><div class="stat-label">Don't Have to Be Famous to Get Paid</div></div>
+  </div>
+</div></section>
+
+<div class="truth-band"><div class="container"><div class="truth-grid">
+  <div class="truth-item"><div class="truth-icon">🧠</div><div class="truth-title">You know more than you think</div><div class="truth-desc">After 10-20 years in a field, you've accumulated expertise that is genuinely rare and valuable — you've just been paid for it in one way (salary) when multiple ways are available.</div></div>
+  <div class="truth-item"><div class="truth-icon">💡</div><div class="truth-title">Teaching earns more than doing</div><div class="truth-desc">Consultants, coaches, course creators, and authors consistently earn more per hour than practitioners at the same expertise level. The multiplier on knowledge is packaging.</div></div>
+  <div class="truth-item"><div class="truth-icon">🔑</div><div class="truth-title">The model determines the leverage</div><div class="truth-desc">A coaching hour pays once. A course sells forever. An ebook scales infinitely. Choosing the right income model for your expertise is the highest-leverage decision you'll make.</div></div>
+</div></div></div>
+
+<section class="section"><div class="container">
+  <div class="section-eyebrow">The Knowledge Economy Is Real</div>
+  <h2 class="section-title">And you're already participating in it —<br><em>just on one side</em></h2>
+  <div class="section-divider"></div>
+  <p class="section-intro">Every year you spend developing expertise in a field, you're building an asset. The challenge is that most people were taught only one way to monetize that asset: employment.</p>
+  <p style="font-size:.93rem;color:var(--soft);line-height:1.82;margin-bottom:18px;">The people selling knowledge-based products and services are not, for the most part, more expert than the people buying them. They're more packaged. They identified what they know, found the people who need to know it, and built a delivery mechanism. If you're waiting to feel "expert enough" before monetizing what you know, you're almost certainly already there.</p>
+  <div class="pull-quote"><p>"You are not starting from scratch. You are starting from 20 years of accumulated knowledge that someone desperately needs and doesn't have."</p><cite>Popcycle · Business & Side Hustle</cite></div>
+  <div class="key-concept">
+    <div class="kc-label">The Expertise Inventory</div>
+    <h3>What you know is more monetizable than you think — if you inventory it honestly.</h3>
+    <p>The inventory has three parts: technical knowledge (what you know how to do), experiential wisdom (what you've learned from doing it), and contextual knowledge (industry norms, pitfalls, shortcuts that only come from years inside a domain). All three are sellable — to different buyers through different channels. The most valuable knowledge is often what feels most obvious to you.</p>
+    <ul>
+      <li>Technical: skills, methods, tools, frameworks you've mastered</li>
+      <li>Experiential: mistakes made, lessons learned, patterns recognized over time</li>
+      <li>Contextual: industry knowledge, unwritten rules, what actually works vs. what's taught</li>
+      <li>All three are sellable — to different buyers through different channels</li>
+    </ul>
+  </div>
+</div></section>
+
+<div class="sub-band"><span class="sub-label">Part One</span><span class="sub-line"></span><span class="sub-label">The Six Income Models</span></div>
+<section class="section" style="padding-top:44px;"><div class="container">
+  <div class="section-eyebrow">Know Your Options</div>
+  <h2 class="section-title">The six ways to monetize expertise —<br><em>compared honestly</em></h2>
+  <div class="section-divider"></div>
+  <p class="section-intro">Each model has different leverage, different income ceilings, different time-to-revenue. Choose based on what fits your life — not what looks most impressive.</p>
+  <div class="chapters-grid">
+    <div class="chapter-card"><div class="chapter-num-block"><span class="chapter-num">01</span><span class="chapter-num-label">Model</span></div><div><div class="chapter-tagline">High $/Hour · Low Scale</div><h3 class="chapter-title">Consulting</h3><p class="chapter-desc">You are hired for your expertise on a specific problem. Billed by project, retainer, or day rate. Consulting is the fastest path to revenue from expertise — often achievable in 30-60 days. Day rates for specialized consultants range from $500-$5,000+ depending on expertise and industry. The ceiling is your available hours. The barrier is building the pipeline — finding clients consistently. Most consultants land first clients through their existing network.</p><div class="chapter-takeaway"><strong>Best For</strong>People with 10+ years of specialized expertise who can articulate a specific business problem they solve. Fastest path to meaningful revenue.</div></div></div>
+    <div class="chapter-card"><div class="chapter-num-block"><span class="chapter-num">02</span><span class="chapter-num-label">Model</span></div><div><div class="chapter-tagline">Strong $/Hour · Medium Scale</div><h3 class="chapter-title">Coaching</h3><p class="chapter-desc">You guide clients through their own thinking rather than providing expert solutions. Coaching rates range from $150-$1,000+/hour depending on niche and client type. Executive coaches and business coaches at the premium end earn $200-$500/session. Coaching scales better than consulting because sessions can be packaged into programs ($2,000-$10,000 for 3-6 month engagements). ICF certification builds credibility but isn't legally required.</p><div class="chapter-takeaway"><strong>Best For</strong>People with expertise in helping others navigate decisions, transitions, or performance improvement. Requires genuine coaching skills beyond subject expertise.</div></div></div>
+    <div class="chapter-card"><div class="chapter-num-block"><span class="chapter-num">03</span><span class="chapter-num-label">Model</span></div><div><div class="chapter-tagline">Medium $/Hour · High Scale</div><h3 class="chapter-title">Online Courses</h3><p class="chapter-desc">You package your expertise into a curriculum and sell access to it. A well-positioned course sells repeatedly without additional time investment — the leverage is real. Courses range from $27 (mini-courses) to $2,000+ (comprehensive flagship courses). The challenge is marketing: great courses with no audience earn nothing. Most successful course creators built an audience first or had a large professional network.</p><div class="chapter-takeaway"><strong>Best For</strong>People with structured, teachable expertise and either an existing audience or willingness to invest 6-12 months building one.</div></div></div>
+    <div class="chapter-card"><div class="chapter-num-block"><span class="chapter-num">04</span><span class="chapter-num-label">Model</span></div><div><div class="chapter-tagline">Low $/Unit · Very High Scale</div><h3 class="chapter-title">Writing (Books, Ebooks, Newsletters)</h3><p class="chapter-desc">Written knowledge products are the most scalable: write once, sell indefinitely. Traditional books establish authority but generate modest direct income. Self-published ebooks on Amazon earn 70% royalties. Newsletters monetize through paid subscriptions, sponsorships, or affiliate commissions. Substack's top writers earn millions annually from subscriptions. The leverage is extreme at scale; the challenge is building the readership that creates scale.</p><div class="chapter-takeaway"><strong>Best For</strong>People who write fluently and want to build long-term authority and passive income. Slower to monetize but potentially the most scalable.</div></div></div>
+    <div class="chapter-card"><div class="chapter-num-block"><span class="chapter-num">05</span><span class="chapter-num-label">Model</span></div><div><div class="chapter-tagline">High Variable</div><h3 class="chapter-title">Speaking</h3><p class="chapter-desc">You are paid to present your expertise — at conferences, corporate events, associations, or virtual summits. Speaking fees range from $0 (beginners building visibility) to $50,000+ (top keynote speakers). Most professional speakers with developed expertise earn $2,500-$15,000 per engagement. Speaking is typically not standalone — it generates consulting leads, book sales, and course enrollments. Most speakers get started through direct outreach to event organizers.</p><div class="chapter-takeaway"><strong>Best For</strong>People with a compelling point of view on a business-relevant topic, strong stage presence, and the ability to develop a signature talk. Often combined with consulting or coaching.</div></div></div>
+    <div class="chapter-card"><div class="chapter-num-block"><span class="chapter-num">06</span><span class="chapter-num-label">Model</span></div><div><div class="chapter-tagline">Recurring Passive</div><h3 class="chapter-title">Licensing and Templates</h3><p class="chapter-desc">You create a product once — a framework, template, methodology, or tool — and license it for ongoing use. Examples: HR consultants licensing employee handbook templates, marketers licensing content templates. Marketplaces like Etsy, Creative Market, and Teachers Pay Teachers host templates. Template packs typically sell for $20-$200; licensing deals range widely.</p><div class="chapter-takeaway"><strong>Best For</strong>People who have created proprietary systems, frameworks, or processes that others in their field or adjacent fields would pay to use directly.</div></div></div>
+  </div>
+</div></section>
+
+<div class="burg-band"><div class="container"><div class="band-label">The Core Question</div><p>"Which model fits the life I'm trying to build — not the one that sounds most impressive?"</p></div></div>
+
+<div class="sub-band"><span class="sub-label">Part Two</span><span class="sub-line"></span><span class="sub-label">From Expertise to Income — The Practical Path</span></div>
+<section class="section" style="padding-top:44px;"><div class="container">
+  <div class="section-eyebrow">Making It Real</div>
+  <h2 class="section-title">The steps between knowing something<br><em>and getting paid for it</em></h2>
+  <div class="section-divider"></div>
+  <p class="section-intro">Expertise alone doesn't generate income. Packaged, positioned, and marketed expertise does.</p>
+  <div class="steps-list">
+    <div class="step-card"><div class="step-num-circle">1</div><div><div class="step-title">Name the Problem You Solve</div><p class="step-body">Before choosing a model or building a product, get precise about the problem you solve for a specific person. Not "I help businesses grow" — but "I help independent financial advisors reduce client churn by improving onboarding." The more precisely you can name the problem and the person experiencing it, the easier every other step becomes.</p><div class="step-example"><strong>The One-Sentence Test</strong>"I help [specific person] achieve [specific result] by [specific method]." If you can't complete that sentence specifically, you haven't done enough thinking yet.</div></div></div>
+    <div class="step-card"><div class="step-num-circle">2</div><div><div class="step-title">Choose One Model and Go Deep</div><p class="step-body">The most common mistake: pursuing every model simultaneously. A consulting practice and a course and a book and a newsletter — all at once, none of them well. Choose one primary model, execute it until it produces consistent revenue, then layer in a second. The secondary model almost always amplifies the primary.</p><div class="step-example"><strong>The Sequence That Works</strong>Start with consulting or coaching (fastest to revenue). Once income is consistent, build a course or book (scales reach without adding hours). Then add speaking or licensing if appropriate.</div></div></div>
+    <div class="step-card"><div class="step-num-circle">3</div><div><div class="step-title">Build Proof Before You Need It</div><p class="step-body">Before you can charge premium rates, you need demonstrated results. Case studies, testimonials, and documented outcomes are the currency of the knowledge economy. Start by producing results for clients at below-market rates (or free, in exchange for a detailed testimonial and case study). Do this 2-3 times. Then raise your rates significantly and use the proof in all your marketing.</p><div class="step-example"><strong>What Good Proof Looks Like</strong>"[Client name], [title], achieved [specific result] in [timeframe] using [your approach]." Specific numbers, specific timeframes, real names. Generic testimonials have almost no marketing value.</div></div></div>
+    <div class="step-card"><div class="step-num-circle">4</div><div><div class="step-title">Start Building an Audience — Even if Small</div><p class="step-body">Every knowledge-based income model eventually benefits from an audience. A LinkedIn following of 2,000 engaged professionals in your niche can generate $200,000+ in annual consulting revenue. Start by publishing what you know — one substantive piece per week — and let the audience find you over time. Don't post to be seen. Post to be useful. Usefulness is the algorithm.</p><div class="step-example"><strong>The Minimum Viable Strategy</strong>Pick one platform where your target clients spend time. Publish one genuinely useful piece per week. Do this for 12 months before evaluating results. Almost nobody who follows this seriously for a year regrets it.</div></div></div>
+    <div class="step-card"><div class="step-num-circle">5</div><div><div class="step-title">Price for Value, Not Time</div><p class="step-body">The shift from employment thinking (paid for hours) to expertise thinking (paid for outcomes) is the most important mental shift. A consultant who saves a company $500,000 is not well-priced at $200/hour for 10 hours. They're well-priced at $50,000 for the outcome. Most knowledge workers could charge 2-5x their current rate without losing clients — they're undercharging because they're thinking about time.</p><div class="step-example"><strong>How to Find Your Value Price</strong>"What is it worth to the client if this problem is solved?" "What would they pay a large consulting firm for this?" Your rate should be significantly below the large firm rate and significantly above your hourly calculation.</div></div></div>
+  </div>
+</div></section>
+
+<div class="sub-band"><span class="sub-label">Part Three</span><span class="sub-line"></span><span class="sub-label">Straight Answers</span></div>
+<section class="section" style="padding-top:44px;"><div class="container">
+  <div class="section-eyebrow">Real Questions</div>
+  <h2 class="section-title">What people actually<br><em>want to know</em></h2>
+  <div class="section-divider"></div>
+  <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>I don't feel like an expert. Who am I to charge for this?</div><div class="faq-a">This is the most common barrier, and it's almost always inaccurate. Expertise is relative to the person you're helping, not relative to the top professionals in your field. You don't need to be the world's foremost authority to help someone with a specific problem. If you've spent 10+ years in a field, you know meaningfully more than most people will ever know about dozens of specific problems within it.</div></div>
+  <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>How do I find my first consulting or coaching client?</div><div class="faq-a">Through your existing network. Almost universally. The first consulting client is almost never a cold outreach — it's a former colleague, previous manager, or someone in your professional network who knows your work and has a problem you solve. Make a list of 20 people who know your work. Tell them specifically what you're offering. Ask if they know anyone who might benefit. Follow up once. Most people overthink this step and underdo the simple version.</div></div>
+  <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>Should I start with a course or with services?</div><div class="faq-a">Services first, almost always. Services generate revenue quickly, provide direct feedback on your positioning, and create the case studies that make a course worth buying. A course built before you've done the consulting work is often poorly positioned — you think you know what clients need, but you don't know what you don't know. Do the work with clients first. Build the course from what you learn. It will be dramatically better.</div></div>
+  <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>How do I handle the imposter syndrome that comes with pricing?</div><div class="faq-a">Separate the feeling from the decision. Imposter syndrome doesn't tell you anything accurate about whether your expertise is worth what you're charging. The accurate information comes from market evidence: are people paying your rate? Are clients getting results? Do they refer others? If yes, your price is appropriate regardless of how you feel. Raise your rate when prospects consistently say yes without pushback — that's the market telling you you're underpriced.</div></div>
+  <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>What if my field makes monetizing expertise feel awkward?</div><div class="faq-a">That feeling is common in certain professions (medicine, law, education, social work) where commercial framing can feel at odds with a service orientation. The reframe: monetizing your expertise isn't selling out — it's creating access. A physician who creates a well-researched health guide reaches people who would never access their clinic. The commercialization is the mechanism of broader service, not its antithesis. Know your professional context and norms before proceeding.</div></div>
+</div></section>
+
+<section class="closing"><div class="closing-inner">
+  <h2>You've already done the hardest part.<br>You became <em>genuinely good</em> at something.</h2>
+  <p>The rest is packaging, positioning, and permission to charge what it's worth. Popcycle's Business & Side Hustle category covers the platforms, tools, and resources that help knowledge workers build income from what they already know.</p>
+  <a href="https://popcycle.online" class="closing-btn">Explore Popcycle.online</a>
+  <div class="closing-brand">POPCYCLE</div>
+  <div class="closing-sub">Sweeten your life.</div>
+</div></section>
+</body></html>
