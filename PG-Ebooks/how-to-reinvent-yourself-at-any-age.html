@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Reinvent Yourself at Any Age | Popcycle</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1F4A8A;
+    --deepnavy: #0D1F3C;
+    --accent: #4A4E8C;
+    --accent-light: #7B80C0;
+    --sage-solid: #52654B;
+    --steel: #7F95B8;
+    --steel-light: #A8BDD4;
+    --forest: #185723;
+    --forest-light: #2E7D3A;
+    --paper: #EEF2F8;
+    --cream: #F4F7FB;
+    --white: #ffffff;
+    --text: #1A2B4A;
+    --soft: #4A5568;
+    --border: #D4DCE8;
+    --gold: #B8860B;
+    --gold-light: #D4A017;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Jost', sans-serif; background: var(--cream); color: var(--text); font-size: 15px; line-height: 1.7; }
+
+  .chapter-card, .key-concept, .pull-quote, .faq-item, .step-card, .phase-card, .truth-item { break-inside: avoid; page-break-inside: avoid; }
+  h2, h3, h4, .section-eyebrow, .kc-label { break-after: avoid; page-break-after: avoid; }
+  .section-intro, .chapter-desc, .step-body { orphans: 3; widows: 3; }
+
+  @media print {
+    .no-print { display: none !important; }
+    body { font-size: 11px; background: white; }
+    .hero { min-height: auto; padding: 48px 40px; }
+    .section { padding: 48px 0; }
+    .truth-band, .closing { padding: 40px 0; }
+  }
+
+  .print-bar { background: var(--deepnavy); color: var(--white); padding: 10px 24px; display: flex; justify-content: space-between; align-items: center; font-size: 11px; letter-spacing: 1px; position: sticky; top: 0; z-index: 100; font-weight: 500; text-transform: uppercase; }
+  .print-btn { background: var(--forest); color: var(--white); border: none; padding: 6px 16px; border-radius: 20px; font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; cursor: pointer; }
+
+  .hero { background: var(--deepnavy); min-height: 88vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 100px 40px 80px; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 15% 60%, rgba(24,87,35,0.2) 0%, transparent 50%), radial-gradient(ellipse at 85% 25%, rgba(74,78,140,0.3) 0%, transparent 55%), radial-gradient(ellipse at 50% 110%, rgba(8,15,30,0.9) 0%, transparent 60%); }
+  .hero::after { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(82,101,75,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(82,101,75,0.05) 1px, transparent 1px); background-size: 50px 50px; }
+  .hero-inner { position: relative; z-index: 2; max-width: 820px; }
+  .hero-eyebrow { font-size: 10px; font-weight: 500; letter-spacing: 5px; text-transform: uppercase; color: var(--steel-light); margin-bottom: 20px; }
+  .price-badge { display: inline-block; background: rgba(24,87,35,0.2); border: 1px solid rgba(46,125,58,0.45); color: #6DBF78; font-size: 10px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; padding: 6px 18px; border-radius: 20px; margin-bottom: 28px; }
+  .hero h1 { font-family: 'Fraunces', serif; font-size: clamp(2.5rem, 6.5vw, 4.8rem); font-weight: 300; line-height: 1.05; color: var(--white); letter-spacing: -1.5px; margin-bottom: 10px; }
+  .hero h1 em { color: #6DBF78; font-style: italic; }
+  .hero-divider { width: 60px; height: 2px; background: linear-gradient(90deg, transparent, #6DBF78, transparent); margin: 28px auto; }
+  .hero-sub { font-family: 'Fraunces', serif; font-size: clamp(1.1rem, 3vw, 1.5rem); font-weight: 300; font-style: italic; color: rgba(255,255,255,0.72); margin-bottom: 20px; line-height: 1.5; }
+  .hero-desc { font-size: 0.92rem; color: rgba(255,255,255,0.5); max-width: 560px; margin: 0 auto 44px; line-height: 1.8; font-weight: 300; }
+  .hero-pills { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-bottom: 50px; }
+  .hero-pill { font-size: 10px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--steel-light); border: 1px solid rgba(127,149,184,0.4); padding: 7px 16px; border-radius: 20px; background: rgba(127,149,184,0.08); }
+  .hero-stats { display: flex; justify-content: center; gap: 48px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.08); flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat-num { font-family: 'Fraunces', serif; font-size: 2rem; font-weight: 600; color: #6DBF78; line-height: 1; margin-bottom: 4px; }
+  .stat-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.4); }
+
+  .container { max-width: 860px; margin: 0 auto; padding: 0 36px; }
+  .section { padding: 64px 0; }
+  .section-eyebrow { font-size: 10px; font-weight: 500; letter-spacing: 4px; text-transform: uppercase; color: var(--forest); margin-bottom: 10px; }
+  .section-title { font-family: 'Fraunces', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 300; line-height: 1.1; color: var(--navy); margin-bottom: 12px; }
+  .section-title em { color: var(--forest); font-style: italic; }
+  .section-divider { height: 2px; background: linear-gradient(90deg, var(--forest), transparent); margin: 20px 0 32px; }
+  .section-intro { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 300; font-style: italic; color: var(--soft); border-left: 3px solid var(--forest); padding-left: 20px; margin-bottom: 36px; line-height: 1.65; }
+
+  .truth-band { background: var(--navy); padding: 52px 0; color: var(--white); }
+  .truth-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+  .truth-item { padding: 28px; background: rgba(255,255,255,0.04); break-inside: avoid; }
+  .truth-icon { font-size: 1.8rem; margin-bottom: 12px; }
+  .truth-title { font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 600; color: var(--white); margin-bottom: 8px; }
+  .truth-desc { font-size: 0.83rem; color: rgba(255,255,255,0.6); line-height: 1.65; }
+
+  .phase-grid { display: flex; flex-direction: column; gap: 3px; margin: 28px 0; }
+  .phase-card { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 28px 32px; display: grid; grid-template-columns: 72px 1fr; gap: 24px; align-items: start; }
+  .phase-num-block { text-align: center; padding-top: 4px; }
+  .phase-num { font-family: 'Fraunces', serif; font-size: 2.4rem; font-weight: 700; color: var(--forest); line-height: 1; display: block; }
+  .phase-num-label { font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: var(--steel); display: block; margin-top: 2px; }
+  .phase-title { font-family: 'Fraunces', serif; font-size: 1.35rem; font-weight: 600; color: var(--navy); margin-bottom: 6px; line-height: 1.2; }
+  .phase-tagline { font-size: 10px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--forest); margin-bottom: 12px; }
+  .phase-desc { font-size: 0.91rem; color: var(--soft); line-height: 1.75; margin-bottom: 14px; }
+  .phase-note { background: var(--paper); border-left: 3px solid var(--sage-solid); padding: 12px 16px; border-radius: 0 4px 4px 0; font-size: 0.85rem; color: var(--navy); font-weight: 500; }
+  .phase-note strong { display: block; font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: var(--sage-solid); margin-bottom: 4px; }
+
+  .key-concept { background: var(--navy); color: var(--white); border-radius: 8px; padding: 30px 34px; margin: 28px 0; position: relative; overflow: hidden; }
+  .key-concept::before { content: ''; position: absolute; top: 0; right: 0; width: 200px; height: 200px; background: radial-gradient(circle at 100% 0%, rgba(24,87,35,0.3) 0%, transparent 70%); }
+  .kc-label { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: #6DBF78; margin-bottom: 10px; font-weight: 500; }
+  .key-concept h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 400; color: var(--white); margin-bottom: 12px; }
+  .key-concept p { font-size: 0.92rem; color: rgba(255,255,255,0.78); line-height: 1.78; }
+  .key-concept ul { margin-top: 12px; padding-left: 0; list-style: none; }
+  .key-concept ul li { font-size: 0.9rem; color: rgba(255,255,255,0.75); line-height: 1.7; padding: 4px 0 4px 20px; position: relative; }
+  .key-concept ul li::before { content: '→'; position: absolute; left: 0; color: #6DBF78; font-size: 0.8rem; }
+
+  .pull-quote { border-left: 4px solid var(--forest); padding: 20px 26px; margin: 30px 0; background: rgba(24,87,35,0.06); border-radius: 0 6px 6px 0; }
+  .pull-quote p { font-family: 'Fraunces', serif; font-size: 1.25rem; font-style: italic; font-weight: 300; color: var(--navy); line-height: 1.6; margin: 0; }
+  .pull-quote cite { display: block; font-size: 0.75rem; font-style: normal; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--forest); margin-top: 10px; }
+
+  .steps-list { display: flex; flex-direction: column; gap: 14px; margin: 24px 0; }
+  .step-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 24px 28px; display: grid; grid-template-columns: 48px 1fr; gap: 20px; align-items: start; }
+  .step-num-circle { width: 44px; height: 44px; border-radius: 50%; background: var(--forest); display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 700; color: var(--white); flex-shrink: 0; margin-top: 2px; }
+  .step-title { font-family: 'Fraunces', serif; font-size: 1.12rem; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+  .step-body { font-size: 0.9rem; color: var(--soft); line-height: 1.75; }
+  .step-example { margin-top: 10px; font-size: 0.85rem; color: var(--navy); background: var(--paper); border-radius: 4px; padding: 10px 14px; border-left: 2px solid var(--sage-solid); font-weight: 500; }
+  .step-example strong { display: block; font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: var(--sage-solid); margin-bottom: 3px; }
+
+  .sub-band { background: rgba(24,87,35,0.06); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 14px 36px; display: flex; align-items: center; gap: 16px; }
+  .sub-label { font-size: 9px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--navy); white-space: nowrap; }
+  .sub-line { flex: 1; height: 1px; background: var(--border); }
+
+  .forest-band { background: var(--forest); padding: 36px 0; color: var(--white); text-align: center; }
+  .forest-band p { font-family: 'Fraunces', serif; font-size: 1.2rem; font-style: italic; font-weight: 300; color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto; line-height: 1.6; }
+  .forest-band .band-label { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 10px; font-weight: 500; }
+
+  .faq-item { border-bottom: 1px solid var(--border); padding: 22px 0; }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q { font-family: 'Fraunces', serif; font-size: 1.08rem; font-weight: 600; color: var(--navy); margin-bottom: 10px; display: flex; gap: 14px; }
+  .faq-q .qmark { color: var(--forest); font-style: italic; flex-shrink: 0; }
+  .faq-a { font-size: 0.9rem; color: var(--soft); line-height: 1.78; padding-left: 28px; }
+
+  .closing { background: var(--deepnavy); color: var(--white); padding: 80px 0; text-align: center; position: relative; overflow: hidden; }
+  .closing::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(24,87,35,0.2) 0%, transparent 65%); }
+  .closing-inner { position: relative; max-width: 620px; margin: 0 auto; padding: 0 36px; }
+  .closing h2 { font-family: 'Fraunces', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 300; margin-bottom: 20px; line-height: 1.15; }
+  .closing h2 em { color: #6DBF78; font-style: italic; }
+  .closing p { font-size: 0.95rem; color: rgba(255,255,255,0.68); line-height: 1.82; margin-bottom: 32px; }
+  .closing-btn { display: inline-block; background: var(--forest); color: var(--white); text-decoration: none; font-weight: 600; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; padding: 16px 40px; border-radius: 30px; }
+  .closing-brand { margin-top: 52px; font-weight: 500; font-size: 13px; letter-spacing: 6px; color: var(--steel-light); }
+  .closing-sub { font-family: 'Fraunces', serif; font-style: italic; font-size: 0.85rem; color: rgba(255,255,255,0.35); margin-top: 6px; }
+
+  @media (max-width: 640px) {
+    .truth-grid { grid-template-columns: 1fr; }
+    .phase-card { grid-template-columns: 1fr; }
+    .step-card { grid-template-columns: 1fr; }
+    .container { padding: 0 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="print-bar no-print">
+  <span>Popcycle · Personal Development</span>
+  <button class="print-btn" onclick="window.print()">Save as PDF</button>
+</div>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Popcycle · Personal Development</div>
+    <div class="price-badge">eBook · $12</div>
+    <h1>How to Reinvent Yourself<br><em>at Any Age</em></h1>
+    <div class="hero-divider"></div>
+    <p class="hero-sub">The second act isn't a consolation prize. For most people, it's the real thing.</p>
+    <p class="hero-desc">Reinvention after 40 isn't about pretending the first chapter didn't happen. It's about taking everything you learned — about yourself, about what matters, about what you won't tolerate — and building something that actually fits who you are now.</p>
+    <div class="hero-pills">
+      <span class="hero-pill">Second Acts</span>
+      <span class="hero-pill">Identity Shifts</span>
+      <span class="hero-pill">Career Reinvention</span>
+      <span class="hero-pill">Purposeful Living</span>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">47</div><div class="stat-label">Average Age of Peak Happiness</div></div>
+      <div class="stat"><div class="stat-num">40+</div><div class="stat-label">When Most Major Reinventions Begin</div></div>
+      <div class="stat"><div class="stat-num">Now</div><div class="stat-label">The Only Starting Point That Exists</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="truth-band">
+  <div class="container">
+    <div class="truth-grid">
+      <div class="truth-item"><div class="truth-icon">🌀</div><div class="truth-title">Reinvention is normal</div><div class="truth-desc">Research on adult development finds that most people go through 2-3 significant identity shifts in their lifetime. It's not a crisis. It's the process working as intended.</div></div>
+      <div class="truth-item"><div class="truth-icon">📈</div><div class="truth-title">Happiness has a U-curve</div><div class="truth-desc">Life satisfaction dips in midlife and rises sharply after 50. The people on the other side of reinvention consistently report higher wellbeing than before they changed course.</div></div>
+      <div class="truth-item"><div class="truth-icon">🧭</div><div class="truth-title">Experience is the asset</div><div class="truth-desc">Everything you've learned — about people, about yourself, about what works — transfers. You're not starting over. You're starting from a completely different place.</div></div>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-eyebrow">The Honest Starting Point</div>
+    <h2 class="section-title">Why reinvention feels<br><em>harder than it should</em></h2>
+    <div class="section-divider"></div>
+    <p class="section-intro">It's not that people don't want to change. It's that identity is more deeply embedded than we realize — and the brain treats identity shifts as genuine threats, even when they're chosen.</p>
+    <p style="font-size:0.93rem;color:var(--soft);line-height:1.82;margin-bottom:20px;">By midlife, most people have a deeply grooved sense of who they are — built from decades of roles, relationships, and routines. Career identity, family identity, social identity. When you decide to reinvent yourself, you're not just changing what you do. You're renegotiating who you are. And the brain, which runs partly on prediction and pattern, experiences that renegotiation as disorienting even when you chose it.</p>
+    <p style="font-size:0.93rem;color:var(--soft);line-height:1.82;margin-bottom:28px;">This is why reinvention often feels lonely even when it's clearly the right move. The people around you knew the old version. They may not fully understand the new one yet. That gap is real — and it's temporary. What's on the other side of it is a life that fits you, built by you, informed by everything you've already learned.</p>
+    <div class="pull-quote">
+      <p>"It is never too late to be what you might have been."</p>
+      <cite>George Eliot</cite>
+    </div>
+    <div class="key-concept">
+      <div class="kc-label">The Research Finding</div>
+      <h3>The U-curve of happiness is real — and you may be near the bottom right now.</h3>
+      <p>Economists David Blanchflower and Andrew Oswald analyzed data from over 500,000 people across 72 countries and found a consistent U-shaped curve in life satisfaction: high in youth, dipping through midlife, then rising sharply and continuing upward into later life. If you're in your 40s or 50s and feeling the weight of transition, you may be at the curve's trough — which means the trajectory from here is up. That's not wishful thinking. It's what the data shows, consistently, across cultures.</p>
+    </div>
+  </div>
+</section>
+
+<div class="sub-band"><span class="sub-label">Part One</span><span class="sub-line"></span><span class="sub-label">The Phases of Reinvention</span></div>
+
+<section class="section" style="padding-top:48px;">
+  <div class="container">
+    <div class="section-eyebrow">A Realistic Map</div>
+    <h2 class="section-title">What reinvention<br><em>actually looks like</em></h2>
+    <div class="section-divider"></div>
+    <p class="section-intro">Most people experience reinvention as chaos because no one gave them a map. Here's the terrain. You're probably already somewhere on it.</p>
+    <div class="phase-grid">
+      <div class="phase-card">
+        <div class="phase-num-block"><span class="phase-num">01</span><span class="phase-num-label">Phase</span></div>
+        <div>
+          <div class="phase-tagline">The Dissonance</div>
+          <h3 class="phase-title">When the Old Story Stops Fitting</h3>
+          <p class="phase-desc">Reinvention usually begins not with a dramatic decision but with a quiet, persistent feeling that something is off. The job that used to energize you now drains you. The identity you worked hard to build feels like clothes that no longer fit. You can function — but something underneath is pushing toward something else. This phase can last months or years. Many people try to outrun it by working harder at the old thing. That rarely works for long.</p>
+          <div class="phase-note"><strong>What This Phase Needs</strong>Honest acknowledgment. Not action yet — just the willingness to name what you're feeling without immediately trying to fix it. Journaling, therapy, or one very honest conversation with someone you trust can unlock this phase.</div>
+        </div>
+      </div>
+      <div class="phase-card">
+        <div class="phase-num-block"><span class="phase-num">02</span><span class="phase-num-label">Phase</span></div>
+        <div>
+          <div class="phase-tagline">The Excavation</div>
+          <h3 class="phase-title">Figuring Out What You Actually Want</h3>
+          <p class="phase-desc">Once you stop running from the dissonance, you enter the excavation — digging through accumulated roles and expectations to find the signal underneath. What did you love before you became practical? What problems do you naturally want to solve? What would you do if outcome weren't the filter? This isn't navel-gazing. It's reconnaissance. The answers often surprise people — they find they've been carrying something they wanted for decades and convinced themselves wasn't possible.</p>
+          <div class="phase-note"><strong>What This Phase Needs</strong>Curiosity without commitment. Try things. Take a class. Have coffee with someone doing what you're drawn to. Read sideways — books about adjacent topics, industries, ways of living. You're looking for resonance, not a plan.</div>
+        </div>
+      </div>
+      <div class="phase-card">
+        <div class="phase-num-block"><span class="phase-num">03</span><span class="phase-num-label">Phase</span></div>
+        <div>
+          <div class="phase-tagline">The Bridge</div>
+          <h3 class="phase-title">Moving Without Burning Everything Down</h3>
+          <p class="phase-desc">Most successful reinventions are not cliff-jumps. They're bridges — built while still standing on solid ground. The side project before the career change. The certification while still employed. The relationship rebuilt before the old one ends. Bridge-building requires patience and discipline, but it dramatically reduces the cost and fear of reinvention. You don't have to blow up everything you've built. You have to build the next thing alongside it until it can hold your weight.</p>
+          <div class="phase-note"><strong>What This Phase Needs</strong>A concrete first move. Not a complete plan — just the next step. What's the smallest thing you can do in the next 30 days that moves you toward the new thing? Start there.</div>
+        </div>
+      </div>
+      <div class="phase-card">
+        <div class="phase-num-block"><span class="phase-num">04</span><span class="phase-num-label">Phase</span></div>
+        <div>
+          <div class="phase-tagline">The Awkward Middle</div>
+          <h3 class="phase-title">When You're Neither Here Nor There</h3>
+          <p class="phase-desc">This is the hardest phase, and the one most people don't anticipate. You've left or are leaving the old identity, but the new one isn't fully formed yet. You're in the gap — not the person you were, not yet the person you're becoming. Psychologist William Bridges called this "the neutral zone." It can feel like failure or confusion. It's actually transformation. The discomfort is the process working. This phase requires patience, community, and the willingness to tolerate ambiguity without forcing resolution too quickly.</p>
+          <div class="phase-note"><strong>What This Phase Needs</strong>Other people in transition. Find a community — a class, a group, a forum — of people navigating something similar. The neutral zone is much more tolerable when you're not in it alone.</div>
+        </div>
+      </div>
+      <div class="phase-card">
+        <div class="phase-num-block"><span class="phase-num">05</span><span class="phase-num-label">Phase</span></div>
+        <div>
+          <div class="phase-tagline">The Integration</div>
+          <h3 class="phase-title">When the New Version Feels Like You</h3>
+          <p class="phase-desc">Integration is when the new identity stops feeling like a costume and starts feeling like skin. You stop explaining yourself to people who knew the old version. You start attracting the right kind of people and opportunities — the ones aligned with who you've become, not who you were. This phase is usually quieter than people expect. There's no dramatic moment of arrival. You just notice one day that the new story feels true. That's how you know you've made it through.</p>
+          <div class="phase-note"><strong>What This Phase Needs</strong>Recognition. Most people miss integration because they're still braced for the hard part. Pay attention to the moments when the new thing feels natural. That's the signal you're looking for.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="forest-band">
+  <div class="container">
+    <div class="band-label">Worth Remembering</div>
+    <p>"You are not starting over. You are starting from here — with everything you know, everything you've survived, and everything you've decided you won't carry anymore."</p>
+  </div>
+</div>
+
+<div class="sub-band"><span class="sub-label">Part Two</span><span class="sub-line"></span><span class="sub-label">Making It Real</span></div>
+
+<section class="section" style="padding-top:48px;">
+  <div class="container">
+    <div class="section-eyebrow">The Practical Work</div>
+    <h2 class="section-title">How to build the<br><em>next version of you</em></h2>
+    <div class="section-divider"></div>
+    <p class="section-intro">Reinvention without structure is just restlessness. These are the moves that turn the feeling into something real.</p>
+    <div class="steps-list">
+      <div class="step-card">
+        <div class="step-num-circle">1</div>
+        <div>
+          <div class="step-title">Write the two-sentence version</div>
+          <p class="step-body">Who are you becoming, and what do you want your life to look like? Not a vision board — two sentences. Specific enough to be meaningful, open enough to evolve. Writing it forces clarity. Clarity creates direction. Direction creates action.</p>
+          <div class="step-example"><strong>Example</strong>"I'm building a life where I use my 20 years of sales experience to teach and consult rather than produce. I want my work to feel like contribution, not obligation."</div>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num-circle">2</div>
+        <div>
+          <div class="step-title">Inventory your transferable assets</div>
+          <p class="step-body">Make a list of everything you actually know how to do — not job titles, but skills and knowledge. You'll find it's longer than you expect, and much of it transfers across industries, roles, and contexts. Most people dramatically undervalue what they know because they've been doing it for years and it feels ordinary. It isn't.</p>
+          <div class="step-example"><strong>Try This</strong>List 10 things you know how to do that a 25-year-old doesn't. Then ask: where do people pay for that knowledge?</div>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num-circle">3</div>
+        <div>
+          <div class="step-title">Find three people living the next chapter</div>
+          <p class="step-body">Whatever direction you're considering, find three people who are already living something close to it. Study them. Reach out if possible — most people are willing to have a 20-minute conversation with someone who's genuinely curious. You need proof of concept and you need models. Both are available if you look.</p>
+          <div class="step-example"><strong>Where to Look</strong>LinkedIn, podcasts about the field, local networking events, industry associations. One honest conversation with someone 5 years ahead of you is worth more than 10 books.</div>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num-circle">4</div>
+        <div>
+          <div class="step-title">Design a 90-day experiment</div>
+          <p class="step-body">Not a plan — an experiment. A specific 90-day commitment to explore the new direction with low stakes and high curiosity. A side project, a freelance client, a volunteer role, a course. Something real enough to generate information, small enough not to require you to bet everything on it. Experiments are reversible. They're also the fastest way to know if the direction is right.</p>
+          <div class="step-example"><strong>The Format</strong>"For the next 90 days I will [specific action] to explore whether [direction] is right for me. I will decide at the end whether to continue, pivot, or stop."</div>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num-circle">5</div>
+        <div>
+          <div class="step-title">Tell the new story before it's fully true</div>
+          <p class="step-body">Identity follows narrative. The people who reinvent successfully start introducing themselves as the new version before they feel fully qualified to. "I'm building a consulting practice." "I'm transitioning into coaching." "I'm working on a book." You don't have to be finished to claim the direction. In fact, claiming the direction is part of what makes it real.</p>
+          <div class="step-example"><strong>Note</strong>This isn't fake. It's accurate. You are building that thing. Saying so out loud is just honesty about where you're headed — and it invites the right conversations and opportunities.</div>
+        </div>
+      </div>
+    </div>
+    <div class="key-concept" style="margin-top:32px;">
+      <div class="kc-label">What the Research Shows</div>
+      <h3>People who reinvent deliberately are happier — not just eventually, but during the process.</h3>
+      <p>Studies on purposeful reinvention (distinct from forced career change or crisis response) find that people who actively choose to rebuild report higher wellbeing, stronger sense of agency, and better relationships — even during the transition period. The key variable is agency: the sense that you are choosing this, not just reacting to circumstances. You have that agency right now. Using it changes the experience entirely.</p>
+      <ul>
+        <li>Deliberate reinvention predicts higher life satisfaction at 5 and 10 years</li>
+        <li>People who reinvent report stronger sense of purpose than those who don't</li>
+        <li>The process itself — not just the outcome — is associated with growth</li>
+        <li>Social connection during reinvention significantly shortens the neutral zone</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="sub-band"><span class="sub-label">Part Three</span><span class="sub-line"></span><span class="sub-label">Straight Answers</span></div>
+
+<section class="section" style="padding-top:48px;">
+  <div class="container">
+    <div class="section-eyebrow">Honest Q&A</div>
+    <h2 class="section-title">What people actually<br><em>want to know</em></h2>
+    <div class="section-divider"></div>
+    <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>Am I too old to reinvent myself?</div><div class="faq-a">No. The research on adult neuroplasticity, career change, and life satisfaction all point in the same direction: meaningful change is possible at any age, and later-life reinventions often succeed more reliably than early ones because they're driven by clarity rather than urgency. Colonel Sanders franchised KFC at 65. Vera Wang designed her first dress at 40. Julia Child published her first cookbook at 49. These aren't exceptions — they're examples of what experience plus direction actually produces.</div></div>
+    <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>What if I don't know what I want to reinvent into?</div><div class="faq-a">Start with what you want to move away from. That's almost always clearer than what you're moving toward, and it's equally useful information. Then follow curiosity. What do you find yourself reading about? What problems do you notice that others ignore? What did you love before you became responsible for everything? The direction often reveals itself through motion, not through planning. Move toward something — anything — and adjust from there.</div></div>
+    <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>How do I handle the people who don't understand or support the change?</div><div class="faq-a">With patience and appropriate distance. Some people in your life are invested in the old version of you — it's familiar, it fits their narrative about who you are. Your change may feel threatening to them. That's about them, not about the validity of your direction. Share selectively during the transition. You don't owe everyone an explanation in real time. Build your external community around the new direction — people who understand what you're building — while you give the existing relationships time to adapt.</div></div>
+    <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>What if I reinvent and it doesn't work?</div><div class="faq-a">Then you'll know something you didn't know before, and you'll have options you didn't have before. Very few reinventions are total failures — most generate skills, connections, and self-knowledge that become the foundation for the next iteration. The people who reinvent "unsuccessfully" and stop are rare. Most adjust, pivot, and try again with better information. The bigger risk is not the reinvention that doesn't work out. It's the reinvention you never start.</div></div>
+    <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>How long does reinvention take?</div><div class="faq-a">Research on major life transitions suggests the full arc — from initial dissonance to integration — typically runs 2-5 years. That sounds long until you consider: what does the next 20 years look like if you don't? And the timeline compresses significantly when you're deliberate about it — when you have a direction, a community, and a plan. You can be meaningfully different in 12 months. Fully integrated in 3-5 years. The question is not whether it's worth the time. The question is whether anything else is worth more.</div></div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="closing-inner">
+    <h2>There's a version of you<br><em>still being written</em></h2>
+    <p>Reinvention isn't a detour from your life. It is your life, at its most honest. Popcycle's Personal Development category covers the tools, courses, and resources that make the next chapter real — curated for people who are serious about building something that fits.</p>
+    <a href="https://popcycle.online" class="closing-btn">Explore Popcycle.online</a>
+    <div class="closing-brand">POPCYCLE</div>
+    <div class="closing-sub">Sweeten your life.</div>
+  </div>
+</section>
+
+</body>
+</html>
