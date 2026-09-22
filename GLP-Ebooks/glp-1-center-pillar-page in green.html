@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The GLP-1 Center | Popcycle — Honest Curation for the GLP-1 Era</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--deep:#0E2A2A;--main:#1B5E5A;--mid:#2C807A;--light:#6FC0B2;--accent:#E08A5A;--accent-l:#F0A878;--sage:#52654B;--paper:#EFF4F2;--warm-paper:#E0EBE7;--border:#B2D0C8;--soft:#12292A;--white:#fff;--text:#0E2A2A;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--text);font-size:15px;line-height:1.7;}
+  .truth-item,.key-concept,.pull-quote,.faq-item,.res-card,.pick-card{break-inside:avoid;page-break-inside:avoid;}
+  h2,h3,.section-eyebrow{break-after:avoid;page-break-after:avoid;}
+  @media print{.no-print{display:none!important;}body{font-size:11px;}.hero{min-height:auto;padding:48px 40px;}.section{padding:48px 0;}}
+  .print-bar{background:var(--deep);color:var(--white);padding:10px 24px;display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:1px;position:sticky;top:0;z-index:100;font-weight:500;text-transform:uppercase;}
+  .print-btn{background:var(--main);color:var(--white);border:none;padding:6px 16px;border-radius:20px;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;cursor:pointer;}
+  .hero{background:var(--deep);min-height:90vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 40px 80px;position:relative;overflow:hidden;}
+  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 25% 60%,rgba(27,94,90,.55) 0%,transparent 55%),radial-gradient(ellipse at 78% 20%,rgba(224,138,90,.14) 0%,transparent 50%),radial-gradient(ellipse at 50% 110%,rgba(4,16,16,.95) 0%,transparent 55%);}
+  .hero::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(111,192,178,.05) 1px,transparent 0);background-size:32px 32px;}
+  .hero-inner{position:relative;z-index:2;max-width:840px;}
+  .hero-eyebrow{font-size:10px;font-weight:500;letter-spacing:5px;text-transform:uppercase;color:var(--light);margin-bottom:20px;}
+  .price-badge{display:inline-block;background:rgba(27,94,90,.3);border:1px solid rgba(44,128,122,.5);color:var(--light);font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;padding:6px 18px;border-radius:20px;margin-bottom:28px;}
+  .hero h1{font-family:'Fraunces',serif;font-size:clamp(2.6rem,6.5vw,4.8rem);font-weight:300;line-height:1.02;color:var(--white);letter-spacing:-1.5px;margin-bottom:10px;}
+  .hero h1 em{color:var(--light);font-style:italic;}
+  .hero-divider{width:60px;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);margin:28px auto;}
+  .hero-sub{font-family:'Fraunces',serif;font-size:clamp(1.1rem,3vw,1.5rem);font-weight:300;font-style:italic;color:rgba(255,255,255,.72);margin-bottom:20px;line-height:1.5;}
+  .hero-desc{font-size:.94rem;color:rgba(255,255,255,.5);max-width:600px;margin:0 auto 44px;line-height:1.82;font-weight:300;}
+  .hero-pills{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:50px;}
+  .hero-pill{font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--light);border:1px solid rgba(27,94,90,.5);padding:7px 16px;border-radius:20px;background:rgba(27,94,90,.2);}
+  .hero-stats{display:flex;justify-content:center;gap:44px;padding-top:40px;border-top:1px solid rgba(255,255,255,.08);flex-wrap:wrap;}
+  .stat{text-align:center;}
+  .stat-num{font-family:'Fraunces',serif;font-size:1.7rem;font-weight:600;color:var(--light);line-height:1;margin-bottom:4px;}
+  .stat-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);}
+  .container{max-width:960px;margin:0 auto;padding:0 36px;}
+  .container-narrow{max-width:860px;margin:0 auto;padding:0 36px;}
+  .section{padding:64px 0;}
+  .section-eyebrow{font-size:10px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:var(--main);margin-bottom:10px;}
+  .section-title{font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,3rem);font-weight:300;line-height:1.1;color:var(--deep);margin-bottom:12px;}
+  .section-title em{color:var(--main);font-style:italic;}
+  .section-divider{height:2px;background:linear-gradient(90deg,var(--main),transparent);margin:20px 0 32px;}
+  .section-intro{font-family:'Fraunces',serif;font-size:1.12rem;font-weight:300;font-style:italic;color:var(--soft);border-left:3px solid var(--main);padding-left:20px;margin-bottom:32px;line-height:1.65;}
+  .lead-p{font-size:.95rem;color:var(--soft);line-height:1.85;margin-bottom:18px;}
+  .truth-band{background:var(--deep);padding:52px 0;}
+  .truth-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+  .truth-item{padding:30px 28px;background:rgba(255,255,255,.04);text-align:center;}
+  .truth-icon{font-size:1.9rem;margin-bottom:12px;}
+  .truth-title{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;color:var(--white);margin-bottom:8px;}
+  .truth-desc{font-size:.85rem;color:rgba(255,255,255,.6);line-height:1.65;}
+  .key-concept{background:var(--deep);color:var(--white);border-radius:8px;padding:32px 36px;margin:24px 0;position:relative;overflow:hidden;}
+  .key-concept::before{content:'';position:absolute;top:0;right:0;width:220px;height:220px;background:radial-gradient(circle at 100% 0%,rgba(27,94,90,.5) 0%,transparent 70%);}
+  .kc-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--light);margin-bottom:10px;font-weight:500;}
+  .key-concept h3{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;color:var(--white);margin-bottom:12px;}
+  .key-concept p{font-size:.93rem;color:rgba(255,255,255,.8);line-height:1.8;}
+  .key-concept ul{margin-top:14px;padding-left:0;list-style:none;}
+  .key-concept ul li{font-size:.9rem;color:rgba(255,255,255,.74);line-height:1.7;padding:5px 0 5px 22px;position:relative;}
+  .key-concept ul li::before{content:'\2192';position:absolute;left:0;color:var(--light);}
+  .pull-quote{border-left:4px solid var(--main);padding:22px 28px;margin:28px 0;background:var(--warm-paper);border-radius:0 6px 6px 0;}
+  .pull-quote p{font-family:'Fraunces',serif;font-size:1.28rem;font-style:italic;font-weight:300;color:var(--deep);line-height:1.55;margin:0;}
+  .pull-quote cite{display:block;font-size:.75rem;font-style:normal;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--main);margin-top:10px;}
+  /* honest-standard band */
+  .standard-band{background:var(--warm-paper);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:56px 0;}
+  .standard-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:28px;}
+  .std-item{text-align:center;padding:0 8px;}
+  .std-num{font-family:'Fraunces',serif;font-size:1.5rem;color:var(--main);font-weight:600;margin-bottom:6px;}
+  .std-t{font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--deep);margin-bottom:6px;}
+  .std-d{font-size:.82rem;color:var(--soft);line-height:1.55;}
+  /* section nav strip */
+  .subnav{background:var(--deep);padding:22px 0;position:sticky;top:37px;z-index:90;}
+  .subnav-inner{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;}
+  .subnav a{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--light);text-decoration:none;border:1px solid rgba(111,192,178,.3);padding:8px 16px;border-radius:20px;transition:all .2s;}
+  .subnav a:hover{background:var(--main);color:var(--white);border-color:var(--main);}
+  /* resource band */
+  .res-band{padding:60px 0;}
+  .res-band:nth-of-type(even){background:var(--warm-paper);}
+  .res-head{display:flex;align-items:baseline;gap:16px;margin-bottom:8px;}
+  .res-count{font-family:'Fraunces',serif;font-size:.95rem;color:var(--accent);font-weight:600;}
+  .res-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:28px;}
+  .res-grid.three{grid-template-columns:repeat(3,1fr);}
+  .res-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:24px 26px;display:flex;flex-direction:column;}
+  .res-tag{font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:10px;}
+  .res-card h4{font-family:'Fraunces',serif;font-size:1.18rem;font-weight:600;color:var(--deep);margin-bottom:4px;line-height:1.25;}
+  .res-card .byline{font-size:.8rem;color:var(--mid);font-weight:500;margin-bottom:10px;}
+  .res-card p{font-size:.87rem;color:var(--soft);line-height:1.65;margin-bottom:12px;flex:1;}
+  .res-why{font-size:.8rem;color:var(--deep);background:var(--warm-paper);border-left:2px solid var(--sage);padding:9px 12px;border-radius:0 4px 4px 0;}
+  .res-why strong{display:block;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--sage);margin-bottom:3px;}
+  .res-band:nth-of-type(even) .res-card{background:var(--paper);}
+  .res-band:nth-of-type(even) .res-why{background:#DCEAE4;}
+  .pill-status{display:inline-block;font-size:8px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:12px;margin-left:8px;vertical-align:middle;}
+  .pill-live{background:var(--main);color:var(--white);}
+  .pill-soon{background:var(--warm-paper);color:var(--mid);border:1px solid var(--border);}
+  /* product pick card */
+  .pick-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:22px 24px;}
+  .pick-card h4{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;color:var(--deep);margin-bottom:6px;}
+  .pick-crit{font-size:.82rem;color:var(--soft);line-height:1.6;margin-bottom:10px;}
+  .pick-look{font-size:.8rem;color:var(--deep);}
+  .pick-look strong{color:var(--main);}
+  .res-band:nth-of-type(even) .pick-card{background:var(--paper);}
+  .callout{background:var(--deep);color:var(--white);border-radius:8px;padding:26px 30px;margin-top:24px;position:relative;overflow:hidden;}
+  .callout .kc-label{color:var(--accent-l);}
+  .callout h4{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:400;color:var(--white);margin-bottom:10px;}
+  .callout p{font-size:.9rem;color:rgba(255,255,255,.8);line-height:1.75;}
+  .accent-band{background:var(--main);padding:38px 0;text-align:center;}
+  .accent-band .band-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:10px;font-weight:500;}
+  .accent-band p{font-family:'Fraunces',serif;font-size:1.2rem;font-style:italic;font-weight:300;color:rgba(255,255,255,.94);max-width:660px;margin:0 auto;line-height:1.6;}
+  .faq-item{border-bottom:1px solid var(--border);padding:20px 0;}
+  .faq-item:last-child{border-bottom:none;}
+  .faq-q{font-family:'Fraunces',serif;font-size:1.08rem;font-weight:600;color:var(--deep);margin-bottom:8px;display:flex;gap:12px;}
+  .faq-q .qmark{color:var(--sage);font-style:italic;flex-shrink:0;}
+  .faq-a{font-size:.9rem;color:var(--soft);line-height:1.78;padding-left:26px;}
+  .closing{background:var(--deep);color:var(--white);padding:82px 0;text-align:center;position:relative;overflow:hidden;}
+  .closing::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(27,94,90,.45) 0%,transparent 65%);}
+  .closing-inner{position:relative;max-width:640px;margin:0 auto;padding:0 36px;}
+  .closing h2{font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,3rem);font-weight:300;margin-bottom:18px;line-height:1.15;}
+  .closing h2 em{color:var(--light);font-style:italic;}
+  .closing p{font-size:.95rem;color:rgba(255,255,255,.65);line-height:1.82;margin-bottom:30px;}
+  .closing-btn{display:inline-block;background:var(--main);color:var(--white);text-decoration:none;font-weight:600;font-size:12px;letter-spacing:2px;text-transform:uppercase;padding:15px 38px;border-radius:30px;}
+  .closing-brand{margin-top:48px;font-weight:500;font-size:13px;letter-spacing:6px;color:var(--light);}
+  .closing-sub{font-family:'Fraunces',serif;font-style:italic;font-size:.85rem;color:rgba(255,255,255,.32);margin-top:6px;}
+  .disclaimer{max-width:860px;margin:0 auto;padding:28px 36px 64px;font-size:.78rem;color:#6E8480;line-height:1.6;font-style:italic;text-align:center;}
+  @media(max-width:720px){.truth-grid{grid-template-columns:1fr;}.standard-grid{grid-template-columns:repeat(2,1fr);}.res-grid,.res-grid.three{grid-template-columns:1fr;}.container,.container-narrow{padding:0 20px;}.subnav{display:none;}}
+</style>
+</head>
+<body>
+<div class="print-bar no-print"><span>Popcycle · The GLP-1 Center</span><button class="print-btn" onclick="window.print()">Save as PDF</button></div>
+
+<section class="hero"><div class="hero-inner">
+  <div class="hero-eyebrow">Popcycle · Pillar Guide</div>
+  <div class="price-badge">The GLP-1 Center</div>
+  <h1>The GLP-1 Era,<br><em>Without the Hype</em></h1>
+  <div class="hero-divider"></div>
+  <p class="hero-sub">Straight answers about GLP-1 medications — what they do, what they cost you, and what actually helps. Curated on merit, never on commission.</p>
+  <p class="hero-desc">GLP-1s are the most talked-about, most misunderstood development in weight and metabolic health in a generation. This is our honest hub: the real science, the genuine trade-offs, and the ebooks, resources, and products we've vetted to help you navigate them well.</p>
+  <div class="hero-pills"><span class="hero-pill">The Real Science</span><span class="hero-pill">Rx vs. "Natural"</span><span class="hero-pill">Muscle Preservation</span><span class="hero-pill">Vetted Resources</span></div>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">15–28%</div><div class="stat-label">Weight Loss Range, By Medication</div></div>
+    <div class="stat"><div class="stat-num">Rx ≠ OTC</div><div class="stat-label">The Difference We Explain Honestly</div></div>
+    <div class="stat"><div class="stat-num">50 / 50</div><div class="stat-label">Medication vs. What You Do Around It</div></div>
+  </div>
+</div></section>
+
+<div class="subnav no-print"><div class="subnav-inner">
+  <a href="#what">What They Are</a>
+  <a href="#standard">Our Standard</a>
+  <a href="#ebooks">eBooks</a>
+  <a href="#free">Free Stuff</a>
+  <a href="#podcasts">Podcasts</a>
+  <a href="#books">Books</a>
+  <a href="#products">Product Picks</a>
+  <a href="#faq">FAQ</a>
+</div></div>
+
+<div class="truth-band"><div class="container"><div class="truth-grid">
+  <div class="truth-item"><div class="truth-icon">💉</div><div class="truth-title">The prescription drugs are real</div><div class="truth-desc">Semaglutide and tirzepatide produce genuine, substantial weight loss and real health benefits. They're prescription-only, they carry real risks, and they've changed the landscape. We don't downplay that.</div></div>
+  <div class="truth-item"><div class="truth-icon">🌿</div><div class="truth-title">"Natural GLP-1" is mostly marketing</div><div class="truth-desc">The OTC "nature's Ozempic" supplements don't replicate the drugs — the evidence isn't there. We'll tell you what the science actually supports, and what genuinely helps, instead of selling you hype.</div></div>
+  <div class="truth-item"><div class="truth-icon">🏋️</div><div class="truth-title">The medication is only half of it</div><div class="truth-desc">What you eat and how you train while on a GLP-1 determines whether you lose fat or also lose muscle. The habits around the drug matter as much as the drug. That's where we focus.</div></div>
+</div></div></div>
+
+<section class="section" id="what"><div class="container-narrow">
+  <div class="section-eyebrow">Start Here</div>
+  <h2 class="section-title">What GLP-1s actually are,<br><em>in plain English</em></h2>
+  <div class="section-divider"></div>
+  <p class="section-intro">GLP-1 is a hormone your gut naturally releases after eating — it curbs appetite, slows digestion, and helps regulate blood sugar. The medications are engineered versions that last for days instead of minutes, turning a brief natural signal into a sustained one.</p>
+  <p class="lead-p">That sustained appetite signal is why these drugs are so effective: they quiet the constant "food noise" many people live with, making it dramatically easier to eat less without white-knuckle willpower. The prescription class has evolved fast. Semaglutide (sold as Ozempic for diabetes and Wegovy for weight loss) established the category, producing around 15% average weight loss. Tirzepatide (Mounjaro / Zepbound) added a second hormone receptor and pushed that to roughly 21%. As of 2026, an oral semaglutide pill and a new non-peptide oral drug (orforglipron) have arrived, and a triple-agonist (retatrutide) in the pipeline is reaching above 28% in trials.</p>
+  <p class="lead-p">The benefits increasingly go beyond the scale: these medications now carry approvals or strong evidence for cardiovascular risk reduction, sleep apnea, and liver disease. But they also carry real trade-offs — gastrointestinal side effects, cost and access hurdles, the likelihood of regaining weight if you stop, and the muscle-loss risk that makes nutrition and strength training non-negotiable. This section exists to help you weigh all of it honestly.</p>
+  <div class="pull-quote"><p>"A GLP-1 doesn't do the work for you — it makes the work possible. It quiets the appetite that willpower alone could never outlast. What you build in that quiet is up to you."</p><cite>Popcycle · The GLP-1 Center</cite></div>
+  <div class="key-concept">
+    <div class="kc-label">The Honest Distinction</div>
+    <h3>Prescription GLP-1s and "GLP-1 supplements" are not the same thing.</h3>
+    <p>This is the single most important thing to understand before you spend a dollar. The prescription drugs directly activate GLP-1 receptors with a potency no supplement matches. The OTC "natural GLP-1 boosters" — berberine, fiber blends, and the rest — work through entirely different, far weaker pathways. Some genuinely support metabolic health; none replicate the medications. We keep the two clearly separated so you always know what you're actually buying.</p>
+    <ul>
+      <li>Prescription GLP-1s: potent, prescription-only, real benefits and real risks</li>
+      <li>Berberine ("nature's Ozempic"): works via a different pathway, modest effects, not a replacement</li>
+      <li>Fiber &amp; protein: genuinely support your body's own GLP-1 and satiety — evidence-backed</li>
+      <li>The FDA doesn't verify supplements work before they're sold — so we scrutinize the claims</li>
+      <li>Our rule: compare outcomes, not marketing language</li>
+    </ul>
+  </div>
+</div></section>
+
+<div class="standard-band" id="standard"><div class="container">
+  <div class="section-eyebrow" style="text-align:center;">How We Curate</div>
+  <h2 class="section-title" style="text-align:center;">The PopScore standard,<br><em>applied to GLP-1s</em></h2>
+  <p style="text-align:center;max-width:640px;margin:16px auto 0;font-size:.92rem;color:var(--soft);line-height:1.8;">Everything in this section earns its place the same way everything on Popcycle does: on merit, not because anyone paid to be here. For a topic this hyped — and this consequential to your health — that standard matters more than ever. Here's what we weigh.</p>
+  <div class="standard-grid">
+    <div class="std-item"><div class="std-num">01</div><div class="std-t">Evidence</div><div class="std-d">Does the science actually support the claim, in humans, at real doses? Marketing language doesn't count.</div></div>
+    <div class="std-item"><div class="std-num">02</div><div class="std-t">Honesty</div><div class="std-d">Is the product clear about what it is and isn't? We flag anything implying it replaces a prescription drug.</div></div>
+    <div class="std-item"><div class="std-num">03</div><div class="std-t">Genuine Value</div><div class="std-d">Does it truly help someone on this journey — preserving muscle, easing side effects, building habits?</div></div>
+    <div class="std-item"><div class="std-num">04</div><div class="std-t">Safety</div><div class="std-d">Third-party tested, transparent ingredients, no reckless claims. Your health isn't a place to cut corners.</div></div>
+  </div>
+</div></div>
+
+<!-- EBOOKS -->
+<div class="res-band" id="ebooks"><div class="container">
+  <div class="res-head"><h2 class="section-title" style="margin:0;">Our eBooks</h2><span class="res-count">3 guides</span></div>
+  <div class="section-divider"></div>
+  <p class="lead-p">Deep, honest, premium guides to the decisions that matter — whether you're considering a GLP-1, already on one, or helping someone who is.</p>
+  <div class="res-grid three">
+    <div class="res-card"><div class="res-tag">Decision Guide · $12</div><h4>Is Ozempic Right for Me?<span class="pill-status pill-live">Live</span></h4><p>A calm, balanced walkthrough of who GLP-1s are genuinely for, the real benefits and risks, and the questions to bring to your doctor — without hype or fear-mongering.</p><div class="res-why"><strong>Why it's here</strong>The honest starting point for anyone weighing the decision.</div></div>
+    <div class="res-card"><div class="res-tag">The Full Picture · $12</div><h4>The Honest Guide to GLP-1 Medications<span class="pill-status pill-soon">New</span></h4><p>The complete benefits-and-drawbacks briefing: how they work, what to realistically expect, the side effects and costs, what happens when you stop, and how to decide if the trade-offs fit your life.</p><div class="res-why"><strong>Why it's here</strong>The definitive, no-spin overview of the whole class.</div></div>
+    <div class="res-card"><div class="res-tag">Practical Playbook · $12</div><h4>Making GLP-1s Work<span class="pill-status pill-soon">New</span></h4><p>The usage guide: preserving muscle, hitting your protein, managing nausea and other side effects, training smart, and building the habits that make the results last — on the drug and after it.</p><div class="res-why"><strong>Why it's here</strong>Turns a prescription into a lasting transformation.</div></div>
+  </div>
+</div></div>
+
+<!-- FREE STUFF -->
+<div class="res-band" id="free"><div class="container">
+  <div class="res-head"><h2 class="section-title" style="margin:0;">Free Stuff</h2><span class="res-count">Genuinely useful, genuinely free</span></div>
+  <div class="section-divider"></div>
+  <p class="lead-p">Resources that cost nothing and actually help — from cutting your medication bill to tracking the protein that protects your muscle.</p>
+  <div class="res-grid">
+    <div class="res-card"><div class="res-tag">Save Money</div><h4>Manufacturer Savings Programs</h4><p>Novo Nordisk (NovoCare) and Eli Lilly (LillyDirect) run official savings cards and self-pay programs that can meaningfully cut the cost of brand-name GLP-1s for eligible patients. Always check the current official program before paying full price.</p><div class="res-why"><strong>Why it's here</strong>Cost is the #1 barrier — this is the first place to look.</div></div>
+    <div class="res-card"><div class="res-tag">Compare Prices</div><h4>GoodRx & Pharmacy Price Tools</h4><p>Free price-comparison tools that show what a GLP-1 costs across nearby pharmacies and surface available coupons. Prices vary widely by pharmacy — a two-minute check can save hundreds.</p><div class="res-why"><strong>Why it's here</strong>Same drug, wildly different prices. Knowledge is savings.</div></div>
+    <div class="res-card"><div class="res-tag">Track Protein</div><h4>Free Nutrition Trackers</h4><p>Free tiers of apps like Cronometer and MyFitnessPal let you track daily protein — the single most important number for preserving muscle on a GLP-1. Hitting your protein target is far easier when you can actually see it.</p><div class="res-why"><strong>Why it's here</strong>Muscle preservation starts with knowing your protein.</div></div>
+    <div class="res-card"><div class="res-tag">Learn & Connect</div><h4>Patient Orgs & Evidence Sources</h4><p>The Obesity Action Coalition offers free, judgment-free patient resources and community, while NIH / NIDDK provides plain-language, evidence-based information free of commercial spin. Great for grounding yourself in facts.</p><div class="res-why"><strong>Why it's here</strong>Trustworthy, non-commercial information you can rely on.</div></div>
+  </div>
+</div></div>
+
+<!-- PODCASTS -->
+<div class="res-band" id="podcasts"><div class="container">
+  <div class="res-head"><h2 class="section-title" style="margin:0;">Podcasts We Love</h2><span class="res-count">For going deeper</span></div>
+  <div class="section-divider"></div>
+  <p class="lead-p">Science-first shows that cover GLP-1s, metabolism, and appetite with genuine rigor — not the ones chasing the trend for clicks.</p>
+  <div class="res-grid">
+    <div class="res-card"><div class="res-tag">Longevity & Metabolic Health</div><h4>The Peter Attia Drive</h4><div class="byline">with Dr. Peter Attia</div><p>Long-form, deeply researched conversations on metabolic health, body composition, and the nuances of GLP-1s — including the muscle-preservation questions most coverage skips. Dense but rewarding.</p><div class="res-why"><strong>Why we love it</strong>The most rigorous treatment of the trade-offs anywhere.</div></div>
+    <div class="res-card"><div class="res-tag">Science of the Body</div><h4>Huberman Lab</h4><div class="byline">with Dr. Andrew Huberman</div><p>Accessible deep-dives into the neuroscience and physiology of appetite, metabolism, and hormones. Strong for understanding <em>why</em> GLP-1s work the way they do at a mechanistic level.</p><div class="res-why"><strong>Why we love it</strong>Makes the underlying biology genuinely understandable.</div></div>
+    <div class="res-card"><div class="res-tag">Nutrition Science</div><h4>ZOE Science & Nutrition</h4><div class="byline">with Prof. Tim Spector & guests</div><p>Evidence-based episodes on food, satiety, blood sugar, and the gut — the natural systems GLP-1 drugs tap into. Excellent for the nutrition side of doing this well.</p><div class="res-why"><strong>Why we love it</strong>Grounds the food-and-satiety piece in real research.</div></div>
+    <div class="res-card"><div class="res-tag">Health & Aging</div><h4>FoundMyFitness</h4><div class="byline">with Dr. Rhonda Patrick</div><p>Rigorous, citation-heavy episodes on nutrition, muscle, and healthy aging — useful context for protecting lean mass and overall health while losing weight on a GLP-1.</p><div class="res-why"><strong>Why we love it</strong>Serious depth on muscle and healthy aging.</div></div>
+  </div>
+  <p style="font-size:.8rem;color:var(--mid);margin-top:18px;font-style:italic;">Availability and specific episodes change over time — search each show for its latest GLP-1 and metabolic-health coverage.</p>
+</div></div>
+
+<!-- BOOKS -->
+<div class="res-band" id="books"><div class="container">
+  <div class="res-head"><h2 class="section-title" style="margin:0;">Books We Love</h2><span class="res-count">The foundations</span></div>
+  <div class="section-divider"></div>
+  <p class="lead-p">GLP-1s make more sense when you understand appetite, metabolism, and why weight is so stubborn. These are the books that build that foundation.</p>
+  <div class="res-grid">
+    <div class="res-card"><div class="res-tag">Appetite Science</div><h4>The Hungry Brain</h4><div class="byline">Stephan Guyenet, PhD</div><p>The clearest explanation of why we overeat and how the brain regulates appetite and body weight. Reading it makes exactly what a GLP-1 is doing — quieting that system — click into place.</p><div class="res-why"><strong>Why we love it</strong>Explains the "food noise" GLP-1s silence.</div></div>
+    <div class="res-card"><div class="res-tag">Metabolism</div><h4>Burn</h4><div class="byline">Herman Pontzer, PhD</div><p>A myth-busting look at how metabolism actually works — why exercise alone rarely drives weight loss, and what really governs the calories you burn. Essential context for realistic expectations.</p><div class="res-why"><strong>Why we love it</strong>Corrects the metabolism myths that derail people.</div></div>
+    <div class="res-card"><div class="res-tag">Metabolic Health</div><h4>Good Energy</h4><div class="byline">Casey Means, MD</div><p>A accessible framework for metabolic health and insulin resistance — the underlying terrain GLP-1s act on. Useful for understanding the bigger picture beyond the number on the scale.</p><div class="res-why"><strong>Why we love it</strong>Zooms out to the metabolic root causes.</div></div>
+    <div class="res-card"><div class="res-tag">Insulin & Weight</div><h4>Why We Get Sick</h4><div class="byline">Benjamin Bikman, PhD</div><p>A deep, readable dive into insulin resistance — central to type 2 diabetes and obesity, and a key reason GLP-1s help. Grounds you in the metabolic science behind the medications.</p><div class="res-why"><strong>Why we love it</strong>The insulin story that ties it all together.</div></div>
+  </div>
+</div></div>
+
+<!-- PRODUCTS -->
+<div class="res-band" id="products"><div class="container">
+  <div class="res-head"><h2 class="section-title" style="margin:0;">Product Choices</h2><span class="res-count">What genuinely helps</span></div>
+  <div class="section-divider"></div>
+  <p class="lead-p">We don't sell you "natural Ozempic." We curate the products that <em>actually</em> support a GLP-1 journey — preserving muscle, easing side effects, and building lasting habits. Here's each category, and exactly what we look for when we pick within it.</p>
+  <div class="res-grid">
+    <div class="pick-card"><h4>Protein Supplements</h4><p class="pick-crit">The most important supportive product. With appetite suppressed, hitting enough protein (roughly 1.2–2.0 g/kg/day) is what protects muscle — and it's genuinely hard to eat that much whole food when you're barely hungry. A quality protein powder bridges the gap.</p><div class="pick-look"><strong>What we look for:</strong> third-party tested (NSF / Informed Sport), ~20–30g protein per serving, minimal fillers, a flavor you'll actually drink. Whey isolate or a complete plant blend.</div></div>
+    <div class="pick-card"><h4>Fiber Supplements</h4><p class="pick-crit">Constipation is one of the most common GLP-1 side effects, and fiber also genuinely supports your body's own GLP-1 and satiety. A simple soluble-fiber supplement addresses both — this is one "natural" support with real evidence behind it.</p><div class="pick-look"><strong>What we look for:</strong> psyllium husk or a well-tolerated soluble fiber, no added sugar, easy to mix. Start low and increase gradually.</div></div>
+    <div class="pick-card"><h4>Electrolytes & Hydration</h4><p class="pick-crit">Reduced food and fluid intake on a GLP-1 can leave you dehydrated and low on electrolytes, worsening fatigue and headaches. A sensible electrolyte supplement helps you feel human while you eat less.</p><div class="pick-look"><strong>What we look for:</strong> meaningful sodium/potassium/magnesium, little or no added sugar, no megadose gimmicks. Simple and clean.</div></div>
+    <div class="pick-card"><h4>Resistance Training Gear</h4><p class="pick-crit">The evidence is clear: resistance training is what preserves muscle during GLP-1 weight loss. You don't need a gym — a modest home setup removes every excuse and pays back enormously in lean mass retained.</p><div class="pick-look"><strong>What we look for:</strong> adjustable dumbbells or a quality resistance-band set — space-efficient, scalable, beginner-friendly. Pair with our <em>Beginner's Strength Training Over 40</em> guide.</div></div>
+    <div class="pick-card"><h4>A Good Food Scale</h4><p class="pick-crit">Preserving muscle means actually hitting your protein, and most people badly estimate portions. A simple digital scale turns "I think I ate enough protein" into "I know I did" — cheap, boring, and quietly decisive.</p><div class="pick-look"><strong>What we look for:</strong> accurate to the gram, easy tare function, durable. That's the whole list. Fancy features are optional.</div></div>
+    <div class="pick-card"><h4>Nausea & Digestion Support</h4><p class="pick-crit">Nausea is the most common early side effect. Simple, well-tolerated aids — ginger, small anti-nausea supports — can smooth the adjustment period, alongside the classic advice to eat slowly and stop before full.</p><div class="pick-look"><strong>What we look for:</strong> gentle, evidence-supported options like ginger; nothing that interacts with your medication. When in doubt, ask your prescriber.</div></div>
+  </div>
+  <div class="callout">
+    <div class="kc-label">A Straight Word on "Natural GLP-1" Pills</div>
+    <h4>We won't pretend a supplement equals a prescription drug.</h4>
+    <p>You'll see berberine sold as "nature's Ozempic" and countless "GLP-1 boosters" promising drug-like results. The honest truth: berberine works through a different pathway than GLP-1 drugs, and the human evidence points to modest effects — a few pounds in studies — not anything close to semaglutide or tirzepatide. It may support metabolic health for some people, and fiber and protein genuinely help your body's own GLP-1, but none of these replace the medications. If you want a metabolic-support supplement, we'll say so plainly. If you want GLP-1 results, that means a conversation with a doctor — and we'd rather tell you that than sell you a pill that won't deliver. Talk to your provider before adding berberine, especially if you take a GLP-1 or diabetes medication, since it can affect blood sugar.</p>
+  </div>
+</div></div>
+
+<div class="accent-band"><div class="container-narrow"><div class="band-label">The Popcycle Promise</div><p>"We make money when you buy what genuinely helps — so we have every reason to be honest about what doesn't. On a topic this hyped, that's the whole point."</p></div></div>
+
+<section class="section" id="faq"><div class="container-narrow">
+  <div class="section-eyebrow">Straight Answers</div>
+  <h2 class="section-title">Real questions about<br><em>the GLP-1 era</em></h2>
+  <div class="section-divider"></div>
+  <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>Do I need a prescription, or can I buy a GLP-1 over the counter?</div><div class="faq-a">The real GLP-1 medications — semaglutide (Ozempic, Wegovy) and tirzepatide (Mounjaro, Zepbound), plus newer oral options — are prescription-only, and appropriately so: they're powerful drugs with real risks that require medical supervision. Anything sold over the counter as a "GLP-1 supplement" is not the same class of product and won't produce the same results. If you're interested in the medications, the path is a conversation with a licensed healthcare provider, who can assess whether they're right for you.</div></div>
+  <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>Do "natural GLP-1" supplements actually work?</div><div class="faq-a">Not the way the marketing implies. Berberine — the most popular "nature's Ozempic" — works through a different mechanism than GLP-1 drugs, and the human evidence shows only modest weight effects, nothing like the prescription medications. Some supportive ingredients have genuine value: soluble fiber and adequate protein really do support your body's own GLP-1 and satiety. So the honest framing is that certain supplements may modestly support metabolic health, but none replace the drugs. We flag the difference clearly on every product so you always know what you're getting.</div></div>
+  <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>What's the deal with muscle loss on GLP-1s?</div><div class="faq-a">It's the trade-off most people aren't warned about. When you lose weight rapidly on a GLP-1, a meaningful share of that loss — often a quarter to 40% — can come from muscle rather than fat, which is not the weight you want to lose. The good news is that this is largely preventable: prioritizing protein (roughly 1.2–2.0 g/kg/day, spread across meals) and doing resistance training two to three times a week preserves lean mass while you drop fat. This is exactly why our product picks center on protein and strength training rather than supplements that promise shortcuts.</div></div>
+  <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>What happens if I stop taking it?</div><div class="faq-a">This is one of the most important realities to understand going in: for most people, appetite returns when the medication stops, and weight regain is common without the habits to sustain the loss. GLP-1s are increasingly viewed like treatments for other chronic conditions — often taken long-term. That's not a reason to avoid them, but it's a reason to build genuine habits (the nutrition and strength work) while you're on the drug, so that whatever you decide later, you've built something durable. Our <em>Making GLP-1s Work</em> guide focuses heavily on exactly this.</div></div>
+  <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>How do you decide what to recommend here?</div><div class="faq-a">The same way we curate everything on Popcycle: on merit. We weigh the actual evidence (does it hold up in humans, at real doses?), honesty (is the product clear about what it is?), genuine usefulness (does it truly help someone on this journey?), and safety (third-party tested, transparent, no reckless claims). Nobody pays to appear here. For a topic this hyped and this tied to your health, that independence is the entire value we offer — we'd rather lose a sale than point you toward something that won't deliver.</div></div>
+</div></section>
+
+<section class="closing"><div class="closing-inner">
+  <h2>The hype will find you.<br>We'll give you <em>the truth.</em></h2>
+  <p>Whatever you decide about GLP-1s, you deserve to decide it with clear, honest information and genuinely useful tools. That's what this section is for. Explore the guides, grab the free resources, and build your plan on facts — not on whoever shouted loudest.</p>
+  <a href="https://popcycle.online" class="closing-btn">Explore Popcycle.online</a>
+  <div class="closing-brand">POPCYCLE</div>
+  <div class="closing-sub">Sweeten your life.</div>
+</div></section>
+<div class="disclaimer">This page is for educational purposes only and is not medical advice. GLP-1 receptor agonists are prescription medications with significant benefits and risks; decisions about them should be made with a qualified healthcare provider. Supplements are not evaluated by the FDA for effectiveness and can interact with medications — consult your provider before starting any supplement, especially alongside a GLP-1 or diabetes medication. Product categories reflect Popcycle's independent editorial standard; specific product availability and formulations change over time.</div>
+</body></html>

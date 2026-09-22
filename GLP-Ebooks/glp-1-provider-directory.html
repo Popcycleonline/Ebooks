@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GLP-1 Provider Directory | Popcycle — Vetted Telehealth, Ranked by PopScore</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--deep:#0E2A2A;--main:#1B5E5A;--mid:#2C807A;--light:#6FC0B2;--accent:#E08A5A;--accent-l:#F0A878;--sage:#52654B;--paper:#EFF4F2;--warm-paper:#E0EBE7;--border:#B2D0C8;--soft:#12292A;--white:#fff;--text:#0E2A2A;--gold:#C99A3E;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--text);font-size:15px;line-height:1.7;}
+  .prov-card,.key-concept,.pull-quote,.faq-item{break-inside:avoid;page-break-inside:avoid;}
+  h2,h3,.section-eyebrow{break-after:avoid;page-break-after:avoid;}
+  @media print{.no-print{display:none!important;}body{font-size:11px;}.hero{min-height:auto;padding:48px 40px;}.section{padding:48px 0;}}
+  .print-bar{background:var(--deep);color:var(--white);padding:10px 24px;display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:1px;position:sticky;top:0;z-index:100;font-weight:500;text-transform:uppercase;}
+  .print-btn{background:var(--main);color:var(--white);border:none;padding:6px 16px;border-radius:20px;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;cursor:pointer;}
+  .hero{background:var(--deep);min-height:82vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 40px 80px;position:relative;overflow:hidden;}
+  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 25% 60%,rgba(27,94,90,.55) 0%,transparent 55%),radial-gradient(ellipse at 78% 20%,rgba(224,138,90,.14) 0%,transparent 50%),radial-gradient(ellipse at 50% 110%,rgba(4,16,16,.95) 0%,transparent 55%);}
+  .hero::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(111,192,178,.05) 1px,transparent 0);background-size:32px 32px;}
+  .hero-inner{position:relative;z-index:2;max-width:840px;}
+  .hero-eyebrow{font-size:10px;font-weight:500;letter-spacing:5px;text-transform:uppercase;color:var(--light);margin-bottom:20px;}
+  .price-badge{display:inline-block;background:rgba(27,94,90,.3);border:1px solid rgba(44,128,122,.5);color:var(--light);font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;padding:6px 18px;border-radius:20px;margin-bottom:28px;}
+  .hero h1{font-family:'Fraunces',serif;font-size:clamp(2.5rem,6vw,4.6rem);font-weight:300;line-height:1.03;color:var(--white);letter-spacing:-1.5px;margin-bottom:10px;}
+  .hero h1 em{color:var(--light);font-style:italic;}
+  .hero-divider{width:60px;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);margin:28px auto;}
+  .hero-sub{font-family:'Fraunces',serif;font-size:clamp(1.1rem,3vw,1.5rem);font-weight:300;font-style:italic;color:rgba(255,255,255,.72);margin-bottom:20px;line-height:1.5;}
+  .hero-desc{font-size:.94rem;color:rgba(255,255,255,.5);max-width:600px;margin:0 auto 44px;line-height:1.82;font-weight:300;}
+  .hero-stats{display:flex;justify-content:center;gap:44px;padding-top:40px;border-top:1px solid rgba(255,255,255,.08);flex-wrap:wrap;}
+  .stat{text-align:center;}
+  .stat-num{font-family:'Fraunces',serif;font-size:1.7rem;font-weight:600;color:var(--light);line-height:1;margin-bottom:4px;}
+  .stat-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);}
+  .container{max-width:960px;margin:0 auto;padding:0 36px;}
+  .container-narrow{max-width:860px;margin:0 auto;padding:0 36px;}
+  .section{padding:60px 0;}
+  .section-eyebrow{font-size:10px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:var(--main);margin-bottom:10px;}
+  .section-title{font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,3rem);font-weight:300;line-height:1.1;color:var(--deep);margin-bottom:12px;}
+  .section-title em{color:var(--main);font-style:italic;}
+  .section-divider{height:2px;background:linear-gradient(90deg,var(--main),transparent);margin:20px 0 32px;}
+  .section-intro{font-family:'Fraunces',serif;font-size:1.12rem;font-weight:300;font-style:italic;color:var(--soft);border-left:3px solid var(--main);padding-left:20px;margin-bottom:32px;line-height:1.65;}
+  .lead-p{font-size:.94rem;color:var(--soft);line-height:1.85;margin-bottom:18px;}
+  .key-concept{background:var(--deep);color:var(--white);border-radius:8px;padding:32px 36px;margin:24px 0;position:relative;overflow:hidden;}
+  .key-concept::before{content:'';position:absolute;top:0;right:0;width:220px;height:220px;background:radial-gradient(circle at 100% 0%,rgba(27,94,90,.5) 0%,transparent 70%);}
+  .kc-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--accent-l);margin-bottom:10px;font-weight:500;}
+  .key-concept h3{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:400;color:var(--white);margin-bottom:12px;}
+  .key-concept p{font-size:.93rem;color:rgba(255,255,255,.8);line-height:1.8;}
+  .key-concept ul{margin-top:14px;padding-left:0;list-style:none;}
+  .key-concept ul li{font-size:.9rem;color:rgba(255,255,255,.74);line-height:1.7;padding:5px 0 5px 22px;position:relative;}
+  .key-concept ul li::before{content:'\26A0';position:absolute;left:0;color:var(--accent-l);font-size:.8rem;}
+  .pull-quote{border-left:4px solid var(--main);padding:22px 28px;margin:28px 0;background:var(--warm-paper);border-radius:0 6px 6px 0;}
+  .pull-quote p{font-family:'Fraunces',serif;font-size:1.28rem;font-style:italic;font-weight:300;color:var(--deep);line-height:1.55;margin:0;}
+  .pull-quote cite{display:block;font-size:.75rem;font-style:normal;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--main);margin-top:10px;}
+  /* scoring legend */
+  .score-legend{background:var(--warm-paper);border:1px solid var(--border);border-radius:8px;padding:24px 28px;margin-top:24px;}
+  .score-legend h4{font-family:'Fraunces',serif;font-size:1.05rem;color:var(--deep);margin-bottom:12px;}
+  .legend-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+  .legend-item{font-size:.8rem;color:var(--soft);line-height:1.5;}
+  .legend-item strong{display:block;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--main);margin-bottom:4px;}
+  /* tier band */
+  .tier-band{padding:16px 0 6px;}
+  .tier-head{display:flex;align-items:center;gap:14px;margin:32px 0 6px;}
+  .tier-badge{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:20px;color:var(--white);}
+  .tier-featured{background:var(--main);}
+  .tier-solid{background:var(--mid);}
+  .tier-verify{background:var(--gold);}
+  .tier-desc{font-size:.86rem;color:var(--soft);font-style:italic;}
+  /* provider card */
+  .prov-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:26px 28px;margin-bottom:16px;display:grid;grid-template-columns:78px 1fr;gap:22px;}
+  .score-block{text-align:center;}
+  .score-circle{width:66px;height:66px;border-radius:50%;background:var(--deep);display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto;}
+  .score-num{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:700;color:var(--light);line-height:1;}
+  .score-max{font-size:8px;color:rgba(255,255,255,.5);letter-spacing:1px;margin-top:1px;}
+  .score-word{font-size:8px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--main);margin-top:8px;}
+  .prov-body h3{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:600;color:var(--deep);margin-bottom:2px;line-height:1.15;}
+  .prov-tag{font-size:.85rem;color:var(--mid);font-weight:500;margin-bottom:12px;}
+  .prov-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;}
+  .chip{font-size:9px;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:5px 11px;border-radius:14px;background:var(--warm-paper);color:var(--soft);border:1px solid var(--border);}
+  .chip.brand{background:#DCEAE4;color:var(--main);border-color:var(--light);}
+  .chip.aff{background:#F4E7DC;color:#A85E30;border-color:#E5C5AC;}
+  .prov-body p{font-size:.9rem;color:var(--soft);line-height:1.7;margin-bottom:12px;}
+  .pc-cols{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:4px;}
+  .pc-pros,.pc-cons{font-size:.83rem;line-height:1.55;}
+  .pc-pros strong,.pc-cons strong{display:block;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:5px;}
+  .pc-pros strong{color:var(--main);}
+  .pc-cons strong{color:var(--accent);}
+  .pc-pros ul,.pc-cons ul{list-style:none;padding:0;}
+  .pc-pros li,.pc-cons li{padding:2px 0 2px 15px;position:relative;color:var(--soft);}
+  .pc-pros li::before{content:'+';position:absolute;left:0;color:var(--main);font-weight:700;}
+  .pc-cons li::before{content:'\2013';position:absolute;left:0;color:var(--accent);font-weight:700;}
+  .aff-note{margin-top:14px;font-size:.82rem;color:var(--deep);background:var(--warm-paper);border-left:2px solid var(--gold);padding:9px 13px;border-radius:0 4px 4px 0;}
+  .aff-note strong{color:var(--gold);font-size:8px;letter-spacing:1.5px;text-transform:uppercase;display:block;margin-bottom:3px;}
+  /* anchor note */
+  .anchor{background:var(--deep);color:var(--white);border-radius:8px;padding:26px 30px;margin-top:16px;}
+  .anchor .kc-label{color:var(--light);}
+  .anchor h4{font-family:'Fraunces',serif;font-size:1.25rem;color:var(--white);margin-bottom:10px;}
+  .anchor p{font-size:.9rem;color:rgba(255,255,255,.8);line-height:1.75;}
+  /* affiliate table */
+  .aff-table-wrap{overflow-x:auto;margin-top:26px;}
+  table.aff{width:100%;border-collapse:collapse;font-size:.85rem;background:var(--white);border-radius:8px;overflow:hidden;border:1px solid var(--border);}
+  table.aff th{background:var(--deep);color:var(--white);font-weight:500;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:12px 12px;text-align:left;}
+  table.aff td{padding:11px 12px;border-top:1px solid var(--border);color:var(--soft);vertical-align:top;}
+  table.aff tr:nth-child(even) td{background:var(--warm-paper);}
+  table.aff td strong{color:var(--deep);}
+  .accent-band{background:var(--main);padding:38px 0;text-align:center;}
+  .accent-band .band-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:10px;font-weight:500;}
+  .accent-band p{font-family:'Fraunces',serif;font-size:1.2rem;font-style:italic;font-weight:300;color:rgba(255,255,255,.94);max-width:660px;margin:0 auto;line-height:1.6;}
+  .closing{background:var(--deep);color:var(--white);padding:78px 0;text-align:center;position:relative;overflow:hidden;}
+  .closing::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(27,94,90,.45) 0%,transparent 65%);}
+  .closing-inner{position:relative;max-width:640px;margin:0 auto;padding:0 36px;}
+  .closing h2{font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,3rem);font-weight:300;margin-bottom:18px;line-height:1.15;}
+  .closing h2 em{color:var(--light);font-style:italic;}
+  .closing p{font-size:.95rem;color:rgba(255,255,255,.65);line-height:1.82;margin-bottom:30px;}
+  .closing-btn{display:inline-block;background:var(--main);color:var(--white);text-decoration:none;font-weight:600;font-size:12px;letter-spacing:2px;text-transform:uppercase;padding:15px 38px;border-radius:30px;}
+  .closing-brand{margin-top:48px;font-weight:500;font-size:13px;letter-spacing:6px;color:var(--light);}
+  .closing-sub{font-family:'Fraunces',serif;font-style:italic;font-size:.85rem;color:rgba(255,255,255,.32);margin-top:6px;}
+  .disclaimer{max-width:860px;margin:0 auto;padding:28px 36px 64px;font-size:.78rem;color:#6E8480;line-height:1.6;font-style:italic;text-align:center;}
+  @media(max-width:720px){.legend-grid{grid-template-columns:repeat(2,1fr);}.prov-card{grid-template-columns:1fr;}.score-circle{margin:0;}.pc-cols{grid-template-columns:1fr;}.container,.container-narrow{padding:0 20px;}}
+</style>
+</head>
+<body>
+<div class="print-bar no-print"><span>Popcycle · GLP-1 Provider Directory</span><button class="print-btn" onclick="window.print()">Save as PDF</button></div>
+
+<section class="hero"><div class="hero-inner">
+  <div class="hero-eyebrow">Popcycle · The GLP-1 Center</div>
+  <div class="price-badge">Provider Directory</div>
+  <h1>Where to Get a GLP-1,<br><em>Vetted for You</em></h1>
+  <div class="hero-divider"></div>
+  <p class="hero-sub">Dozens of companies now prescribe GLP-1s online. We ranked the ones worth your trust — on care quality, honesty, and value, not on who pays us most.</p>
+  <p class="hero-desc">Every provider here was scored on the same standard: real medical oversight, transparent pricing, and access to legitimate medication. We tell you what each does well, where it falls short, and who it's genuinely right for.</p>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">8</div><div class="stat-label">Providers Vetted</div></div>
+    <div class="stat"><div class="stat-num">PopScore</div><div class="stat-label">Ranked on Merit, Not Commission</div></div>
+    <div class="stat"><div class="stat-num">FDA-First</div><div class="stat-label">We Favor Branded, Approved Options</div></div>
+  </div>
+</div></section>
+
+<section class="section"><div class="container-narrow">
+  <div class="section-eyebrow">How to Read This</div>
+  <h2 class="section-title">Not all online GLP-1<br><em>providers are equal</em></h2>
+  <div class="section-divider"></div>
+  <p class="section-intro">Getting a GLP-1 prescribed online can be genuinely convenient and more affordable. But the market has exploded, and it now spans everything from physician-led obesity clinics to no-frills operations that hand you a prescription and disappear. The gap in quality is enormous — so we vetted them.</p>
+  <p class="lead-p">Two things shape our rankings. First, we favor providers offering brand-name, FDA-approved medications (Wegovy, Zepbound, and the newer oral options), increasingly available directly through partnerships with the drugmakers. Second, we weigh the quality of care — whether there's a real medical evaluation, lab work when appropriate, ongoing support, and honest pricing — because a GLP-1 journey is a year-plus commitment, not a one-time transaction.</p>
+  <p class="lead-p">We're transparent about one more thing: Popcycle may earn a commission if you choose a provider through our links. That's how we keep the lights on. But it never changes the rankings — the scores below reflect our honest assessment of care quality and value, and we flag every caveat, including for providers whose programs pay us well.</p>
+  <div class="key-concept">
+    <div class="kc-label">Read This Before You Choose</div>
+    <h3>The compounded-vs-branded question matters more than the price.</h3>
+    <p>Many online providers push lower-cost "compounded" semaglutide or tirzepatide. These aren't FDA-approved and haven't been tested for safety, effectiveness, or quality the way the branded drugs have — and regulators have flagged concerns and issued warnings across this space. Compounded medication has a legitimate role in specific situations, but it isn't a generic equivalent. We favor branded, approved options and full transparency, and we flag providers that lean heavily on compounded products or cut clinical corners.</p>
+    <ul>
+      <li>Compounded GLP-1s are not FDA-approved or quality-tested like branded drugs</li>
+      <li>A real provider should require a proper evaluation — and often lab work</li>
+      <li>Watch for red flags: no video visit, no labs, undisclosed compounding pharmacy</li>
+      <li>Beware "first-month" bait pricing that jumps sharply after you enroll</li>
+      <li>Whatever you choose, the prescribing decision belongs with a qualified clinician</li>
+    </ul>
+  </div>
+  <div class="score-legend">
+    <h4>What the PopScore weighs</h4>
+    <div class="legend-grid">
+      <div class="legend-item"><strong>Care Quality</strong>Real evaluation, labs when needed, ongoing clinical support.</div>
+      <div class="legend-item"><strong>Legitimacy</strong>Access to branded, FDA-approved meds; licensed providers.</div>
+      <div class="legend-item"><strong>Transparency</strong>Clear pricing, honest terms, no bait-and-switch.</div>
+      <div class="legend-item"><strong>Value</strong>Genuine support for the money — not just a prescription.</div>
+    </div>
+  </div>
+</div></section>
+
+<div class="tier-band"><div class="container">
+  <div class="tier-head"><span class="tier-badge tier-featured">Featured</span><span class="tier-desc">Our strongest picks — real care, branded options, honest value.</span></div>
+
+  <!-- WeightWatchers -->
+  <div class="prov-card">
+    <div class="score-block"><div class="score-circle"><span class="score-num">9.2</span><span class="score-max">/10</span></div><div class="score-word">Featured</div></div>
+    <div class="prov-body">
+      <h3>WeightWatchers Clinic</h3>
+      <div class="prov-tag">The gold standard for combining real medical care with lasting lifestyle change.</div>
+      <div class="prov-meta"><span class="chip brand">Branded meds</span><span class="chip">Obesity specialists</span><span class="chip">Behavior coaching</span><span class="chip aff">Affiliate: yes</span></div>
+      <p>WeightWatchers brings decades of behavior-change expertise together with a clinical program staffed by obesity-medicine doctors, nurse practitioners, and dietitians. It offers branded Wegovy, Zepbound, and Saxenda and pairs the medication with the habit-building support that makes results last — which is exactly the philosophy Popcycle champions. Independent testers have rated its medical program the best overall.</p>
+      <div class="pc-cols">
+        <div class="pc-pros"><strong>Strengths</strong><ul><li>Board-certified obesity specialists + dietitians</li><li>Branded, FDA-approved medications</li><li>Best-in-class lifestyle and habit support</li></ul></div>
+        <div class="pc-cons"><strong>Watch for</strong><ul><li>Medication cost is separate from membership</li><li>Best value only if you use the coaching</li></ul></div>
+      </div>
+      <div class="aff-note"><strong>Affiliate</strong>Own program (weightwatchers.com/us/affiliate) plus partner networks; CPA commonly cited around $20–$300. Apply directly and via a network like Katalys.</div>
+    </div>
+  </div>
+
+  <!-- Ro -->
+  <div class="prov-card">
+    <div class="score-block"><div class="score-circle"><span class="score-num">8.9</span><span class="score-max">/10</span></div><div class="score-word">Featured</div></div>
+    <div class="prov-body">
+      <h3>Ro (Ro Body)</h3>
+      <div class="prov-tag">Branded medication access with a strong insurance and prior-authorization team.</div>
+      <div class="prov-meta"><span class="chip brand">Branded meds</span><span class="chip">Prior-auth team</span><span class="chip">Coaching</span><span class="chip aff">Affiliate: yes</span></div>
+      <p>Ro is a well-established telehealth brand offering branded Wegovy and Zepbound through the drugmakers' direct programs, with a dedicated team to navigate insurance prior authorizations — often the real bottleneck to getting covered. Its Body program adds behavioral support, and month-to-month flexibility makes it low-risk to try.</p>
+      <div class="pc-cols">
+        <div class="pc-pros"><strong>Strengths</strong><ul><li>Branded meds via Novo/Lilly partnerships</li><li>Dedicated prior-authorization support</li><li>Flexible, month-to-month</li></ul></div>
+        <div class="pc-cons"><strong>Watch for</strong><ul><li>Medication cost not included in membership</li><li>Some users report slower support responses</li></ul></div>
+      </div>
+      <div class="aff-note"><strong>Affiliate</strong>Runs through the Katalys network; CPA commonly cited around $50–$75. Apply via Katalys.</div>
+    </div>
+  </div>
+
+  <!-- Noom -->
+  <div class="prov-card">
+    <div class="score-block"><div class="score-circle"><span class="score-num">8.7</span><span class="score-max">/10</span></div><div class="score-word">Featured</div></div>
+    <div class="prov-body">
+      <h3>Noom (Noom Med)</h3>
+      <div class="prov-tag">Psychology-first weight loss — the habit-change philosophy Popcycle loves.</div>
+      <div class="prov-meta"><span class="chip brand">Branded Zepbound</span><span class="chip">Behavior science</span><span class="chip">CDC-recognized</span><span class="chip aff">Affiliate: yes</span></div>
+      <p>Noom built its reputation on behavior-change psychology, and Noom Med layers GLP-1 access (including branded Zepbound via Lilly's pharmacy) onto that foundation of coaching, education, and accountability. For anyone who wants the medication <em>and</em> the durable habits that keep results after it — Popcycle's core message — Noom is a natural fit.</p>
+      <div class="pc-cols">
+        <div class="pc-pros"><strong>Strengths</strong><ul><li>Deep behavior-change and coaching support</li><li>Branded Zepbound access</li><li>Trusted, long-established brand</li></ul></div>
+        <div class="pc-cons"><strong>Watch for</strong><ul><li>Separate membership + medication billing can confuse</li><li>GLP-1 program is newer than the core app</li></ul></div>
+      </div>
+      <div class="aff-note"><strong>Affiliate</strong>Available via the Katalys network; CPA commonly cited around $60–$200. Apply via Katalys.</div>
+    </div>
+  </div>
+
+  <!-- LifeMD -->
+  <div class="prov-card">
+    <div class="score-block"><div class="score-circle"><span class="score-num">8.6</span><span class="score-max">/10</span></div><div class="score-word">Featured</div></div>
+    <div class="prov-body">
+      <h3>LifeMD</h3>
+      <div class="prov-tag">Branded and compounded options with a required video visit and insurance help.</div>
+      <div class="prov-meta"><span class="chip brand">Branded meds</span><span class="chip">Video visit</span><span class="chip">Insurance support</span><span class="chip aff">Affiliate: yes</span></div>
+      <p>A publicly traded, 50-state telehealth company, LifeMD offers branded Wegovy (injection and pill) and Zepbound through direct drugmaker partnerships, plus lower-cost paths. It requires a real video visit with a licensed provider and includes insurance navigation and lab work in the program — a solid, well-rounded, legitimate option.</p>
+      <div class="pc-cols">
+        <div class="pc-pros"><strong>Strengths</strong><ul><li>Branded meds + clear path to Wegovy/Zepbound</li><li>Video visit and lab work in the program</li><li>Insurance and prior-auth assistance</li></ul></div>
+        <div class="pc-cons"><strong>Watch for</strong><ul><li>Variable pricing by medication and plan tier</li><li>Also markets a multi-drug "Triple Therapy" — evaluate carefully</li></ul></div>
+      </div>
+      <div class="aff-note"><strong>Affiliate</strong>CPA offers available through affiliate networks; confirm the current network and payout on application.</div>
+    </div>
+  </div>
+</div></div>
+
+<div class="tier-band"><div class="container">
+  <div class="tier-head"><span class="tier-badge tier-solid">Solid — With Caveats</span><span class="tier-desc">Good options that earn a place, with specifics worth knowing.</span></div>
+
+  <!-- Mochi -->
+  <div class="prov-card">
+    <div class="score-block"><div class="score-circle"><span class="score-num">8.2</span><span class="score-max">/10</span></div><div class="score-word">Solid</div></div>
+    <div class="prov-body">
+      <h3>Mochi Health</h3>
+      <div class="prov-tag">Physician-led obesity medicine with genuine clinical rigor and insurance integration.</div>
+      <div class="prov-meta"><span class="chip">Obesity-med physicians</span><span class="chip">Labs required</span><span class="chip">Insurance + compounded</span><span class="chip aff">Affiliate: likely</span></div>
+      <p>Founded by physicians, Mochi centers on board-certified obesity-medicine specialists and requires lab work before prescribing — a strong marker of clinical seriousness that many quick-access competitors skip. It offers both insurance-covered branded paths and flat-rate compounded options with behavioral and nutrition support.</p>
+      <div class="pc-cols">
+        <div class="pc-pros"><strong>Strengths</strong><ul><li>Board-certified obesity-medicine focus</li><li>Requires labs — real clinical rigor</li><li>Strong insurance integration</li></ul></div>
+        <div class="pc-cons"><strong>Watch for</strong><ul><li>Leans on compounded meds for self-pay</li><li>Best value depends on in-network insurance</li></ul></div>
+      </div>
+      <div class="aff-note"><strong>Affiliate</strong>Affiliate compensation exists (review partners disclose it); confirm the network and terms on application.</div>
+    </div>
+  </div>
+
+  <!-- Hims -->
+  <div class="prov-card">
+    <div class="score-block"><div class="score-circle"><span class="score-num">7.8</span><span class="score-max">/10</span></div><div class="score-word">Solid</div></div>
+    <div class="prov-body">
+      <h3>Hims &amp; Hers</h3>
+      <div class="prov-tag">A trusted, convenient consumer brand — now with branded Wegovy, but read the caveats.</div>
+      <div class="prov-meta"><span class="chip brand">Branded Wegovy</span><span class="chip">Also compounded</span><span class="chip">Multi-specialty</span><span class="chip aff">Affiliate: yes</span></div>
+      <p>Hims &amp; Hers is the biggest, most recognizable name here, with slick UX, subscription convenience, and now branded Wegovy through a Novo Nordisk partnership. It's a legitimate, publicly traded company — but weight loss is one of many product lines, its intake is largely questionnaire-based with limited lab rigor, and it drew scrutiny for aggressively marketing compounded semaglutide before the branded deal. Great convenience; go in informed.</p>
+      <div class="pc-cols">
+        <div class="pc-pros"><strong>Strengths</strong><ul><li>Branded Wegovy access + strong convenience</li><li>Trusted, well-known consumer brand</li><li>Transparent, upfront plan pricing</li></ul></div>
+        <div class="pc-cons"><strong>Watch for</strong><ul><li>Generalist — weight loss isn't its sole focus</li><li>Limited lab rigor; also sells compounded</li><li>Mixed reviews on customer support</li></ul></div>
+      </div>
+      <div class="aff-note"><strong>Affiliate</strong>One of the most lucrative here — runs on Impact and ShareASale (also via Katalys); CPA models vary widely by product. Apply via Impact.</div>
+    </div>
+  </div>
+</div></div>
+
+<div class="tier-band"><div class="container">
+  <div class="tier-head"><span class="tier-badge tier-verify">Worth a Look — Verify First</span><span class="tier-desc">Notable for specific strengths; confirm the affiliate and clinical details.</span></div>
+
+  <!-- Form Health -->
+  <div class="prov-card">
+    <div class="score-block"><div class="score-circle"><span class="score-num">8.5</span><span class="score-max">/10</span></div><div class="score-word">Clinically strong</div></div>
+    <div class="prov-body">
+      <h3>Form Health</h3>
+      <div class="prov-tag">Arguably the highest clinical quality — dietitian-led obesity medicine with required labs.</div>
+      <div class="prov-meta"><span class="chip">Doctor + dietitian</span><span class="chip">Labs required</span><span class="chip">Insurance-based</span><span class="chip aff">Affiliate: verify</span></div>
+      <p>Form Health pairs obesity-medicine physicians with registered dietitians and requires lab work, delivering comprehensive, genuinely medical care that stands out in a crowded field. The catch for a curation site: it runs on a clinical/insurance model, and we couldn't confirm a public affiliate program — you'd likely need to inquire directly about a partnership.</p>
+      <div class="pc-cols">
+        <div class="pc-pros"><strong>Strengths</strong><ul><li>Physician + dietitian team, labs required</li><li>Comprehensive, high-touch clinical care</li><li>Insurance-based model</li></ul></div>
+        <div class="pc-cons"><strong>Watch for</strong><ul><li>No confirmed consumer affiliate program</li><li>Less "instant access" than mass-market rivals</li></ul></div>
+      </div>
+      <div class="aff-note"><strong>Affiliate</strong>Unconfirmed. Excellent brand fit if a partnership exists — reach out to Form Health directly to ask.</div>
+    </div>
+  </div>
+
+  <!-- Henry Meds -->
+  <div class="prov-card">
+    <div class="score-block"><div class="score-circle"><span class="score-num">7.0</span><span class="score-max">/10</span></div><div class="score-word">Use with care</div></div>
+    <div class="prov-body">
+      <h3>Henry Meds</h3>
+      <div class="prov-tag">Fast, flat-rate access — convenient, but lighter on clinical rigor.</div>
+      <div class="prov-meta"><span class="chip">Compounded-focused</span><span class="chip">Flat-rate</span><span class="chip">No labs at intake</span><span class="chip aff">Affiliate: verify</span></div>
+      <p>Henry Meds is popular for its simple, flat-rate pricing and quick access to compounded GLP-1s. That convenience comes with trade-offs a merit-first brand should name: it requires no labs at intake and centers on compounded rather than branded medication, which means lighter clinical screening. Fine for informed, low-risk patients with recent bloodwork — but not our first recommendation.</p>
+      <div class="pc-cols">
+        <div class="pc-pros"><strong>Strengths</strong><ul><li>Simple flat-rate pricing</li><li>Fast, low-friction access</li><li>Popular and widely reviewed</li></ul></div>
+        <div class="pc-cons"><strong>Watch for</strong><ul><li>No labs at intake — lighter screening</li><li>Compounded-focused, not branded/FDA-approved</li></ul></div>
+      </div>
+      <div class="aff-note"><strong>Affiliate</strong>Likely available through an affiliate network; confirm program, network, and payout before featuring.</div>
+    </div>
+  </div>
+
+  <!-- Anchor -->
+  <div class="anchor">
+    <div class="kc-label">The Trust Anchors</div>
+    <h4>Straight from the source: NovoCare &amp; LillyDirect</h4>
+    <p>Worth knowing even though they aren't affiliate plays: the drugmakers now sell directly. Novo Nordisk's <strong>NovoCare Pharmacy</strong> offers self-pay Wegovy, and Eli Lilly's <strong>LillyDirect</strong> offers Zepbound — often at the lowest legitimate self-pay prices, and the definition of FDA-approved and authentic. Several featured providers above (Ro, LifeMD, Hims, WeightWatchers, Noom) plug into these same drugmaker programs. They're the reference point every other price and product should be measured against.</p>
+  </div>
+</div></div>
+
+<div class="accent-band"><div class="container-narrow"><div class="band-label">The Popcycle Standard</div><p>"We'll happily earn a commission when you choose a provider that genuinely serves you. We won't rank a weaker one higher because it pays more. That line is the whole business."</p></div></div>
+
+<section class="section"><div class="container">
+  <div class="section-eyebrow">At a Glance</div>
+  <h2 class="section-title">The affiliate &amp; provider<br><em>summary</em></h2>
+  <div class="section-divider"></div>
+  <p class="lead-p">A quick reference for both readers comparing options and for our own partnership planning. Affiliate terms change often — always confirm current network and payout on application.</p>
+  <div class="aff-table-wrap">
+    <table class="aff">
+      <thead><tr><th>Provider</th><th>PopScore</th><th>Medications</th><th>Affiliate network</th><th>Est. payout</th></tr></thead>
+      <tbody>
+        <tr><td><strong>WeightWatchers Clinic</strong></td><td>9.2</td><td>Branded (Wegovy, Zepbound, Saxenda)</td><td>Own program + Katalys</td><td>~$20–$300 CPA</td></tr>
+        <tr><td><strong>Ro</strong></td><td>8.9</td><td>Branded (Wegovy, Zepbound)</td><td>Katalys</td><td>~$50–$75 CPA</td></tr>
+        <tr><td><strong>Noom (Noom Med)</strong></td><td>8.7</td><td>Branded Zepbound + compounded</td><td>Katalys</td><td>~$60–$200 CPA</td></tr>
+        <tr><td><strong>LifeMD</strong></td><td>8.6</td><td>Branded + compounded</td><td>Affiliate networks (verify)</td><td>CPA — confirm</td></tr>
+        <tr><td><strong>Mochi Health</strong></td><td>8.2</td><td>Insurance branded + compounded</td><td>Likely (verify)</td><td>Confirm</td></tr>
+        <tr><td><strong>Hims &amp; Hers</strong></td><td>7.8</td><td>Branded Wegovy + compounded</td><td>Impact, ShareASale</td><td>CPA — varies widely</td></tr>
+        <tr><td><strong>Form Health</strong></td><td>8.5</td><td>Insurance-based branded</td><td>Unconfirmed — inquire</td><td>—</td></tr>
+        <tr><td><strong>Henry Meds</strong></td><td>7.0</td><td>Compounded-focused</td><td>Likely (verify)</td><td>Confirm</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:.8rem;color:var(--mid);margin-top:16px;font-style:italic;">PopScores are Popcycle's independent editorial assessments based on publicly available information as of mid-2026 and do not reflect any paid placement. Payout figures are commonly cited ranges from affiliate networks, not guarantees. Provider offerings, pricing, and programs change frequently — verify directly before enrolling or featuring.</p>
+</div></section>
+
+<section class="closing"><div class="closing-inner">
+  <h2>Convenient access,<br><em>honestly ranked.</em></h2>
+  <p>Online GLP-1 care can be a genuine gift — if you choose a provider that actually cares for you. These are the ones we'd point a friend toward, ranked on merit and flagged where they fall short. Pair your choice with our guides on using GLP-1s well, and build results that last.</p>
+  <a href="https://popcycle.online" class="closing-btn">Explore Popcycle.online</a>
+  <div class="closing-brand">POPCYCLE</div>
+  <div class="closing-sub">Sweeten your life.</div>
+</div></section>
+<div class="disclaimer">This page is for educational purposes only and is not medical advice or an endorsement of any specific provider or medication. GLP-1 receptor agonists are prescription medications; the decision to use them, and through which provider, should be made with a qualified healthcare professional. Popcycle may earn affiliate commissions from some providers listed, which never affects editorial rankings. Provider details, pricing, medication availability, and affiliate terms change frequently and should be verified directly. Compounded medications are not FDA-approved and differ from branded drugs in testing and oversight.</div>
+</body></html>
