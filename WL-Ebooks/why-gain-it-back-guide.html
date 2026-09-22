@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Most People Gain It Back — Popcycle</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #1D9E75;
+    --darkteal: #0F6E56;
+    --navy: #0B2A3D;
+    --deepnavy: #071c28;
+    --lightteal: #5BC9A8;
+    --amber: #D9A35B;
+    --amberlight: #F0CB94;
+    --cream: #F5F1E8;
+    --paper: #FBFAF6;
+    --text: #1a2820;
+    --soft: #4a6055;
+    --border: #dfe7e2;
+    --white: #ffffff;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--paper);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  @media print {
+    .no-print { display: none !important; }
+    body { background: white; font-size: 12px; }
+    .cover { min-height: auto; padding: 60px 40px; }
+  }
+
+  .print-bar {
+    background: var(--navy);
+    color: var(--white);
+    padding: 10px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    letter-spacing: 1px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .print-btn {
+    background: var(--teal);
+    color: var(--white);
+    border: none;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  /* ===== COVER ===== */
+  .cover {
+    background: var(--deepnavy);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 25% 70%, rgba(217,163,91,0.18) 0%, transparent 55%),
+      radial-gradient(ellipse at 75% 25%, rgba(29,158,117,0.3) 0%, transparent 55%),
+      radial-gradient(ellipse at 50% 100%, rgba(11,42,61,0.7) 0%, transparent 60%);
+  }
+  .cover-spiral {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+    opacity: 0.15;
+  }
+  .cover-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    width: 100%;
+  }
+  .cover-eyebrow {
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--lightteal);
+    margin-bottom: 24px;
+  }
+  .cover h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.4rem, 6.5vw, 4.2rem);
+    font-weight: 300;
+    line-height: 1.12;
+    color: var(--white);
+    margin-bottom: 8px;
+    letter-spacing: -1px;
+  }
+  .cover h1 em {
+    color: var(--lightteal);
+    font-style: italic;
+    font-weight: 300;
+  }
+  .cover-divider {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--teal), transparent);
+    margin: 28px auto;
+  }
+  .cover-subtitle {
+    font-family: 'Fraunces', serif;
+    font-size: 1.25rem;
+    font-weight: 300;
+    font-style: italic;
+    color: #c8e6da;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  .cover-desc {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: rgba(200,230,218,0.7);
+    letter-spacing: 0.5px;
+    max-width: 480px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+  }
+  .cover-tags {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+  .cover-pill {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--lightteal);
+    border: 1px solid rgba(91,201,168,0.3);
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: rgba(29,158,117,0.08);
+  }
+  .cover-brand {
+    margin-top: 56px;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 6px;
+    color: var(--teal);
+  }
+  .cover-brand-sub {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: rgba(200,230,218,0.5);
+    margin-top: 4px;
+  }
+
+  /* ===== CONTAINER ===== */
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 36px;
+  }
+
+  /* ===== INTRO BAND ===== */
+  .intro-band {
+    background: var(--navy);
+    padding: 64px 0;
+    color: var(--white);
+  }
+  .page-eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--lightteal);
+    margin-bottom: 12px;
+  }
+  .page-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.9rem, 5vw, 3rem);
+    font-weight: 300;
+    line-height: 1.15;
+    margin-bottom: 24px;
+  }
+  .intro-band p {
+    font-size: 0.95rem;
+    color: rgba(200,230,218,0.85);
+    line-height: 1.8;
+    margin-bottom: 14px;
+    max-width: 620px;
+  }
+  .intro-band p:last-child { margin-bottom: 0; }
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 32px;
+  }
+  .intro-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(91,201,168,0.2);
+    border-radius: 4px;
+    padding: 18px 20px;
+  }
+  .intro-card-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--lightteal);
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .intro-card p {
+    font-size: 0.85rem;
+    color: rgba(200,230,218,0.8);
+    line-height: 1.65;
+  }
+
+  /* ===== SECTION HEADER ===== */
+  .section { padding: 60px 0; }
+  .section-number {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--navy);
+    margin-bottom: 12px;
+  }
+  .section-title em { color: var(--teal); font-style: italic; }
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, var(--teal), transparent);
+    margin: 24px 0 32px;
+  }
+  .section-intro {
+    font-family: 'Fraunces', serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--soft);
+    line-height: 1.6;
+    margin-bottom: 28px;
+    border-left: 3px solid var(--teal);
+    padding-left: 20px;
+  }
+
+  /* ===== CONTENT BLOCKS ===== */
+  .content-block { margin-bottom: 32px; }
+  .content-block h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+  .content-block p {
+    color: var(--soft);
+    margin-bottom: 12px;
+    line-height: 1.75;
+  }
+
+  /* ===== KEY CONCEPT BOX ===== */
+  .key-concept {
+    background: var(--navy);
+    color: var(--white);
+    border-radius: 6px;
+    padding: 28px 32px;
+    margin: 28px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .key-concept::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 140px; height: 140px;
+    background: radial-gradient(circle at 100% 0%, rgba(91,201,168,0.18) 0%, transparent 70%);
+  }
+  .key-concept-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--lightteal);
+    font-weight: 500;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .key-concept h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .key-concept p {
+    font-size: 0.92rem;
+    color: rgba(200,230,218,0.9);
+    line-height: 1.75;
+    position: relative;
+  }
+
+  /* ===== AMBER CALLOUT (gentle warning / honesty) ===== */
+  .amber-box {
+    background: var(--cream);
+    border: 1px solid var(--amberlight);
+    border-left: 4px solid var(--amber);
+    border-radius: 0 6px 6px 0;
+    padding: 22px 26px;
+    margin: 28px 0;
+  }
+  .amber-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #b3823e;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .amber-box h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+  .amber-box p {
+    font-size: 0.92rem;
+    color: var(--soft);
+    line-height: 1.75;
+  }
+
+  /* ===== PULL QUOTE ===== */
+  .pull-quote {
+    border-left: 4px solid var(--teal);
+    padding: 16px 24px;
+    margin: 28px 0;
+    background: var(--cream);
+    border-radius: 0 6px 6px 0;
+  }
+  .pull-quote p {
+    font-family: 'Fraunces', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--navy);
+    line-height: 1.6;
+    margin: 0;
+  }
+  .pull-quote cite {
+    display: block;
+    font-size: 0.78rem;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-top: 8px;
+  }
+
+  /* ===== TWO COLUMN ===== */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 24px 0;
+  }
+  .col-box {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 20px;
+  }
+  .col-box.loop { border-top: 3px solid var(--amber); }
+  .col-box.path { border-top: 3px solid var(--teal); }
+  .col-box h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .col-box.loop h4 { color: #b3823e; }
+  .col-box.path h4 { color: var(--darkteal); }
+  .col-box ul { list-style: none; }
+  .col-box li {
+    font-size: 0.88rem;
+    color: var(--soft);
+    line-height: 1.6;
+    padding: 6px 0;
+    padding-left: 22px;
+    position: relative;
+  }
+  .col-box.loop li::before {
+    content: '\21BB';
+    position: absolute;
+    left: 0;
+    color: var(--amber);
+    font-weight: 600;
+  }
+  .col-box.path li::before {
+    content: '\2192';
+    position: absolute;
+    left: 0;
+    color: var(--teal);
+    font-weight: 600;
+  }
+
+  /* ===== HABIT STACK ROWS ===== */
+  .habit-strip {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin: 24px 0;
+  }
+  .habit-row {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 16px;
+    align-items: center;
+    border-left: 3px solid var(--teal);
+    padding: 16px 20px;
+    background: var(--cream);
+  }
+  .habit-num {
+    font-family: 'Fraunces', serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--teal);
+    text-align: center;
+  }
+  .habit-content h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 2px;
+  }
+  .habit-content p {
+    font-size: 0.85rem;
+    color: var(--soft);
+    line-height: 1.5;
+  }
+
+  /* ===== FAQ ===== */
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+  }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q {
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 8px;
+    display: flex;
+    gap: 12px;
+  }
+  .faq-q .q-mark { color: var(--teal); font-style: italic; flex-shrink: 0; }
+  .faq-a {
+    font-size: 0.9rem;
+    color: var(--soft);
+    line-height: 1.7;
+    padding-left: 28px;
+  }
+
+  /* ===== CHECKLIST ===== */
+  .checklist { list-style: none; margin: 16px 0; }
+  .checklist li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+    color: var(--soft);
+    line-height: 1.5;
+  }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist li .dot {
+    margin-top: 6px;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--teal);
+    flex-shrink: 0;
+  }
+
+  /* ===== BREAK DIVIDER ===== */
+  .break-divider {
+    background: var(--cream);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 36px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .break-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--darkteal);
+    white-space: nowrap;
+  }
+  .break-line { flex: 1; height: 1px; background: var(--border); }
+
+  /* ===== CLOSING ===== */
+  .closing {
+    background: var(--deepnavy);
+    color: var(--white);
+    padding: 72px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .closing::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(29,158,117,0.25) 0%, transparent 60%);
+  }
+  .closing-inner { position: relative; max-width: 560px; margin: 0 auto; }
+  .closing h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.8rem, 4.5vw, 2.6rem);
+    font-weight: 300;
+    margin-bottom: 18px;
+  }
+  .closing h2 em { color: var(--lightteal); font-style: italic; }
+  .closing p {
+    font-size: 0.95rem;
+    color: rgba(200,230,218,0.85);
+    line-height: 1.8;
+    margin-bottom: 28px;
+  }
+  .closing-link {
+    display: inline-block;
+    background: var(--teal);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    border-radius: 30px;
+  }
+  .closing-brand {
+    margin-top: 48px;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 6px;
+    color: var(--teal);
+  }
+  .closing-brand-sub {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: rgba(200,230,218,0.5);
+    margin-top: 4px;
+  }
+</style>
+</head>
+<body>
+
+<div class="print-bar no-print">
+  <span>Why Most People Gain It Back — Popcycle</span>
+  <button class="print-btn" onclick="window.print()">Print / Save PDF</button>
+</div>
+
+<!-- ===== COVER ===== -->
+<div class="cover">
+  <svg class="cover-spiral" viewBox="0 0 700 1000" preserveAspectRatio="xMidYMid slice">
+    <path d="M 350 500 m -260 0 a 260 260 0 1 1 520 0 a 260 260 0 1 1 -520 0" fill="none" stroke="#5BC9A8" stroke-width="1"/>
+    <path d="M 350 500 m -190 0 a 190 190 0 1 1 380 0 a 190 190 0 1 1 -380 0" fill="none" stroke="#5BC9A8" stroke-width="1"/>
+    <path d="M 350 500 m -120 0 a 120 120 0 1 1 240 0 a 120 120 0 1 1 -240 0" fill="none" stroke="#D9A35B" stroke-width="1"/>
+    <path d="M 350 240 C 500 280, 560 420, 460 540 C 380 640, 250 600, 250 480" fill="none" stroke="#5BC9A8" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M 250 480 C 250 480, 230 700, 420 800 C 560 870, 650 760, 660 650" fill="none" stroke="#1D9E75" stroke-width="2.5" stroke-linecap="round"/>
+  </svg>
+  <div class="cover-inner">
+    <div class="cover-eyebrow">A Popcycle Free Guide</div>
+    <h1>Why Most People <em>Gain It Back</em></h1>
+    <div class="cover-divider"></div>
+    <div class="cover-subtitle">Simple Habits That Actually Stick</div>
+    <p class="cover-desc">Losing weight is hard. Keeping it off is harder - and almost nobody talks honestly about why. This is the guide for after the diet ends, when the real work actually begins.</p>
+    <div class="cover-tags">
+      <span class="cover-pill">The Real Reason</span>
+      <span class="cover-pill">Breaking the Loop</span>
+      <span class="cover-pill">What Actually Sticks</span>
+    </div>
+    <div class="cover-brand">POPCYCLE</div>
+    <div class="cover-brand-sub">sweeten your life</div>
+  </div>
+</div>
+
+<!-- ===== INTRO BAND ===== -->
+<div class="intro-band">
+  <div class="container">
+    <p class="page-eyebrow">Before We Start</p>
+    <h2 class="page-title">The part nobody talks about</h2>
+    <p>Search for "weight loss" and you will find an almost endless supply of plans, programs, and promises about how to lose weight. Search for "how to keep weight off" and the results thin out dramatically - even though, for most people, that is the actual hard part.</p>
+    <p>Studies on weight regain are sobering, and they are not shared to discourage you - they are shared because the standard advice clearly is not addressing the real problem. If you have lost weight before and gained it back, possibly more than once, this guide is for you. Not because something is wrong with you, but because the usual approach was never built for the part that comes after.</p>
+    <div class="intro-grid">
+      <div class="intro-card">
+        <div class="intro-card-label">What this is</div>
+        <p>An honest look at why weight regain happens so often, and the specific, unglamorous habits that actually predict long-term success.</p>
+      </div>
+      <div class="intro-card">
+        <div class="intro-card-label">What this is not</div>
+        <p>A new diet, a 30-day challenge, or a promise that this time will be different just because you read a guide. This is about systems, not willpower.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SECTION 1: THE LOOP ===== -->
+<div class="section">
+  <div class="container">
+    <p class="section-number">Section One</p>
+    <h2 class="section-title">Understanding <em>the loop</em></h2>
+    <div class="section-divider"></div>
+
+    <p class="section-intro">Before you can break a pattern, it helps to actually see the shape of it.</p>
+
+    <div class="content-block">
+      <h3>The familiar shape</h3>
+      <p>For many people, the pattern looks something like this: a period of high motivation and strict structure leads to weight loss. Life happens - stress, travel, a holiday, an injury - and the structure slips. Old habits return, often along with some or all of the weight. Eventually, motivation returns, and the cycle begins again.</p>
+      <p>Each time through this loop can feel like starting over from zero, which is exhausting and demoralizing - even though, in many cases, something real was learned each time. The problem is not that people fail to learn. The problem is that the structure itself was never designed to survive contact with real life.</p>
+    </div>
+
+    <div class="two-col">
+      <div class="col-box loop">
+        <h4>The Loop</h4>
+        <ul>
+          <li>Built around willpower and motivation</li>
+          <li>Works great until life gets disrupted</li>
+          <li>All-or-nothing: either "on plan" or "off"</li>
+          <li>Resets to zero after any interruption</li>
+        </ul>
+      </div>
+      <div class="col-box path">
+        <h4>The Path</h4>
+        <ul>
+          <li>Built around small, durable systems</li>
+          <li>Designed to flex when life happens</li>
+          <li>Has a default "good enough" mode</li>
+          <li>Picks back up without starting over</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="key-concept">
+      <div class="key-concept-label">Key Concept</div>
+      <h3>The goal is not perfection - it is a floor</h3>
+      <p>People who maintain weight loss long-term are not the ones who never slip. They are the ones who have a "floor" - a minimum standard they almost never go below, even on bad days. The floor might be as simple as always eating some protein, or always taking a short walk. It is small enough to maintain even when everything else falls apart.</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="break-divider">
+  <span class="break-label">Section Break</span>
+  <div class="break-line"></div>
+</div>
+
+<!-- ===== SECTION 2: WHY DIETS FAIL AT MAINTENANCE ===== -->
+<div class="section">
+  <div class="container">
+    <p class="section-number">Section Two</p>
+    <h2 class="section-title">Why most plans <em>were never built</em> for this</h2>
+    <div class="section-divider"></div>
+
+    <p class="section-intro">It is worth understanding why this keeps happening - because it is rarely about you.</p>
+
+    <div class="content-block">
+      <h3>Diets are designed to end</h3>
+      <p>Almost every popular diet has a built-in endpoint - a number of weeks, a goal weight, a finish line. This makes sense for marketing: a program with a clear end is easier to sell and easier to commit to short-term. But it creates an obvious problem. What happens on day one after the program ends?</p>
+      <p>For most plans, the honest answer is: nothing. There is no "after" plan, no transition, no guidance for the next phase - just an assumption that you will somehow continue making all the same restrictive choices forever, purely through willpower, with no external structure supporting you.</p>
+    </div>
+
+    <div class="amber-box">
+      <div class="amber-label">An Honest Observation</div>
+      <h3>Willpower is a finite resource</h3>
+      <p>Decades of research on self-control point to the same conclusion: willpower is not a fixed personality trait, and it is not unlimited. It fluctuates with sleep, stress, and how many other decisions you are making in a day. A plan that depends entirely on willpower is, by definition, a plan that will eventually run into a day where willpower is low - and on that day, without any other structure, the plan collapses.</p>
+    </div>
+
+    <div class="content-block">
+      <h3>The metabolic piece, briefly</h3>
+      <p>There is also a real physiological component. After weight loss, the body can become somewhat more efficient and hunger signals can increase - the body, in a sense, wants to return to its previous weight. This is real, but it is not destiny. It means maintenance may genuinely require more conscious attention than the body's automatic signals alone would suggest, especially in the months immediately following weight loss.</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="break-divider">
+  <span class="break-label">Section Break</span>
+  <div class="break-line"></div>
+</div>
+
+<!-- ===== SECTION 3: WHAT ACTUALLY PREDICTS SUCCESS ===== -->
+<div class="section">
+  <div class="container">
+    <p class="section-number">Section Three</p>
+    <h2 class="section-title">What <em>actually</em> predicts long-term success</h2>
+    <div class="section-divider"></div>
+
+    <p class="section-intro">Research on people who maintain significant weight loss for years - not weeks - points to a small set of recurring habits.</p>
+
+    <div class="content-block">
+      <p>None of these are exciting. None of them are secrets. But the people who maintain weight loss long-term tend to share more of these habits than people who regain it.</p>
+    </div>
+
+    <div class="habit-strip">
+      <div class="habit-row">
+        <div class="habit-num">1</div>
+        <div class="habit-content"><h4>Regular self-monitoring</h4><p>Some form of consistent check-in - whether that is weighing in, taking photos, or tracking food - even if imperfectly.</p></div>
+      </div>
+      <div class="habit-row">
+        <div class="habit-num">2</div>
+        <div class="habit-content"><h4>Consistent eating patterns</h4><p>Eating at relatively similar times and in relatively similar ways most days, including weekends - rather than "saving up" restriction for weekdays.</p></div>
+      </div>
+      <div class="habit-row">
+        <div class="habit-num">3</div>
+        <div class="habit-content"><h4>Regular physical activity</h4><p>Not necessarily intense - but consistent movement most days, often including simply walking more.</p></div>
+      </div>
+      <div class="habit-row">
+        <div class="habit-num">4</div>
+        <div class="habit-content"><h4>Quick response to small regains</h4><p>Acting on a 3-5 pound increase immediately, rather than waiting until it becomes 15-20 pounds and feels overwhelming.</p></div>
+      </div>
+      <div class="habit-row">
+        <div class="habit-num">5</div>
+        <div class="habit-content"><h4>A support system of some kind</h4><p>Whether that is a person, a community, or even just someone who knows what you are working on and checks in occasionally.</p></div>
+      </div>
+    </div>
+
+    <div class="pull-quote">
+      <p>None of these habits are about perfection. They are about catching small drifts before they become big ones - and about never fully losing the structure that got you here in the first place.</p>
+      <cite>The pattern, simplified</cite>
+    </div>
+
+  </div>
+</div>
+
+<div class="break-divider">
+  <span class="break-label">Section Break</span>
+  <div class="break-line"></div>
+</div>
+
+<!-- ===== SECTION 4: BUILDING YOUR FLOOR ===== -->
+<div class="section">
+  <div class="container">
+    <p class="section-number">Section Four</p>
+    <h2 class="section-title">Building <em>your</em> floor</h2>
+    <div class="section-divider"></div>
+
+    <p class="section-intro">This is the practical part - and it starts with something smaller than you might expect.</p>
+
+    <div class="content-block">
+      <h3>Pick one non-negotiable</h3>
+      <p>Rather than trying to maintain an entire structured plan indefinitely, choose one single habit that you will maintain even on your worst days - the floor we mentioned earlier. This should be something so small it feels almost too easy. Examples: a 10-minute walk every day, drinking a glass of water before each meal, or simply weighing yourself each morning without judgment.</p>
+    </div>
+
+    <div class="content-block">
+      <h3>Define your "good enough" day</h3>
+      <p>Most plans only define a "perfect" day. Define what a "good enough" day looks like too - the minimum version that still counts as a win. On a good enough day, maybe you do not hit every goal, but you do your one non-negotiable habit and you do not actively work against your progress. Good enough days, repeated often, are what actually add up over months and years.</p>
+    </div>
+
+    <div class="key-concept">
+      <div class="key-concept-label">A Different Kind of Goal</div>
+      <h3>Aim for "still going" rather than "back on track"</h3>
+      <p>The phrase "getting back on track" implies you fell off a track entirely - which makes a small slip feel like a bigger failure than it is. Try reframing: you are not on or off a track. You are always somewhere on a path, and some days you move faster than others. There is no off.</p>
+    </div>
+
+    <div class="content-block">
+      <h3>Plan for the predictable disruptions</h3>
+      <p>Holidays happen. Travel happens. Stressful weeks at work happen. Rather than treating these as unexpected derailments each time, you can plan for them in advance: decide ahead of time what your floor looks like during a vacation, or what your minimum movement goal is during a busy week. Removing the surprise removes a lot of the all-or-nothing reaction.</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="break-divider">
+  <span class="break-label">Section Break</span>
+  <div class="break-line"></div>
+</div>
+
+<!-- ===== SECTION 5: FAQ ===== -->
+<div class="section">
+  <div class="container">
+    <p class="section-number">Section Five</p>
+    <h2 class="section-title">Common questions, <em>answered honestly</em></h2>
+    <div class="section-divider"></div>
+
+    <div class="faq-item">
+      <div class="faq-q"><span class="q-mark">Q.</span> I have regained weight before. Does that mean I will again?</div>
+      <div class="faq-a">No - but it does mean the approach that led to regain before may need to change, not just the willpower behind it. Many people who eventually maintain their weight long-term went through several rounds of loss and regain first. Each round can teach you something about what your floor needs to look like, if you pay attention to it.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q"><span class="q-mark">Q.</span> How long until maintenance feels easier?</div>
+      <div class="faq-a">Many people report that the first year after reaching a goal weight is the most demanding, and that things tend to feel more automatic after that - though this varies significantly. The habits in this guide are designed to reduce how much conscious effort maintenance requires over time, but some ongoing attention is normal and not a sign of failure.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q"><span class="q-mark">Q.</span> What if I gain back a few pounds - should I panic?</div>
+      <div class="faq-a">No. Weight naturally fluctuates by several pounds for reasons unrelated to fat gain - water, sodium, hormones, digestion. The habit that matters is responding calmly to a genuine upward trend over a couple of weeks, not reacting to any single day's number.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q"><span class="q-mark">Q.</span> Is it normal to need to adjust my approach over time?</div>
+      <div class="faq-a">Yes, completely. Life changes - jobs, family situations, health, age - and what worked at one point may need adjusting later. This is not the system failing. It is the system working as intended, by adapting rather than collapsing.</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== CLOSING ===== -->
+<div class="closing">
+  <div class="closing-inner">
+    <h2>Want more like <em>this</em>?</h2>
+    <p>This guide is part of the Popcycle Start Here library - free resources for people who want to make real, lasting changes to their health, finances, relationships, and goals. We curate the best free and paid tools, apps, books, podcasts, and programs out there - not based on who pays the highest commission, but based on what we genuinely believe works.</p>
+    <p style="margin-bottom:36px;">Visit our Weight Loss &amp; Fitness collection for apps we love, podcasts worth your time, and books that might change how you think about food, movement, and health altogether.</p>
+    <a href="https://popcycle.online" class="closing-link">Visit Popcycle.online</a>
+    <div class="closing-brand">POPCYCLE</div>
+    <div class="closing-brand-sub">sweeten your life</div>
+  </div>
+</div>
+
+</body>
+</html>

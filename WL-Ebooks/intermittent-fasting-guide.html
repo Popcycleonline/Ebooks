@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intermittent Fasting: An Honest Guide With No Agenda — Popcycle</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #1D9E75;
+    --darkteal: #0F6E56;
+    --navy: #0B2A3D;
+    --deepnavy: #071c28;
+    --lightteal: #5BC9A8;
+    --cream: #F5F1E8;
+    --paper: #FBFAF6;
+    --text: #1a2820;
+    --soft: #4a6055;
+    --border: #dfe7e2;
+    --white: #ffffff;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--paper);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  @media print {
+    .no-print { display: none !important; }
+    .page-break { page-break-before: always; }
+    body { background: white; font-size: 12px; }
+    .cover { min-height: auto; padding: 60px 40px; }
+  }
+
+  /* ===== PRINT BAR ===== */
+  .print-bar {
+    background: var(--navy);
+    color: var(--white);
+    padding: 10px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    letter-spacing: 1px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .print-btn {
+    background: var(--teal);
+    color: var(--white);
+    border: none;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  /* ===== COVER ===== */
+  .cover {
+    background: var(--deepnavy);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 30%, rgba(29,158,117,0.35) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 75%, rgba(91,201,168,0.18) 0%, transparent 55%),
+      radial-gradient(ellipse at 50% 100%, rgba(11,42,61,0.7) 0%, transparent 60%);
+  }
+  .cover-clock {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 640px; height: 640px;
+    transform: translate(-50%,-50%);
+    border: 1px solid rgba(91,201,168,0.12);
+    border-radius: 50%;
+  }
+  .cover-clock::before {
+    content: '';
+    position: absolute;
+    inset: 60px;
+    border: 1px solid rgba(91,201,168,0.08);
+    border-radius: 50%;
+  }
+  .cover-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    width: 100%;
+  }
+  .cover-eyebrow {
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--lightteal);
+    margin-bottom: 24px;
+  }
+  .cover h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.6rem, 7vw, 4.6rem);
+    font-weight: 300;
+    line-height: 1.08;
+    color: var(--white);
+    margin-bottom: 8px;
+    letter-spacing: -1px;
+  }
+  .cover h1 em {
+    color: var(--lightteal);
+    font-style: italic;
+    font-weight: 300;
+  }
+  .cover-divider {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--teal), transparent);
+    margin: 28px auto;
+  }
+  .cover-subtitle {
+    font-family: 'Fraunces', serif;
+    font-size: 1.25rem;
+    font-weight: 300;
+    font-style: italic;
+    color: #c8e6da;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  .cover-desc {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: rgba(200,230,218,0.7);
+    letter-spacing: 0.5px;
+    max-width: 480px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+  }
+  .cover-tags {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+  .cover-pill {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--lightteal);
+    border: 1px solid rgba(91,201,168,0.3);
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: rgba(29,158,117,0.08);
+  }
+  .cover-brand {
+    margin-top: 56px;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 6px;
+    color: var(--teal);
+  }
+  .cover-brand-sub {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: rgba(200,230,218,0.5);
+    margin-top: 4px;
+  }
+
+  /* ===== CONTAINER ===== */
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 36px;
+  }
+
+  /* ===== INTRO BAND ===== */
+  .intro-band {
+    background: var(--navy);
+    padding: 64px 0;
+    color: var(--white);
+  }
+  .page-eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--lightteal);
+    margin-bottom: 12px;
+  }
+  .page-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.9rem, 5vw, 3rem);
+    font-weight: 300;
+    line-height: 1.15;
+    margin-bottom: 24px;
+  }
+  .intro-band p {
+    font-size: 0.95rem;
+    color: rgba(200,230,218,0.85);
+    line-height: 1.8;
+    margin-bottom: 14px;
+    max-width: 620px;
+  }
+  .intro-band p:last-child { margin-bottom: 0; }
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 32px;
+  }
+  .intro-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(91,201,168,0.2);
+    border-radius: 4px;
+    padding: 18px 20px;
+  }
+  .intro-card-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--lightteal);
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .intro-card p {
+    font-size: 0.85rem;
+    color: rgba(200,230,218,0.8);
+    line-height: 1.65;
+  }
+
+  /* ===== SECTION HEADER ===== */
+  .section {
+    padding: 60px 0;
+  }
+  .section-number {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--navy);
+    margin-bottom: 12px;
+  }
+  .section-title em {
+    color: var(--teal);
+    font-style: italic;
+  }
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, var(--teal), transparent);
+    margin: 24px 0 32px;
+  }
+  .section-intro {
+    font-family: 'Fraunces', serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--soft);
+    line-height: 1.6;
+    margin-bottom: 28px;
+    border-left: 3px solid var(--teal);
+    padding-left: 20px;
+  }
+
+  /* ===== CONTENT BLOCKS ===== */
+  .content-block { margin-bottom: 32px; }
+  .content-block h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+  .content-block p {
+    color: var(--soft);
+    margin-bottom: 12px;
+    line-height: 1.75;
+  }
+
+  /* ===== KEY CONCEPT BOX ===== */
+  .key-concept {
+    background: var(--navy);
+    color: var(--white);
+    border-radius: 6px;
+    padding: 28px 32px;
+    margin: 28px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .key-concept::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 140px; height: 140px;
+    background: radial-gradient(circle at 100% 0%, rgba(91,201,168,0.18) 0%, transparent 70%);
+  }
+  .key-concept-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--lightteal);
+    font-weight: 500;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .key-concept h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .key-concept p {
+    font-size: 0.92rem;
+    color: rgba(200,230,218,0.9);
+    line-height: 1.75;
+    position: relative;
+  }
+
+  /* ===== PULL QUOTE ===== */
+  .pull-quote {
+    border-left: 4px solid var(--teal);
+    padding: 16px 24px;
+    margin: 28px 0;
+    background: var(--cream);
+    border-radius: 0 6px 6px 0;
+  }
+  .pull-quote p {
+    font-family: 'Fraunces', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--navy);
+    line-height: 1.6;
+    margin: 0;
+  }
+  .pull-quote cite {
+    display: block;
+    font-size: 0.78rem;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-top: 8px;
+  }
+
+  /* ===== TWO COLUMN ===== */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 24px 0;
+  }
+  .col-box {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 20px;
+  }
+  .col-box.good { border-top: 3px solid var(--teal); }
+  .col-box.caution { border-top: 3px solid #c0735a; }
+  .col-box h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .col-box.good h4 { color: var(--darkteal); }
+  .col-box.caution h4 { color: #a85a44; }
+  .col-box ul {
+    list-style: none;
+  }
+  .col-box li {
+    font-size: 0.88rem;
+    color: var(--soft);
+    line-height: 1.6;
+    padding: 6px 0;
+    padding-left: 18px;
+    position: relative;
+  }
+  .col-box.good li::before {
+    content: '+';
+    position: absolute;
+    left: 0;
+    color: var(--teal);
+    font-weight: 600;
+  }
+  .col-box.caution li::before {
+    content: '\2013';
+    position: absolute;
+    left: 0;
+    color: #c0735a;
+    font-weight: 600;
+  }
+
+  /* ===== TIMELINE / CLOCK STRIP ===== */
+  .clock-strip {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin: 24px 0;
+  }
+  .clock-row {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 0;
+    border-left: 3px solid var(--teal);
+    padding: 14px 20px;
+    background: var(--cream);
+  }
+  .clock-row.fasting { border-left-color: var(--lightteal); background: var(--navy); }
+  .clock-time {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--darkteal);
+    text-transform: uppercase;
+    padding-top: 2px;
+  }
+  .clock-row.fasting .clock-time { color: var(--lightteal); }
+  .clock-content h4 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 2px;
+  }
+  .clock-content p {
+    font-size: 0.85rem;
+    color: var(--soft);
+    line-height: 1.5;
+  }
+  .clock-row.fasting .clock-content h4 { color: var(--white); }
+  .clock-row.fasting .clock-content p { color: rgba(200,230,218,0.8); }
+
+  /* ===== FAQ ===== */
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+  }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q {
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 8px;
+    display: flex;
+    gap: 12px;
+  }
+  .faq-q .q-mark {
+    color: var(--teal);
+    font-style: italic;
+    flex-shrink: 0;
+  }
+  .faq-a {
+    font-size: 0.9rem;
+    color: var(--soft);
+    line-height: 1.7;
+    padding-left: 28px;
+  }
+
+  /* ===== CHECKLIST ===== */
+  .checklist {
+    list-style: none;
+    margin: 16px 0;
+  }
+  .checklist li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+    color: var(--soft);
+    line-height: 1.5;
+  }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist li .dot {
+    margin-top: 6px;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--teal);
+    flex-shrink: 0;
+  }
+
+  /* ===== BREAK DIVIDER ===== */
+  .break-divider {
+    background: var(--cream);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 36px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .break-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--darkteal);
+    white-space: nowrap;
+  }
+  .break-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* ===== CLOSING ===== */
+  .closing {
+    background: var(--deepnavy);
+    color: var(--white);
+    padding: 72px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .closing::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(29,158,117,0.25) 0%, transparent 60%);
+  }
+  .closing-inner { position: relative; max-width: 560px; margin: 0 auto; }
+  .closing h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.8rem, 4.5vw, 2.6rem);
+    font-weight: 300;
+    margin-bottom: 18px;
+  }
+  .closing h2 em { color: var(--lightteal); font-style: italic; }
+  .closing p {
+    font-size: 0.95rem;
+    color: rgba(200,230,218,0.85);
+    line-height: 1.8;
+    margin-bottom: 28px;
+  }
+  .closing-link {
+    display: inline-block;
+    background: var(--teal);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    border-radius: 30px;
+  }
+  .closing-brand {
+    margin-top: 48px;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 6px;
+    color: var(--teal);
+  }
+  .closing-brand-sub {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: rgba(200,230,218,0.5);
+    margin-top: 4px;
+  }
+</style>
+</head>
+<body>
+
+<div class="print-bar no-print">
+  <span>Intermittent Fasting: An Honest Guide — Popcycle</span>
+  <button class="print-btn" onclick="window.print()">Print / Save PDF</button>
+</div>
+
+<!-- ===== COVER ===== -->
+<div class="cover">
+  <div class="cover-clock"></div>
+  <div class="cover-inner">
+    <div class="cover-eyebrow">A Popcycle Free Guide</div>
+    <h1>Intermittent <em>Fasting</em></h1>
+    <div class="cover-divider"></div>
+    <div class="cover-subtitle">An Honest Guide With No Agenda</div>
+    <p class="cover-desc">What actually happens to your body when you skip breakfast — the science, the benefits, the downsides, and who it really works for. No sales pitch. No supplements. Just the facts, explained simply.</p>
+    <div class="cover-tags">
+      <span class="cover-pill">The Science</span>
+      <span class="cover-pill">Who It Helps</span>
+      <span class="cover-pill">Who Should Skip It</span>
+      <span class="cover-pill">How to Try It</span>
+    </div>
+    <div class="cover-brand">POPCYCLE</div>
+    <div class="cover-brand-sub">sweeten your life</div>
+  </div>
+</div>
+
+<!-- ===== INTRO BAND ===== -->
+<div class="intro-band">
+  <div class="container">
+    <p class="page-eyebrow">Before We Start</p>
+    <h2 class="page-title">Why we wrote this</h2>
+    <p>Intermittent fasting might be the most talked about, most argued over, and most misunderstood approach to eating in the last decade. Some people treat it like a miracle. Others treat it like a myth. Most of the content out there falls into one of those two camps - and most of it is trying to sell you something once it gets you there.</p>
+    <p>We are not in either camp, and we are not selling anything. This guide exists because we think you deserve a straight answer about what intermittent fasting actually is, what the research genuinely shows, and - most importantly - whether it makes sense for your life. If it does, great. If it does not, that is useful information too.</p>
+    <div class="intro-grid">
+      <div class="intro-card">
+        <div class="intro-card-label">What this is</div>
+        <p>An honest, balanced explanation of intermittent fasting based on what the research actually says, written in plain language.</p>
+      </div>
+      <div class="intro-card">
+        <div class="intro-card-label">What this is not</div>
+        <p>A program to buy, a supplement to take, or a claim that fasting is the answer to everything. It is one tool among many.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SECTION 1: WHAT IT IS ===== -->
+<div class="section">
+  <div class="container">
+    <p class="section-number">Section One</p>
+    <h2 class="section-title">What intermittent fasting <em>actually</em> is</h2>
+    <div class="section-divider"></div>
+
+    <p class="section-intro">Strip away the branding and the hype, and intermittent fasting is simply a pattern of when you eat - not what you eat.</p>
+
+    <div class="content-block">
+      <h3>The basic idea</h3>
+      <p>Every approach to intermittent fasting follows the same underlying structure: you cycle between periods of eating and periods of not eating. That is genuinely the entire concept. There is no special food, no required supplement, and no secret ingredient. It is purely a question of timing.</p>
+      <p>Humans have done this, in one form or another, for most of history - not always by choice, but our bodies are well adapted to handle stretches without food. What is new is treating it as a deliberate strategy rather than something that just happens.</p>
+    </div>
+
+    <div class="key-concept">
+      <div class="key-concept-label">Key Concept</div>
+      <h3>It is a schedule, not a diet</h3>
+      <p>Intermittent fasting does not tell you what to eat. You could eat well during your eating window, or you could eat poorly. The schedule itself does not make food healthier - which is exactly why it is sometimes oversold and sometimes unfairly dismissed.</p>
+    </div>
+
+    <div class="content-block">
+      <h3>The most common patterns</h3>
+      <p>There are several popular approaches, and they all follow the same eat/fast structure with different timing:</p>
+    </div>
+
+    <div class="clock-strip">
+      <div class="clock-row">
+        <div class="clock-time">16:8</div>
+        <div class="clock-content"><h4>Time-Restricted Eating</h4><p>Eat within an 8-hour window each day, fast for the remaining 16 hours. The most common and most studied approach for beginners.</p></div>
+      </div>
+      <div class="clock-row fasting">
+        <div class="clock-time">5:2</div>
+        <div class="clock-content"><h4>The 5:2 Method</h4><p>Eat normally five days a week, significantly reduce calories (around 500-600) on two non-consecutive days.</p></div>
+      </div>
+      <div class="clock-row">
+        <div class="clock-time">18:6 / 20:4</div>
+        <div class="clock-content"><h4>Extended Windows</h4><p>Variations on time-restricted eating with shorter eating windows, often adopted gradually after starting with 16:8.</p></div>
+      </div>
+      <div class="clock-row fasting">
+        <div class="clock-time">24hr</div>
+        <div class="clock-content"><h4>Alternate Day or Full-Day Fasts</h4><p>One or more full 24-hour fasts per week. More advanced, generally not a starting point.</p></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="break-divider">
+  <span class="break-label">Section Break</span>
+  <div class="break-line"></div>
+</div>
+
+<!-- ===== SECTION 2: THE RESEARCH ===== -->
+<div class="section">
+  <div class="container">
+    <p class="section-number">Section Two</p>
+    <h2 class="section-title">What the research <em>really</em> says</h2>
+    <div class="section-divider"></div>
+
+    <p class="section-intro">The honest answer is: more than skeptics claim, less than enthusiasts promise.</p>
+
+    <div class="content-block">
+      <h3>The genuinely supported benefits</h3>
+      <p>A meaningful body of research supports several effects of intermittent fasting, particularly time-restricted eating. These are not exotic claims - they are largely explained by simple mechanisms.</p>
+    </div>
+
+    <div class="two-col">
+      <div class="col-box good">
+        <h4>What's well supported</h4>
+        <ul>
+          <li>Can reduce overall calorie intake naturally, by shrinking the eating window</li>
+          <li>May improve insulin sensitivity for some people</li>
+          <li>Can simplify decision-making around food - fewer meals to plan</li>
+          <li>Some evidence for improved markers of metabolic health</li>
+        </ul>
+      </div>
+      <div class="col-box caution">
+        <h4>Where the evidence is thinner</h4>
+        <ul>
+          <li>Claims of dramatic fat loss beyond simple calorie reduction</li>
+          <li>Specific anti-aging or longevity claims in humans</li>
+          <li>The idea that timing matters more than total intake for everyone</li>
+          <li>One-size-fits-all claims about hormones and metabolism</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pull-quote">
+      <p>For most people, the benefit of intermittent fasting is not magic - it is that eating less often often leads to eating less overall, without the mental effort of counting every calorie.</p>
+      <cite>The honest summary</cite>
+    </div>
+
+    <div class="content-block">
+      <h3>Why the confusion exists</h3>
+      <p>A lot of the most dramatic claims about intermittent fasting come from animal studies - often mice, often using fasting protocols that do not translate directly to humans. When these findings get reported, the nuance tends to disappear. "Mice that fasted lived longer under specific lab conditions" becomes "fasting helps you live longer," which is a much bigger claim than the research supports.</p>
+      <p>None of this means fasting is useless. It means the honest version is more modest than the version that sells books and supplements.</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="break-divider">
+  <span class="break-label">Section Break</span>
+  <div class="break-line"></div>
+</div>
+
+<!-- ===== SECTION 3: WHO IT WORKS FOR ===== -->
+<div class="section">
+  <div class="container">
+    <p class="section-number">Section Three</p>
+    <h2 class="section-title">Who this tends to <em>work well</em> for</h2>
+    <div class="section-divider"></div>
+
+    <p class="section-intro">Intermittent fasting is not right or wrong - it is a fit question, and fit depends entirely on your life.</p>
+
+    <div class="content-block">
+      <h3>People who often do well with it</h3>
+      <p>Based on both research and the experiences widely reported by people who try it, intermittent fasting tends to suit certain situations particularly well:</p>
+    </div>
+
+    <ul class="checklist">
+      <li><span class="dot"></span> People who naturally are not very hungry in the morning and have historically forced themselves to eat breakfast out of habit or guilt</li>
+      <li><span class="dot"></span> People who find counting calories or tracking macros mentally exhausting, and want a simpler structure</li>
+      <li><span class="dot"></span> People with relatively flexible schedules who can choose when their eating window falls</li>
+      <li><span class="dot"></span> People who tend to snack mindlessly throughout the day and want clearer boundaries around eating</li>
+      <li><span class="dot"></span> People who have tried many structured diets and want something that requires fewer ongoing decisions</li>
+    </ul>
+
+    <div class="key-concept">
+      <div class="key-concept-label">Worth Noting</div>
+      <h3>It tends to work best when it feels easy</h3>
+      <p>People who report the best long-term experiences with intermittent fasting often describe it as something that fit naturally into how they already lived - not something they had to white-knuckle through every day. If your version of fasting feels like a constant battle, that is useful information, not a personal failure.</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="break-divider">
+  <span class="break-label">Section Break</span>
+  <div class="break-line"></div>
+</div>
+
+<!-- ===== SECTION 4: WHO SHOULD SKIP IT ===== -->
+<div class="section">
+  <div class="container">
+    <p class="section-number">Section Four</p>
+    <h2 class="section-title">Who should probably <em>skip it</em></h2>
+    <div class="section-divider"></div>
+
+    <p class="section-intro">This is the section most guides leave out - and it might be the most important one in this entire book.</p>
+
+    <div class="content-block">
+      <h3>Situations where fasting is not the right tool</h3>
+      <p>Intermittent fasting is not appropriate or advisable for everyone, and a guide that pretends otherwise is not being honest with you.</p>
+    </div>
+
+    <ul class="checklist">
+      <li><span class="dot"></span> Anyone with a current or past history of disordered eating - fasting structures can reinforce unhealthy patterns around food and control</li>
+      <li><span class="dot"></span> Pregnant or breastfeeding individuals, whose nutritional needs are different and more consistent</li>
+      <li><span class="dot"></span> People with certain medical conditions, including some forms of diabetes, without medical supervision</li>
+      <li><span class="dot"></span> Anyone taking medications that need to be taken with food, or that affect blood sugar</li>
+      <li><span class="dot"></span> People who find that fasting triggers obsessive thinking about food, increased anxiety, or a worsened relationship with eating</li>
+      <li><span class="dot"></span> Growing children and teenagers, whose nutritional needs differ significantly from adults</li>
+    </ul>
+
+    <div class="pull-quote">
+      <p>If fasting makes you feel worse - physically, mentally, or emotionally - that is not a sign you need to push through it. It is a sign this particular tool is not the right one for you right now.</p>
+      <cite>Worth repeating</cite>
+    </div>
+
+    <div class="content-block">
+      <p>If any of the situations above apply to you, or if you are simply unsure, a conversation with a doctor or registered dietitian before making changes is always a reasonable and responsible step - not a sign that fasting "isn't for serious people." It is the opposite.</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="break-divider">
+  <span class="break-label">Section Break</span>
+  <div class="break-line"></div>
+</div>
+
+<!-- ===== SECTION 5: HOW TO TRY IT ===== -->
+<div class="section">
+  <div class="container">
+    <p class="section-number">Section Five</p>
+    <h2 class="section-title">How to try it <em>without</em> making it complicated</h2>
+    <div class="section-divider"></div>
+
+    <p class="section-intro">If, after reading the above, you think this might be worth exploring - here is the simplest possible starting point.</p>
+
+    <div class="content-block">
+      <h3>Start with the easiest version</h3>
+      <p>The most accessible entry point is simply pushing breakfast back. If you typically eat from 7am to 8pm, try eating from 10am to 8pm instead. That alone creates a 14-hour fasting window, which is close to the popular 16:8 pattern, without requiring any dramatic change.</p>
+    </div>
+
+    <div class="two-col">
+      <div class="col-box good">
+        <h4>Things that help</h4>
+        <ul>
+          <li>Black coffee, plain tea, and water are generally fine during a fast</li>
+          <li>Staying busy in the morning makes the fasting window pass faster</li>
+          <li>Adjusting gradually - shift your first meal by 30 minutes every few days</li>
+          <li>Eating enough during your window - fasting is not about under-eating overall</li>
+        </ul>
+      </div>
+      <div class="col-box caution">
+        <h4>Things to watch for</h4>
+        <ul>
+          <li>Using the eating window as an excuse to overeat or eat poorly</li>
+          <li>Ignoring genuine hunger signals versus habitual hunger</li>
+          <li>Forcing a schedule that conflicts badly with your work or family life</li>
+          <li>Treating any single day's fast as more important than your overall pattern</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="key-concept">
+      <div class="key-concept-label">Permission Slip</div>
+      <h3>You are allowed to stop</h3>
+      <p>If you try intermittent fasting for a few weeks and it simply does not suit you - you feel worse, it is not sustainable, or it is not giving you anything that feels worthwhile - stopping is not failure. It is information. There is no trophy for sticking with a tool that is not working for you.</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="break-divider">
+  <span class="break-label">Section Break</span>
+  <div class="break-line"></div>
+</div>
+
+<!-- ===== SECTION 6: FAQ ===== -->
+<div class="section">
+  <div class="container">
+    <p class="section-number">Section Six</p>
+    <h2 class="section-title">Common questions, <em>answered honestly</em></h2>
+    <div class="section-divider"></div>
+
+    <div class="faq-item">
+      <div class="faq-q"><span class="q-mark">Q.</span> Will intermittent fasting slow down my metabolism?</div>
+      <div class="faq-a">For most people, in the short to medium term, no - research generally does not support significant metabolic slowdown from time-restricted eating patterns. Very prolonged or extreme fasting is a different conversation, but standard approaches like 16:8 do not appear to meaningfully change metabolic rate for most people.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q"><span class="q-mark">Q.</span> Can I exercise while fasting?</div>
+      <div class="faq-a">Many people exercise during a fasted state without issue, and some report feeling fine or even good doing so. Others find their performance suffers. This is highly individual - if fasted exercise feels bad, there is no rule requiring it. Eating before training is completely valid.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q"><span class="q-mark">Q.</span> Do I need to fast every single day for it to work?</div>
+      <div class="faq-a">No. Some people fast most days and take occasional breaks - for a holiday, a special occasion, or just because. The benefits associated with intermittent fasting come from a general pattern over time, not from a perfect unbroken streak.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q"><span class="q-mark">Q.</span> Is intermittent fasting the same as starvation mode?</div>
+      <div class="faq-a">No. The concept of "starvation mode" as commonly described - where your body desperately holds onto fat after a missed meal or two - is largely a myth. Genuine metabolic adaptation to prolonged severe restriction is real but happens over a very different timescale than a daily fasting window.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q"><span class="q-mark">Q.</span> What should I do if I feel terrible the first few days?</div>
+      <div class="faq-a">Mild headaches, irritability, or hunger pangs in the first few days are common as your body adjusts, especially if you previously ate first thing every morning. These often improve within a week or two. If symptoms are severe or do not improve, that is a signal to reconsider, not push through.</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== CLOSING ===== -->
+<div class="closing">
+  <div class="closing-inner">
+    <h2>Want more like <em>this</em>?</h2>
+    <p>This guide is part of the Popcycle Start Here library - free resources for people who want to make real, lasting changes to their health, finances, relationships, and goals. We curate the best free and paid tools, apps, books, podcasts, and programs out there - not based on who pays the highest commission, but based on what we genuinely believe works.</p>
+    <p style="margin-bottom:36px;">Visit our Weight Loss &amp; Fitness collection for apps we love, podcasts worth your time, and books that might change how you think about food, movement, and health altogether.</p>
+    <a href="https://popcycle.online" class="closing-link">Visit Popcycle.online</a>
+    <div class="closing-brand">POPCYCLE</div>
+    <div class="closing-brand-sub">sweeten your life</div>
+  </div>
+</div>
+
+</body>
+</html>

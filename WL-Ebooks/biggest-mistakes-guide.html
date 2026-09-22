@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Biggest Mistakes People Make When Trying to Lose Weight — Popcycle</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #1D9E75;
+    --darkteal: #0F6E56;
+    --navy: #0B2A3D;
+    --deepnavy: #071c28;
+    --lightteal: #5BC9A8;
+    --coral: #D9705A;
+    --corallight: #F0B8AC;
+    --cream: #F5F1E8;
+    --paper: #FBFAF6;
+    --text: #1a2820;
+    --soft: #4a6055;
+    --border: #dfe7e2;
+    --white: #ffffff;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--paper);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  @media print {
+    .no-print { display: none !important; }
+    body { background: white; font-size: 12px; }
+    .cover { min-height: auto; padding: 60px 40px; }
+    .mistake-block, .key-concept, .pull-quote, .two-col, .intro-card, .badge-row {
+      break-inside: avoid;
+    }
+    .section { padding: 30px 0; }
+  }
+
+  .print-bar {
+    background: var(--navy);
+    color: var(--white);
+    padding: 10px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    letter-spacing: 1px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .print-btn {
+    background: var(--teal);
+    color: var(--white);
+    border: none;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  /* ===== COVER ===== */
+  .cover {
+    background: var(--deepnavy);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 40px;
+    position: relative;
+    overflow: hidden;
+    break-inside: avoid;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 22% 28%, rgba(217,112,90,0.18) 0%, transparent 50%),
+      radial-gradient(ellipse at 78% 72%, rgba(29,158,117,0.32) 0%, transparent 55%),
+      radial-gradient(ellipse at 50% 100%, rgba(11,42,61,0.7) 0%, transparent 60%);
+  }
+  .cover-marks {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+    opacity: 0.12;
+  }
+  .cover-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    width: 100%;
+  }
+  .cover-eyebrow {
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--lightteal);
+    margin-bottom: 24px;
+  }
+  .cover h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.3rem, 6.2vw, 4rem);
+    font-weight: 300;
+    line-height: 1.12;
+    color: var(--white);
+    margin-bottom: 8px;
+    letter-spacing: -1px;
+  }
+  .cover h1 em {
+    color: var(--lightteal);
+    font-style: italic;
+    font-weight: 300;
+  }
+  .cover h1 .coral { color: var(--corallight); font-style: italic; }
+  .cover-divider {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--teal), transparent);
+    margin: 28px auto;
+  }
+  .cover-subtitle {
+    font-family: 'Fraunces', serif;
+    font-size: 1.25rem;
+    font-weight: 300;
+    font-style: italic;
+    color: #c8e6da;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  .cover-desc {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: rgba(200,230,218,0.7);
+    letter-spacing: 0.5px;
+    max-width: 480px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+  }
+  .cover-tags {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+  .cover-pill {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--lightteal);
+    border: 1px solid rgba(91,201,168,0.3);
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: rgba(29,158,117,0.08);
+  }
+  .cover-brand {
+    margin-top: 56px;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 6px;
+    color: var(--teal);
+  }
+  .cover-brand-sub {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: rgba(200,230,218,0.5);
+    margin-top: 4px;
+  }
+
+  /* ===== CONTAINER ===== */
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 36px;
+  }
+
+  /* ===== INTRO BAND ===== */
+  .intro-band {
+    background: var(--navy);
+    padding: 64px 0;
+    color: var(--white);
+  }
+  .page-eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--lightteal);
+    margin-bottom: 12px;
+  }
+  .page-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.9rem, 5vw, 3rem);
+    font-weight: 300;
+    line-height: 1.15;
+    margin-bottom: 24px;
+  }
+  .intro-band p {
+    font-size: 0.95rem;
+    color: rgba(200,230,218,0.85);
+    line-height: 1.8;
+    margin-bottom: 14px;
+    max-width: 620px;
+  }
+  .intro-band p:last-child { margin-bottom: 0; }
+
+  /* ===== TOC STRIP ===== */
+  .toc {
+    background: var(--cream);
+    padding: 40px 0;
+  }
+  .toc-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--darkteal);
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+  .toc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .toc-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 10px 14px;
+  }
+  .toc-num {
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--coral);
+    min-width: 22px;
+  }
+  .toc-text {
+    font-size: 0.85rem;
+    color: var(--soft);
+    line-height: 1.4;
+  }
+  .toc-final {
+    grid-column: span 2;
+    border-color: var(--teal);
+  }
+  .toc-final .toc-num { color: var(--teal); }
+
+  /* ===== SECTION ===== */
+  .section { padding: 56px 0; }
+
+  /* ===== MISTAKE BLOCK ===== */
+  .mistake-block {
+    margin-bottom: 16px;
+  }
+  .mistake-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 4px;
+  }
+  .mistake-badge {
+    flex-shrink: 0;
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: var(--coral);
+    color: var(--white);
+    font-family: 'Fraunces', serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .mistake-badge::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border: 1px solid var(--corallight);
+    border-radius: 50%;
+  }
+  .mistake-eyebrow {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--coral);
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  .mistake-title {
+    font-family: 'Fraunces', serif;
+    font-size: 1.7rem;
+    font-weight: 300;
+    color: var(--navy);
+    line-height: 1.2;
+  }
+  .mistake-section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, var(--coral), transparent);
+    margin: 18px 0 24px;
+  }
+
+  .sub-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Fraunces', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    margin-top: 22px;
+  }
+  .sub-label .dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .sub-label.looks .dot { background: var(--navy); }
+  .sub-label.looks { color: var(--navy); }
+  .sub-label.backfires .dot { background: var(--coral); }
+  .sub-label.backfires { color: var(--coral); }
+  .sub-label.instead .dot { background: var(--teal); }
+  .sub-label.instead { color: var(--darkteal); }
+
+  .mistake-block p {
+    color: var(--soft);
+    margin-bottom: 10px;
+    line-height: 1.75;
+    font-size: 0.93rem;
+  }
+
+  .fix-box {
+    background: var(--cream);
+    border-left: 3px solid var(--teal);
+    border-radius: 0 6px 6px 0;
+    padding: 18px 22px;
+    margin-top: 12px;
+  }
+  .fix-box ul { list-style: none; }
+  .fix-box li {
+    font-size: 0.88rem;
+    color: var(--soft);
+    line-height: 1.6;
+    padding: 5px 0;
+    padding-left: 22px;
+    position: relative;
+  }
+  .fix-box li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: var(--teal);
+    font-weight: 600;
+  }
+
+  /* ===== KEY CONCEPT BOX ===== */
+  .key-concept {
+    background: var(--navy);
+    color: var(--white);
+    border-radius: 6px;
+    padding: 28px 32px;
+    margin: 28px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .key-concept::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 140px; height: 140px;
+    background: radial-gradient(circle at 100% 0%, rgba(91,201,168,0.18) 0%, transparent 70%);
+  }
+  .key-concept-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--lightteal);
+    font-weight: 500;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .key-concept h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .key-concept p {
+    font-size: 0.92rem;
+    color: rgba(200,230,218,0.9);
+    line-height: 1.75;
+    position: relative;
+  }
+
+  /* ===== PULL QUOTE ===== */
+  .pull-quote {
+    border-left: 4px solid var(--teal);
+    padding: 16px 24px;
+    margin: 28px 0;
+    background: var(--cream);
+    border-radius: 0 6px 6px 0;
+  }
+  .pull-quote p {
+    font-family: 'Fraunces', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--navy);
+    line-height: 1.6;
+    margin: 0;
+  }
+  .pull-quote cite {
+    display: block;
+    font-size: 0.78rem;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-top: 8px;
+  }
+
+  /* ===== NEXT STEPS ===== */
+  .step-strip {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin: 24px 0;
+  }
+  .step-row {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 16px;
+    align-items: center;
+    border-left: 3px solid var(--teal);
+    padding: 16px 20px;
+    background: var(--cream);
+  }
+  .step-num {
+    font-family: 'Fraunces', serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--teal);
+    text-align: center;
+  }
+  .step-content p {
+    font-size: 0.9rem;
+    color: var(--soft);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* ===== BREAK DIVIDER ===== */
+  .break-divider {
+    background: var(--cream);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 36px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .break-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--darkteal);
+    white-space: nowrap;
+  }
+  .break-line { flex: 1; height: 1px; background: var(--border); }
+
+  /* ===== CLOSING ===== */
+  .closing {
+    background: var(--deepnavy);
+    color: var(--white);
+    padding: 72px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .closing::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(29,158,117,0.25) 0%, transparent 60%);
+  }
+  .closing-inner { position: relative; max-width: 560px; margin: 0 auto; }
+  .closing h2 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.8rem, 4.5vw, 2.6rem);
+    font-weight: 300;
+    margin-bottom: 18px;
+  }
+  .closing h2 em { color: var(--lightteal); font-style: italic; }
+  .closing p {
+    font-size: 0.95rem;
+    color: rgba(200,230,218,0.85);
+    line-height: 1.8;
+    margin-bottom: 28px;
+  }
+  .closing-link {
+    display: inline-block;
+    background: var(--teal);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    border-radius: 30px;
+  }
+  .closing-brand {
+    margin-top: 48px;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 6px;
+    color: var(--teal);
+  }
+  .closing-brand-sub {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: rgba(200,230,218,0.5);
+    margin-top: 4px;
+  }
+</style>
+</head>
+<body>
+
+<div class="print-bar no-print">
+  <span>The Biggest Mistakes People Make When Trying to Lose Weight — Popcycle</span>
+  <button class="print-btn" onclick="window.print()">Print / Save PDF</button>
+</div>
+
+<!-- ===== COVER ===== -->
+<div class="cover">
+  <svg class="cover-marks" viewBox="0 0 700 1000" preserveAspectRatio="xMidYMid slice">
+    <g stroke="#D9705A" stroke-width="3" stroke-linecap="round" opacity="0.5">
+      <path d="M120 180 L160 220 M160 180 L120 220"/>
+      <path d="M560 760 L600 800 M600 760 L560 800"/>
+      <path d="M580 220 L612 252 M612 220 L580 252"/>
+    </g>
+    <g stroke="#5BC9A8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.6">
+      <path d="M150 760 L185 800 L240 730"/>
+      <path d="M540 320 L570 355 L620 290"/>
+      <path d="M100 460 L128 490 L175 430"/>
+    </g>
+  </svg>
+  <div class="cover-inner">
+    <div class="cover-eyebrow">A Popcycle Free Guide</div>
+    <h1>The Biggest <span class="coral">Mistakes</span></h1>
+    <div class="cover-divider"></div>
+    <div class="cover-subtitle">...and exactly what to do instead</div>
+    <p class="cover-desc">Seven mistakes that quietly derail most weight loss attempts - explained honestly, with a simple, practical fix for each one. No gimmicks. No products. Just the stuff we wish someone had told us earlier.</p>
+    <div class="cover-tags">
+      <span class="cover-pill">7 Mistakes</span>
+      <span class="cover-pill">7 Fixes</span>
+      <span class="cover-pill">Zero Guilt</span>
+    </div>
+    <div class="cover-brand">POPCYCLE</div>
+    <div class="cover-brand-sub">sweeten your life</div>
+  </div>
+</div>
+
+<!-- ===== INTRO BAND ===== -->
+<div class="intro-band">
+  <div class="container">
+    <p class="page-eyebrow">Before We Start</p>
+    <h2 class="page-title">A quick welcome</h2>
+    <p>If you have ever started a diet on a Monday with real excitement, only to find yourself back at square one a few weeks later wondering what went wrong, you are in the right place.</p>
+    <p>Here is the truth nobody tells you at the start: it is probably not your fault, and it is almost certainly not a willpower problem. Most people who struggle with weight loss are simply repeating the same handful of mistakes that the diet industry has quietly trained all of us to make - because those mistakes keep people coming back for the next program, the next supplement, the next quick fix.</p>
+    <p>This guide breaks down the seven biggest mistakes we see people make, explains why each one backfires, and gives you a simple, practical alternative for each one. Grab a coffee, get comfortable, and let&#8217;s get into it.</p>
+  </div>
+</div>
+
+<!-- ===== TOC ===== -->
+<div class="toc">
+  <div class="container">
+    <p class="toc-label">What's Inside</p>
+    <div class="toc-grid">
+      <div class="toc-item"><span class="toc-num">1</span><span class="toc-text">Starting too fast, too restrictive</span></div>
+      <div class="toc-item"><span class="toc-num">2</span><span class="toc-text">Treating exercise as punishment</span></div>
+      <div class="toc-item"><span class="toc-num">3</span><span class="toc-text">Chasing the scale, not the trend</span></div>
+      <div class="toc-item"><span class="toc-num">4</span><span class="toc-text">All-or-nothing thinking</span></div>
+      <div class="toc-item"><span class="toc-num">5</span><span class="toc-text">Ignoring sleep and stress</span></div>
+      <div class="toc-item"><span class="toc-num">6</span><span class="toc-text">Cutting out entire food groups</span></div>
+      <div class="toc-item"><span class="toc-num">7</span><span class="toc-text">Going it completely alone</span></div>
+      <div class="toc-item toc-final"><span class="toc-num">+</span><span class="toc-text">Your simple next steps</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MISTAKES SECTION ===== -->
+<div class="section">
+  <div class="container">
+
+    <!-- MISTAKE 1 -->
+    <div class="mistake-block">
+      <div class="mistake-header">
+        <div class="mistake-badge">1</div>
+        <div>
+          <div class="mistake-eyebrow">Mistake One</div>
+          <div class="mistake-title">Starting too fast, too restrictive</div>
+        </div>
+      </div>
+      <div class="mistake-section-divider"></div>
+
+      <div class="sub-label looks"><span class="dot"></span> What it looks like</div>
+      <p>Monday morning arrives and everything changes at once. No more sugar, no more carbs, no more eating out, two workouts a day, and a meal plan that looks nothing like how you actually eat. For about four days, it feels amazing. Then life happens - a busy week, a birthday party, a bad night of sleep - and the whole structure collapses because there was no room for real life inside it.</p>
+
+      <div class="sub-label backfires"><span class="dot"></span> Why it backfires</div>
+      <p>Drastic restriction triggers what researchers call the deprivation response. Your body and brain interpret sudden, extreme limitation as a threat, which increases hunger hormones and cravings. Combine that with a plan that has zero flexibility, and a single missed day can feel like total failure - which is often the moment people give up entirely.</p>
+
+      <div class="sub-label instead"><span class="dot"></span> What to do instead</div>
+      <p>Change one or two things at a time, not everything at once. Small changes you can sustain for months will always outperform an extreme plan you abandon after two weeks.</p>
+      <div class="fix-box">
+        <ul>
+          <li>Pick one meal of the day to improve first - often breakfast</li>
+          <li>Add one walk most days before changing anything else</li>
+          <li>Allow yourself foods you genuinely enjoy, in reasonable amounts</li>
+          <li>Give any new habit at least two weeks before judging it</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="break-divider"><span class="break-label">Mistake Two</span><div class="break-line"></div></div>
+
+<div class="section">
+  <div class="container">
+
+    <!-- MISTAKE 2 -->
+    <div class="mistake-block">
+      <div class="mistake-header">
+        <div class="mistake-badge">2</div>
+        <div>
+          <div class="mistake-eyebrow">Mistake Two</div>
+          <div class="mistake-title">Treating exercise as punishment</div>
+        </div>
+      </div>
+      <div class="mistake-section-divider"></div>
+
+      <div class="sub-label looks"><span class="dot"></span> What it looks like</div>
+      <p>You ate something you regret, so now you owe the gym an hour of cardio to make up for it. Exercise becomes a debt to be repaid rather than something good for you on its own. Over time, this connection between food guilt and exercise turns workouts into something to dread - and things we dread rarely stay consistent.</p>
+
+      <div class="sub-label backfires"><span class="dot"></span> Why it backfires</div>
+      <p>Motivation driven by guilt is unreliable by nature - it only shows up after you feel bad about something. Long term consistency comes from positive associations, not negative ones. If movement is tied to shame, your brain will look for reasons to avoid it, and eventually it will find them.</p>
+
+      <div class="sub-label instead"><span class="dot"></span> What to do instead</div>
+      <p>Find movement you do not dread. The best exercise program is the one you will actually do consistently, not the one that burns the most calories on paper.</p>
+      <div class="fix-box">
+        <ul>
+          <li>Choose activities you find genuinely enjoyable, even if unconventional</li>
+          <li>Separate food choices from exercise completely - they are not a transaction</li>
+          <li>Track consistency (did I move today?) rather than intensity at first</li>
+          <li>Notice how movement makes you feel afterward, not just during</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="key-concept">
+      <div class="key-concept-label">Key Concept</div>
+      <h3>Guilt is not a strategy</h3>
+      <p>Every successful long-term exerciser we have come across describes movement as something they do for themselves, not something they owe to anyone - including themselves after a "bad" meal. If you can find even one form of movement you genuinely look forward to, you have solved most of the consistency problem already.</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="break-divider"><span class="break-label">Mistake Three</span><div class="break-line"></div></div>
+
+<div class="section">
+  <div class="container">
+
+    <!-- MISTAKE 3 -->
+    <div class="mistake-block">
+      <div class="mistake-header">
+        <div class="mistake-badge">3</div>
+        <div>
+          <div class="mistake-eyebrow">Mistake Three</div>
+          <div class="mistake-title">Chasing the scale, not the trend</div>
+        </div>
+      </div>
+      <div class="mistake-section-divider"></div>
+
+      <div class="sub-label looks"><span class="dot"></span> What it looks like</div>
+      <p>You step on the scale every morning. Some days it is down, which feels great. Other days it is up two pounds for no obvious reason, and your whole mood shifts. You start making decisions based on a number that can swing several pounds in a single day due to water, sodium, hormones, and digestion - none of which have anything to do with actual fat loss.</p>
+
+      <div class="sub-label backfires"><span class="dot"></span> Why it backfires</div>
+      <p>Daily weight fluctuations are normal and largely meaningless on their own. When people interpret a single bad reading as failure, it often triggers the all-or-nothing thinking covered in Mistake Four - leading to giving up on a day, a week, or the entire effort, even when real progress is happening underneath the noise.</p>
+
+      <div class="sub-label instead"><span class="dot"></span> What to do instead</div>
+      <p>Look at trends over weeks, not single readings over days.</p>
+      <div class="fix-box">
+        <ul>
+          <li>Weigh yourself at the same time, same conditions, if at all</li>
+          <li>Average your weight over 7 days instead of reacting to one number</li>
+          <li>Track other measures too - how clothes fit, energy, strength gains</li>
+          <li>Remember: the goal is the long term direction, not any single point</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="break-divider"><span class="break-label">Mistake Four</span><div class="break-line"></div></div>
+
+<div class="section">
+  <div class="container">
+
+    <!-- MISTAKE 4 -->
+    <div class="mistake-block">
+      <div class="mistake-header">
+        <div class="mistake-badge">4</div>
+        <div>
+          <div class="mistake-eyebrow">Mistake Four</div>
+          <div class="mistake-title">All-or-nothing thinking</div>
+        </div>
+      </div>
+      <div class="mistake-section-divider"></div>
+
+      <div class="sub-label looks"><span class="dot"></span> What it looks like</div>
+      <p>You eat one thing that was not on plan - a slice of cake at a coworker's birthday, fries with lunch, a missed workout - and suddenly the whole day feels ruined. So you figure you might as well keep going, finish the day off, and start fresh tomorrow. Or Monday. Or next month.</p>
+
+      <div class="sub-label backfires"><span class="dot"></span> Why it backfires</div>
+      <p>One off-plan meal has almost no real impact on your overall progress. But the story you tell yourself afterward - that you have failed and might as well give up for now - turns one small moment into days or weeks of lost momentum. The meal was never the problem. The all-or-nothing story is.</p>
+
+      <div class="sub-label instead"><span class="dot"></span> What to do instead</div>
+      <p>Practice what we call the next bite philosophy: the only decision that matters is your very next choice.</p>
+      <div class="fix-box">
+        <ul>
+          <li>One meal does not define a day, and one day does not define a journey</li>
+          <li>After an off-plan meal, simply return to your normal pattern next time</li>
+          <li>Remove the language of cheating and ruining - it adds emotional weight</li>
+          <li>Progress is the average of many days, not the perfection of any one</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pull-quote">
+      <p>The meal was never the problem. The story you told yourself about the meal is the problem.</p>
+      <cite>Worth remembering</cite>
+    </div>
+
+  </div>
+</div>
+
+<div class="break-divider"><span class="break-label">Mistake Five</span><div class="break-line"></div></div>
+
+<div class="section">
+  <div class="container">
+
+    <!-- MISTAKE 5 -->
+    <div class="mistake-block">
+      <div class="mistake-header">
+        <div class="mistake-badge">5</div>
+        <div>
+          <div class="mistake-eyebrow">Mistake Five</div>
+          <div class="mistake-title">Ignoring sleep and stress</div>
+        </div>
+      </div>
+      <div class="mistake-section-divider"></div>
+
+      <div class="sub-label looks"><span class="dot"></span> What it looks like</div>
+      <p>Nutrition and exercise get all the attention, while sleep and stress quietly run in the background, undermining everything else. Late nights, constant notifications, and a stressful schedule become normal, and nobody connects them to the fact that cravings are stronger, energy is lower, and motivation is harder to find.</p>
+
+      <div class="sub-label backfires"><span class="dot"></span> Why it backfires</div>
+      <p>Poor sleep and chronic stress directly affect the hormones that regulate hunger and fullness, often increasing appetite and cravings for high calorie foods. They also reduce willpower and decision-making capacity - meaning the very tools you need to stick to your plan are weakest exactly when you need them most.</p>
+
+      <div class="sub-label instead"><span class="dot"></span> What to do instead</div>
+      <p>Treat sleep and stress management as part of your weight loss plan, not separate from it.</p>
+      <div class="fix-box">
+        <ul>
+          <li>Aim for a consistent sleep and wake time, even on weekends</li>
+          <li>Build in small daily moments of genuine downtime, not just screens</li>
+          <li>Notice if stress is driving certain eating patterns, without judgment</li>
+          <li>If sleep has been a long term struggle, it may be worth addressing on its own</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="break-divider"><span class="break-label">Mistake Six</span><div class="break-line"></div></div>
+
+<div class="section">
+  <div class="container">
+
+    <!-- MISTAKE 6 -->
+    <div class="mistake-block">
+      <div class="mistake-header">
+        <div class="mistake-badge">6</div>
+        <div>
+          <div class="mistake-eyebrow">Mistake Six</div>
+          <div class="mistake-title">Cutting out entire food groups</div>
+        </div>
+      </div>
+      <div class="mistake-section-divider"></div>
+
+      <div class="sub-label looks"><span class="dot"></span> What it looks like</div>
+      <p>No carbs. No sugar. No dairy. No fruit. Whatever the current trending approach says to eliminate, it gets eliminated - often all at once, often based on something seen online rather than anything specific to your body or your life.</p>
+
+      <div class="sub-label backfires"><span class="dot"></span> Why it backfires</div>
+      <p>Eliminating entire categories of food makes eating socially complicated, removes foods that may have real nutritional value, and often creates the exact restriction-rebound cycle described in Mistake One. It also tends to make a food feel forbidden - and forbidden foods become disproportionately tempting.</p>
+
+      <div class="sub-label instead"><span class="dot"></span> What to do instead</div>
+      <p>Focus on what to add before deciding what to remove.</p>
+      <div class="fix-box">
+        <ul>
+          <li>Add more protein and vegetables to meals you already eat</li>
+          <li>Let some foods naturally take up less space as others fill the plate</li>
+          <li>If you have a genuine sensitivity, work with a professional</li>
+          <li>Aim for a way of eating you could maintain at a holiday or restaurant</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="break-divider"><span class="break-label">Mistake Seven</span><div class="break-line"></div></div>
+
+<div class="section">
+  <div class="container">
+
+    <!-- MISTAKE 7 -->
+    <div class="mistake-block">
+      <div class="mistake-header">
+        <div class="mistake-badge">7</div>
+        <div>
+          <div class="mistake-eyebrow">Mistake Seven</div>
+          <div class="mistake-title">Going it completely alone</div>
+        </div>
+      </div>
+      <div class="mistake-section-divider"></div>
+
+      <div class="sub-label looks"><span class="dot"></span> What it looks like</div>
+      <p>You decide to make a change, but you keep it to yourself. Nobody around you knows you are trying anything different. When things get hard, there is no one to talk to about it, and when things go well, there is no one to share it with either.</p>
+
+      <div class="sub-label backfires"><span class="dot"></span> Why it backfires</div>
+      <p>Behavior change is hard enough with support - it is significantly harder without it. People who have some form of accountability, community, or shared experience are more likely to stick with changes long term. Isolation also means that when motivation naturally dips, as it does for everyone, there is nothing pulling you back in.</p>
+
+      <div class="sub-label instead"><span class="dot"></span> What to do instead</div>
+      <p>Find some form of connection, even a small one.</p>
+      <div class="fix-box">
+        <ul>
+          <li>Tell one person what you are working on and why</li>
+          <li>Consider a podcast or online community of people on a similar path</li>
+          <li>Notice you do not have to do this perfectly or alone to make progress</li>
+          <li>Celebrate small wins with someone, even if it feels minor</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="break-divider"><span class="break-label">Your Next Steps</span><div class="break-line"></div></div>
+
+<!-- ===== NEXT STEPS ===== -->
+<div class="section">
+  <div class="container">
+    <p class="section-eyebrow" style="font-size:11px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:var(--teal);margin-bottom:8px;">What Now</p>
+    <h2 style="font-family:'Fraunces',serif;font-size:clamp(2rem, 5vw, 3rem);font-weight:300;line-height:1.1;color:var(--navy);margin-bottom:12px;">Your simple <em style="color:var(--teal);font-style:italic;">next steps</em></h2>
+    <div style="height:1px;background:linear-gradient(90deg, var(--teal), transparent);margin:24px 0 28px;"></div>
+
+    <p style="color:var(--soft);margin-bottom:24px;line-height:1.75;">You do not need to fix all seven of these at once - in fact, trying to would be Mistake One all over again. Instead, here is what we suggest:</p>
+
+    <div class="step-strip">
+      <div class="step-row"><div class="step-num">1</div><div class="step-content"><p>Re-read the seven mistakes and circle the one or two that felt most familiar</p></div></div>
+      <div class="step-row"><div class="step-num">2</div><div class="step-content"><p>Pick just one "what to do instead" suggestion to start this week</p></div></div>
+      <div class="step-row"><div class="step-num">3</div><div class="step-content"><p>Give it two weeks before adding anything else</p></div></div>
+      <div class="step-row"><div class="step-num">4</div><div class="step-content"><p>Be patient with yourself - sustainable change is built slowly, on purpose</p></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CLOSING ===== -->
+<div class="closing">
+  <div class="closing-inner">
+    <h2>Want more like <em>this</em>?</h2>
+    <p>This guide is part of the Popcycle Start Here library - free resources for people who want to make real, lasting changes to their health, finances, relationships, and goals. We curate the best free and paid tools, apps, books, podcasts, and programs out there - not based on who pays the highest commission, but based on what we genuinely believe works.</p>
+    <p style="margin-bottom:36px;">Visit our Weight Loss &amp; Fitness collection for apps we love, podcasts worth your time, and books that might change how you think about food, movement, and health altogether.</p>
+    <a href="https://popcycle.online" class="closing-link">Visit Popcycle.online</a>
+    <div class="closing-brand">POPCYCLE</div>
+    <div class="closing-brand-sub">sweeten your life</div>
+  </div>
+</div>
+
+</body>
+</html>

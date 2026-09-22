@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Truth About Metabolism After 40 | Popcycle</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --deep-brown:#2A1800;--bronze:#8B4A00;--bronze-mid:#B06020;--bronze-light:#D4904A;
+    --amber:#C88030;--amber-light:#E8A84D;--sage:#52654B;--forest:#2E5020;
+    --paper:#FBF5EC;--warm-paper:#F5EAD8;--border:#DCC8A8;
+    --soft:#2A1800;--white:#ffffff;--text:#2A1800;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--text);font-size:15px;line-height:1.7;}
+  .chapter-card,.key-concept,.pull-quote,.faq-item,.step-card,.truth-item{break-inside:avoid;page-break-inside:avoid;}
+  h2,h3,.section-eyebrow{break-after:avoid;page-break-after:avoid;}
+  .section-intro,.chapter-desc,.step-body{orphans:3;widows:3;}
+  @media print{.no-print{display:none!important;}body{font-size:11px;}.hero{min-height:auto;padding:48px 40px;}.section{padding:48px 0;}}
+  .print-bar{background:var(--deep-brown);color:var(--white);padding:10px 24px;display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:1px;position:sticky;top:0;z-index:100;font-weight:500;text-transform:uppercase;}
+  .print-btn{background:var(--bronze);color:var(--white);border:none;padding:6px 16px;border-radius:20px;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:1px;cursor:pointer;}
+  .hero{background:var(--deep-brown);min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 40px 80px;position:relative;overflow:hidden;}
+  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 25% 60%,rgba(139,74,0,.35) 0%,transparent 55%),radial-gradient(ellipse at 78% 20%,rgba(176,96,32,.2) 0%,transparent 50%),radial-gradient(ellipse at 50% 110%,rgba(15,8,0,.95) 0%,transparent 55%);}
+  .hero::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(212,144,74,.06) 1px,transparent 0);background-size:32px 32px;}
+  .hero-inner{position:relative;z-index:2;max-width:820px;}
+  .hero-eyebrow{font-size:10px;font-weight:500;letter-spacing:5px;text-transform:uppercase;color:var(--bronze-light);margin-bottom:20px;}
+  .price-badge{display:inline-block;background:rgba(139,74,0,.2);border:1px solid rgba(176,96,32,.45);color:var(--bronze-light);font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;padding:6px 18px;border-radius:20px;margin-bottom:28px;}
+  .hero h1{font-family:'Fraunces',serif;font-size:clamp(2.6rem,7vw,4.8rem);font-weight:300;line-height:1.02;color:var(--white);letter-spacing:-1.5px;margin-bottom:10px;}
+  .hero h1 em{color:var(--bronze-light);font-style:italic;}
+  .hero-divider{width:60px;height:2px;background:linear-gradient(90deg,transparent,var(--bronze-mid),transparent);margin:28px auto;}
+  .hero-sub{font-family:'Fraunces',serif;font-size:clamp(1.1rem,3vw,1.45rem);font-weight:300;font-style:italic;color:rgba(255,255,255,.7);margin-bottom:20px;line-height:1.5;}
+  .hero-desc{font-size:.91rem;color:rgba(255,255,255,.47);max-width:560px;margin:0 auto 44px;line-height:1.82;font-weight:300;}
+  .hero-pills{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:50px;}
+  .hero-pill{font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--bronze-light);border:1px solid rgba(139,74,0,.4);padding:7px 16px;border-radius:20px;background:rgba(139,74,0,.1);}
+  .hero-stats{display:flex;justify-content:center;gap:48px;padding-top:40px;border-top:1px solid rgba(255,255,255,.07);flex-wrap:wrap;}
+  .stat{text-align:center;}
+  .stat-num{font-family:'Fraunces',serif;font-size:2rem;font-weight:600;color:var(--bronze-light);line-height:1;margin-bottom:4px;}
+  .stat-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.38);}
+  .container{max-width:860px;margin:0 auto;padding:0 36px;}
+  .section{padding:64px 0;}
+  .section-eyebrow{font-size:10px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:var(--bronze);margin-bottom:10px;}
+  .section-title{font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,3rem);font-weight:300;line-height:1.1;color:var(--deep-brown);margin-bottom:12px;}
+  .section-title em{color:var(--bronze);font-style:italic;}
+  .section-divider{height:2px;background:linear-gradient(90deg,var(--bronze),transparent);margin:20px 0 32px;}
+  .section-intro{font-family:'Fraunces',serif;font-size:1.12rem;font-weight:300;font-style:italic;color:var(--soft);border-left:3px solid var(--bronze);padding-left:20px;margin-bottom:32px;line-height:1.65;}
+  .truth-band{background:var(--deep-brown);padding:52px 0;}
+  .truth-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+  .truth-item{padding:28px;background:rgba(255,255,255,.04);break-inside:avoid;text-align:center;}
+  .truth-icon{font-size:1.8rem;margin-bottom:12px;}
+  .truth-title{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;color:var(--white);margin-bottom:8px;}
+  .truth-desc{font-size:.83rem;color:rgba(255,255,255,.58);line-height:1.65;}
+  .chapters-grid{display:flex;flex-direction:column;gap:4px;margin:24px 0;}
+  .chapter-card{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:26px 30px;display:grid;grid-template-columns:76px 1fr;gap:22px;align-items:start;}
+  .chapter-num-block{text-align:center;padding-top:4px;}
+  .chapter-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--bronze);line-height:1;display:block;}
+  .chapter-num-label{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#A07840;display:block;margin-top:2px;}
+  .chapter-tagline{font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--amber);margin-bottom:10px;}
+  .chapter-title{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:600;color:var(--deep-brown);margin-bottom:8px;line-height:1.2;}
+  .chapter-desc{font-size:.91rem;color:var(--soft);line-height:1.75;margin-bottom:14px;}
+  .chapter-takeaway{background:var(--warm-paper);border-left:3px solid var(--sage);padding:12px 16px;border-radius:0 4px 4px 0;font-size:.85rem;color:var(--deep-brown);font-weight:500;}
+  .chapter-takeaway strong{display:block;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--sage);margin-bottom:4px;}
+  .key-concept{background:var(--deep-brown);color:var(--white);border-radius:8px;padding:30px 34px;margin:24px 0;position:relative;overflow:hidden;}
+  .key-concept::before{content:'';position:absolute;top:0;right:0;width:200px;height:200px;background:radial-gradient(circle at 100% 0%,rgba(139,74,0,.3) 0%,transparent 70%);}
+  .kc-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--bronze-light);margin-bottom:10px;font-weight:500;}
+  .key-concept h3{font-family:'Fraunces',serif;font-size:1.45rem;font-weight:400;color:var(--white);margin-bottom:12px;}
+  .key-concept p{font-size:.92rem;color:rgba(255,255,255,.78);line-height:1.78;}
+  .key-concept ul{margin-top:12px;padding-left:0;list-style:none;}
+  .key-concept ul li{font-size:.9rem;color:rgba(255,255,255,.72);line-height:1.7;padding:4px 0 4px 20px;position:relative;}
+  .key-concept ul li::before{content:'→';position:absolute;left:0;color:var(--bronze-light);font-size:.8rem;}
+  .pull-quote{border-left:4px solid var(--bronze);padding:20px 26px;margin:26px 0;background:var(--warm-paper);border-radius:0 6px 6px 0;}
+  .pull-quote p{font-family:'Fraunces',serif;font-size:1.22rem;font-style:italic;font-weight:300;color:var(--deep-brown);line-height:1.6;margin:0;}
+  .pull-quote cite{display:block;font-size:.75rem;font-style:normal;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--bronze);margin-top:10px;}
+  .steps-list{display:flex;flex-direction:column;gap:12px;margin:24px 0;}
+  .step-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:22px 26px;display:grid;grid-template-columns:50px 1fr;gap:18px;align-items:start;}
+  .step-num-circle{width:42px;height:42px;border-radius:50%;background:var(--bronze);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;color:var(--white);flex-shrink:0;margin-top:2px;}
+  .step-title{font-family:'Fraunces',serif;font-size:1.12rem;font-weight:600;color:var(--deep-brown);margin-bottom:6px;}
+  .step-body{font-size:.9rem;color:var(--soft);line-height:1.75;}
+  .step-example{margin-top:10px;font-size:.85rem;color:var(--deep-brown);background:var(--warm-paper);border-radius:4px;padding:10px 14px;border-left:2px solid var(--sage);font-weight:500;}
+  .step-example strong{display:block;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--sage);margin-bottom:3px;}
+  .sub-band{background:#F0E4CC;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:13px 36px;display:flex;align-items:center;gap:16px;margin:8px 0;}
+  .sub-label{font-size:9px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--deep-brown);white-space:nowrap;}
+  .sub-line{flex:1;height:1px;background:var(--border);}
+  .bronze-band{background:var(--bronze);padding:36px 0;text-align:center;}
+  .bronze-band .band-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:10px;font-weight:500;}
+  .bronze-band p{font-family:'Fraunces',serif;font-size:1.18rem;font-style:italic;font-weight:300;color:rgba(255,255,255,.92);max-width:600px;margin:0 auto;line-height:1.6;}
+  .faq-item{border-bottom:1px solid var(--border);padding:20px 0;}
+  .faq-item:last-child{border-bottom:none;}
+  .faq-q{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;color:var(--deep-brown);margin-bottom:8px;display:flex;gap:12px;}
+  .faq-q .qmark{color:var(--sage);font-style:italic;flex-shrink:0;}
+  .faq-a{font-size:.9rem;color:var(--soft);line-height:1.78;padding-left:26px;}
+  .closing{background:var(--deep-brown);color:var(--white);padding:80px 0;text-align:center;position:relative;overflow:hidden;}
+  .closing::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(139,74,0,.28) 0%,transparent 65%);}
+  .closing-inner{position:relative;max-width:620px;margin:0 auto;padding:0 36px;}
+  .closing h2{font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,3rem);font-weight:300;margin-bottom:18px;line-height:1.15;}
+  .closing h2 em{color:var(--bronze-light);font-style:italic;}
+  .closing p{font-size:.95rem;color:rgba(255,255,255,.65);line-height:1.82;margin-bottom:30px;}
+  .closing-btn{display:inline-block;background:var(--bronze);color:var(--white);text-decoration:none;font-weight:600;font-size:12px;letter-spacing:2px;text-transform:uppercase;padding:15px 38px;border-radius:30px;}
+  .closing-brand{margin-top:48px;font-weight:500;font-size:13px;letter-spacing:6px;color:var(--bronze-light);}
+  .closing-sub{font-family:'Fraunces',serif;font-style:italic;font-size:.85rem;color:rgba(255,255,255,.32);margin-top:6px;}
+  @media(max-width:640px){.truth-grid{grid-template-columns:1fr;}.chapter-card{grid-template-columns:1fr;}.step-card{grid-template-columns:1fr;}.container{padding:0 20px;}}
+</style>
+</head>
+<body>
+<div class="print-bar no-print"><span>Popcycle · Weight Loss & Fitness</span><button class="print-btn" onclick="window.print()">Save as PDF</button></div>
+
+<section class="hero"><div class="hero-inner">
+  <div class="hero-eyebrow">Popcycle · Weight Loss & Fitness</div>
+  <div class="price-badge">eBook · $9</div>
+  <h1>The Truth About<br><em>Metabolism After 40</em></h1>
+  <div class="hero-divider"></div>
+  <p class="hero-sub">Your metabolism didn't break. But it did change — and the old approach probably isn't working anymore.</p>
+  <p class="hero-desc">Most people over 40 are fighting their metabolism with tools designed for a 25-year-old body. This guide explains what actually changes, why the old rules stop working, and what the science says to do instead.</p>
+  <div class="hero-pills"><span class="hero-pill">Sarcopenia</span><span class="hero-pill">Muscle Preservation</span><span class="hero-pill">Protein Strategy</span><span class="hero-pill">Hormonal Shifts</span></div>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">1–2%</div><div class="stat-label">Annual Muscle Loss Starting at 30</div></div>
+    <div class="stat"><div class="stat-num">Not</div><div class="stat-label">Inevitable — With the Right Response</div></div>
+    <div class="stat"><div class="stat-num">3</div><div class="stat-label">Levers That Actually Move the Needle</div></div>
+  </div>
+</div></section>
+
+<div class="truth-band"><div class="container"><div class="truth-grid">
+  <div class="truth-item"><div class="truth-icon">🔥</div><div class="truth-title">Your metabolism did change</div><div class="truth-desc">After 40, muscle mass declines, hormones shift, and sleep quality affects fat storage more than before. Understanding what changed is step one.</div></div>
+  <div class="truth-item"><div class="truth-icon">💪</div><div class="truth-title">Muscle is the engine</div><div class="truth-desc">Metabolic rate is largely determined by lean muscle mass. Protecting and building muscle after 40 is the highest-leverage metabolic intervention available.</div></div>
+  <div class="truth-item"><div class="truth-icon">🍽</div><div class="truth-title">Protein is the priority</div><div class="truth-desc">Protein needs actually increase with age. Most people over 40 are significantly under-eating protein — and it's costing them metabolically.</div></div>
+</div></div></div>
+
+<section class="section"><div class="container">
+  <div class="section-eyebrow">Before the Myths</div>
+  <h2 class="section-title">What metabolism actually is —<br><em>and what changed</em></h2>
+  <div class="section-divider"></div>
+  <p class="section-intro">"My metabolism slowed down" is partially true, widely misunderstood, and — most importantly — more addressable than most people realize.</p>
+  <p style="font-size:.93rem;color:var(--soft);line-height:1.82;margin-bottom:18px;">Metabolism refers to the total energy your body expends. Resting metabolic rate (RMR) — the calories you burn at rest — accounts for roughly 60-75% of total energy expenditure and is primarily determined by lean muscle mass. After age 30, most people lose 1-2% of muscle mass per year without intervention. Less muscle = lower RMR = fewer calories burned at rest. This is the actual mechanism — and it's almost entirely addressable.</p>
+  <p style="font-size:.93rem;color:var(--soft);line-height:1.82;margin-bottom:24px;">The other factors are real too: hormonal shifts, reduced sleep quality, and lifestyle drift. None of these are destiny. All of them respond to specific interventions. That's what this guide is about.</p>
+  <div class="pull-quote"><p>"The metabolism you have at 50 is largely the result of choices made between 30 and 50. The metabolism you have at 70 is largely up to you right now."</p><cite>Popcycle · Weight Loss & Fitness</cite></div>
+  <div class="key-concept">
+    <div class="kc-label">The Real Mechanism</div>
+    <h3>Sarcopenia — muscle loss with age — is the primary driver of metabolic decline.</h3>
+    <p>Sarcopenia begins around age 30 and accelerates after 60 if unaddressed. Skeletal muscle is highly adaptable at any age — research shows adults in their 60s, 70s, and beyond who begin resistance training build significant muscle mass and see meaningful improvements in metabolic rate. The window doesn't close.</p>
+    <ul>
+      <li>Muscle tissue burns approximately 6 calories per pound per day at rest vs. 2 for fat</li>
+      <li>A 10-pound muscle gain can increase resting metabolism by 60+ calories per day</li>
+      <li>Resistance training elevates RMR for 24-48 hours post-workout</li>
+      <li>Protein synthesis efficiency decreases with age — you need MORE protein to build the same muscle</li>
+      <li>Even modest increases in muscle mass improve insulin sensitivity measurably</li>
+    </ul>
+  </div>
+</div></section>
+
+<div class="sub-band"><span class="sub-label">Part One</span><span class="sub-line"></span><span class="sub-label">What Actually Changes After 40</span></div>
+<section class="section" style="padding-top:44px;"><div class="container">
+  <div class="section-eyebrow">The Honest Breakdown</div>
+  <h2 class="section-title">Six metabolic shifts —<br><em>and what to do about each one</em></h2>
+  <div class="section-divider"></div>
+  <p class="section-intro">Understanding the specific changes lets you target specific solutions. Vague "eat less, move more" advice ignores all of this.</p>
+  <div class="chapters-grid">
+    <div class="chapter-card"><div class="chapter-num-block"><span class="chapter-num">01</span><span class="chapter-num-label">Change</span></div><div><div class="chapter-tagline">The Big One</div><h3 class="chapter-title">Muscle Loss (Sarcopenia)</h3><p class="chapter-desc">Starting around age 30 and accelerating after 40, most people lose 1-2% of muscle mass per year without intervention. By age 60, this can mean losing 20-30% of peak muscle mass. Muscle is metabolically expensive tissue — it burns calories at rest. Less muscle means lower resting metabolic rate, reduced glucose disposal, and greater tendency to store visceral (abdominal) fat.</p><div class="chapter-takeaway"><strong>The Response</strong>Resistance training 2-4x per week is the primary intervention. No other approach addresses sarcopenia directly. You cannot eat your way out of muscle loss.</div></div></div>
+    <div class="chapter-card"><div class="chapter-num-block"><span class="chapter-num">02</span><span class="chapter-num-label">Change</span></div><div><div class="chapter-tagline">The Hormonal Shift</div><h3 class="chapter-title">Estrogen, Testosterone & Growth Hormone Decline</h3><p class="chapter-desc">After 40, both men and women experience significant hormonal shifts. In women, declining estrogen changes where fat is stored — from hips and thighs toward the abdomen — and affects insulin sensitivity. In men, declining testosterone reduces the anabolic stimulus and increases fat storage. Both sexes experience reduced growth hormone, which affects recovery and fat metabolism. These shifts change the game but don't end it.</p><div class="chapter-takeaway"><strong>The Response</strong>Resistance training and adequate sleep are the most powerful natural supports for these hormonal systems. Discuss hormone therapy with your physician if symptoms are significant.</div></div></div>
+    <div class="chapter-card"><div class="chapter-num-block"><span class="chapter-num">03</span><span class="chapter-num-label">Change</span></div><div><div class="chapter-tagline">The Sleep Factor</div><h3 class="chapter-title">Poor Sleep Compounds Everything</h3><p class="chapter-desc">Sleep quality typically declines with age — and its metabolic consequences are underappreciated. Poor sleep elevates cortisol (which promotes fat storage), disrupts leptin and ghrelin (hunger and fullness hormones), and impairs glucose metabolism. Research shows people sleeping 6 vs. 8 hours lose significantly more muscle and less fat during calorie restriction — meaning the composition of weight lost changes with sleep quality.</p><div class="chapter-takeaway"><strong>The Response</strong>Sleep hygiene for metabolic health is not optional at this stage. Prioritize 7-9 hours. The metabolic cost of chronic under-sleeping is significant and compounds with every other challenge.</div></div></div>
+    <div class="chapter-card"><div class="chapter-num-block"><span class="chapter-num">04</span><span class="chapter-num-label">Change</span></div><div><div class="chapter-tagline">The Protein Problem</div><h3 class="chapter-title">Anabolic Resistance — You Need More Protein</h3><p class="chapter-desc">After 40, muscle protein synthesis becomes less efficient — called anabolic resistance. The same amount of dietary protein that stimulated robust muscle building at 25 produces a smaller response at 50. The solution: eat more protein. Research suggests adults over 40 need 1.0-1.2 grams per pound of body weight — significantly more than general recommendations.</p><div class="chapter-takeaway"><strong>The Response</strong>Most adults over 40 eat roughly half the protein needed for muscle maintenance. Distribute protein across meals (30-40g per meal) rather than loading it at dinner.</div></div></div>
+    <div class="chapter-card"><div class="chapter-num-block"><span class="chapter-num">05</span><span class="chapter-num-label">Change</span></div><div><div class="chapter-tagline">The Insulin Picture</div><h3 class="chapter-title">Declining Insulin Sensitivity</h3><p class="chapter-desc">Insulin sensitivity tends to decline with age, muscle loss, and reduced activity — meaning the body needs more insulin to manage the same blood sugar load. This promotes fat storage, increases carbohydrate cravings, and creates a feedback loop that makes weight management progressively harder. It's also a significant risk factor for Type 2 diabetes.</p><div class="chapter-takeaway"><strong>The Response</strong>Prioritizing protein and vegetables over refined carbohydrates, combined with resistance training, is the most effective non-pharmaceutical approach to improving insulin sensitivity.</div></div></div>
+    <div class="chapter-card"><div class="chapter-num-block"><span class="chapter-num">06</span><span class="chapter-num-label">Change</span></div><div><div class="chapter-tagline">The Recovery Reality</div><h3 class="chapter-title">Longer Recovery, Lower Tolerance for Volume</h3><p class="chapter-desc">Recovery from exercise takes longer after 40 — more muscle damage, slower repair, higher inflammation response. Overtraining is a genuine risk, and the chronic inflammation it produces actively undermines metabolic health. Smart programming means adequate recovery, not maximum volume. More is not always better.</p><div class="chapter-takeaway"><strong>The Response</strong>Two or three well-designed resistance training sessions per week with adequate recovery often outperforms five mediocre ones. Recovery is training.</div></div></div>
+  </div>
+</div></section>
+
+<div class="bronze-band"><div class="container"><div class="band-label">The Shift</div><p>"After 40, the game changes. The goal isn't to work harder — it's to work smarter with a different body than you had at 25."</p></div></div>
+
+<div class="sub-band"><span class="sub-label">Part Two</span><span class="sub-line"></span><span class="sub-label">What Actually Works</span></div>
+<section class="section" style="padding-top:44px;"><div class="container">
+  <div class="section-eyebrow">The Evidence-Based Response</div>
+  <h2 class="section-title">Five interventions with<br><em>the strongest evidence</em></h2>
+  <div class="section-divider"></div>
+  <p class="section-intro">Not all metabolic interventions are equal. These five have the strongest research support for adults over 40.</p>
+  <div class="steps-list">
+    <div class="step-card"><div class="step-num-circle">1</div><div><div class="step-title">Resistance Training — Non-Negotiable</div><p class="step-body">The single most important metabolic intervention for adults over 40. It builds and preserves the muscle mass that drives metabolic rate, improves insulin sensitivity, supports bone density, and elevates resting metabolism for 24-48 hours post-workout. The dose required is achievable: 2-3 sessions per week of progressive resistance training produces meaningful results at any age.</p><div class="step-example"><strong>Starting Point</strong>Bodyweight exercises and light dumbbells are effective starting points. Progressive overload — gradually increasing the challenge — is the key principle. Apps like WHOOP and programs like Starting Strength are solid entry points.</div></div></div>
+    <div class="step-card"><div class="step-num-circle">2</div><div><div class="step-title">Protein: Hit the Target</div><p class="step-body">After 40, protein intake is the highest-leverage dietary variable for metabolic health. Aim for 0.7-1.0 grams per pound of bodyweight. Distribute it across meals (30-40g per meal) rather than concentrating it at dinner. Prioritize complete protein sources: meat, fish, eggs, dairy, or complete plant combinations. Track for at least 2 weeks to understand your actual intake vs. your target.</p><div class="step-example"><strong>Practical Numbers</strong>A 160-pound person targeting 1g/lb needs 160g daily. That's roughly: 4 eggs (24g) + Greek yogurt (17g) + 6oz chicken breast (52g) + cottage cheese 1 cup (28g) + protein shake (25g). Doable with planning.</div></div></div>
+    <div class="step-card"><div class="step-num-circle">3</div><div><div class="step-title">Sleep: The Metabolic Foundation</div><p class="step-body">If you're under-sleeping, you're working against yourself metabolically regardless of what else you're doing. Research shows sleep restriction during calorie restriction results in 55% less fat loss and 60% more muscle loss — a dramatically different body composition outcome from identical calorie deficits. Prioritize 7-9 hours. Address sleep apnea if relevant (extremely common and under-diagnosed in adults over 45).</p><div class="step-example"><strong>Sleep Quality Interventions</strong>Consistent sleep/wake times. Cool, dark, quiet bedroom. No screens 60 minutes before bed. Magnesium glycinate 300-400mg (evidence-supported). Alcohol significantly disrupts sleep architecture — even 1-2 drinks affect sleep quality.</div></div></div>
+    <div class="step-card"><div class="step-num-circle">4</div><div><div class="step-title">Manage Stress Actively</div><p class="step-body">Chronic stress elevates cortisol, which promotes abdominal fat storage, breaks down muscle tissue, disrupts sleep, and increases carbohydrate cravings. At 40+, stress management is metabolic medicine. Evidence-supported interventions: regular physical activity, consistent adequate sleep, and mindfulness practice — 10-20 minutes daily has measurable cortisol effects within 8 weeks.</p><div class="step-example"><strong>What the Research Supports</strong>Mindfulness-Based Stress Reduction (MBSR) has the strongest evidence base. Apps like Headspace, Calm, and Insight Timer are evidence-adjacent. Even short daily practice produces measurable effects.</div></div></div>
+    <div class="step-card"><div class="step-num-circle">5</div><div><div class="step-title">Eat to Support the Engine, Not Restrict It</div><p class="step-body">Severe calorie restriction after 40 is particularly counterproductive — it accelerates muscle loss, lowers RMR, and triggers biological defense mechanisms that make regain nearly inevitable. A moderate deficit (300-500 calories below maintenance), high protein, and resistance training is the evidence-based approach. Cycling periods of maintenance with periods of deficit improves long-term outcomes vs. continuous restriction.</p><div class="step-example"><strong>The Framework</strong>Protein first at every meal. Vegetables for volume. Whole food carbohydrates timed around training. Modest deficit, not aggressive restriction. This isn't a diet — it's a fuel strategy for a machine you're actively maintaining.</div></div></div>
+  </div>
+</div></section>
+
+<div class="sub-band"><span class="sub-label">Part Three</span><span class="sub-line"></span><span class="sub-label">Straight Answers</span></div>
+<section class="section" style="padding-top:44px;"><div class="container">
+  <div class="section-eyebrow">Real Questions</div>
+  <h2 class="section-title">What people actually<br><em>want to know</em></h2>
+  <div class="section-divider"></div>
+  <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>Why am I gaining weight even though I'm eating the same as I always did?</div><div class="faq-a">Several things have changed: muscle mass has declined (lowering resting calorie burn), hormonal shifts have affected fat distribution, and sleep quality may have declined (affecting hunger hormones). "Eating the same" at 45 as at 30 may now represent a calorie surplus. The solution isn't dramatic restriction — it's rebuilding the metabolic engine through resistance training and adequate protein.</div></div>
+  <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>Will cardio fix my metabolism?</div><div class="faq-a">Cardio burns calories during the session and has important benefits for cardiovascular health and mood. But it doesn't meaningfully address sarcopenia, and it doesn't significantly elevate resting metabolic rate the way resistance training does. If you're doing cardio but not resistance training, you're addressing symptoms without addressing the primary cause. Both are valuable. Resistance training is the non-negotiable.</div></div>
+  <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>Can I build muscle after 50?</div><div class="faq-a">Yes, unambiguously. Multiple well-controlled studies show that adults in their 60s, 70s, and even 80s who begin progressive resistance training programs build significant lean muscle mass. Muscle protein synthesis in response to training remains possible at any age — it's just less efficient (hence the higher protein requirement). The adaptation is slower than in youth, but it happens.</div></div>
+  <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>What about intermittent fasting — is it effective after 40?</div><div class="faq-a">Intermittent fasting works for some people as a calorie management tool and may benefit insulin sensitivity. However, for adults over 40 focused on muscle preservation, longer fasting windows can make it challenging to hit protein targets and distribute protein optimally. IF is not metabolically superior to other approaches that achieve the same calorie and protein outcomes. If it helps you manage intake consistently, use it. If it's causing you to under-eat protein, it's not worth the trade-off.</div></div>
+  <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>I've heard metabolism doesn't actually slow with age — is that true?</div><div class="faq-a">A 2021 study in Science found that total energy expenditure (adjusted for body size) is relatively stable from age 20-60. But the nuance matters: body composition changed — people have less muscle and more fat, which changes how calories are burned and stored. The practical implication is the same: protect and build muscle, because that's the tissue doing the metabolic work.</div></div>
+</div></section>
+
+<section class="closing"><div class="closing-inner">
+  <h2>Your metabolism isn't broken.<br>It just needs <em>different inputs</em> than it did at 25.</h2>
+  <p>The changes are real. So are the solutions. Popcycle's Weight Loss & Fitness category covers the tools, programs, and products that support the work — from strength training apps to nutrition tracking to recovery tools — vetted for real results at every age.</p>
+  <a href="https://popcycle.online" class="closing-btn">Explore Popcycle.online</a>
+  <div class="closing-brand">POPCYCLE</div>
+  <div class="closing-sub">Sweeten your life.</div>
+</div></section>
+</body></html>
