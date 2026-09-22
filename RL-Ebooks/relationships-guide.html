@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Best Relationship Tools, Apps & Programs in 2026 | Popcycle</title>
+<meta name="description" content="We reviewed the best relationship apps, couples therapy platforms, communication courses, and dating tools so you don't have to. These are the ones we'd actually recommend to someone we care about.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0D1F3C;
+    --deepnavy: #080F1E;
+    --midnavy: #1A3666;
+    --lightnavy: #2B52A0;
+    --slate: #6B7A99;
+    --palerose: #FDF0F4;
+    --rose: #C2446E;
+    --lightrose: #E88AAA;
+    --cream: #FBF7F8;
+    --paper: #F7EFF2;
+    --white: #ffffff;
+    --text: #0D1F3C;
+    --soft: #4A5568;
+    --border: #EDDDE4;
+    --spark: #C2446E;
+    --lightspark: #E88AAA;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .product-card, .pick-card, .comparison-row, .key-concept,
+  .pull-quote, .faq-item, .trust-item, .stat, .sub-band,
+  .product-score-block, .product-meta, .product-cta, .pscore-ring,
+  .picks-grid, .hero-stats, .hero-pills, .trust-grid,
+  .comparison-wrap, .comparison-header {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .product-name, .product-tagline, .product-num, h1, h2, h3, h4,
+  .section-eyebrow, .pick-badge, .kc-label, .score-label, .pscore-label {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  @media print {
+    .no-print { display: none !important; }
+    body { font-size: 11px; }
+    .hero { min-height: auto; padding: 40px; }
+  }
+
+  .print-bar {
+    background: var(--deepnavy);
+    color: var(--white);
+    padding: 10px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    letter-spacing: 1px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .print-btn {
+    background: var(--rose);
+    color: var(--white);
+    border: none;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: var(--deepnavy);
+    min-height: 88vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 40px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 25% 60%, rgba(194,68,110,0.2) 0%, transparent 50%),
+      radial-gradient(ellipse at 75% 25%, rgba(43,82,160,0.35) 0%, transparent 55%),
+      radial-gradient(ellipse at 50% 105%, rgba(8,15,30,0.85) 0%, transparent 60%);
+  }
+  .hero-motion {
+    position: absolute;
+    width: 100%; height: 100%;
+    top: 0; left: 0;
+    opacity: 0.09;
+  }
+  .hero-inner { position: relative; z-index: 2; max-width: 820px; }
+  .hero-eyebrow {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--lightrose);
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2.6rem, 7vw, 5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    color: var(--white);
+    letter-spacing: -1.5px;
+    margin-bottom: 10px;
+  }
+  .hero h1 em { color: var(--lightrose); font-style: italic; }
+  .hero-divider {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--rose), transparent);
+    margin: 28px auto;
+  }
+  .hero-sub {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    font-weight: 300;
+    font-style: italic;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .hero-desc {
+    font-size: 0.92rem;
+    color: rgba(255,255,255,0.55);
+    max-width: 560px;
+    margin: 0 auto 44px;
+    line-height: 1.75;
+    font-weight: 300;
+  }
+  .hero-pills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 50px;
+  }
+  .hero-pill {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--lightrose);
+    border: 1px solid rgba(194,68,110,0.4);
+    padding: 7px 16px;
+    border-radius: 20px;
+    background: rgba(194,68,110,0.1);
+  }
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .stat { text-align: center; }
+  .stat-num {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--lightrose);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .stat-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+  }
+
+  .container { max-width: 900px; margin: 0 auto; padding: 0 36px; }
+
+  .trust-band { background: var(--navy); padding: 48px 0; color: var(--white); }
+  .trust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+  .trust-item { padding: 24px 28px; background: rgba(255,255,255,0.04); }
+  .trust-icon { font-size: 1.6rem; margin-bottom: 10px; }
+  .trust-title { font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 600; color: var(--white); margin-bottom: 6px; }
+  .trust-desc { font-size: 0.82rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
+
+  .section { padding: 72px 0; }
+  .section-eyebrow { font-size: 10px; font-weight: 500; letter-spacing: 4px; text-transform: uppercase; color: var(--rose); margin-bottom: 10px; }
+  .section-title { font-family: 'Fraunces', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 300; line-height: 1.1; color: var(--navy); margin-bottom: 12px; }
+  .section-title em { color: var(--rose); font-style: italic; }
+  .section-divider { height: 2px; background: linear-gradient(90deg, var(--rose), transparent); margin: 20px 0 32px; }
+  .section-intro { font-family: 'Fraunces', serif; font-size: 1.18rem; font-weight: 300; font-style: italic; color: var(--soft); border-left: 3px solid var(--rose); padding-left: 20px; margin-bottom: 36px; line-height: 1.65; }
+
+  .picks-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 24px 0; }
+  .pick-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 24px; position: relative; overflow: hidden; break-inside: avoid; }
+  .pick-card.featured { grid-column: span 2; background: var(--navy); color: var(--white); border-color: var(--navy); }
+  .pick-badge { display: inline-block; font-size: 9px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+  .pick-card.featured .pick-badge { background: var(--rose); color: var(--white); }
+  .pick-card:not(.featured) .pick-badge { background: var(--palerose); color: var(--navy); }
+  .pick-name { font-family: 'Fraunces', serif; font-size: 1.35rem; font-weight: 600; margin-bottom: 6px; color: var(--navy); }
+  .pick-card.featured .pick-name { color: var(--white); }
+  .pick-why { font-size: 0.88rem; line-height: 1.65; color: var(--soft); margin-bottom: 14px; }
+  .pick-card.featured .pick-why { color: rgba(255,255,255,0.75); }
+  .pick-score { display: flex; align-items: center; gap: 8px; margin-top: auto; }
+  .score-label { font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--slate); font-weight: 500; }
+  .pick-card.featured .score-label { color: rgba(255,255,255,0.5); }
+  .score-num { font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 600; color: var(--rose); line-height: 1; }
+  .score-bar { flex: 1; height: 4px; background: rgba(0,0,0,0.08); border-radius: 2px; overflow: hidden; }
+  .pick-card.featured .score-bar { background: rgba(255,255,255,0.15); }
+  .score-fill { height: 100%; background: var(--rose); border-radius: 2px; }
+  .pick-link { display: inline-block; margin-top: 14px; font-size: 11px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: var(--rose); text-decoration: none; border-bottom: 1px solid rgba(194,68,110,0.3); padding-bottom: 1px; }
+
+  .comparison-wrap { background: var(--white); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin: 24px 0; }
+  .comparison-header { display: grid; grid-template-columns: 2fr 1.2fr 1.2fr 1.2fr 1.5fr; background: var(--navy); color: var(--white); padding: 14px 20px; gap: 12px; }
+  .comparison-header span { font-size: 9px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.6); }
+  .comparison-header span:first-child { color: var(--white); }
+  .comparison-row { display: grid; grid-template-columns: 2fr 1.2fr 1.2fr 1.2fr 1.5fr; padding: 16px 20px; gap: 12px; border-bottom: 1px solid var(--border); align-items: center; break-inside: avoid; }
+  .comparison-row:last-child { border-bottom: none; }
+  .comparison-row:nth-child(even) { background: var(--palerose); }
+  .comp-name { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 600; color: var(--navy); margin-bottom: 2px; }
+  .comp-cat { font-size: 10px; color: var(--slate); letter-spacing: 1px; text-transform: uppercase; }
+  .comp-score { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 600; color: var(--rose); }
+  .comp-price { font-size: 0.85rem; color: var(--soft); }
+  .comp-best { font-size: 0.8rem; color: var(--navy); font-weight: 500; }
+  .comp-link { font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--rose); text-decoration: none; }
+
+  .product-grid { display: flex; flex-direction: column; gap: 2px; margin: 24px 0; }
+  .product-card { background: var(--white); border: 1px solid var(--border); border-radius: 6px; padding: 28px 32px; display: grid; grid-template-columns: 1fr 80px; gap: 24px; align-items: start; break-inside: avoid; }
+  .product-num { font-family: 'Fraunces', serif; font-size: 0.75rem; font-weight: 300; color: var(--slate); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 4px; }
+  .product-name { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600; color: var(--navy); margin-bottom: 4px; line-height: 1.2; }
+  .product-tagline { font-size: 10px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--rose); margin-bottom: 14px; }
+  .product-desc { font-size: 0.92rem; color: var(--soft); line-height: 1.75; margin-bottom: 16px; }
+  .product-meta { display: flex; gap: 16px; flex-wrap: wrap; }
+  .meta-item { font-size: 10px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; color: var(--slate); }
+  .meta-item strong { color: var(--navy); }
+  .product-cta { display: inline-block; margin-top: 16px; background: var(--navy); color: var(--white); text-decoration: none; font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; padding: 10px 20px; border-radius: 20px; }
+  .product-score-block { text-align: center; padding-top: 4px; }
+  .pscore-label { font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: var(--slate); margin-bottom: 4px; }
+  .pscore-num { font-family: 'Fraunces', serif; font-size: 2.8rem; font-weight: 700; color: var(--rose); line-height: 1; margin-bottom: 2px; }
+  .pscore-ring { width: 56px; height: 56px; margin: 0 auto 6px; }
+
+  .sub-band { background: var(--paper); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 14px 36px; display: flex; align-items: center; gap: 16px; margin: 8px 0; }
+  .sub-label { font-size: 9px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--navy); white-space: nowrap; }
+  .sub-line { flex: 1; height: 1px; background: var(--border); }
+
+  .key-concept { background: var(--navy); color: var(--white); border-radius: 8px; padding: 28px 32px; margin: 28px 0; position: relative; overflow: hidden; break-inside: avoid; }
+  .key-concept::before { content: ''; position: absolute; top: 0; right: 0; width: 180px; height: 180px; background: radial-gradient(circle at 100% 0%, rgba(194,68,110,0.22) 0%, transparent 70%); }
+  .kc-label { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--lightrose); margin-bottom: 8px; font-weight: 500; }
+  .key-concept h3 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 400; color: var(--white); margin-bottom: 10px; }
+  .key-concept p { font-size: 0.92rem; color: rgba(255,255,255,0.8); line-height: 1.75; }
+
+  .pull-quote { border-left: 4px solid var(--rose); padding: 18px 24px; margin: 28px 0; background: var(--paper); border-radius: 0 6px 6px 0; }
+  .pull-quote p { font-family: 'Fraunces', serif; font-size: 1.2rem; font-style: italic; font-weight: 300; color: var(--navy); line-height: 1.6; margin: 0; }
+  .pull-quote cite { display: block; font-size: 0.75rem; font-style: normal; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--rose); margin-top: 8px; }
+
+  .faq-item { border-bottom: 1px solid var(--border); padding: 22px 0; break-inside: avoid; }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q { font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 600; color: var(--navy); margin-bottom: 10px; display: flex; gap: 14px; }
+  .faq-q .qmark { color: var(--rose); font-style: italic; flex-shrink: 0; }
+  .faq-a { font-size: 0.9rem; color: var(--soft); line-height: 1.75; padding-left: 28px; }
+
+  .closing { background: var(--deepnavy); color: var(--white); padding: 80px 0; text-align: center; position: relative; overflow: hidden; }
+  .closing::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(194,68,110,0.22) 0%, transparent 60%); }
+  .closing-inner { position: relative; max-width: 600px; margin: 0 auto; }
+  .closing h2 { font-family: 'Fraunces', serif; font-size: clamp(2rem, 5vw, 3rem); font-weight: 300; margin-bottom: 18px; }
+  .closing h2 em { color: var(--lightrose); font-style: italic; }
+  .closing p { font-size: 0.95rem; color: rgba(255,255,255,0.7); line-height: 1.8; margin-bottom: 30px; }
+  .closing-btn { display: inline-block; background: var(--rose); color: var(--white); text-decoration: none; font-weight: 600; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; padding: 16px 36px; border-radius: 30px; }
+  .closing-brand { margin-top: 48px; font-weight: 500; font-size: 13px; letter-spacing: 6px; color: var(--lightrose); }
+  .closing-sub { font-family: 'Fraunces', serif; font-style: italic; font-size: 0.85rem; color: rgba(255,255,255,0.4); margin-top: 4px; }
+</style>
+</head>
+<body>
+
+<div class="print-bar no-print">
+  <span>Popcycle — Relationships Guide 2026</span>
+  <button class="print-btn" onclick="window.print()">Save as PDF</button>
+</div>
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <svg class="hero-motion" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
+    <!-- Two interlocking arcs -->
+    <path d="M 350 350 m -200 0 a 200 200 0 1 1 400 0 a 200 200 0 1 1 -400 0" fill="none" stroke="#C2446E" stroke-width="1.2"/>
+    <path d="M 850 350 m -200 0 a 200 200 0 1 1 400 0 a 200 200 0 1 1 -400 0" fill="none" stroke="#C2446E" stroke-width="1.2"/>
+    <path d="M 350 350 m -260 0 a 260 260 0 1 1 520 0 a 260 260 0 1 1 -520 0" fill="none" stroke="#E88AAA" stroke-width="0.6"/>
+    <path d="M 850 350 m -260 0 a 260 260 0 1 1 520 0 a 260 260 0 1 1 -520 0" fill="none" stroke="#E88AAA" stroke-width="0.6"/>
+    <!-- Connecting line at center -->
+    <line x1="350" y1="350" x2="850" y2="350" stroke="#C2446E" stroke-width="0.5"/>
+    <!-- Small dots at centers -->
+    <circle cx="350" cy="350" r="6" fill="#C2446E" opacity="0.6"/>
+    <circle cx="850" cy="350" r="6" fill="#C2446E" opacity="0.6"/>
+  </svg>
+
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Popcycle Curated Guide — 2026</div>
+    <h1>The Best <em>Relationship</em> Tools, Apps & Programs</h1>
+    <div class="hero-divider"></div>
+    <div class="hero-sub">Because every good thing in life has someone else in it.</div>
+    <p class="hero-desc">We reviewed the tools that actually help people connect better, communicate more honestly, and build the kinds of relationships that make everything else feel more worth it. These are the ones we stand behind.</p>
+    <div class="hero-pills">
+      <span class="hero-pill">Communication</span>
+      <span class="hero-pill">Couples Therapy</span>
+      <span class="hero-pill">Dating</span>
+      <span class="hero-pill">Marriage</span>
+      <span class="hero-pill">Self-Relationship</span>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">8+</div><div class="stat-label">Products Reviewed</div></div>
+      <div class="stat"><div class="stat-num">5</div><div class="stat-label">Subcategories</div></div>
+      <div class="stat"><div class="stat-num">100</div><div class="stat-label">Popcycle Score</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TRUST BAND ===== -->
+<div class="trust-band">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <div class="trust-icon">❤️</div>
+        <div class="trust-title">Human-Centered</div>
+        <div class="trust-desc">We only recommend tools that treat relationships as genuinely complex human experiences, not problems to be solved with an algorithm.</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🔬</div>
+        <div class="trust-title">Research-Backed</div>
+        <div class="trust-desc">Every program here is either developed by licensed therapists and researchers or has a documented track record with real couples and individuals.</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🤝</div>
+        <div class="trust-title">No Hidden Agenda</div>
+        <div class="trust-desc">Some links are affiliate links. Our scores are not. No product bought its way onto this page.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TOP PICKS ===== -->
+<div class="section">
+  <div class="container">
+    <p class="section-eyebrow">Where to Start</p>
+    <h2 class="section-title">Our <em>top picks</em> at a glance</h2>
+    <div class="section-divider"></div>
+    <p class="section-intro">If you only have five minutes, these are the decisions we would make for you.</p>
+
+    <div class="picks-grid">
+      <div class="pick-card featured">
+        <div class="pick-badge">Best Overall</div>
+        <div class="pick-name">The Gottman Institute</div>
+        <div class="pick-why">Forty-plus years of research on what makes relationships work, distilled into courses, books, and therapist-guided programs. Dr. John Gottman can predict with 91% accuracy which couples will stay together and which will not, based on observable communication patterns. The courses translate that research into practical, daily tools. No fluff, no generic advice. Just the most evidence-based relationship work available to the public.</div>
+        <div class="pick-score">
+          <div class="score-label">Popcycle Score</div>
+          <div class="score-num">95</div>
+          <div class="score-bar"><div class="score-fill" style="width:95%"></div></div>
+        </div>
+        <a href="https://www.gottman.com" class="pick-link">View Courses</a>
+      </div>
+
+      <div class="pick-card">
+        <div class="pick-badge">Best Couples App</div>
+        <div class="pick-name">Lasting</div>
+        <div class="pick-why">The marriage counseling app recommended by therapists and used by over two million couples. Daily exercises and guided conversations that strengthen connection before problems become crises. The app that pays for itself the first time it helps you say something important differently.</div>
+        <div class="pick-score">
+          <div class="score-label">Score</div>
+          <div class="score-num">91</div>
+          <div class="score-bar"><div class="score-fill" style="width:91%"></div></div>
+        </div>
+        <a href="https://www.getlasting.com" class="pick-link">Try Lasting</a>
+      </div>
+
+      <div class="pick-card">
+        <div class="pick-badge">Best Online Therapy</div>
+        <div class="pick-name">Talkspace</div>
+        <div class="pick-why">Licensed therapists available seven days a week via messaging, video, and phone. The relationship between you and yourself is the first relationship worth working on. Talkspace makes that work accessible without navigating insurance or waiting lists.</div>
+        <div class="pick-score">
+          <div class="score-label">Score</div>
+          <div class="score-num">89</div>
+          <div class="score-bar"><div class="score-fill" style="width:89%"></div></div>
+        </div>
+        <a href="https://www.talkspace.com" class="pick-link">Get Matched</a>
+      </div>
+
+      <div class="pick-card">
+        <div class="pick-badge">Best for Dating</div>
+        <div class="pick-name">Match.com</div>
+        <div class="pick-why">Built for people who are done swiping for entertainment and ready to find something real. The profile depth, matching quality, and user base all reflect serious intent. If the goal is a genuine relationship, Match is where most people in the 35-65 demographic actually find one.</div>
+        <div class="pick-score">
+          <div class="score-label">Score</div>
+          <div class="score-num">87</div>
+          <div class="score-bar"><div class="score-fill" style="width:87%"></div></div>
+        </div>
+        <a href="https://www.match.com" class="pick-link">See Match</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== COMPARISON TABLE ===== -->
+<div style="background: var(--white); padding: 56px 0; border-top: 1px solid var(--border);">
+  <div class="container">
+    <p class="section-eyebrow">Side by Side</p>
+    <h2 class="section-title">The full <em>comparison</em></h2>
+    <div class="section-divider"></div>
+
+    <div class="comparison-wrap">
+      <div class="comparison-header">
+        <span>Product</span>
+        <span>Score</span>
+        <span>Price</span>
+        <span>Best For</span>
+        <span>Link</span>
+      </div>
+      <div class="comparison-row">
+        <div><div class="comp-name">Gottman Institute</div><div class="comp-cat">Research & Courses</div></div>
+        <div class="comp-score">95</div>
+        <div class="comp-price">$49-149/course</div>
+        <div class="comp-best">Evidence-Based Work</div>
+        <a href="https://www.gottman.com" class="comp-link">Visit Site</a>
+      </div>
+      <div class="comparison-row">
+        <div><div class="comp-name">Lasting</div><div class="comp-cat">Couples App</div></div>
+        <div class="comp-score">91</div>
+        <div class="comp-price">$59.99/year</div>
+        <div class="comp-best">Ongoing Couple Work</div>
+        <a href="https://www.getlasting.com" class="comp-link">Visit Site</a>
+      </div>
+      <div class="comparison-row">
+        <div><div class="comp-name">Talkspace</div><div class="comp-cat">Online Therapy</div></div>
+        <div class="comp-score">89</div>
+        <div class="comp-price">$69-109/week</div>
+        <div class="comp-best">Individual Therapy</div>
+        <a href="https://www.talkspace.com" class="comp-link">Visit Site</a>
+      </div>
+      <div class="comparison-row">
+        <div><div class="comp-name">Ours</div><div class="comp-cat">Couples Therapy</div></div>
+        <div class="comp-score">88</div>
+        <div class="comp-price">$195-249/session</div>
+        <div class="comp-best">Professional Couples Therapy</div>
+        <a href="https://www.withours.com" class="comp-link">Visit Site</a>
+      </div>
+      <div class="comparison-row">
+        <div><div class="comp-name">Match.com</div><div class="comp-cat">Dating Platform</div></div>
+        <div class="comp-score">87</div>
+        <div class="comp-price">$20-45/month</div>
+        <div class="comp-best">Serious Dating</div>
+        <a href="https://www.match.com" class="comp-link">Visit Site</a>
+      </div>
+      <div class="comparison-row">
+        <div><div class="comp-name">eHarmony</div><div class="comp-cat">Dating Platform</div></div>
+        <div class="comp-score">85</div>
+        <div class="comp-price">$35-65/month</div>
+        <div class="comp-best">Compatibility Matching</div>
+        <a href="https://www.eharmony.com" class="comp-link">Visit Site</a>
+      </div>
+      <div class="comparison-row">
+        <div><div class="comp-name">BetterHelp</div><div class="comp-cat">Online Therapy</div></div>
+        <div class="comp-score">90</div>
+        <div class="comp-price">$60-100/week</div>
+        <div class="comp-best">Accessible Mental Health</div>
+        <a href="https://www.betterhelp.com" class="comp-link">Visit Site</a>
+      </div>
+      <div class="comparison-row">
+        <div><div class="comp-name">Relish</div><div class="comp-cat">Relationship Coaching</div></div>
+        <div class="comp-score">83</div>
+        <div class="comp-price">$9.99/month</div>
+        <div class="comp-best">Daily Relationship Coaching</div>
+        <a href="https://www.hellorelish.com" class="comp-link">Visit Site</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FULL REVIEWS ===== -->
+<div class="section">
+  <div class="container">
+    <p class="section-eyebrow">The Full Breakdown</p>
+    <h2 class="section-title">Every product, <em>reviewed honestly</em></h2>
+    <div class="section-divider"></div>
+    <p class="section-intro">Here is exactly why each one made the cut, and who it is actually right for.</p>
+
+    <!-- COMMUNICATION & COUPLES -->
+    <div class="sub-band"><span class="sub-label">Communication & Couples Work</span><div class="sub-line"></div></div>
+
+    <div class="key-concept">
+      <div class="kc-label">Worth Understanding First</div>
+      <h3>Most relationship problems are communication problems in disguise.</h3>
+      <p>Gottman's research found that the way couples communicate about small, everyday things predicts how they handle the big ones. The products in this section work because they address communication patterns at the root rather than offering advice for individual conflicts. The goal is not to win arguments better. It is to need fewer of them.</p>
+    </div>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <div>
+          <div class="product-num">01 of 08</div>
+          <div class="product-name">The Gottman Institute</div>
+          <div class="product-tagline">Evidence-Based Tools for Stronger Relationships</div>
+          <div class="product-desc">Dr. John Gottman spent over 40 years studying couples in a research lab, observing their interactions and following up years later to see who stayed together and who did not. The patterns he identified are remarkably consistent: the couples who thrive are not the ones who fight less, but the ones who fight differently. They maintain what Gottman calls a "positive sentiment override," stay curious rather than defensive, and repair quickly after conflict. The Gottman Institute's online courses translate these findings into practical daily exercises any couple can use, no therapist required, though therapist-guided options are available too.</div>
+          <div class="product-meta">
+            <div class="meta-item"><strong>Price:</strong> $49-149/course</div>
+            <div class="meta-item"><strong>Best For:</strong> Any couple wanting real tools</div>
+            <div class="meta-item"><strong>Research:</strong> 40+ years, 3,000+ couples studied</div>
+          </div>
+          <a href="https://www.gottman.com" class="product-cta">View Courses</a>
+        </div>
+        <div class="product-score-block">
+          <svg class="pscore-ring" viewBox="0 0 56 56">
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#EDDDE4" stroke-width="4"/>
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#C2446E" stroke-width="4" stroke-dasharray="150.8" stroke-dashoffset="7.5" stroke-linecap="round" transform="rotate(-90 28 28)"/>
+          </svg>
+          <div class="pscore-label">Score</div>
+          <div class="pscore-num">95</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div>
+          <div class="product-num">02 of 08</div>
+          <div class="product-name">Lasting</div>
+          <div class="product-tagline">The Marriage App Backed by Science</div>
+          <div class="product-desc">Lasting takes Gottman-adjacent research and packages it into a daily practice couples can actually maintain. The app opens daily conversations neither partner might naturally initiate: about needs, about gratitude, about what is working and what is not. Over two million couples use it, and licensed therapists consistently recommend it as a between-session tool. The key insight behind Lasting is that relationships do not fail from dramatic events. They erode from small, daily neglect. This addresses the neglect.</div>
+          <div class="product-meta">
+            <div class="meta-item"><strong>Price:</strong> $59.99/year</div>
+            <div class="meta-item"><strong>Best For:</strong> Couples in any stage</div>
+            <div class="meta-item"><strong>Users:</strong> 2M+ couples</div>
+          </div>
+          <a href="https://www.getlasting.com" class="product-cta">Try Lasting</a>
+        </div>
+        <div class="product-score-block">
+          <svg class="pscore-ring" viewBox="0 0 56 56">
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#EDDDE4" stroke-width="4"/>
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#C2446E" stroke-width="4" stroke-dasharray="150.8" stroke-dashoffset="13.6" stroke-linecap="round" transform="rotate(-90 28 28)"/>
+          </svg>
+          <div class="pscore-label">Score</div>
+          <div class="pscore-num">91</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div>
+          <div class="product-num">03 of 08</div>
+          <div class="product-name">Ours</div>
+          <div class="product-tagline">Couples Therapy Without the Waiting Room</div>
+          <div class="product-desc">Ours connects couples with licensed therapists who specialize in relationships, via video sessions both partners can join from wherever they are. What distinguishes Ours from general therapy platforms is the specialization: these therapists are not generalists who sometimes see couples. They are couples specialists, trained in approaches like Emotionally Focused Therapy and the Gottman Method. For couples dealing with a specific recurring issue, a life transition, or a communication breakdown they cannot seem to get past on their own, this is the clearest professional option available online.</div>
+          <div class="product-meta">
+            <div class="meta-item"><strong>Price:</strong> $195-249/session</div>
+            <div class="meta-item"><strong>Best For:</strong> Couples needing professional guidance</div>
+            <div class="meta-item"><strong>Specialists:</strong> EFT and Gottman-trained</div>
+          </div>
+          <a href="https://www.withours.com" class="product-cta">Learn More</a>
+        </div>
+        <div class="product-score-block">
+          <svg class="pscore-ring" viewBox="0 0 56 56">
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#EDDDE4" stroke-width="4"/>
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#C2446E" stroke-width="4" stroke-dasharray="150.8" stroke-dashoffset="18.1" stroke-linecap="round" transform="rotate(-90 28 28)"/>
+          </svg>
+          <div class="pscore-label">Score</div>
+          <div class="pscore-num">88</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INDIVIDUAL THERAPY -->
+    <div class="sub-band"><span class="sub-label">Individual Therapy & Self-Relationship</span><div class="sub-line"></div></div>
+
+    <div class="pull-quote">
+      <p>The most important relationship you will ever have is the one with yourself. Every other relationship reflects it back to you.</p>
+      <cite>Why this subcategory matters</cite>
+    </div>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <div>
+          <div class="product-num">04 of 08</div>
+          <div class="product-name">Talkspace</div>
+          <div class="product-tagline">A Therapist in Your Pocket</div>
+          <div class="product-desc">Talkspace gives you access to a licensed therapist via text, audio, video, and live sessions, seven days a week. The relationship-specific therapists on Talkspace can help with patterns that show up across relationships: attachment styles, communication habits, how you handle conflict, and what you bring to partnerships from your history. Individual therapy often does more for your relationships than couples therapy alone, because it addresses what you bring to the dynamic, not just how two people interact within it.</div>
+          <div class="product-meta">
+            <div class="meta-item"><strong>Price:</strong> $69-109/week</div>
+            <div class="meta-item"><strong>Best For:</strong> Individual relationship patterns</div>
+            <div class="meta-item"><strong>Available:</strong> 7 days a week</div>
+          </div>
+          <a href="https://www.talkspace.com" class="product-cta">Get Matched</a>
+        </div>
+        <div class="product-score-block">
+          <svg class="pscore-ring" viewBox="0 0 56 56">
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#EDDDE4" stroke-width="4"/>
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#C2446E" stroke-width="4" stroke-dasharray="150.8" stroke-dashoffset="15.1" stroke-linecap="round" transform="rotate(-90 28 28)"/>
+          </svg>
+          <div class="pscore-label">Score</div>
+          <div class="pscore-num">89</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div>
+          <div class="product-num">05 of 08</div>
+          <div class="product-name">BetterHelp</div>
+          <div class="product-tagline">Therapy That Meets You Where You Are</div>
+          <div class="product-desc">BetterHelp is the largest online therapy platform available, with over 30,000 licensed therapists and matching within 48 hours. For people whose relationship struggles have roots in personal history, anxiety, attachment patterns, or self-esteem, starting here before or alongside couples work is often the more effective sequence. The therapist matching considers your specific concerns, making it possible to find someone with relationship-specific expertise rather than a generalist.</div>
+          <div class="product-meta">
+            <div class="meta-item"><strong>Price:</strong> $60-100/week</div>
+            <div class="meta-item"><strong>Best For:</strong> Individual therapy access</div>
+            <div class="meta-item"><strong>Therapists:</strong> 30,000+ licensed</div>
+          </div>
+          <a href="https://www.betterhelp.com" class="product-cta">Get Matched</a>
+        </div>
+        <div class="product-score-block">
+          <svg class="pscore-ring" viewBox="0 0 56 56">
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#EDDDE4" stroke-width="4"/>
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#C2446E" stroke-width="4" stroke-dasharray="150.8" stroke-dashoffset="15.1" stroke-linecap="round" transform="rotate(-90 28 28)"/>
+          </svg>
+          <div class="pscore-label">Score</div>
+          <div class="pscore-num">90</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DATING -->
+    <div class="sub-band"><span class="sub-label">Dating & Finding Partnership</span><div class="sub-line"></div></div>
+
+    <div class="key-concept">
+      <div class="kc-label">An Honest Note on Dating Apps</div>
+      <h3>The goal is not more matches. It is better ones.</h3>
+      <p>Most dating apps are optimized for engagement, not for your success in finding a relationship. The apps we recommend here are specifically built for people who are serious about finding a real partnership, not people who want to browse. That intentionality shows in the profile depth, the matching approach, and the demographic of people actually using them.</p>
+    </div>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <div>
+          <div class="product-num">06 of 08</div>
+          <div class="product-name">Match.com</div>
+          <div class="product-tagline">Find Someone Worth Showing Up For</div>
+          <div class="product-desc">Match has been connecting serious relationship-seekers since 1995, and the demographic of active users reflects that history. The profile depth and matching intelligence are meaningfully better than swipe-based apps because the platform attracts people willing to invest time in the process. For anyone in the 35-65 demographic who wants a real relationship rather than a casual connection, Match is consistently where those relationships actually start. The paid subscription signals intent on both sides.</div>
+          <div class="product-meta">
+            <div class="meta-item"><strong>Price:</strong> $20-45/month</div>
+            <div class="meta-item"><strong>Best For:</strong> Adults 35+ seeking commitment</div>
+            <div class="meta-item"><strong>Est:</strong> 1995, largest dating network</div>
+          </div>
+          <a href="https://www.match.com" class="product-cta">See Match</a>
+        </div>
+        <div class="product-score-block">
+          <svg class="pscore-ring" viewBox="0 0 56 56">
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#EDDDE4" stroke-width="4"/>
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#C2446E" stroke-width="4" stroke-dasharray="150.8" stroke-dashoffset="19.6" stroke-linecap="round" transform="rotate(-90 28 28)"/>
+          </svg>
+          <div class="pscore-label">Score</div>
+          <div class="pscore-num">87</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div>
+          <div class="product-num">07 of 08</div>
+          <div class="product-name">eHarmony</div>
+          <div class="product-tagline">The App Designed for Serious Relationships</div>
+          <div class="product-desc">eHarmony's 32-dimension compatibility matching is the most thorough personality-based approach in consumer dating. The extensive questionnaire upfront screens out casual users by design, which means the people you encounter have invested real time in the process. For people who have been frustrated by surface-level connections on other platforms, eHarmony's depth-first approach often produces a noticeably different quality of match. It takes longer to get started, and that is the point.</div>
+          <div class="product-meta">
+            <div class="meta-item"><strong>Price:</strong> $35-65/month</div>
+            <div class="meta-item"><strong>Best For:</strong> Compatibility-focused matching</div>
+            <div class="meta-item"><strong>Dimensions:</strong> 32-factor compatibility</div>
+          </div>
+          <a href="https://www.eharmony.com" class="product-cta">See eHarmony</a>
+        </div>
+        <div class="product-score-block">
+          <svg class="pscore-ring" viewBox="0 0 56 56">
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#EDDDE4" stroke-width="4"/>
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#C2446E" stroke-width="4" stroke-dasharray="150.8" stroke-dashoffset="22.6" stroke-linecap="round" transform="rotate(-90 28 28)"/>
+          </svg>
+          <div class="pscore-label">Score</div>
+          <div class="pscore-num">85</div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div>
+          <div class="product-num">08 of 08</div>
+          <div class="product-name">Relish</div>
+          <div class="product-tagline">Daily Relationship Coaching in Your Pocket</div>
+          <div class="product-desc">Relish sits in an interesting space between a couples app and a dating coaching tool. For people who are single and want to work on their relationship patterns and readiness before meeting someone, or for couples who want a lower-commitment daily touchpoint than Lasting, Relish offers personalized coaching, quizzes, and conversation prompts at an accessible price point. At $9.99 a month, it is the most affordable entry point in this category for people who are not yet ready for a higher-commitment program.</div>
+          <div class="product-meta">
+            <div class="meta-item"><strong>Price:</strong> $9.99/month</div>
+            <div class="meta-item"><strong>Best For:</strong> Singles, light couples coaching</div>
+            <div class="meta-item"><strong>Format:</strong> Daily coaching prompts</div>
+          </div>
+          <a href="https://www.hellorelish.com" class="product-cta">Try Relish</a>
+        </div>
+        <div class="product-score-block">
+          <svg class="pscore-ring" viewBox="0 0 56 56">
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#EDDDE4" stroke-width="4"/>
+            <circle cx="28" cy="28" r="24" fill="none" stroke="#C2446E" stroke-width="4" stroke-dasharray="150.8" stroke-dashoffset="25.6" stroke-linecap="round" transform="rotate(-90 28 28)"/>
+          </svg>
+          <div class="pscore-label">Score</div>
+          <div class="pscore-num">83</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FAQ ===== -->
+<div style="background: var(--white); padding: 60px 0; border-top: 1px solid var(--border);">
+  <div class="container">
+    <p class="section-eyebrow">Honest Answers</p>
+    <h2 class="section-title">Questions we <em>actually get</em></h2>
+    <div class="section-divider"></div>
+
+    <div class="faq-item">
+      <div class="faq-q"><span class="qmark">Q.</span> Should we try a couples app or couples therapy first?</div>
+      <div class="faq-a">If things feel manageable but could be better, start with an app like Lasting. The daily practice of a well-designed app can address a lot before it becomes a crisis, and it is significantly more affordable than therapy sessions. If you are dealing with a specific recurring issue that has not improved on its own, or if one or both partners feel stuck, couples therapy with a specialist like those on Ours is the more appropriate starting point.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q"><span class="qmark">Q.</span> Does online couples therapy actually work?</div>
+      <div class="faq-a">Research comparing in-person and online couples therapy shows similar outcomes for most presenting concerns. The biggest advantage of online therapy is that it removes the logistics barrier, which means couples are more likely to actually attend consistently. Consistency matters more than the medium. That said, for complex situations involving trauma, severe mental health concerns, or high-conflict dynamics, in-person work with a specialist may be preferable.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q"><span class="qmark">Q.</span> Is Match or eHarmony better for people over 50?</div>
+      <div class="faq-a">Both have strong user bases in the over-50 demographic, but they work differently. Match gives you more browsing control and a larger pool of potential matches. eHarmony does more of the filtering for you based on compatibility dimensions and tends to produce fewer but better-matched suggestions. If you prefer to browse and decide, Match. If you want the algorithm to do the heavy lifting, eHarmony.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q"><span class="qmark">Q.</span> What if only one partner wants to work on the relationship?</div>
+      <div class="faq-a">This is more common than most people realize, and individual therapy is often the right starting point. Working on your own communication patterns, attachment style, and responses can meaningfully shift the dynamic in a relationship even if only one person is actively in therapy. The Gottman Institute also has resources specifically for this situation. Change in one person almost always produces some change in the system around them.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q"><span class="qmark">Q.</span> Do you earn commissions from these recommendations?</div>
+      <div class="faq-a">Some links on this page are affiliate links, which means Popcycle may earn a small commission if you make a purchase, at no additional cost to you. Our Popcycle Scores and editorial opinions are completely independent of affiliate relationships. A product with a lower commission rate can still earn a higher score than one with a higher commission rate, and frequently does.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CLOSING ===== -->
+<div class="closing">
+  <div class="closing-inner">
+    <h2>Every good thing has <em>someone else</em> in it.</h2>
+    <p>Whether you are looking to strengthen what you have, find something new, or better understand what you bring to the connections in your life — there is a starting point here for you. None of these tools replace the work of actually showing up for the people you care about. But they can make showing up a little easier, a little clearer, and a lot more intentional.</p>
+    <p style="margin-bottom: 36px;">Visit the Popcycle Relationships hub for our free Start Here resources, book recommendations, podcast picks, and more — all in one place.</p>
+    <a href="https://popcycle.online" class="closing-btn">Back to Popcycle</a>
+    <div class="closing-brand">POPCYCLE</div>
+    <div class="closing-sub">sweeten your life</div>
+  </div>
+</div>
+
+</body>
+</html>
