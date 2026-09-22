@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Plain-English Guide to Building an Emergency Fund | Popcycle</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--deep:#0E1A26;--main:#24506E;--mid:#3A6E92;--light:#6FA0C0;--accent:#D0A050;--accent-l:#E4BC6E;--sage:#52654B;--paper:#F0F3F6;--warm-paper:#E2EAF0;--border:#B2C6D6;--soft:#121F2A;--white:#fff;--text:#0E1A26;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Jost',sans-serif;background:var(--paper);color:var(--text);font-size:15px;line-height:1.7;}
+  .chapter-card,.key-concept,.pull-quote,.faq-item,.step-card,.truth-item{break-inside:avoid;page-break-inside:avoid;}
+  h2,h3,.section-eyebrow{break-after:avoid;page-break-after:avoid;}
+  @media print{.no-print{display:none!important;}body{font-size:11px;}.hero{min-height:auto;padding:48px 40px;}.section{padding:48px 0;}}
+  .print-bar{background:var(--deep);color:var(--white);padding:10px 24px;display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:1px;position:sticky;top:0;z-index:100;font-weight:500;text-transform:uppercase;}
+  .print-btn{background:var(--main);color:var(--white);border:none;padding:6px 16px;border-radius:20px;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;cursor:pointer;}
+  .hero{background:var(--deep);min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:100px 40px 80px;position:relative;overflow:hidden;}
+  .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 25% 60%,rgba(36,80,110,.55) 0%,transparent 55%),radial-gradient(ellipse at 78% 20%,rgba(208,160,80,.14) 0%,transparent 50%),radial-gradient(ellipse at 50% 110%,rgba(4,10,16,.95) 0%,transparent 55%);}
+  .hero::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(111,160,192,.06) 1px,transparent 0);background-size:32px 32px;}
+  .hero-inner{position:relative;z-index:2;max-width:820px;}
+  .hero-eyebrow{font-size:10px;font-weight:500;letter-spacing:5px;text-transform:uppercase;color:var(--light);margin-bottom:20px;}
+  .price-badge{display:inline-block;background:rgba(36,80,110,.35);border:1px solid rgba(58,110,146,.5);color:var(--light);font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;padding:6px 18px;border-radius:20px;margin-bottom:28px;}
+  .hero h1{font-family:'Fraunces',serif;font-size:clamp(2.3rem,6vw,4.2rem);font-weight:300;line-height:1.05;color:var(--white);letter-spacing:-1.5px;margin-bottom:10px;}
+  .hero h1 em{color:var(--light);font-style:italic;}
+  .hero-divider{width:60px;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);margin:28px auto;}
+  .hero-sub{font-family:'Fraunces',serif;font-size:clamp(1.05rem,2.8vw,1.4rem);font-weight:300;font-style:italic;color:rgba(255,255,255,.7);margin-bottom:20px;line-height:1.5;}
+  .hero-desc{font-size:.91rem;color:rgba(255,255,255,.47);max-width:560px;margin:0 auto 44px;line-height:1.82;font-weight:300;}
+  .hero-pills{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:50px;}
+  .hero-pill{font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--light);border:1px solid rgba(36,80,110,.5);padding:7px 16px;border-radius:20px;background:rgba(36,80,110,.2);}
+  .hero-stats{display:flex;justify-content:center;gap:48px;padding-top:40px;border-top:1px solid rgba(255,255,255,.07);flex-wrap:wrap;}
+  .stat{text-align:center;}
+  .stat-num{font-family:'Fraunces',serif;font-size:1.7rem;font-weight:600;color:var(--light);line-height:1;margin-bottom:4px;}
+  .stat-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.38);}
+  .container{max-width:860px;margin:0 auto;padding:0 36px;}
+  .section{padding:64px 0;}
+  .section-eyebrow{font-size:10px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:var(--main);margin-bottom:10px;}
+  .section-title{font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,3rem);font-weight:300;line-height:1.1;color:var(--deep);margin-bottom:12px;}
+  .section-title em{color:var(--main);font-style:italic;}
+  .section-divider{height:2px;background:linear-gradient(90deg,var(--main),transparent);margin:20px 0 32px;}
+  .section-intro{font-family:'Fraunces',serif;font-size:1.12rem;font-weight:300;font-style:italic;color:var(--soft);border-left:3px solid var(--main);padding-left:20px;margin-bottom:32px;line-height:1.65;}
+  .truth-band{background:var(--deep);padding:52px 0;}
+  .truth-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+  .truth-item{padding:28px;background:rgba(255,255,255,.04);break-inside:avoid;text-align:center;}
+  .truth-icon{font-size:1.8rem;margin-bottom:12px;}
+  .truth-title{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;color:var(--white);margin-bottom:8px;}
+  .truth-desc{font-size:.83rem;color:rgba(255,255,255,.58);line-height:1.65;}
+  .chapters-grid{display:flex;flex-direction:column;gap:4px;margin:24px 0;}
+  .chapter-card{background:var(--white);border:1px solid var(--border);border-radius:6px;padding:26px 30px;display:grid;grid-template-columns:76px 1fr;gap:22px;align-items:start;}
+  .chapter-num-block{text-align:center;padding-top:4px;}
+  .chapter-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--main);line-height:1;display:block;}
+  .chapter-num-label{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--light);display:block;margin-top:2px;}
+  .chapter-tagline{font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:10px;}
+  .chapter-title{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:600;color:var(--deep);margin-bottom:8px;line-height:1.2;}
+  .chapter-desc{font-size:.91rem;color:var(--soft);line-height:1.75;margin-bottom:14px;}
+  .chapter-takeaway{background:var(--warm-paper);border-left:3px solid var(--sage);padding:12px 16px;border-radius:0 4px 4px 0;font-size:.85rem;color:var(--deep);font-weight:500;}
+  .chapter-takeaway strong{display:block;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--sage);margin-bottom:4px;}
+  .key-concept{background:var(--deep);color:var(--white);border-radius:8px;padding:30px 34px;margin:24px 0;position:relative;overflow:hidden;}
+  .key-concept::before{content:'';position:absolute;top:0;right:0;width:200px;height:200px;background:radial-gradient(circle at 100% 0%,rgba(36,80,110,.5) 0%,transparent 70%);}
+  .kc-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--light);margin-bottom:10px;font-weight:500;}
+  .key-concept h3{font-family:'Fraunces',serif;font-size:1.45rem;font-weight:400;color:var(--white);margin-bottom:12px;}
+  .key-concept p{font-size:.92rem;color:rgba(255,255,255,.78);line-height:1.78;}
+  .key-concept ul{margin-top:12px;padding-left:0;list-style:none;}
+  .key-concept ul li{font-size:.9rem;color:rgba(255,255,255,.72);line-height:1.7;padding:4px 0 4px 20px;position:relative;}
+  .key-concept ul li::before{content:'→';position:absolute;left:0;color:var(--accent);font-size:.8rem;}
+  .pull-quote{border-left:4px solid var(--main);padding:20px 26px;margin:26px 0;background:var(--warm-paper);border-radius:0 6px 6px 0;}
+  .pull-quote p{font-family:'Fraunces',serif;font-size:1.22rem;font-style:italic;font-weight:300;color:var(--deep);line-height:1.6;margin:0;}
+  .pull-quote cite{display:block;font-size:.75rem;font-style:normal;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--main);margin-top:10px;}
+  .steps-list{display:flex;flex-direction:column;gap:12px;margin:24px 0;}
+  .step-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:22px 26px;display:grid;grid-template-columns:50px 1fr;gap:18px;align-items:start;}
+  .step-num-circle{width:42px;height:42px;border-radius:50%;background:var(--main);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:1.1rem;font-weight:700;color:var(--white);flex-shrink:0;margin-top:2px;}
+  .step-title{font-family:'Fraunces',serif;font-size:1.12rem;font-weight:600;color:var(--deep);margin-bottom:6px;}
+  .step-body{font-size:.9rem;color:var(--soft);line-height:1.75;}
+  .step-example{margin-top:10px;font-size:.85rem;color:var(--deep);background:var(--warm-paper);border-radius:4px;padding:10px 14px;border-left:2px solid var(--sage);font-weight:500;}
+  .step-example strong{display:block;font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--sage);margin-bottom:3px;}
+  .sub-band{background:#DAE6EE;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:13px 36px;display:flex;align-items:center;gap:16px;margin:8px 0;}
+  .sub-label{font-size:9px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--deep);white-space:nowrap;}
+  .sub-line{flex:1;height:1px;background:var(--border);}
+  .accent-band{background:var(--main);padding:36px 0;text-align:center;}
+  .accent-band .band-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:10px;font-weight:500;}
+  .accent-band p{font-family:'Fraunces',serif;font-size:1.18rem;font-style:italic;font-weight:300;color:rgba(255,255,255,.92);max-width:640px;margin:0 auto;line-height:1.6;}
+  .faq-item{border-bottom:1px solid var(--border);padding:20px 0;}
+  .faq-item:last-child{border-bottom:none;}
+  .faq-q{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;color:var(--deep);margin-bottom:8px;display:flex;gap:12px;}
+  .faq-q .qmark{color:var(--sage);font-style:italic;flex-shrink:0;}
+  .faq-a{font-size:.9rem;color:var(--soft);line-height:1.78;padding-left:26px;}
+  .closing{background:var(--deep);color:var(--white);padding:80px 0;text-align:center;position:relative;overflow:hidden;}
+  .closing::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(36,80,110,.5) 0%,transparent 65%);}
+  .closing-inner{position:relative;max-width:620px;margin:0 auto;padding:0 36px;}
+  .closing h2{font-family:'Fraunces',serif;font-size:clamp(2rem,5vw,3rem);font-weight:300;margin-bottom:18px;line-height:1.15;}
+  .closing h2 em{color:var(--light);font-style:italic;}
+  .closing p{font-size:.95rem;color:rgba(255,255,255,.65);line-height:1.82;margin-bottom:30px;}
+  .closing-btn{display:inline-block;background:var(--main);color:var(--white);text-decoration:none;font-weight:600;font-size:12px;letter-spacing:2px;text-transform:uppercase;padding:15px 38px;border-radius:30px;}
+  .closing-brand{margin-top:48px;font-weight:500;font-size:13px;letter-spacing:6px;color:var(--light);}
+  .closing-sub{font-family:'Fraunces',serif;font-style:italic;font-size:.85rem;color:rgba(255,255,255,.32);margin-top:6px;}
+  .disclaimer{max-width:860px;margin:0 auto;padding:24px 36px 60px;font-size:.78rem;color:#7C8C9C;line-height:1.6;font-style:italic;text-align:center;}
+  @media(max-width:640px){.truth-grid{grid-template-columns:1fr;}.chapter-card{grid-template-columns:1fr;}.step-card{grid-template-columns:1fr;}.container{padding:0 20px;}}
+</style>
+</head>
+<body>
+<div class="print-bar no-print"><span>Popcycle · Financial & Credit</span><button class="print-btn" onclick="window.print()">Save as PDF</button></div>
+<section class="hero"><div class="hero-inner">
+  <div class="hero-eyebrow">Popcycle · Financial & Credit</div>
+  <div class="price-badge">eBook · $9</div>
+  <h1>The Plain-English Guide to<br>Building an <em>Emergency Fund</em></h1>
+  <div class="hero-divider"></div>
+  <p class="hero-sub">The one financial move that stops small disasters from becoming large ones — explained simply, and built step by step.</p>
+  <p class="hero-desc">An emergency fund is the foundation everything else in your financial life stands on. This guide explains what it is, how much you need, where to keep it, and exactly how to build one — even on a tight budget, starting from zero.</p>
+  <div class="hero-pills"><span class="hero-pill">Starter vs. Full Fund</span><span class="hero-pill">How Much</span><span class="hero-pill">Where to Keep It</span><span class="hero-pill">Automation</span></div>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">1</div><div class="stat-label">Move That Prevents Most Money Crises</div></div>
+    <div class="stat"><div class="stat-num">3-6</div><div class="stat-label">Months Is the Target</div></div>
+    <div class="stat"><div class="stat-num">$0</div><div class="stat-label">Is a Fine Place to Start</div></div>
+  </div>
+</div></section>
+
+<div class="truth-band"><div class="container"><div class="truth-grid">
+  <div class="truth-item"><div class="truth-icon">🛡️</div><div class="truth-title">It's insurance you pay yourself</div><div class="truth-desc">An emergency fund turns a financial crisis into a manageable inconvenience. It's the buffer between a bad week and a debt spiral.</div></div>
+  <div class="truth-item"><div class="truth-icon">🎯</div><div class="truth-title">The target is simple</div><div class="truth-desc">Three to six months of essential expenses, kept somewhere safe and separate. That's the whole goal — this guide is about how to actually get there.</div></div>
+  <div class="truth-item"><div class="truth-icon">🧱</div><div class="truth-title">It's the foundation</div><div class="truth-desc">Investing, debt payoff, and financial peace all rest on having a buffer. Without it, one surprise sends everything back to zero. Build this first.</div></div>
+</div></div></div>
+
+<section class="section"><div class="container">
+  <div class="section-eyebrow">Why This Comes First</div>
+  <h2 class="section-title">The single most important<br><em>account you'll build</em></h2>
+  <div class="section-divider"></div>
+  <p class="section-intro">It's not glamorous — it doesn't grow like investments or feel like progress the way paying off debt does — but it's the foundation that makes everything else possible.</p>
+  <p style="font-size:.93rem;color:var(--soft);line-height:1.82;margin-bottom:18px;">Without it, a single unexpected expense — a car repair, a medical bill, a job loss — forces you onto high-interest credit cards, undoing months of financial progress and starting a debt cycle that's hard to escape. The concept is simple: money set aside specifically for genuine emergencies, kept somewhere safe and accessible, so that when life happens — and it will — you handle it with cash instead of debt.</p>
+  <p style="font-size:.93rem;color:var(--soft);line-height:1.82;margin-bottom:24px;">The reason it deserves a whole guide isn't complexity; it's that building one requires a clear plan, especially on a tight budget, and most people never get a straightforward explanation of how. This guide covers what counts as an emergency, how much you need, where to keep it, and a concrete, step-by-step method for building the fund from wherever you're starting — including from zero.</p>
+  <div class="pull-quote"><p>"An emergency fund doesn't make you money. It does something more important: it keeps a bad day from becoming a bad year."</p><cite>Popcycle · Financial & Credit</cite></div>
+  <div class="key-concept">
+    <div class="kc-label">The Core Idea</div>
+    <h3>An emergency fund is money whose only job is to prevent debt when life goes wrong.</h3>
+    <p>Its purpose is narrow: to cover genuine, unexpected, necessary expenses without borrowing. It is not an investment (its job is safety and access, not growth), not a savings goal for something planned, and not money to dip into for wants. Its value is precisely that it sits there, boring and available, so that when the transmission fails or the hours get cut, you reach for cash instead of a credit card.</p>
+    <ul>
+      <li>Its only job: cover true emergencies without borrowing</li>
+      <li>Kept safe and accessible — not invested, not locked away</li>
+      <li>Separate from your checking account, so it isn't accidentally spent</li>
+      <li>Not for planned expenses (holidays, car down payment) — those get their own savings</li>
+      <li>The peace of mind it provides is a real, underrated benefit</li>
+    </ul>
+  </div>
+</div></section>
+
+<div class="sub-band"><span class="sub-label">Part One</span><span class="sub-line"></span><span class="sub-label">The Fundamentals</span></div>
+<section class="section" style="padding-top:44px;"><div class="container">
+  <div class="section-eyebrow">Get the Basics Right</div>
+  <h2 class="section-title">What, how much, and where —<br><em>answered clearly</em></h2>
+  <div class="section-divider"></div>
+  <p class="section-intro">Before building, get clear on four fundamentals: what counts as an emergency, how much you need, where to keep it, and the difference between a starter fund and a full one.</p>
+  <div class="chapters-grid">
+    <div class="chapter-card"><div class="chapter-num-block"><span class="chapter-num">01</span><span class="chapter-num-label">Fundamental</span></div><div><div class="chapter-tagline">Define It Clearly</div><h3 class="chapter-title">What Actually Counts as an Emergency</h3><p class="chapter-desc">An emergency is an expense that is unexpected, necessary, and urgent. A car repair you need to get to work: yes. A medical bill: yes. A job loss (the fund covers living expenses while you find work): yes. What doesn't count: a great sale, a vacation, holiday gifts, a planned expense you saw coming. A useful test: is this unexpected, necessary, AND urgent? If it's missing any of the three, it's probably a planned expense that belongs in a different savings bucket.</p><div class="chapter-takeaway"><strong>The Test</strong>Unexpected, necessary, urgent — all three. This keeps your fund from quietly draining into things that felt urgent but weren't. When in doubt, ask whether future-you would consider this a genuine emergency.</div></div></div>
+    <div class="chapter-card"><div class="chapter-num-block"><span class="chapter-num">02</span><span class="chapter-num-label">Fundamental</span></div><div><div class="chapter-tagline">The Target</div><h3 class="chapter-title">How Much You Actually Need</h3><p class="chapter-desc">The standard guidance is three to six months of essential expenses — not income, but the bare-bones cost of keeping your life running: housing, utilities, food, insurance, minimum debt payments, transportation. Calculate that monthly number, then multiply. Aim toward 3 months if you have very stable income and few dependents; toward 6 months (or more) if your income is variable, you're self-employed, you're a single earner, or you support a family.</p><div class="chapter-takeaway"><strong>The Math</strong>Add up only essential monthly expenses (survival, not full lifestyle), then multiply by 3-6 based on how stable your income is. That's your target. Variable or single income = aim higher.</div></div></div>
+    <div class="chapter-card"><div class="chapter-num-block"><span class="chapter-num">03</span><span class="chapter-num-label">Fundamental</span></div><div><div class="chapter-tagline">Where to Keep It</div><h3 class="chapter-title">A High-Yield Savings Account</h3><p class="chapter-desc">An emergency fund needs two things: safety (it can't lose value) and accessibility (reachable within a day or two). That rules out both checking (too spendable, earns nothing) and investments (which can drop in value exactly when you need them). The answer for most people is a high-yield savings account — currently paying meaningfully more than traditional bank accounts, FDIC-insured, and accessible in a day or two. Separate enough to resist casual spending, reachable when a real emergency hits.</p><div class="chapter-takeaway"><strong>The Right Home</strong>A high-yield savings account (online banks often pay the most) keeps the money safe, earning some interest, one step removed from daily spending. Keep it separate from checking so it's not absorbed into everyday life.</div></div></div>
+    <div class="chapter-card"><div class="chapter-num-block"><span class="chapter-num">04</span><span class="chapter-num-label">Fundamental</span></div><div><div class="chapter-tagline">Two Stages</div><h3 class="chapter-title">The Starter Fund vs. the Full Fund</h3><p class="chapter-desc">Building 3-6 months can feel impossible from zero or while carrying high-interest debt. The solution is to split it. First, build a starter fund of about $1,000-$2,000 — enough to handle most common emergencies (a car repair, a modest medical bill) without credit. Build this first, even while paying down debt. Then, once high-interest debt is cleared, build toward the full 3-6 month fund. This staging keeps the goal achievable and protects you during debt payoff.</p><div class="chapter-takeaway"><strong>Two Steps</strong>Stage one: a $1,000-$2,000 starter fund, built first, even alongside debt payoff. Stage two: the full 3-6 months, built after high-interest debt is gone. Two achievable steps instead of one overwhelming one.</div></div></div>
+  </div>
+</div></section>
+
+<div class="accent-band"><div class="container"><div class="band-label">The Whole Point</div><p>"You are not saving to grow this money. You are saving so that the next emergency costs you cash — not a credit card balance at 24% that follows you for years."</p></div></div>
+
+<div class="sub-band"><span class="sub-label">Part Two</span><span class="sub-line"></span><span class="sub-label">Building It, Step by Step</span></div>
+<section class="section" style="padding-top:44px;"><div class="container">
+  <div class="section-eyebrow">The Method</div>
+  <h2 class="section-title">How to build the fund<br><em>from wherever you are</em></h2>
+  <div class="section-divider"></div>
+  <p class="section-intro">The fundamentals tell you what to aim for. These five steps are how you actually get there — even on a tight budget, even starting from nothing.</p>
+  <div class="steps-list">
+    <div class="step-card"><div class="step-num-circle">1</div><div><div class="step-title">Set a Specific Starter Goal</div><p class="step-body">Vague goals ("save more") produce vague results. Set a specific, achievable first target: a $1,000 starter fund, or one month of essential expenses. A concrete number you can picture and track is far more motivating than an abstract intention. This first goal should feel achievable within a few months — early success builds the momentum that carries you to the full fund.</p><div class="step-example"><strong>The First Target</strong>Pick one number: $1,000, or one month of essential expenses. Make it concrete and trackable. Achievable-and-specific beats ambitious-and-vague every time when it comes to building the habit.</div></div></div>
+    <div class="step-card"><div class="step-num-circle">2</div><div><div class="step-title">Automate the Transfer</div><p class="step-body">The single most effective technique for building any savings is automation: set up an automatic transfer from checking to your emergency savings on payday, before the money can be spent. Even a small automatic amount — $25, $50, $100 per paycheck — builds steadily and removes the need for ongoing willpower. Money you never see in checking is money you don't miss. Automation converts saving from a monthly decision into a default.</p><div class="step-example"><strong>Set It and Forget It</strong>Schedule an automatic transfer for the day after payday. Start with whatever you can sustain, even $25. Automation is why this works — the system does it for you.</div></div></div>
+    <div class="step-card"><div class="step-num-circle">3</div><div><div class="step-title">Find the Money — Even When It's Tight</div><p class="step-body">If there's no room in the budget, you have two levers: reduce an expense or add income, temporarily. On the expense side, review subscriptions, dining out, and recurring charges for anything you can pause. On the income side, even a short-term boost — selling unused items, a few weeks of a side gig, a tax refund directed entirely to savings — can seed the fund quickly. Windfalls are especially powerful.</p><div class="step-example"><strong>Quick Wins</strong>Direct any windfall — tax refund, bonus, rebate, gift — straight into the fund. Pause one or two non-essential subscriptions temporarily. A short side gig aimed entirely at the starter fund can build it in weeks.</div></div></div>
+    <div class="step-card"><div class="step-num-circle">4</div><div><div class="step-title">Keep It Separate and Slightly Inconvenient</div><p class="step-body">An emergency fund works best when it's separate from everyday checking — separate enough that you don't see it as spendable, and slightly inconvenient to access (a transfer that takes a day, rather than a debit card you carry). This friction is a feature: it protects the fund from impulse spending while keeping it reachable for genuine emergencies. Many people use a separate online high-yield account precisely because the one-day transfer delay makes casual dipping less likely.</p><div class="step-example"><strong>The Right Friction</strong>Reachable in a day or two for real emergencies, but not linked to a card you carry or the account you spend from daily. Separate enough to protect it, accessible enough to use when you truly need to.</div></div></div>
+    <div class="step-card"><div class="step-num-circle">5</div><div><div class="step-title">Replenish It After You Use It</div><p class="step-body">The emergency fund is meant to be used — that's its purpose. When a real emergency draws it down, that's the system working, not a failure. The one essential follow-up: rebuild it. After using the fund, make replenishing it your temporary top priority, restarting the automatic transfers (or increasing them) until it's back to full. A fund that's used and rebuilt has done its job; one that's used and never refilled leaves you exposed.</p><div class="step-example"><strong>The Cycle</strong>Use it without guilt when a true emergency hits — then immediately prioritize refilling it. Restart or boost your automatic transfers until it's whole again. Using and replenishing is the healthy, intended cycle.</div></div></div>
+  </div>
+</div></section>
+
+<div class="sub-band"><span class="sub-label">Straight Answers</span><span class="sub-line"></span><span class="sub-label">Real Questions</span></div>
+<section class="section" style="padding-top:44px;"><div class="container">
+  <div class="section-eyebrow">Real Questions</div>
+  <h2 class="section-title">What people actually<br><em>want to know</em></h2>
+  <div class="section-divider"></div>
+  <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>Should I build an emergency fund or pay off debt first?</div><div class="faq-a">Do both, in stages. First build a small starter fund ($1,000-$2,000) — this is essential, because without any buffer, the next surprise expense forces you right back onto credit cards, and the debt cycle never breaks. With that in place, focus intensely on high-interest debt. Then, once high-interest debt is cleared, build the full 3-6 month fund. The starter-fund-first approach protects your debt-payoff progress. This is general educational guidance; your situation may call for a different balance.</div></div>
+  <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>Isn't it better to invest this money instead of letting it sit?</div><div class="faq-a">No — and this is a common, costly mistake. An emergency fund's job is safety and accessibility, not growth. If you invest it, it can lose value exactly when you need it most (emergencies and market drops often coincide, like a recession that costs you your job). The "opportunity cost" of keeping several months' expenses in savings is real but small, and it buys the certainty that the money will be there, at full value, the day you need it. Keep the emergency fund safe. Invest other money for growth.</div></div>
+  <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>How much should I keep if my income is irregular?</div><div class="faq-a">Lean toward the higher end — six months or more. Irregular income (self-employment, freelancing, commission, seasonal work) means a larger buffer is prudent, because your income itself is a source of uncertainty the fund needs to smooth over. Some people with highly variable income keep 9-12 months. The more unpredictable your earnings, the more the fund does double duty: covering true emergencies and bridging normal gaps between income. When in doubt with variable income, save more rather than less.</div></div>
+  <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>What if I can only save a tiny amount each month?</div><div class="faq-a">Save the tiny amount — it matters more than it feels like it does. Small, consistent contributions build both the fund and the habit, and the habit is what carries you long-term. $25 a paycheck is $650 a year — more than half a starter fund, from an amount most budgets can find. And it grows: as you pay off debt, get raises, or free up money, you increase the contribution. Nearly everyone who builds a solid fund started with an amount that felt too small to matter. Starting is the victory.</div></div>
+  <div class="faq-item"><div class="faq-q"><span class="qmark">Q</span>Where's the best place to actually keep it?</div><div class="faq-a">For most people, a high-yield savings account at an FDIC-insured bank (often an online bank, which tends to pay the highest rates) is ideal: safe, earning meaningful interest, separate from checking, accessible within a day or two. Avoid keeping it in checking (too spendable, earns nothing), in cash at home (no interest, security risk), or in investments (can lose value when you need it). A money market account is similar. Look for: FDIC insurance, competitive interest, no fees, and easy transfers to your main account.</div></div>
+</div></section>
+
+<section class="closing"><div class="closing-inner">
+  <h2>Build this one thing first.<br>Everything else <em>gets easier.</em></h2>
+  <p>An emergency fund is the quiet foundation beneath every other financial goal. Popcycle's Financial & Credit category reviews the high-yield savings accounts, budgeting apps, and automation tools that make building one straightforward — vetted for genuine value, not commission.</p>
+  <a href="https://popcycle.online" class="closing-btn">Explore Popcycle.online</a>
+  <div class="closing-brand">POPCYCLE</div>
+  <div class="closing-sub">Sweeten your life.</div>
+</div></section>
+<div class="disclaimer">This guide is for educational purposes only and is not personalized financial advice. Interest rates, account features, and individual circumstances vary — verify current details with the financial institution and consider consulting a qualified financial professional for guidance specific to your situation.</div>
+</body></html>
