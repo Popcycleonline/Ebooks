@@ -113,10 +113,18 @@
   .cta-btn-rose { display: inline-block; width: 320px; max-width: 100%; box-sizing: border-box; background: var(--rose); color: var(--bean); padding: 16px 20px; text-decoration: none; font-family: 'Jost', sans-serif; font-size: 10.5px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700; transition: opacity 0.2s; margin-top: 14px; text-align: center; }
   .cta-btn-rose:hover { opacity: 0.85; }
 
-  .closing-brand { margin-top: 80px; font-family: 'Poppins', sans-serif; font-size: 12px; letter-spacing: 0; text-transform: none; color: var(--rose); font-weight: 700; line-height: 1; }
-  .closing-brand-tag { font-family: 'Dancing Script', cursive; font-size: 15px; color: var(--citrus); opacity: 0.95; letter-spacing: 0; text-transform: none; margin-top: 4px; font-weight: 700; }
+  .closing-brand { margin-top: 80px; font-family: 'Poppins', sans-serif; font-size: 18px; letter-spacing: 0; text-transform: none; color: var(--rose); font-weight: 700; line-height: 1; }
+  .closing-brand-tag { font-family: 'Dancing Script', cursive; font-size: 15px; color: var(--citrus); opacity: 0.95; letter-spacing: 0; text-transform: none; margin-top: 6px; font-weight: 700; }
 
   .divider { height: 6px; background: var(--rose); }
+
+  /* WEEK QUOTES — narrower than body copy, text-wrap balanced to avoid widows */
+  .week-quote { max-width: 480px; margin: 0 auto 72px; }
+  .week-quote .quote-text { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; line-height: 1.55; color: var(--eggshell); opacity: 0.82; margin-bottom: 2px; font-weight: 400; text-wrap: balance; }
+  .week-quote .quote-attr { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 15px; line-height: 1.2; color: var(--eggshell); opacity: 0.82; letter-spacing: 0.3px; padding-left: 55%; margin-top: 0; }
+
+  /* Shift week-intro content up so the original copy block sits at vertical center with the quote above as preface */
+  .week-intro-inner { transform: translateY(-8vh); }
 
   @media (max-width: 600px) {
     body { font-size: 15px; }
@@ -130,6 +138,10 @@
     textarea.write-area { padding: 16px 18px; font-size: 14px; }
     .progress-counter { top: 12px; right: 12px; padding: 6px 12px; font-size: 10px; }
     .save-indicator { bottom: 16px; right: 16px; }
+    .week-intro-inner { transform: translateY(-5vh); }
+    .week-quote { margin-bottom: 48px; }
+    .week-quote .quote-text { font-size: 16px; }
+    .week-quote .quote-attr { font-size: 14px; padding-left: 45%; }
   }
 
   @media print {
@@ -155,7 +167,8 @@
 <div class="divider"></div>
 
 <section class="page welcome">
-  <h2>Why <em>this</em> journal.</h2>
+  <h2>What is it about <em>me</em>?</h2>
+  <p>I have asked this question before, probably looking for reassurance that the end of yet another relationship wasn't my fault. My very astute best friend once responded, "Well," she asked, "what is the one thing that all of your relationships have in common?" I thought intently. I had tried to learn. I had tried to change. Each ending illuminated different choices, different personalities, even different surroundings. Each situation seemed completely different, I wasn't quite sure. She responded, <em>"You."</em></p>
   <p>The person you become shapes every relationship in your life. Not just romantic love. Also the love you offer your children, your friends, your parents, your work. The quality of all of them traces back to one source: how well you know yourself, and how honest you are about what you bring.</p>
   <p>Most of us never do this work. We assume the next relationship will be different because the person is different. Then we discover, often painfully, that the same patterns followed us. The relationship changed. We did not.</p>
   <p>Lasting love starts in the mirror because that is where the real work actually happens. The 30 questions here are designed to help you see yourself more clearly, name the patterns you have been carrying, grieve what deserves to be grieved, and start becoming someone capable of giving and receiving the love you want.</p>
@@ -179,6 +192,10 @@
 
 <section class="week-intro full">
   <div class="week-intro-inner">
+    <blockquote class="week-quote">
+      <p class="quote-text">Until you make the unconscious conscious, it will direct your life and you will call it fate.</p>
+      <p class="quote-attr">Carl Jung</p>
+    </blockquote>
     <div class="week-eyebrow">Week One</div>
     <h2>The patterns you <em>carry</em>.</h2>
     <p>The first 7 questions are archaeological. They are not about blame. They are about seeing clearly where your relationship patterns came from, so you can decide which ones to keep.</p>
@@ -194,7 +211,11 @@
 <section class="closing full">
   <div class="closing-inner">
     <h2>That is the <em>work</em>.</h2>
-    <p>Thirty questions. Thirty days. One quiet act of looking in the mirror honestly, with love.</p>
+    <blockquote class="week-quote">
+      <p class="quote-text">Everyone thinks of changing the world ... but no one thinks about changing themselves.</p>
+      <p class="quote-attr">Leo Tolstoy</p>
+    </blockquote>
+    <p>I hope you enjoyed looking in the mirror.</p>
     <p>Most people never do this work. Not because they cannot, but because they are afraid of what they might see. You just sat with yourself more honestly than most adults ever do. That matters more than you know.</p>
     <p><em>Lasting love starts here. In the mirror. In the willingness to see yourself clearly. In the commitment to keep becoming the person worth loving, and worth being loved by.</em></p>
 
@@ -255,9 +276,9 @@ const days = [
 ];
 
 const weekIntros = {
-  8: { num:"Two", title:"The honest <em>inventory</em>.", body:"The next 7 questions ask what you actually bring, what you actually need, and what you have been willing to compromise. The honest answers may surprise you." },
-  15: { num:"Three", title:"What the hurt <em>taught</em>.", body:"These 7 questions are the hardest. They look at grief, complicity, forgiveness, and the stories about love you have been living inside. This is where the deepest shifts happen." },
-  22: { num:"Four", title:"Who you are <em>becoming</em>.", body:"The last 9 questions are about who you are becoming. What self-respect looks like, what you now know is non-negotiable, and the life worth building whether or not a partner arrives." }
+  8: { num:"Two", quote:"Knowing others is intelligence, knowing yourself is true wisdom.", attr:"Lao Tzu", title:"The honest <em>inventory</em>.", body:"The next 7 questions ask what you actually bring, what you actually need, and what you have been willing to compromise. The honest answers may surprise you." },
+  15: { num:"Three", quote:"Gazing into the looking glass is powerful. Of all the attributes that humans possess that animals do not, this is the most mysterious. It can also be the most helpful.", attr:"from the book: 5 Easy Peaces", title:"What the hurt <em>taught</em>.", body:"These 7 questions are the hardest. They look at grief, complicity, forgiveness, and the stories about love you have been living inside. This is where the deepest shifts happen." },
+  22: { num:"Four", quote:"Who looks outside, dreams; who looks inside, awakes.", attr:"Carl Jung", title:"Who you are <em>becoming</em>.", body:"The last 9 questions are about who you are becoming. What self-respect looks like, what you now know is non-negotiable, and the life worth building whether or not a partner arrives." }
 };
 
 function buildDays() {
@@ -266,7 +287,7 @@ function buildDays() {
   days.forEach(d => {
     if (weekIntros[d.num]) {
       const wi = weekIntros[d.num];
-      html += `<section class="week-intro full"><div class="week-intro-inner"><div class="week-eyebrow">Week ${wi.num}</div><h2>${wi.title}</h2><p>${wi.body}</p></div></section><div class="divider"></div>`;
+      html += `<section class="week-intro full"><div class="week-intro-inner"><blockquote class="week-quote"><p class="quote-text">${wi.quote}</p><p class="quote-attr">${wi.attr}</p></blockquote><div class="week-eyebrow">Week ${wi.num}</div><h2>${wi.title}</h2><p>${wi.body}</p></div></section><div class="divider"></div>`;
     }
     const numPad = String(d.num).padStart(2, '0');
     html += `<section class="day"><div class="day-inner"><div class="day-header"><div><div class="day-eyebrow">Day ${d.word}</div><div class="day-number-big">${numPad}</div></div></div><h2 class="day-question">${d.q}</h2><p class="day-prompt">${d.prompt}</p><div class="write-section"><div class="write-section-label reflection">Reflection ${d.num}.1</div><p class="write-prompt">${d.rPrompt}</p><textarea class="write-area" data-key="d${d.num}-reflection" placeholder="${d.rPlace}"></textarea></div><div class="write-section"><div class="write-section-label action">One Small Shift</div><p class="write-prompt">${d.aPrompt}</p><textarea class="write-area action-area" data-key="d${d.num}-action" placeholder="${d.aPlace}"></textarea></div></div></section>`;
