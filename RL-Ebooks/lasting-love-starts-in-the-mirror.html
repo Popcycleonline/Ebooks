@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lasting Love Starts in the Mirror | Popcycle</title>
+<meta name="description" content="30 days of honest reflection on how you love, what you have learned, and the person worth becoming.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600;700&family=Poppins:wght@700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bean: #461312;
+    --bean-deep: #2d0c0b;
+    --eggshell: #F0EADC;
+    --rose: #ED809D;
+    --rose-deep: #c15976;
+    --citrus: #C9C769;
+    --citrus-deep: #8e8c45;
+    --bean-soft: rgba(70, 19, 18, 0.08);
+    --bean-line: rgba(70, 19, 18, 0.15);
+    --rose-soft: rgba(237, 128, 157, 0.18);
+    --citrus-soft: rgba(201, 199, 105, 0.22);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Jost', sans-serif; background: var(--eggshell); color: var(--bean); line-height: 1.65; font-size: 16px; -webkit-font-smoothing: antialiased; }
+  .page { max-width: 760px; margin: 0 auto; padding: 80px 40px; }
+  .full { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+
+  /* COVER */
+  .cover { background: var(--bean); color: var(--eggshell); text-align: center; padding: 120px 40px; position: relative; overflow: hidden; }
+  .cover::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 30%, rgba(237, 128, 157, 0.14) 0%, transparent 55%), radial-gradient(ellipse at 80% 70%, rgba(201, 199, 105, 0.10) 0%, transparent 50%); }
+  .cover-inner { position: relative; z-index: 2; max-width: 680px; margin: 0 auto; }
+  .cover-eyebrow { font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 5px; text-transform: uppercase; color: var(--rose); margin-bottom: 48px; font-weight: 500; }
+  .cover-lasting { font-family: 'Dancing Script', cursive; font-weight: 700; color: var(--citrus); font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1; margin-bottom: 4px; letter-spacing: 1px; transform: rotate(-2deg); display: inline-block; }
+  .cover h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 6vw, 4.5rem); font-weight: 300; line-height: 1.02; margin-top: 8px; letter-spacing: -1px; }
+  .cover h1 em { font-style: italic; color: var(--rose); font-weight: 400; }
+  .cover-subtitle { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(1.15rem, 2vw, 1.4rem); margin-top: 48px; color: var(--eggshell); opacity: 0.9; line-height: 1.5; font-weight: 400; }
+
+  /* WELCOME */
+  .welcome h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 400; line-height: 1.1; margin-bottom: 32px; color: var(--bean); letter-spacing: -0.5px; }
+  .welcome h2 em { color: var(--rose-deep); font-style: italic; }
+  .welcome p { font-family: 'Cormorant Garamond', serif; font-size: 19px; margin-bottom: 20px; color: var(--bean); line-height: 1.55; }
+  .welcome p em { font-style: italic; color: var(--rose-deep); }
+  .how-to-use { background: var(--bean-soft); padding: 36px 32px; margin-top: 44px; border-left: 4px solid var(--rose); }
+  .how-to-use h3 { font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--rose-deep); margin-bottom: 20px; font-weight: 600; }
+  .how-to-use p { font-family: 'Jost', sans-serif; font-size: 15px; margin-bottom: 12px; color: var(--bean); line-height: 1.6; }
+  .how-to-use p:last-child { margin-bottom: 0; }
+
+  /* WEEK INTRO */
+  .week-intro { background: var(--bean); color: var(--eggshell); text-align: center; padding: 100px 40px; position: relative; overflow: hidden; }
+  .week-intro::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 25% 60%, rgba(237, 128, 157, 0.12) 0%, transparent 55%), radial-gradient(ellipse at 75% 30%, rgba(201, 199, 105, 0.08) 0%, transparent 50%); }
+  .week-intro-inner { position: relative; z-index: 2; max-width: 620px; margin: 0 auto; }
+  .week-eyebrow { font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 5px; text-transform: uppercase; color: var(--citrus); margin-bottom: 24px; font-weight: 500; }
+  .week-intro h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 400; line-height: 1.1; margin-bottom: 28px; letter-spacing: -0.5px; }
+  .week-intro h2 em { color: var(--rose); font-style: italic; }
+  .week-intro p { font-family: 'Cormorant Garamond', serif; font-size: 19px; line-height: 1.55; max-width: 540px; margin: 0 auto; color: var(--eggshell); opacity: 0.9; font-style: italic; }
+
+  /* DAY */
+  .day { background: var(--eggshell); padding: 80px 40px 100px; border-bottom: 1px solid var(--bean-line); }
+  .day-inner { max-width: 720px; margin: 0 auto; }
+  .day-header { display: flex; align-items: baseline; gap: 20px; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 2px solid var(--rose); }
+  .day-eyebrow { font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--rose-deep); font-weight: 600; }
+  .day-number-big { font-family: 'Cormorant Garamond', serif; font-size: 72px; line-height: 1; color: var(--rose); font-style: italic; font-weight: 400; }
+  .day-question { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.7rem, 3.5vw, 2.4rem); font-weight: 400; line-height: 1.2; color: var(--bean); margin: 30px 0 24px; letter-spacing: -0.5px; }
+  .day-prompt { font-family: 'Cormorant Garamond', serif; font-size: 18px; line-height: 1.6; color: var(--bean); opacity: 0.9; font-style: italic; border-left: 3px solid var(--rose); padding-left: 20px; margin-bottom: 48px; max-width: 640px; }
+
+  /* WRITING SECTIONS */
+  .write-section { margin-top: 36px; }
+  .write-section-label { font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; font-weight: 700; margin-bottom: 8px; display: flex; align-items: center; gap: 12px; }
+  .write-section-label.reflection { color: var(--rose-deep); }
+  .write-section-label.action { color: var(--citrus-deep); }
+  .write-section-label::after { content: ''; flex: 1; height: 1px; background: var(--bean-line); }
+  .write-prompt { font-family: 'Jost', sans-serif; font-size: 14px; color: var(--bean); opacity: 0.75; margin-bottom: 14px; line-height: 1.5; }
+  textarea.write-area { width: 100%; min-height: 140px; padding: 20px 22px; font-family: 'Jost', sans-serif; font-size: 15px; line-height: 1.7; color: var(--bean); background: rgba(255, 255, 255, 0.55); border: 1px solid var(--bean-line); border-left: 3px solid var(--rose); resize: none; overflow: hidden; transition: border-color 0.2s, background 0.2s; outline: none; }
+  textarea.write-area:focus { background: rgba(255, 255, 255, 0.9); border-left-color: var(--rose-deep); }
+  textarea.write-area::placeholder { color: rgba(70, 19, 18, 0.35); font-style: italic; }
+  textarea.write-area.action-area { min-height: 90px; background: var(--citrus-soft); border-left-color: var(--citrus-deep); }
+  textarea.write-area.action-area:focus { background: rgba(201, 199, 105, 0.32); }
+
+  /* SAVE INDICATOR */
+  .save-indicator { position: fixed; bottom: 24px; right: 24px; background: var(--bean); color: var(--eggshell); padding: 10px 18px; font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; font-weight: 500; opacity: 0; transform: translateY(10px); transition: opacity 0.3s, transform 0.3s; z-index: 100; pointer-events: none; box-shadow: 0 4px 12px rgba(70, 19, 18, 0.25); }
+  .save-indicator.show { opacity: 1; transform: translateY(0); }
+  .save-indicator.prominent { padding: 14px 24px; font-size: 13px; letter-spacing: 3px; background: var(--rose); color: var(--bean); font-weight: 700; }
+
+  /* PROGRESS COUNTER */
+  .progress-counter { position: fixed; top: 20px; right: 20px; background: rgba(70, 19, 18, 0.9); color: var(--eggshell); padding: 8px 16px; font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; z-index: 99; border-radius: 2px; opacity: 0; transition: opacity 0.4s; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+  .progress-counter.visible { opacity: 0.92; }
+  .progress-counter strong { color: var(--rose); font-weight: 700; margin: 0 2px; }
+
+  /* CLOSING */
+  .closing { background: var(--bean); color: var(--eggshell); text-align: center; padding: 120px 40px; position: relative; overflow: hidden; }
+  .closing::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 60%, rgba(237, 128, 157, 0.14) 0%, transparent 55%), radial-gradient(ellipse at 70% 30%, rgba(201, 199, 105, 0.10) 0%, transparent 50%); }
+  .closing-inner { position: relative; z-index: 2; max-width: 620px; margin: 0 auto; }
+  .closing h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 400; line-height: 1.1; margin-bottom: 32px; letter-spacing: -0.5px; }
+  .closing h2 em { color: var(--rose); font-style: italic; }
+  .closing p { font-family: 'Cormorant Garamond', serif; font-size: 19px; line-height: 1.55; margin: 0 auto 24px; color: var(--eggshell); opacity: 0.9; }
+  .closing p em { font-style: italic; color: var(--rose); }
+
+  /* DOWNLOAD + CTA BOXES */
+  .download-block { background: var(--rose); color: var(--bean); padding: 40px 32px; margin: 60px auto 0; max-width: 520px; text-align: center; }
+  .download-block h3 { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 400; margin-bottom: 12px; color: var(--bean); letter-spacing: -0.3px; }
+  .download-block h3 em { font-style: italic; }
+  .download-block p { font-family: 'Jost', sans-serif; font-size: 14px; color: var(--bean); opacity: 1; margin-bottom: 24px; line-height: 1.55; }
+  .download-btn { display: inline-block; background: var(--bean); color: var(--eggshell); padding: 16px 32px; text-decoration: none; font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; transition: opacity 0.2s; border: none; cursor: pointer; }
+  .download-btn:hover { opacity: 0.85; }
+
+  .cta-box { background: var(--eggshell); color: var(--bean); padding: 50px 40px; margin: 40px auto 0; max-width: 520px; text-align: center; }
+  .cta-box h3 { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 400; margin-bottom: 16px; color: var(--bean); letter-spacing: -0.3px; }
+  .cta-box h3 em { font-style: italic; color: var(--rose-deep); }
+  .cta-box p { font-family: 'Cormorant Garamond', serif; font-size: 16px; color: var(--bean); opacity: 1; margin-bottom: 28px; line-height: 1.55; font-style: normal; }
+  .cta-btn { display: inline-block; width: 320px; max-width: 100%; box-sizing: border-box; background: var(--bean); color: var(--eggshell); padding: 16px 20px; text-decoration: none; font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; transition: opacity 0.2s; text-align: center; }
+  .cta-btn:hover { opacity: 0.85; }
+  .cta-btn-rose { display: inline-block; width: 320px; max-width: 100%; box-sizing: border-box; background: var(--rose); color: var(--bean); padding: 16px 20px; text-decoration: none; font-family: 'Jost', sans-serif; font-size: 10.5px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700; transition: opacity 0.2s; margin-top: 14px; text-align: center; }
+  .cta-btn-rose:hover { opacity: 0.85; }
+
+  .closing-brand { margin-top: 80px; font-family: 'Poppins', sans-serif; font-size: 12px; letter-spacing: 0; text-transform: none; color: var(--rose); font-weight: 700; line-height: 1; }
+  .closing-brand-tag { font-family: 'Dancing Script', cursive; font-size: 15px; color: var(--citrus); opacity: 0.95; letter-spacing: 0; text-transform: none; margin-top: 4px; font-weight: 700; }
+
+  .divider { height: 6px; background: var(--rose); }
+
+  @media (max-width: 600px) {
+    body { font-size: 15px; }
+    .page, .day { padding: 60px 24px; }
+    .cover { padding: 80px 24px; }
+    .week-intro { padding: 70px 24px; }
+    .closing { padding: 80px 24px; }
+    .day-header { flex-direction: column; gap: 8px; align-items: flex-start; }
+    .day-number-big { font-size: 56px; }
+    .download-block, .cta-box { padding: 32px 24px; }
+    textarea.write-area { padding: 16px 18px; font-size: 14px; }
+    .progress-counter { top: 12px; right: 12px; padding: 6px 12px; font-size: 10px; }
+    .save-indicator { bottom: 16px; right: 16px; }
+  }
+
+  @media print {
+    body { background: white; color: black; }
+    .cover, .week-intro, .closing { background: white; color: black; page-break-after: always; }
+    .day { page-break-after: always; border: none; }
+    .save-indicator, .progress-counter, .download-btn, .cta-btn, .cta-btn-rose { display: none; }
+    textarea.write-area { border: 1px solid #333; background: white; }
+  }
+</style>
+</head>
+<body>
+
+<section class="cover full">
+  <div class="cover-inner">
+    <div class="cover-eyebrow">A Popcycle Guide to Yourself</div>
+    <div class="cover-lasting">Lasting</div>
+    <h1>Love Starts in the <em>Mirror</em></h1>
+    <div class="cover-subtitle">30 days of honest reflection on how you love, what you have learned, and the person worth becoming.</div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="page welcome">
+  <h2>Why <em>this</em> journal.</h2>
+  <p>The person you become shapes every relationship in your life. Not just romantic love. Also the love you offer your children, your friends, your parents, your work. The quality of all of them traces back to one source: how well you know yourself, and how honest you are about what you bring.</p>
+  <p>Most of us never do this work. We assume the next relationship will be different because the person is different. Then we discover, often painfully, that the same patterns followed us. The relationship changed. We did not.</p>
+  <p>Lasting love starts in the mirror because that is where the real work actually happens. The 30 questions here are designed to help you see yourself more clearly, name the patterns you have been carrying, grieve what deserves to be grieved, and start becoming someone capable of giving and receiving the love you want.</p>
+  <p><em>Teaching ourselves about ourselves is one of the most generous things we can do for the people we love. They receive the person we have become.</em></p>
+  <p>Every day has two parts. First, you reflect on the question. Then, you commit to one small shift that turns the insight into something you can actually live. Reflection without action is a diary. Reflection with action is transformation.</p>
+  <p>You do not need to be in crisis to do this work. You do not need to be single, married, divorced, or dating. You just need honesty, 15 to 20 minutes a day, and the willingness to answer the uncomfortable questions. Especially the uncomfortable ones. That is almost always where the answer lives.</p>
+
+  <div class="how-to-use">
+    <h3>How to use this</h3>
+    <p>One question per day, in order. Set aside 15 to 20 minutes somewhere quiet.</p>
+    <p>The writing boxes expand as you type. Do not stop writing because you ran out of room. Keep writing until your thoughts are complete.</p>
+    <p>Your answers save automatically to your browser as you type. A small "Saved to your browser" notice appears at the bottom-right of the screen each time. Return tomorrow on the same device and browser, your work will still be there. A progress counter in the top right shows how many days you have written on so far.</p>
+    <p>When you have finished all 30 days, use the "Download My Journal" button on the last page to save your complete work as a text file. That file is portable. Keep it on your computer, email it to yourself, print it, revisit it in a year. It is yours.</p>
+    <p>Do not skip ahead. The questions build. Day 17 lands differently after Day 16 than it would in isolation.</p>
+    <p>If a question makes you uncomfortable, that is usually a signal that it is the right question. Sit with it. Write anyway.</p>
+    <p>Miss a day? Just resume. The 30 days do not need to be consecutive. What matters is the sequence, not the calendar.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="week-intro full">
+  <div class="week-intro-inner">
+    <div class="week-eyebrow">Week One</div>
+    <h2>The patterns you <em>carry</em>.</h2>
+    <p>The first 7 questions are archaeological. They are not about blame. They are about seeing clearly where your relationship patterns came from, so you can decide which ones to keep.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<div id="days-container"></div>
+
+<div class="divider"></div>
+
+<section class="closing full">
+  <div class="closing-inner">
+    <h2>That is the <em>work</em>.</h2>
+    <p>Thirty questions. Thirty days. One quiet act of looking in the mirror honestly, with love.</p>
+    <p>Most people never do this work. Not because they cannot, but because they are afraid of what they might see. You just sat with yourself more honestly than most adults ever do. That matters more than you know.</p>
+    <p><em>Lasting love starts here. In the mirror. In the willingness to see yourself clearly. In the commitment to keep becoming the person worth loving, and worth being loved by.</em></p>
+
+    <div class="download-block">
+      <h3>Keep your <em>work.</em></h3>
+      <p>Download your complete journal, with every reflection and action step, as a text file you can save, print, or return to whenever you need to remember what you saw.</p>
+      <button class="download-btn" onclick="downloadJournal()">Download My Journal</button>
+    </div>
+
+    <div class="cta-box">
+      <h3>What's <em>next?</em></h3>
+      <p>Popcycle curates the best tools, books, apps, and resources for adults 35 to 65 across health, growth, relationships, money, and business. Honest scores. Real trade-offs. No fluff.</p>
+      <a href="https://www.popcycle.online" class="cta-btn">Explore Popcycle</a>
+      <br>
+      <a href="https://www.popcycle.online/improve-your-relationships" class="cta-btn-rose">Improve Your Relationships</a>
+    </div>
+
+    <div class="closing-brand">popcycle</div>
+    <div class="closing-brand-tag">sweeten your life</div>
+  </div>
+</section>
+
+<div class="save-indicator" id="saveIndicator">Saved</div>
+<div class="progress-counter" id="progressCounter"><strong id="progressCount">0</strong> of 30 days started</div>
+
+<script>
+const days = [
+  { num:1, word:"One", q:"What role did I learn to play in my family growing up?", prompt:"Peacemaker, achiever, caretaker, invisible one, hero, protector, the one who kept the peace, the one who absorbed the chaos. We all learned to play something. That role shaped how we love. Which was yours, and how does it still show up?", rPrompt:"Name the role. Describe how you played it, and when. Then describe where you still catch yourself playing it as an adult.", rPlace:"The role nobody asked you to take, but you took anyway...", aPrompt:"Where this week could you stop playing the old role? Name one specific situation.", aPlace:"One moment to show up as yourself instead..." },
+  { num:2, word:"Two", q:"What did I learn about love by watching the adults around me?", prompt:"Not what they told you about love. What you watched them actually do. How they fought. How they repaired, or did not. How they showed affection, or withheld it. The silent curriculum you absorbed before you had words for any of it.", rPrompt:"Describe what love looked like in the home you grew up in. Not the official story. The one your younger self actually witnessed.", rPlace:"Write what you remember seeing, not what you were told to believe...", aPrompt:"Which lesson from that silent curriculum do you want to keep, and which do you want to leave?", aPlace:"Choose one of each..." },
+  { num:3, word:"Three", q:"How do I handle closeness, do I pursue it or protect against it?", prompt:"Attachment research describes two main responses to intimacy under stress: moving toward (seeking reassurance, closeness, resolution) or moving away (needing space, going quiet, shutting down). Most of us lean one direction. Which is you, and when did you learn it?", rPrompt:"Describe your pattern. When you feel disconnected from someone you love, what do you do? Trace it back to where that first became a strategy.", rPlace:"Pursue or protect? Both? Something more specific?", aPrompt:"What is one small way you could interrupt your default pattern this week when it kicks in?", aPlace:"Not perfect, just different..." },
+  { num:4, word:"Four", q:"What dynamic keeps showing up in my significant relationships?", prompt:"Look back at your most meaningful relationships: friendships, family, partners, work. What is the same thing that happens in different forms? That recurring dynamic is almost always something you are participating in, often without knowing. Name the shape of it.", rPrompt:"Describe the pattern across different relationships. Then ask: what is your part in it? Not their part. Yours.", rPlace:"The same movie, different cast...", aPrompt:"If you knew this dynamic would show up again this month, what is one new move you could make inside it?", aPlace:"Something that breaks the pattern on your end..." },
+  { num:5, word:"Five", q:"Who was I able to love well, and what made that possible?", prompt:"Not perfectly. Well. A friend, a parent, a child, a partner, an animal. Describe the person and the quality of love. What did that relationship ask of you that you were able to offer? That is a strength. Do not underestimate it.", rPrompt:"Describe the person and the specific quality of your love for them. What showed up in you that worked?", rPlace:"The love you offered that was genuinely good...", aPrompt:"How can you bring more of that quality into one current relationship this week?", aPlace:"The strength is already yours. Where could you use it?" },
+  { num:6, word:"Six", q:"What do I do when I feel unseen or unheard in a relationship?", prompt:"Everyone has a response to this moment, and it is usually not our best self. Do you get louder? Go quiet? Perform harder? Withdraw affection? Pick a fight about something else? Name your specific move. You cannot change what you have not named.", rPrompt:"Describe your actual move. Be honest. We all have one, and most of us learned it before we were 10.", rPlace:"The move you make that you are not proud of...", aPrompt:"Next time it happens, what is one different thing you could try? Even saying it out loud: 'I feel unseen right now.'", aPlace:"The alternative to the old move..." },
+  { num:7, word:"Seven", q:"When did I first learn that love required performing or earning?", prompt:"Most of us learned this somewhere, from someone. A parent whose love shifted with our performance. A sibling we had to outshine. A teacher. A church. Trace it back. The adult who still believes love must be earned is always protecting the child who learned it had to be.", rPrompt:"Write what you remember. The scene, the person, the age. What did you learn you had to do to be loved?", rPlace:"The moment or the long slow lesson that taught you...", aPrompt:"What is one way you could receive love this week without needing to earn it first?", aPlace:"Letting it in without the performance..." },
+  { num:8, word:"Eight", q:"What are my real strengths as a partner, friend, or family member?", prompt:"Not the modest version. The real one. The qualities that someone who truly loves you would name. Loyalty, humor, steadiness, generosity, patience, the way you show up in a crisis. Write them down without flinching. These are the gifts you bring.", rPrompt:"List them specifically. Then describe a time each one showed up and made a difference for someone.", rPlace:"Not false modesty. The real gifts you bring...", aPrompt:"Which of these strengths have you been undervaluing or hiding? How could you let it out this week?", aPlace:"Permission to be your actual self..." },
+  { num:9, word:"Nine", q:"What are the ways I show love that others may miss?", prompt:"We often give love in the shape we would want to receive it, which means the people in our lives sometimes miss what we are offering. How do you show love? What are the gestures, the acts, the forms of attention that are your language even when nobody is translating?", rPrompt:"Describe your love language in your own words, not Chapman's categories. What are the small specific things you do?", rPlace:"The ways you love that may need subtitles...", aPrompt:"Who in your life might benefit from you naming what you are already doing? Could you tell them this week?", aPlace:"Making the invisible visible..." },
+  { num:10, word:"Ten", q:"What are my actual non-negotiables, and how did I learn them?", prompt:"Not the ideal list. The ones carved into you by experience. Honesty. Faithfulness. Shared vision for children. Capacity for accountability. Someone who does not drink the way my parent did. Name yours. Where did each one come from?", rPrompt:"List your real non-negotiables and the specific experience that taught you each one is non-negotiable.", rPlace:"The list you earned the hard way...", aPrompt:"Where in your life right now are you tolerating something that violates one of these? What is the honest next step?", aPlace:"Honesty with yourself first..." },
+  { num:11, word:"Eleven", q:"What have I compromised in past relationships that I should not have?", prompt:"Not what you wish was different about them. What you traded away about yourself to make it work. Your voice. Your friendships. Your hobbies. Your geography. Your values. Your integrity. Name specifically what you gave up, and what it cost.", rPrompt:"Name what you compromised and what the cost was. This is not for guilt. It is for recognition.", rPlace:"The parts of you that got smaller to fit...", aPrompt:"Which of those compromised parts of you is ready to come back? What is one small step toward reclaiming it?", aPlace:"Taking back what you gave away..." },
+  { num:12, word:"Twelve", q:"What do I need in order to feel safe being fully myself?", prompt:"Safety is not the absence of conflict. It is the presence of certain things. Being able to disagree without losing love. Being able to say no. Being able to be seen on a bad day. What specifically do you need to feel safe enough to be fully you?", rPrompt:"Describe your conditions for safety. Be specific. Not 'trust' but what trust actually looks like in the daily.", rPlace:"The ingredients of being able to be yourself...", aPrompt:"Which of these conditions are you already able to create for yourself, independent of a partner? Which one could you practice this week?", aPlace:"Starting with what you can give yourself..." },
+  { num:13, word:"Thirteen", q:"What is my current relationship with being alone?", prompt:"Not avoiding this question. Can you be alone without needing to fill the space? Do you dread it, long for it, both? Our relationship with being alone shapes our relationship with partnership. The person who cannot be alone is often the person who stays in the wrong room.", rPrompt:"Write honestly about your current relationship with aloneness. When you have a free evening, what happens?", rPlace:"The truth about how alone feels to you right now...", aPrompt:"What is one small practice of chosen solitude you could start this week? A walk. A meal. An hour.", aPlace:"Alone on purpose, not by accident..." },
+  { num:14, word:"Fourteen", q:"What have I been afraid to admit about what I actually want?", prompt:"We censor our own desires. Too much, too specific, too embarrassing, too old-fashioned, too modern. Write what you would want if nobody was watching your list. Companionship, deep intimacy, peace, structure, laughter, a village, children or not, geographic specifics. The honest list is where this gets real.", rPrompt:"The list you would be embarrassed to say out loud. Write it anyway. For your eyes only.", rPlace:"The honest list, no filter...", aPrompt:"Which item on your list has been so hidden that you forgot you wanted it? How could you honor it this week, even in a small way?", aPlace:"Letting one hidden want surface..." },
+  { num:15, word:"Fifteen", q:"What is the loss I have not fully grieved yet?", prompt:"There is almost always one. A marriage. A friendship. A version of yourself. A life you did not get to live. The future you had imagined. We cannot move toward new love while still protecting an ungrieved loss. Name it. Sit with it for a moment on the page.", rPrompt:"Name the loss. Describe what you actually lost, including the futures that will not happen now.", rPlace:"The grief you have been managing instead of feeling...", aPrompt:"What is one small ritual, conversation, letter, or practice that could help you honor this grief rather than carry it silently?", aPlace:"Giving the grief somewhere to go..." },
+  { num:16, word:"Sixteen", q:"What did my last significant relationship teach me about myself?", prompt:"Not about them. About you. What did you learn about your patterns, your tolerances, your capacity, your blind spots? The hardest and best lessons are the ones that reveal our own participation in what hurt. What did you see about yourself?", rPrompt:"Write what the relationship taught you about yourself, not about them. The lessons they revealed, however hard.", rPlace:"The mirror the relationship held up...", aPrompt:"Which of these lessons do you want to carry forward most clearly? How will you remember it?", aPlace:"The lesson you refuse to unlearn..." },
+  { num:17, word:"Seventeen", q:"Where was I complicit in a dynamic I later blamed only on them?", prompt:"This one is hard. Where did I choose silence when I should have spoken? Where did I shrink to keep peace? Where did I ignore signals I did not want to see? Taking responsibility for your part does not excuse theirs. It frees you from carrying both.", rPrompt:"Honest archaeology. Name your part. This is not about being hard on yourself. It is about freedom.", rPlace:"The parts you played that were yours...", aPrompt:"What is one way you can refuse to be complicit in a similar dynamic going forward? Specific.", aPlace:"The new boundary, named..." },
+  { num:18, word:"Eighteen", q:"What am I still angry about, and what is actually underneath the anger?", prompt:"Anger is usually a second emotion. Underneath it is grief, fear, shame, powerlessness, longing. What are you still angry about, and if you let yourself sit with it, what is underneath? That is what actually needs attention.", rPrompt:"Name the anger. Then let yourself go one layer deeper. What is actually underneath?", rPlace:"The anger, and the softer thing beneath it...", aPrompt:"What does the softer feeling underneath actually need? Not from them. From you.", aPlace:"Tending what the anger has been protecting..." },
+  { num:19, word:"Nineteen", q:"Who do I need to forgive, and what would that actually look like?", prompt:"Forgiveness is not reconciliation. It does not require them. It is not excusing what happened. It is choosing not to carry it as a weight that shapes your next love. Who, and what would release look like for you? Including, often, yourself.", rPrompt:"Name who. Describe what forgiveness would mean for you, not for them. Including, sometimes especially, yourself.", rPlace:"The person you have been carrying in your pocket...", aPrompt:"What is one small act of release you could practice this week? A letter you do not send. A ritual. A sentence you say out loud.", aPlace:"Setting down what you have been carrying..." },
+  { num:20, word:"Twenty", q:"Where have I confused familiar with safe?", prompt:"We often marry our mothers or our fathers in some form, because familiar feels like home even when familiar hurt us. The chemistry we feel toward people who activate old patterns is not a sign of destiny, it is a sign of unfinished business. Where have you confused the two?", rPrompt:"Describe the pattern. The type of person you are drawn to, and what that type recreates from your early life.", rPlace:"The chemistry that is actually a childhood echo...", aPrompt:"What would 'genuinely safe' feel like, as distinct from 'familiar'? What is one signal of actual safety you could learn to recognize?", aPlace:"Learning the new signal..." },
+  { num:21, word:"Twenty-One", q:"What is the story about love that I am ready to let go of?", prompt:"We all carry stories. Love hurts. Love ends. I am too much. I am not enough. The good ones are taken. Love means losing yourself. Love means fighting constantly. What is the story you have been living inside, and what is the truer story you want to try instead?", rPrompt:"Name the old story. Write the truer one you want to replace it with.", rPlace:"The story you have been living. The one you want to live...", aPrompt:"What is one specific way you could live into the new story this week, as if it were already true?", aPlace:"Acting from the new story, not the old one..." },
+  { num:22, word:"Twenty-Two", q:"What would self-respect look like in my next relationship, or in this one?", prompt:"Specifically. In the ordinary moments. In the hard ones. What does self-respect look like when a difficult conversation needs to happen? When plans change? When you are tired? When they are tired? Write the actual behaviors, not the abstraction.", rPrompt:"Write what self-respect looks like in specific moments. Keep it concrete.", rPlace:"The actual daily behaviors of self-respect...", aPrompt:"Which one of those behaviors could you practice this week in a current relationship, even a small one?", aPlace:"One small act of self-respect, this week..." },
+  { num:23, word:"Twenty-Three", q:"What are my non-negotiables, now that I know the cost of ignoring them?", prompt:"Revisit Day 10 if needed. Now that you have seen what happens when you push past them, what is the firm list? Not the aspirational list. The one you now know is non-negotiable because experience taught you.", rPrompt:"Rewrite the list, firmer and shorter. The ones you now know you will not cross again.", rPlace:"The list experience sharpened...", aPrompt:"Where in your life right now would honoring one of these require a hard conversation? When will you have it?", aPlace:"Specific when. Specific conversation..." },
+  { num:24, word:"Twenty-Four", q:"What have I been outsourcing to a partner that I need to meet in myself first?", prompt:"Validation. Entertainment. Identity. Financial security. Decision-making. Meaning. We sometimes expect a partner to make us whole, which is both unfair to them and unsustainable for the relationship. What have you been outsourcing, and how can you start meeting it in yourself?", rPrompt:"Name what you have been expecting a partner to provide. Then ask how you could start meeting it in yourself.", rPlace:"The expectations you have been carrying into every room...", aPrompt:"What is one specific practice this week that moves one of those needs from 'partner must' to 'I can meet this myself'?", aPlace:"Reclaiming the work..." },
+  { num:25, word:"Twenty-Five", q:"What does loving myself actually look like day-to-day?", prompt:"Not the Instagram version. The real one. The boring one. The one that includes paying your bills, taking the medicine, going to bed on time, speaking kindly to yourself in the mirror, keeping promises to yourself. Write the actual daily acts.", rPrompt:"Write the daily, unphotographable version of loving yourself. The specific habits and self-talk.", rPlace:"Self-love without the hashtags...", aPrompt:"Which one of these are you not doing right now? Start this week. One act. Daily.", aPlace:"The small practice you have been avoiding..." },
+  { num:26, word:"Twenty-Six", q:"What qualities am I actually looking for in a partner, beyond chemistry?", prompt:"Chemistry is necessary and not sufficient. What are the character qualities you now know matter? Honesty. Capacity for repair. Growth mindset. Shared values. Treats a server kindly. Not reactive. Specific. Write it as if someone were going to actually find you a match.", rPrompt:"The character list, specific and real. The qualities that make long love actually sustainable.", rPlace:"The traits that outlast the chemistry...", aPrompt:"How does this list reshape who you give your time to going forward, whether friends, dates, or anyone else?", aPlace:"Letting the list filter your calendar..." },
+  { num:27, word:"Twenty-Seven", q:"What am I now willing to walk away from early that I used to tolerate for months?", prompt:"The deal-breaker list, specific and short. Not vague ones like 'toxicity' or 'red flags.' The specific ones you know from experience. What will I say no to in the first month, now, that I used to try to work with for a year?", rPrompt:"Write the specific deal-breakers you now recognize. The ones you tolerated too long before.", rPlace:"The early no that saves the long yes...", aPrompt:"Where in your life right now is one of these showing up? What is the honest, soon-not-someday response?", aPlace:"Not someday. This week or next..." },
+  { num:28, word:"Twenty-Eight", q:"What does my life look like, fully, whether or not a partner shows up?", prompt:"The person who is single, the person who is married, the person who is divorced, all have the same work: build a life that is full on its own merits. What does yours look like? What is in it? Who is in it? What rhythms? What meaning? Write the life you want to be living regardless.", rPrompt:"Describe the full life you want to live independent of whether a partner is in it. The friendships, work, rituals, meaning.", rPlace:"The life that stands on its own...", aPrompt:"What is one piece of that full life you have been postponing? Start building it this week.", aPlace:"Living your full life now, not later..." },
+  { num:29, word:"Twenty-Nine", q:"What is the difference between loneliness and solitude for me?", prompt:"Loneliness is a lack. Solitude is a chosen quality of time with yourself. Most of us need to learn to inhabit solitude before we can trust a relationship not to be about escaping loneliness. What is the difference for you, and how do you practice solitude?", rPrompt:"Describe the two states as you experience them. What does each feel like in your body, your head, your evenings?", rPlace:"The felt difference between the two...", aPrompt:"What is one weekly practice of chosen solitude you can build in? A ritual, a time, a place.", aPlace:"Solitude on purpose, scheduled..." },
+  { num:30, word:"Thirty", q:"Who is the person I am becoming, and how will I keep becoming them?", prompt:"Look back at these 30 days. Not to judge your answers. To notice what shifted. Who is the person you are becoming through this work? What specific practice, standard, or commitment will you carry forward to keep becoming them? That is the lasting love. It starts here.", rPrompt:"Describe who you are becoming. Then name 2 or 3 practices that will keep the becoming going.", rPlace:"The person worth being loved. The person worth loving...", aPrompt:"What is the ONE commitment, practice, or standard you will carry forward from these 30 days, starting this week?", aPlace:"The promise you keep to yourself..." }
+];
+
+const weekIntros = {
+  8: { num:"Two", title:"The honest <em>inventory</em>.", body:"The next 7 questions ask what you actually bring, what you actually need, and what you have been willing to compromise. The honest answers may surprise you." },
+  15: { num:"Three", title:"What the hurt <em>taught</em>.", body:"These 7 questions are the hardest. They look at grief, complicity, forgiveness, and the stories about love you have been living inside. This is where the deepest shifts happen." },
+  22: { num:"Four", title:"Who you are <em>becoming</em>.", body:"The last 9 questions are about who you are becoming. What self-respect looks like, what you now know is non-negotiable, and the life worth building whether or not a partner arrives." }
+};
+
+function buildDays() {
+  const container = document.getElementById('days-container');
+  let html = '';
+  days.forEach(d => {
+    if (weekIntros[d.num]) {
+      const wi = weekIntros[d.num];
+      html += `<section class="week-intro full"><div class="week-intro-inner"><div class="week-eyebrow">Week ${wi.num}</div><h2>${wi.title}</h2><p>${wi.body}</p></div></section><div class="divider"></div>`;
+    }
+    const numPad = String(d.num).padStart(2, '0');
+    html += `<section class="day"><div class="day-inner"><div class="day-header"><div><div class="day-eyebrow">Day ${d.word}</div><div class="day-number-big">${numPad}</div></div></div><h2 class="day-question">${d.q}</h2><p class="day-prompt">${d.prompt}</p><div class="write-section"><div class="write-section-label reflection">Reflection ${d.num}.1</div><p class="write-prompt">${d.rPrompt}</p><textarea class="write-area" data-key="d${d.num}-reflection" placeholder="${d.rPlace}"></textarea></div><div class="write-section"><div class="write-section-label action">One Small Shift</div><p class="write-prompt">${d.aPrompt}</p><textarea class="write-area action-area" data-key="d${d.num}-action" placeholder="${d.aPlace}"></textarea></div></div></section>`;
+  });
+  container.innerHTML = html;
+}
+
+const STORAGE_KEY = 'popcycle-mirror-journal-v1';
+const SAVE_COUNT_KEY = 'popcycle-mirror-journal-save-count';
+let saveTimeout, indicatorTimeout;
+let saveCount = 0;
+
+function loadAnswers() {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      const data = JSON.parse(saved);
+      document.querySelectorAll('textarea.write-area').forEach(area => {
+        const key = area.dataset.key;
+        if (data[key]) {
+          area.value = data[key];
+          autoResize(area);
+        }
+      });
+    }
+    const countRaw = localStorage.getItem(SAVE_COUNT_KEY);
+    saveCount = countRaw ? parseInt(countRaw, 10) || 0 : 0;
+    updateProgressCounter();
+  } catch (e) { console.error('Load failed:', e); }
+}
+
+function saveAnswers() {
+  try {
+    const data = {};
+    document.querySelectorAll('textarea.write-area').forEach(area => {
+      if (area.value.trim()) data[area.dataset.key] = area.value;
+    });
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    saveCount++;
+    localStorage.setItem(SAVE_COUNT_KEY, String(saveCount));
+    showSaveIndicator();
+    updateProgressCounter();
+  } catch (e) { console.error('Save failed:', e); }
+}
+
+function scheduleSave() { clearTimeout(saveTimeout); saveTimeout = setTimeout(saveAnswers, 800); }
+
+function showSaveIndicator() {
+  const indicator = document.getElementById('saveIndicator');
+  if (saveCount <= 3) {
+    indicator.textContent = 'Saved to your browser';
+    indicator.classList.add('prominent');
+  } else {
+    indicator.textContent = 'Saved';
+    indicator.classList.remove('prominent');
+  }
+  indicator.classList.add('show');
+  clearTimeout(indicatorTimeout);
+  const duration = saveCount <= 3 ? 2600 : 1500;
+  indicatorTimeout = setTimeout(() => { indicator.classList.remove('show'); }, duration);
+}
+
+function updateProgressCounter() {
+  const startedDays = new Set();
+  document.querySelectorAll('textarea.write-area').forEach(area => {
+    if (area.value.trim()) {
+      const match = area.dataset.key.match(/^d(\d+)-/);
+      if (match) startedDays.add(match[1]);
+    }
+  });
+  const count = startedDays.size;
+  const countEl = document.getElementById('progressCount');
+  const counterEl = document.getElementById('progressCounter');
+  if (countEl) countEl.textContent = count;
+  if (counterEl) {
+    if (count > 0) counterEl.classList.add('visible');
+    else counterEl.classList.remove('visible');
+  }
+}
+
+function autoResize(el) { el.style.height = 'auto'; el.style.height = (el.scrollHeight + 4) + 'px'; }
+
+function downloadJournal() {
+  let text = '';
+  text += '=================================================================\n';
+  text += '  LASTING LOVE STARTS IN THE MIRROR\n';
+  text += '  30 days of honest reflection on how you love,\n';
+  text += '  what you have learned, and the person worth becoming.\n';
+  text += '  A Popcycle Guide to Yourself  |  popcycle.online\n';
+  text += '=================================================================\n\n';
+  text += 'Completed: ' + new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) + '\n\n';
+  text += '-----------------------------------------------------------------\n\n';
+
+  days.forEach(d => {
+    const rEl = document.querySelector(`textarea[data-key="d${d.num}-reflection"]`);
+    const aEl = document.querySelector(`textarea[data-key="d${d.num}-action"]`);
+    const reflection = rEl?.value.trim() || '(No entry)';
+    const action = aEl?.value.trim() || '(No entry)';
+    text += `DAY ${d.word.toUpperCase()} (${d.num})\n`;
+    text += `QUESTION: ${d.q}\n\n`;
+    text += `PROMPT: ${d.prompt}\n\n`;
+    text += `MY REFLECTION:\n${reflection}\n\n`;
+    text += `ONE SMALL SHIFT:\n${action}\n\n`;
+    text += '-----------------------------------------------------------------\n\n';
+  });
+
+  text += '\n=================================================================\n';
+  text += '  Lasting love starts here. In the mirror. In the willingness\n';
+  text += '  to see yourself clearly. In the commitment to keep becoming\n';
+  text += '  the person worth loving, and worth being loved by.\n\n';
+  text += '  Continue at popcycle.online\n';
+  text += '=================================================================\n';
+
+  const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'my-mirror-journal.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  buildDays();
+  loadAnswers();
+  document.querySelectorAll('textarea.write-area').forEach(area => {
+    autoResize(area);
+    area.addEventListener('input', () => {
+      autoResize(area);
+      scheduleSave();
+    });
+  });
+});
+</script>
+
+</body>
+</html>
