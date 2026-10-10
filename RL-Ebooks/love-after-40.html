@@ -470,6 +470,104 @@
   }
   .print-btn:hover { opacity: 0.9; }
 
+  /* EBOOK FOOTER — closing call to action with Popcycle + Category buttons */
+  .ebook-footer {
+    background: var(--bean);
+    color: var(--eggshell);
+    padding: 100px 40px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .ebook-footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 25% 30%, rgba(237, 128, 157, 0.10) 0%, transparent 55%),
+      radial-gradient(ellipse at 75% 70%, rgba(201, 199, 105, 0.08) 0%, transparent 55%);
+  }
+  .footer-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .footer-eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--citrus);
+    margin-bottom: 28px;
+    font-weight: 500;
+  }
+  .footer-close-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 24px;
+    line-height: 1.45;
+    color: var(--eggshell);
+    margin-bottom: 48px;
+    opacity: 0.92;
+    letter-spacing: -0.2px;
+  }
+  .footer-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 56px;
+  }
+  .footer-buttons a,
+  .footer-buttons button {
+    display: inline-block;
+    padding: 16px 30px;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    border: 2px solid;
+  }
+  .footer-btn-primary {
+    background: var(--rose);
+    color: var(--bean);
+    border-color: var(--rose);
+  }
+  .footer-btn-primary:hover {
+    background: var(--rose-deep);
+    border-color: var(--rose-deep);
+    color: var(--eggshell);
+  }
+  .footer-btn-secondary {
+    background: transparent;
+    color: var(--eggshell);
+    border-color: rgba(240, 234, 220, 0.4);
+  }
+  .footer-btn-secondary:hover {
+    border-color: var(--citrus);
+    color: var(--citrus);
+  }
+  .footer-credit {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--eggshell);
+    opacity: 0.5;
+    margin: 0;
+  }
+  .footer-credit a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(240, 234, 220, 0.3);
+    padding-bottom: 1px;
+  }
+
   .divider {
     height: 6px;
     background: var(--rose);
@@ -528,6 +626,14 @@
     .pull-quote { font-size: 22px; margin: 40px auto; }
     .horizon-close { font-size: 20px; }
     .print-btn { bottom: 16px; right: 16px; padding: 12px 18px; font-size: 11px; }
+    .ebook-footer { padding: 70px 24px 50px; }
+    .footer-close-text { font-size: 20px; margin-bottom: 36px; }
+    .footer-buttons { flex-direction: column; gap: 12px; margin-bottom: 44px; }
+    .footer-buttons a, .footer-buttons button {
+      width: 100%;
+      padding: 15px 20px;
+      font-size: 11px;
+    }
   }
 
   /* PRINT STYLES — for Save as PDF */
@@ -563,7 +669,7 @@
     .horizon-main h4 { font-size: 14pt; color: black; }
     .horizon-close { color: #c15976; font-size: 14pt; page-break-inside: avoid; }
     .pull-quote { color: #c15976; font-size: 13pt; page-break-inside: avoid; }
-    .print-btn, .status-note { display: none; }
+    .print-btn, .status-note, .ebook-footer { display: none; }
     .divider { display: none; }
     a { color: inherit; text-decoration: none; }
   }
@@ -1546,12 +1652,21 @@
     </aside>
   </div>
 
-  <div class="status-note">
-    <strong>The field guide is complete</strong>
-    All five Horizons are now in place. The vista has been named. The practice is yours. The library is a doorway to more.
-  </div>
-
 </section>
+
+<!-- EBOOK FOOTER — closing CTA -->
+<footer class="ebook-footer">
+  <div class="footer-inner">
+    <div class="footer-eyebrow">A Popcycle Field Guide</div>
+    <p class="footer-close-text">Save this field guide for later, or keep exploring the Popcycle library.</p>
+    <div class="footer-buttons">
+      <button class="footer-btn-primary" onclick="window.print()">Save as PDF</button>
+      <a class="footer-btn-secondary" href="https://www.popcycle.online">Visit Popcycle</a>
+      <a class="footer-btn-secondary" href="https://www.popcycle.online/relationships">More in Relationships</a>
+    </div>
+    <p class="footer-credit"><a href="https://www.popcycle.online">popcycle.online</a> &nbsp;·&nbsp; Sweeten your life</p>
+  </div>
+</footer>
 
 <button class="print-btn" onclick="window.print()">Save as PDF</button>
 
