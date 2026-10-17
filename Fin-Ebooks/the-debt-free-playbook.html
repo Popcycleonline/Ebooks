@@ -1,0 +1,1825 @@
+<!DOCTYPE html>
+<!--
+  THE DEBT-FREE PLAYBOOK
+  Popcycle · Financial & Credit · Pillar: Make the Necessary Repairs
+  Palette: TRUST (Royal Blue, Royal Blue Deep, Dark Moss, Platinum, Lake Blue)
+  Format: A Popcycle Guide to Yourself (interactive workbook). Built on the 14 Day Financial Reset house style.
+  12 plays across 4 phases. Live debt ledger + avalanche/snowball calculator, balance transfer check,
+  call script cards, localStorage auto-save, download text export, print-to-PDF.
+  Paired with: How to Get Out of Debt Without Destroying Your Life (the mindset half).
+  Figures current as of October 2026.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Debt-Free Playbook | Popcycle</title>
+<meta name="description" content="A tactical, interactive workbook for paying off debt. 12 plays in order: build your ledger, choose your payoff order with a live calculator, lower your interest, handle collectors, medical bills and student loans, and write a plan that keeps you free.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --royal: #0032E7;
+    --royal-deep: #162660;
+    --royal-deeper: #0E1943;
+    --moss: #525333;
+    --moss-deep: #3C3D22;
+    --platinum: #E8E7E3;
+    --platinum-warm: #DDDCD6;
+    --platinum-soft: #F2F1ED;
+    --lake: #6D8EC5;
+    --royal-soft: rgba(0, 50, 231, 0.12);
+    --moss-soft: rgba(82, 83, 51, 0.14);
+    --platinum-line: rgba(22, 38, 96, 0.14);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--platinum);
+    color: var(--royal-deep);
+    line-height: 1.7;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ============================================
+     POPCYCLE VOICE · TRUST palette adaptation
+     ============================================ */
+
+  .page { max-width: 780px; margin: 0 auto; padding: 80px 40px; }
+  .full { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+
+  /* COVER */
+  .cover {
+    background: var(--royal-deep);
+    color: var(--platinum);
+    text-align: center;
+    padding: 120px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 25% 30%, rgba(0, 50, 231, 0.28) 0%, transparent 55%),
+      radial-gradient(ellipse at 75% 70%, rgba(109, 142, 197, 0.18) 0%, transparent 55%);
+  }
+  .cover-inner { position: relative; z-index: 2; max-width: 720px; margin: 0 auto; }
+  .cover-eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--lake);
+    margin-bottom: 48px;
+    font-weight: 500;
+  }
+  .cover-start {
+    display: inline-block;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--royal-deep);
+    background: var(--platinum);
+    padding: 10px 24px;
+    border-radius: 4px;
+    margin-bottom: 36px;
+  }
+  .cover h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.6rem, 6.5vw, 5rem);
+    font-weight: 300;
+    line-height: 1.02;
+    letter-spacing: -1.2px;
+    margin-bottom: 20px;
+  }
+  .cover h1 em {
+    font-style: italic;
+    color: var(--lake);
+    font-weight: 400;
+  }
+  .cover-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+    margin-top: 36px;
+    color: var(--platinum);
+    opacity: 0.92;
+    line-height: 1.5;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cover-brand {
+    margin-top: 72px;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--lake);
+    opacity: 0.8;
+  }
+
+  /* PREFACE */
+  .preface h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 36px;
+    color: var(--royal-deep);
+    letter-spacing: -0.5px;
+  }
+  .preface h2 em { color: var(--royal); font-style: italic; }
+  .preface p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    margin-bottom: 22px;
+    color: var(--royal-deep);
+    line-height: 1.65;
+  }
+  .preface p em { font-style: italic; color: var(--royal); }
+  .preface .lede {
+    font-size: 24px;
+    line-height: 1.5;
+    font-style: italic;
+    margin-bottom: 32px;
+    color: var(--royal-deep);
+  }
+
+  .map-list {
+    background: var(--royal-soft);
+    padding: 36px 32px;
+    margin: 44px 0;
+    border-left: 4px solid var(--royal);
+  }
+  .map-list h3 {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--royal);
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  .map-list p {
+    font-family: 'Jost', sans-serif;
+    font-size: 15px;
+    margin-bottom: 12px;
+    color: var(--royal-deep);
+    line-height: 1.6;
+  }
+  .map-list p:last-child { margin-bottom: 0; }
+  .map-list strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--royal);
+    font-weight: 500;
+    margin-right: 8px;
+  }
+
+  /* PILLAR INTRO (dark full-page intro between pillars) */
+  .pillar-intro {
+    background: var(--royal-deep);
+    color: var(--platinum);
+    text-align: center;
+    padding: 100px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .pillar-intro::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 25% 60%, rgba(0, 50, 231, 0.22) 0%, transparent 55%),
+      radial-gradient(ellipse at 75% 30%, rgba(82, 83, 51, 0.18) 0%, transparent 55%);
+  }
+  .pillar-intro-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+  .pillar-quote { max-width: 500px; margin: 0 auto 68px; }
+  .pillar-quote .quote-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--platinum);
+    opacity: 0.86;
+    margin-bottom: 4px;
+    font-weight: 400;
+    text-wrap: balance;
+  }
+  .pillar-quote .quote-attr {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.2;
+    color: var(--platinum);
+    opacity: 0.82;
+    letter-spacing: 0.3px;
+    padding-left: 55%;
+  }
+  .pillar-eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--lake);
+    margin-bottom: 22px;
+    font-weight: 500;
+  }
+  .pillar-intro h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 5.5vw, 3.6rem);
+    font-weight: 400;
+    line-height: 1.08;
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
+  }
+  .pillar-intro h2 em { color: var(--lake); font-style: italic; }
+  .pillar-intro p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    line-height: 1.55;
+    max-width: 540px;
+    margin: 0 auto;
+    color: var(--platinum);
+    opacity: 0.9;
+    font-style: italic;
+  }
+
+  /* DAY */
+  .day {
+    background: var(--platinum);
+    padding: 70px 40px 90px;
+    border-bottom: 1px solid var(--platinum-line);
+  }
+  .day-inner { max-width: 720px; margin: 0 auto; }
+  .day-header {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--royal);
+  }
+  .day-eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--moss);
+    font-weight: 700;
+  }
+  .day-number-big {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    line-height: 1;
+    color: var(--royal);
+    font-style: italic;
+    font-weight: 400;
+  }
+  .day-pillar {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--moss);
+    font-weight: 600;
+    margin-left: auto;
+    opacity: 0.75;
+  }
+  .day-question {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--royal-deep);
+    margin: 20px 0 24px;
+    letter-spacing: -0.5px;
+  }
+  .day-question em { color: var(--moss); font-style: italic; }
+  .day-context {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18.5px;
+    line-height: 1.6;
+    color: var(--royal-deep);
+    margin-bottom: 28px;
+    max-width: 640px;
+  }
+  .day-prompt {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--royal-deep);
+    font-style: italic;
+    border-left: 3px solid var(--moss);
+    padding-left: 20px;
+    margin-bottom: 28px;
+    max-width: 640px;
+    opacity: 0.9;
+  }
+
+  .reflection-area {
+    position: relative;
+  }
+  .reflection-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--moss);
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .reflection {
+    width: 100%;
+    min-height: 180px;
+    padding: 20px 22px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--royal-deep);
+    background: var(--platinum-soft);
+    border: 1px solid var(--platinum-line);
+    border-left: 3px solid var(--royal);
+    border-radius: 4px;
+    resize: vertical;
+    outline: none;
+    transition: all 0.2s;
+  }
+  .reflection:focus {
+    border-color: var(--royal);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(0, 50, 231, 0.12);
+  }
+  .reflection::placeholder {
+    color: var(--moss);
+    opacity: 0.55;
+    font-style: italic;
+  }
+  .save-status {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--moss);
+    opacity: 0.6;
+    margin-top: 8px;
+    display: block;
+    font-weight: 600;
+    min-height: 14px;
+  }
+  .save-status.saved { color: var(--royal); opacity: 1; }
+
+  /* DAY RESOURCES: small block of trusted external links */
+  .day-resources {
+    background: var(--moss-soft);
+    border-left: 3px solid var(--moss);
+    padding: 18px 22px;
+    margin-bottom: 28px;
+    max-width: 640px;
+  }
+  .day-resources-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--moss);
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .day-resources a {
+    display: block;
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--royal);
+    text-decoration: none;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(0, 50, 231, 0);
+    transition: all 0.2s;
+  }
+  .day-resources a:hover {
+    color: var(--royal-deep);
+    border-bottom-color: var(--royal);
+  }
+  .day-resources a::after {
+    content: ' \2192';
+    opacity: 0.55;
+  }
+
+  /* COMPLETION */
+  .completion {
+    background: var(--royal-deep);
+    color: var(--platinum);
+    padding: 100px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .completion::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 50% 20%, rgba(0, 50, 231, 0.25) 0%, transparent 55%),
+      radial-gradient(ellipse at 50% 90%, rgba(109, 142, 197, 0.14) 0%, transparent 55%);
+  }
+  .completion-inner { position: relative; z-index: 2; max-width: 640px; margin: 0 auto; }
+  .completion-eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--lake);
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+  .completion h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 5.5vw, 3.6rem);
+    font-weight: 400;
+    line-height: 1.08;
+    margin-bottom: 28px;
+    letter-spacing: -0.5px;
+  }
+  .completion h2 em { color: var(--lake); font-style: italic; }
+  .completion p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--platinum);
+    opacity: 0.92;
+    margin-bottom: 20px;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .completion p em { font-style: italic; color: var(--lake); }
+
+  .completion-buttons {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 44px;
+  }
+  .completion-buttons button {
+    padding: 16px 28px;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid;
+    transition: all 0.22s;
+  }
+  .btn-primary {
+    background: var(--royal);
+    color: var(--platinum);
+    border-color: var(--royal);
+  }
+  .btn-primary:hover {
+    background: var(--lake);
+    border-color: var(--lake);
+    color: var(--royal-deep);
+  }
+  .btn-secondary {
+    background: transparent;
+    color: var(--platinum);
+    border-color: rgba(232, 231, 227, 0.4);
+  }
+  .btn-secondary:hover {
+    border-color: var(--lake);
+    color: var(--lake);
+  }
+
+  /* DIVIDER */
+  .divider {
+    height: 6px;
+    background: var(--royal);
+  }
+
+  /* FLOATING PROGRESS */
+  .progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: var(--royal);
+    width: 0%;
+    z-index: 200;
+    transition: width 0.2s;
+  }
+
+  /* FLOATING SAVE/DOWNLOAD BUTTON */
+  .action-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: var(--royal-deep);
+    color: var(--platinum);
+    padding: 14px 22px;
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(14, 25, 67, 0.3);
+    z-index: 100;
+    transition: all 0.2s;
+  }
+  .action-btn:hover { background: var(--royal); }
+
+  /* FOOTER */
+  .ebook-footer {
+    background: var(--royal-deeper);
+    color: var(--platinum);
+    padding: 90px 40px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .ebook-footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 25% 30%, rgba(0, 50, 231, 0.18) 0%, transparent 55%),
+      radial-gradient(ellipse at 75% 70%, rgba(109, 142, 197, 0.1) 0%, transparent 55%);
+  }
+  .footer-inner { position: relative; z-index: 2; max-width: 680px; margin: 0 auto; }
+  .footer-eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--lake);
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+  .footer-close-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.45;
+    color: var(--platinum);
+    margin-bottom: 44px;
+    opacity: 0.92;
+  }
+  .footer-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 50px;
+  }
+  .footer-buttons a, .footer-buttons button {
+    display: inline-block;
+    padding: 15px 28px;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    border: 2px solid;
+  }
+  .footer-buttons .btn-primary {
+    background: var(--royal);
+    color: var(--platinum);
+    border-color: var(--royal);
+  }
+  .footer-buttons .btn-primary:hover {
+    background: var(--lake);
+    border-color: var(--lake);
+    color: var(--royal-deep);
+  }
+  .footer-buttons .btn-secondary {
+    background: transparent;
+    color: var(--platinum);
+    border-color: rgba(232, 231, 227, 0.4);
+  }
+  .footer-buttons .btn-secondary:hover {
+    border-color: var(--lake);
+    color: var(--lake);
+  }
+  .footer-credit {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--platinum);
+    opacity: 0.5;
+    margin: 0;
+  }
+
+  /* MOBILE */
+  @media (max-width: 600px) {
+    body { font-size: 15px; }
+    .page { padding: 60px 24px; }
+    .cover { padding: 80px 24px; }
+    .pillar-intro { padding: 70px 24px; }
+    .day { padding: 50px 24px 70px; }
+    .day-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .day-number-big { font-size: 56px; }
+    .day-pillar { margin-left: 0; }
+    .day-question { font-size: 1.5rem; }
+    .pillar-quote .quote-attr { padding-left: 45%; }
+    .reflection { font-size: 15px; min-height: 150px; padding: 16px 18px; }
+    .action-btn { bottom: 16px; right: 16px; padding: 12px 18px; font-size: 10px; }
+    .ebook-footer { padding: 70px 24px 50px; }
+    .footer-buttons { flex-direction: column; gap: 12px; }
+    .footer-buttons a, .footer-buttons button { width: 100%; padding: 14px 20px; font-size: 11px; }
+  }
+
+  /* PRINT */
+  @media print {
+    body { background: white; color: black; font-size: 11pt; }
+    .cover, .pillar-intro, .completion, .ebook-footer {
+      background: white;
+      color: black;
+      page-break-after: always;
+      min-height: auto;
+      padding: 40px 20px;
+    }
+    .cover h1, .pillar-intro h2, .completion h2 { color: #162660; }
+    .cover h1 em, .pillar-intro h2 em, .completion h2 em { color: #0032E7; }
+    .cover-subtitle, .pillar-intro p, .completion p { color: #162660; opacity: 1; }
+    .cover-eyebrow, .cover-brand, .pillar-eyebrow, .completion-eyebrow, .footer-eyebrow { color: #525333; }
+    .day { page-break-before: auto; page-break-inside: avoid; padding: 20px; border-bottom: 1px solid #ccc; }
+    .day-question { color: #162660; font-size: 16pt; }
+    .reflection { background: white; border: 1px solid #ccc; min-height: 100px; }
+    .action-btn, .progress-bar, .completion-buttons, .footer-buttons { display: none; }
+    .divider { display: none; }
+  }
+
+  /* ============================================
+     PLAYBOOK ADDITIONS · TRUST palette
+     ============================================ */
+
+  .day-number-big { font-variant-numeric: lining-nums; }
+
+  /* PAIR NOTE: cross-sell with audience signaling */
+  .pair-note {
+    background: var(--platinum-soft);
+    border: 1px solid var(--platinum-line);
+    border-top: 4px solid var(--moss);
+    padding: 30px 32px;
+    margin: 44px 0;
+  }
+  .pair-note-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--moss);
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  .preface .pair-note p, .pair-note p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--royal-deep);
+    margin-bottom: 14px;
+  }
+  .pair-note p:last-child { margin-bottom: 0; }
+  .pair-note a {
+    color: var(--royal);
+    font-style: italic;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 50, 231, 0.35);
+  }
+  .pair-note a:hover { border-bottom-color: var(--royal); }
+
+  /* TOOL PANEL: ledger, calculators */
+  .tool {
+    background: #fff;
+    border: 1px solid var(--platinum-line);
+    border-top: 4px solid var(--royal);
+    border-radius: 4px;
+    padding: 26px 26px 22px;
+    margin: 0 0 30px;
+  }
+  .tool-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--royal);
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .tool-hint {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--moss);
+    margin-bottom: 18px;
+    line-height: 1.5;
+  }
+  .ledger-table { width: 100%; border-collapse: collapse; }
+  .ledger-table th {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--moss);
+    font-weight: 700;
+    text-align: left;
+    padding: 0 6px 8px;
+    border-bottom: 1px solid var(--platinum-line);
+  }
+  .ledger-table td { padding: 6px; vertical-align: middle; }
+  .tool input[type="text"], .tool input[type="number"] {
+    width: 100%;
+    font-family: 'Jost', sans-serif;
+    font-size: 15px;
+    color: var(--royal-deep);
+    background: var(--platinum-soft);
+    border: 1px solid var(--platinum-line);
+    border-radius: 3px;
+    padding: 9px 10px;
+    outline: none;
+  }
+  .tool input:focus { border-color: var(--royal); background: #fff; box-shadow: 0 0 0 3px rgba(0, 50, 231, 0.10); }
+  .ledger-table .col-name { width: 34%; }
+  .ledger-table .col-num { width: 20%; }
+  .ledger-remove {
+    background: none;
+    border: none;
+    color: var(--moss);
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0.55;
+    padding: 4px 6px;
+  }
+  .ledger-remove:hover { opacity: 1; color: var(--royal); }
+  .tool-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+  .tool-btn {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 11px 18px;
+    border: 2px solid var(--royal);
+    background: transparent;
+    color: var(--royal);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .tool-btn:hover { background: var(--royal); color: var(--platinum); }
+  .tool-btn.solid { background: var(--royal); color: var(--platinum); }
+  .tool-btn.solid:hover { background: var(--royal-deep); border-color: var(--royal-deep); }
+  .ledger-totals {
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    color: var(--royal-deep);
+  }
+  .ledger-totals strong { color: var(--royal); font-weight: 600; }
+
+  .field-inline {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+  }
+  .field-inline label, .field-single label {
+    display: block;
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--moss);
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .field-single { max-width: 280px; }
+
+  /* RESULTS: avalanche vs snowball side by side */
+  .results {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 6px;
+  }
+  .result-card {
+    background: var(--royal-deep);
+    color: var(--platinum);
+    padding: 22px 22px 20px;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+  .result-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 20% 0%, rgba(0, 50, 231, 0.35) 0%, transparent 60%);
+  }
+  .result-card > * { position: relative; }
+  .result-name {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--lake);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .result-tag {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    opacity: 0.8;
+    margin-bottom: 14px;
+  }
+  .result-big {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    line-height: 1.05;
+    font-weight: 400;
+  }
+  .result-sub {
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    opacity: 0.85;
+    margin: 4px 0 14px;
+  }
+  .result-order {
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    line-height: 1.55;
+    border-top: 1px solid rgba(232, 231, 227, 0.2);
+    padding-top: 12px;
+    opacity: 0.92;
+  }
+  .result-order ol { padding-left: 18px; }
+  .result-verdict {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--royal-deep);
+    margin-top: 18px;
+    padding-left: 16px;
+    border-left: 3px solid var(--royal);
+  }
+  .result-empty {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--moss);
+  }
+  .result-warn {
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    color: var(--moss-deep);
+    background: var(--moss-soft);
+    border-left: 3px solid var(--moss);
+    padding: 10px 14px;
+    margin-top: 14px;
+  }
+
+  /* SCRIPT CARD: what to say on the phone */
+  .script-card {
+    background: var(--platinum-soft);
+    border: 1px solid var(--platinum-line);
+    border-left: 4px solid var(--royal);
+    padding: 24px 26px;
+    margin-bottom: 28px;
+    max-width: 640px;
+    position: relative;
+  }
+  .script-card::after {
+    content: '\201C';
+    position: absolute;
+    top: -6px;
+    right: 18px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 90px;
+    line-height: 1;
+    color: var(--royal);
+    opacity: 0.12;
+  }
+  .script-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--royal);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .script-line {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--royal-deep);
+    margin-bottom: 14px;
+  }
+  .script-line:last-child { margin-bottom: 0; }
+  .script-if {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--moss);
+    font-weight: 700;
+    margin: 18px 0 8px;
+  }
+
+  /* PLAY LIST: short numbered moves inside a play */
+  .moves {
+    list-style: none;
+    margin: 0 0 28px;
+    max-width: 640px;
+    counter-reset: move;
+  }
+  .moves li {
+    counter-increment: move;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--royal-deep);
+    padding: 12px 0 12px 46px;
+    border-bottom: 1px solid var(--platinum-line);
+    position: relative;
+  }
+  .moves li:last-child { border-bottom: none; }
+  .moves li::before {
+    content: counter(move, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 13px;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: var(--royal);
+  }
+  .moves li strong { font-weight: 600; }
+
+  /* SUMMARY CARD in Play 12 */
+  .summary-card {
+    background: var(--royal-soft);
+    border-left: 4px solid var(--royal);
+    padding: 22px 26px;
+    margin-bottom: 28px;
+    max-width: 640px;
+    font-family: 'Jost', sans-serif;
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--royal-deep);
+  }
+  .summary-card .tool-label { margin-bottom: 10px; }
+
+  .disclaimer {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--platinum);
+    opacity: 0.55;
+    max-width: 560px;
+    margin: 0 auto 28px;
+  }
+
+  @media (max-width: 600px) {
+    .tool { padding: 20px 16px 18px; }
+    .ledger-table thead { display: none; }
+    .ledger-table, .ledger-table tbody, .ledger-table tr, .ledger-table td { display: block; width: 100%; }
+    .ledger-table tr {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr auto;
+      gap: 6px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--platinum-line);
+    }
+    .ledger-table td, .ledger-table td.col-name, .ledger-table td.col-num { padding: 0; width: auto; min-width: 0; }
+    .ledger-table td.col-name { grid-column: 1 / -1; }
+    .field-inline { grid-template-columns: 1fr; }
+    .results { grid-template-columns: 1fr; }
+    .script-line { font-size: 17px; }
+  }
+
+  @media print {
+    .tool { border: 1px solid #ccc; page-break-inside: avoid; }
+    .tool-btn, .ledger-remove { display: none; }
+    .result-card { background: white; color: black; border: 1px solid #ccc; }
+    .result-card::before { display: none; }
+    .result-name { color: #0032E7; }
+    .script-card, .pair-note, .summary-card { page-break-inside: avoid; }
+    .disclaimer { color: #333; opacity: 1; }
+  }
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- COVER -->
+<section class="cover full">
+  <div class="cover-inner">
+    <div class="cover-eyebrow">A Popcycle Guide to Yourself</div>
+    <div class="cover-start">Make the Necessary Repairs</div>
+    <h1>The Debt-Free<br><em>Playbook</em></h1>
+    <div class="cover-subtitle">12 plays, in order. Your ledger, your payoff order, the calls worth making, and a plan that keeps you free once you get there.</div>
+    <div class="cover-brand">Popcycle · Financial &amp; Credit</div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PREFACE -->
+<section class="page preface">
+  <h2>Welcome to the <em>playbook</em>.</h2>
+
+  <p class="lede">Understanding your debt is a relief. Knowing exactly what to do on Tuesday morning is a plan.</p>
+
+  <p>This is a working book. It assumes you have already decided you want to be done with your debt, and that what you need now is the sequence: which balance first, which calls to make, which letters to send, which traps to step around, and how to set it all up so it runs without asking you for willpower every single month.</p>
+
+  <p>There are 12 plays, grouped into 4 phases. Each play is one move. Each one gives you the context that matters, a tool or a script where one helps, and a place to write down what you did. Your ledger, your numbers, and your notes save automatically in this browser, on this device. Nobody else can see them, Popcycle included.</p>
+
+  <p>Some plays take 15 minutes. A few involve a phone call you may have been putting off. Go at whatever pace your life allows. A play a week is a perfectly good pace. So is all 12 in a weekend.</p>
+
+  <div class="pair-note">
+    <div class="pair-note-label">Two books, one road</div>
+    <p>If you are still carrying the weight of the debt itself (the avoidance, the knot in your stomach when the mail comes, the quiet story that you are bad with money), start with <a href="https://popcycleonline.github.io/Ebooks/Fin-Ebooks/how-to-get-out-of-debt-without-destroying-your-life.html" target="_blank" rel="noopener">How to Get Out of Debt Without Destroying Your Life</a>. It is the mindset half: why extreme plans fail and how to build one you can live inside.</p>
+    <p>If you are ready to put real numbers on a page and pick up the phone this week, you are in the right place. This is the tactical half.</p>
+  </div>
+
+  <div class="map-list">
+    <h3>The 4 Phases</h3>
+    <p><strong>Plays 1-3 ·</strong> The Ledger. Every balance on one page, your monthly attack number, and the order you will pay it down.</p>
+    <p><strong>Plays 4-6 ·</strong> Lower the Cost. The rate call, the honest math on transfers and consolidation, and the automation that removes willpower.</p>
+    <p><strong>Plays 7-9 ·</strong> The Hard Accounts. Collectors, medical bills, and student loans, each with its own rules.</p>
+    <p><strong>Plays 10-12 ·</strong> Stay Free. A cushion, an income move, and your whole playbook on a single page.</p>
+  </div>
+
+  <p><em>No judgment lives here. Just the next right move, and then the one after that.</em></p>
+</section>
+
+<div class="divider"></div>
+
+<!-- PHASE 1 INTRO -->
+<section class="pillar-intro full">
+  <div class="pillar-intro-inner">
+    <blockquote class="pillar-quote">
+      <p class="quote-text">A debt you can name has edges. A debt with edges can be paid.</p>
+      <p class="quote-attr">Popcycle · Financial</p>
+    </blockquote>
+    <div class="pillar-eyebrow">Phase 1 · Plays 1-3</div>
+    <h2>The <em>Ledger</em>.</h2>
+    <p>Three plays to put every balance on one page, find the number you can put toward it every month, and choose the order you will pay it down.</p>
+  </div>
+</section>
+
+<!-- PLAY 1 -->
+<section class="day" id="play1">
+  <div class="day-inner">
+    <div class="day-header">
+      <div>
+        <div class="day-eyebrow">Play</div>
+        <div class="day-number-big">01</div>
+      </div>
+      <div class="day-pillar">The Ledger</div>
+    </div>
+    <h2 class="day-question">Put every debt on <em>one page</em>.</h2>
+    <p class="day-context">Pull the most recent statement for each account and enter it below: the name, the current balance, the interest rate (APR), and the minimum payment. Credit cards, store cards, the car loan, personal loans, buy-now-pay-later plans, medical bills on payment plans, money owed to family, tax balances, student loans. If you completed Day 2 of the 14 Day Financial Reset, start from that list. Most people leave the mortgage off this ledger. It is long, usually lower in rate, and belongs to a different conversation.</p>
+    <p class="day-context">If you are unsure you have found everything, your credit report lists every account a lender reports, including the ones you forgot about.</p>
+    <div class="day-resources">
+      <div class="day-resources-label">Find what you forgot</div>
+      <a href="https://www.annualcreditreport.com/" target="_blank" rel="noopener">AnnualCreditReport.com (free reports from all 3 bureaus)</a>
+    </div>
+
+    <div class="tool" id="ledgerTool">
+      <div class="tool-label">Your debt ledger</div>
+      <p class="tool-hint">Rates as a percent (22.9, not 0.229). Everything saves as you type, on this device only.</p>
+      <table class="ledger-table">
+        <thead>
+          <tr><th class="col-name">Debt</th><th class="col-num">Balance $</th><th class="col-num">APR %</th><th class="col-num">Minimum $</th><th></th></tr>
+        </thead>
+        <tbody id="ledgerBody"></tbody>
+      </table>
+      <div class="tool-row">
+        <button class="tool-btn" type="button" onclick="addDebtRow()">+ Add a debt</button>
+        <div class="ledger-totals" id="ledgerTotals"></div>
+      </div>
+    </div>
+
+    <p class="day-prompt">Look at the whole page for a moment. Which balance surprised you? Which one have you been avoiding opening the mail for? Write it down. Naming it is the first payment.</p>
+    <div class="reflection-area">
+      <label class="reflection-label">Your notes</label>
+      <textarea class="reflection" id="r1" placeholder="What surprised you. What you had been avoiding. How it feels to see it all in one place."></textarea>
+      <span class="save-status" id="s1"></span>
+    </div>
+  </div>
+</section>
+
+<!-- PLAY 2 -->
+<section class="day" id="play2">
+  <div class="day-inner">
+    <div class="day-header">
+      <div>
+        <div class="day-eyebrow">Play</div>
+        <div class="day-number-big">02</div>
+      </div>
+      <div class="day-pillar">The Ledger</div>
+    </div>
+    <h2 class="day-question">What is your monthly <em>attack number</em>?</h2>
+    <p class="day-context">Your minimums are what you must pay. Your attack number is your minimums plus the extra you can send every month on top of them. The important word is <em>every</em>. Not the most you could find in a heroic month, but the amount you could repeat for 24 months without coming to resent the plan. A smaller number you keep beats a bigger number you abandon in March.</p>
+    <p class="day-context">Look at where the extra will come from, line by line: a subscription cut, a grocery adjustment, a side income, a raise you already received but never redirected. Leave some breathing room in the rest of your budget on purpose. Plans with zero slack break.</p>
+
+    <div class="tool">
+      <div class="tool-label">Your extra each month</div>
+      <p class="tool-hint">This is the amount above your minimums. The calculator in Play 3 uses it.</p>
+      <div class="field-single">
+        <label for="extraInput">Extra per month $</label>
+        <input type="number" id="extraInput" min="0" step="10" placeholder="e.g. 250">
+      </div>
+      <div class="tool-row">
+        <div class="ledger-totals" id="attackTotal"></div>
+      </div>
+    </div>
+
+    <p class="day-prompt">Write your attack number. Then list exactly where the extra comes from, so that future you knows which dollars are spoken for.</p>
+    <div class="reflection-area">
+      <label class="reflection-label">Your notes</label>
+      <textarea class="reflection" id="r2" placeholder="Attack number. Source 1. Source 2. Source 3. The breathing room you are keeping."></textarea>
+      <span class="save-status" id="s2"></span>
+    </div>
+  </div>
+</section>
+
+<!-- PLAY 3 -->
+<section class="day" id="play3">
+  <div class="day-inner">
+    <div class="day-header">
+      <div>
+        <div class="day-eyebrow">Play</div>
+        <div class="day-number-big">03</div>
+      </div>
+      <div class="day-pillar">The Ledger</div>
+    </div>
+    <h2 class="day-question">Which debt goes <em>first</em>?</h2>
+    <p class="day-context">There are two honest ways to order a payoff. <strong>Avalanche</strong> sends every extra dollar to the highest interest rate first, which costs you the least in total interest. <strong>Snowball</strong> sends it to the smallest balance first, which gives you your first win soonest. In both, you pay the minimum on everything else, and when a debt is gone, its whole payment rolls onto the next one. That rolling is what makes the end come faster than the beginning.</p>
+    <p class="day-context">The calculator below runs both orders on your actual ledger. If the difference in interest is small, pick the one you are more likely to finish. Some people blend them: clear one tiny balance for the feeling of it, then switch to avalanche for the rest.</p>
+
+    <div class="tool">
+      <div class="tool-label">Your payoff, both ways</div>
+      <p class="tool-hint">Estimates assume fixed rates, no new charges, and the same payment every month. Real life will wobble. The order is what matters.</p>
+      <div id="calcResults"></div>
+    </div>
+
+    <p class="day-prompt">Which order did you choose, and why? Write the first debt you will attack and the month you expect to see it reach zero.</p>
+    <div class="reflection-area">
+      <label class="reflection-label">Your decision</label>
+      <textarea class="reflection" id="r3" placeholder="Avalanche, snowball, or a blend. First target. The month it is gone."></textarea>
+      <span class="save-status" id="s3"></span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PHASE 2 INTRO -->
+<section class="pillar-intro full">
+  <div class="pillar-intro-inner">
+    <blockquote class="pillar-quote">
+      <p class="quote-text">Every point of interest you remove is money that goes to your balance instead of to the lender.</p>
+      <p class="quote-attr">Popcycle · Financial</p>
+    </blockquote>
+    <div class="pillar-eyebrow">Phase 2 · Plays 4-6</div>
+    <h2>Lower the <em>Cost</em>.</h2>
+    <p>Three plays that make each payment work harder: a phone call, an honest look at transfers and consolidation, and the automation that takes willpower out of the equation.</p>
+  </div>
+</section>
+
+<!-- PLAY 4 -->
+<section class="day" id="play4">
+  <div class="day-inner">
+    <div class="day-header">
+      <div>
+        <div class="day-eyebrow">Play</div>
+        <div class="day-number-big">04</div>
+      </div>
+      <div class="day-pillar">Lower the Cost</div>
+    </div>
+    <h2 class="day-question">Call and ask for a <em>lower rate</em>.</h2>
+    <p class="day-context">Card issuers lower interest rates for customers who ask more often than most people assume, especially for customers with a record of on-time payments. It is not guaranteed. It costs about 10 minutes and a little nerve. Start with the card at the top of your payoff order, using the number on the back of the card. Be friendly, be brief, and write down who you spoke with and what they said.</p>
+    <p class="day-context">If money is tight right now, ask about hardship programs too. Many issuers offer a temporary lower rate or payment for customers going through a job loss, illness, or other disruption. Ask what the program does to the account (some freeze or close the card) before you say yes.</p>
+
+    <div class="script-card">
+      <div class="script-label">Say this</div>
+      <p class="script-line">"Hi. I have been a customer since [year], and I have paid on time. My current rate is [APR]. I am working on paying this balance down, and I would like to ask for a lower interest rate. What are you able to do for me?"</p>
+      <div class="script-if">If the answer is no</div>
+      <p class="script-line">"I understand. Is there a hardship or reduced-rate program I might qualify for? And could you note my request on the account, so I can check back in a few months?"</p>
+    </div>
+
+    <p class="day-prompt">Make one call today. Record the card, the date, the name of the person you spoke with, and the result. If it was a no, write the date you will call again.</p>
+    <div class="reflection-area">
+      <label class="reflection-label">Your call log</label>
+      <textarea class="reflection" id="r4" placeholder="Card / date / who / result / next call date."></textarea>
+      <span class="save-status" id="s4"></span>
+    </div>
+  </div>
+</section>
+
+<!-- PLAY 5 -->
+<section class="day" id="play5">
+  <div class="day-inner">
+    <div class="day-header">
+      <div>
+        <div class="day-eyebrow">Play</div>
+        <div class="day-number-big">05</div>
+      </div>
+      <div class="day-pillar">Lower the Cost</div>
+    </div>
+    <h2 class="day-question">Does a transfer or consolidation <em>actually</em> save you money?</h2>
+    <p class="day-context">A <strong>balance transfer</strong> moves card debt to a new card with a promotional rate, often 0% for somewhere between 12 and 21 months. There is usually a transfer fee, commonly 3% to 5% of the amount moved, and whatever is left when the promotion ends starts collecting the regular rate. The test is simple: can you pay the transferred balance to zero before the promotion ends? Use the check below.</p>
+    <p class="day-context">A <strong>consolidation loan</strong> rolls several debts into one fixed payment. It helps only if the new rate is genuinely lower and the term is not stretched so far that you pay more in total. Be very careful about moving card debt into a home equity loan. It can lower the rate, but it turns debt that was only on your credit into debt that is secured by your house.</p>
+    <p class="day-context">One rule covers both: the card you just cleared is not new room to spend. Keep it open if it has no annual fee (closing it can lower your score), and put it somewhere out of reach.</p>
+
+    <div class="tool">
+      <div class="tool-label">Balance transfer check</div>
+      <p class="tool-hint">Enter the offer terms. The answer is the monthly payment needed to clear it before the regular rate begins.</p>
+      <div class="field-inline">
+        <div><label for="btBal">Amount to move $</label><input type="number" id="btBal" min="0" step="100" placeholder="e.g. 6000"></div>
+        <div><label for="btFee">Transfer fee %</label><input type="number" id="btFee" min="0" step="0.5" placeholder="e.g. 3"></div>
+        <div><label for="btMonths">Promo months</label><input type="number" id="btMonths" min="1" step="1" placeholder="e.g. 18"></div>
+      </div>
+      <div class="result-verdict" id="btResult" style="display:none"></div>
+    </div>
+
+    <p class="day-prompt">Is there a transfer or consolidation offer that passes the test for you? If so, which debt, what terms, and what monthly payment clears it in time? If not, write that down too. Deciding not to is also a decision.</p>
+    <div class="reflection-area">
+      <label class="reflection-label">Your notes</label>
+      <textarea class="reflection" id="r5" placeholder="The offer. The math. Your decision."></textarea>
+      <span class="save-status" id="s5"></span>
+    </div>
+  </div>
+</section>
+
+<!-- PLAY 6 -->
+<section class="day" id="play6">
+  <div class="day-inner">
+    <div class="day-header">
+      <div>
+        <div class="day-eyebrow">Play</div>
+        <div class="day-number-big">06</div>
+      </div>
+      <div class="day-pillar">Lower the Cost</div>
+    </div>
+    <h2 class="day-question">Make the whole plan <em>automatic</em>.</h2>
+    <p class="day-context">A missed payment is the most expensive mistake in a payoff plan. It can bring a late fee, a penalty rate, and, once a payment is 30 days late, a mark on your credit report. Automation takes that risk off the table and takes your mood out of the decision.</p>
+    <ul class="moves">
+      <li><strong>Autopay the minimum</strong> on every account in your ledger, so nothing is ever late.</li>
+      <li><strong>Schedule the extra</strong> to go to your current target the day after payday, before the money has a chance to find another job.</li>
+      <li><strong>Line up due dates.</strong> Most issuers will move your due date if you ask. Grouping them near payday makes the month calmer.</li>
+      <li><strong>Plan the rollover now.</strong> Write down today which account gets the freed-up payment when your first target reaches zero, so the change takes 2 minutes when the day comes.</li>
+    </ul>
+    <p class="day-prompt">List every automation you set up today, with the account and the date it runs.</p>
+    <div class="reflection-area">
+      <label class="reflection-label">Your automations</label>
+      <textarea class="reflection" id="r6" placeholder="Account / autopay amount / date. The extra payment and its date. The rollover plan."></textarea>
+      <span class="save-status" id="s6"></span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PHASE 3 INTRO -->
+<section class="pillar-intro full">
+  <div class="pillar-intro-inner">
+    <blockquote class="pillar-quote">
+      <p class="quote-text">The accounts that frighten us most are often the ones with the most rules protecting us. Learn the rules and the fear gets smaller.</p>
+      <p class="quote-attr">Popcycle · Financial</p>
+    </blockquote>
+    <div class="pillar-eyebrow">Phase 3 · Plays 7-9</div>
+    <h2>The <em>Hard Accounts</em>.</h2>
+    <p>Collectors, medical bills, and student loans. Each runs on its own rules, and more of those rules are on your side than you may have been told.</p>
+  </div>
+</section>
+
+<!-- PLAY 7 -->
+<section class="day" id="play7">
+  <div class="day-inner">
+    <div class="day-header">
+      <div>
+        <div class="day-eyebrow">Play</div>
+        <div class="day-number-big">07</div>
+      </div>
+      <div class="day-pillar">Hard Accounts</div>
+    </div>
+    <h2 class="day-question">Before you pay a collector, <em>validate</em> the debt.</h2>
+    <p class="day-context">When a debt collector first contacts you, federal rules require them to give you a validation notice: who the original creditor was, how much they say you owe, and how to dispute it. You generally have about 30 days from receiving that notice to dispute in writing. If you do, the collector has to pause collection until they verify the debt. Debts get sold, resold, and mixed up. Asking them to show their work is your right, and it is not rude.</p>
+    <ul class="moves">
+      <li><strong>Check the age of the debt.</strong> Every state has a statute of limitations on lawsuits for old debt. In many states, a small payment or a written acknowledgment can restart that clock, so learn where you stand before you send anything.</li>
+      <li><strong>Get any deal in writing first.</strong> If you negotiate a settlement or payment plan, get the agreement in writing before you pay a dollar, and keep it forever.</li>
+      <li><strong>Pay in a way you control.</strong> Avoid giving a collector ongoing access to your bank account. A one-time payment you initiate keeps the control with you.</li>
+      <li><strong>Never ignore a court summons.</strong> Respond by the deadline, even if you believe the debt is wrong. A missed court date can lead to a default judgment and wage garnishment.</li>
+    </ul>
+    <div class="day-resources">
+      <div class="day-resources-label">Trusted help</div>
+      <a href="https://www.consumerfinance.gov/consumer-tools/debt-collection/" target="_blank" rel="noopener">Debt collection: your rights and how to respond (CFPB)</a>
+      <a href="https://www.consumerfinance.gov/ask-cfpb/can-debt-collectors-collect-a-debt-thats-several-years-old-en-1423/" target="_blank" rel="noopener">Old debts and the statute of limitations (CFPB)</a>
+      <a href="https://www.nfcc.org/" target="_blank" rel="noopener">Free nonprofit credit counseling (NFCC)</a>
+    </div>
+    <p class="day-prompt">Do you have any accounts in collections? For each one: who is collecting, the amount they claim, whether you have the validation notice, and the date you will send a written dispute or request.</p>
+    <div class="reflection-area">
+      <label class="reflection-label">Your notes</label>
+      <textarea class="reflection" id="r7" placeholder="Collector / amount claimed / notice received? / your next step and date."></textarea>
+      <span class="save-status" id="s7"></span>
+    </div>
+  </div>
+</section>
+
+<!-- PLAY 8 -->
+<section class="day" id="play8">
+  <div class="day-inner">
+    <div class="day-header">
+      <div>
+        <div class="day-eyebrow">Play</div>
+        <div class="day-number-big">08</div>
+      </div>
+      <div class="day-pillar">Hard Accounts</div>
+    </div>
+    <h2 class="day-question">Is that medical bill <em>right</em>, and do you qualify for help?</h2>
+    <p class="day-context">Medical debt is the one kind of debt almost nobody chose. It also has more exits than most people realize. Start by asking the provider for an itemized bill and comparing it with your insurer's explanation of benefits. Duplicate charges and services you never received are more common than they should be.</p>
+    <p class="day-context">Nonprofit hospitals, which is most hospitals, are required by federal law to have a financial assistance policy. Many people with moderate incomes qualify for a reduced bill or full forgiveness, and you can often apply even after the bill has gone to collections. Before you put a medical bill on a credit card, ask the provider for an interest-free payment plan. Most will say yes.</p>
+    <p class="day-context">On your credit report: as of 2026, the 3 major credit bureaus do not report paid medical collections, medical collections under $500, or unpaid medical collections until they are at least a year old. Several states go further. If a medical debt that fits those rules shows up on your report, dispute it.</p>
+    <div class="day-resources">
+      <div class="day-resources-label">Trusted help</div>
+      <a href="https://dollarfor.org/" target="_blank" rel="noopener">Dollar For (free help applying for hospital financial assistance)</a>
+      <a href="https://www.annualcreditreport.com/" target="_blank" rel="noopener">Check your reports for medical collections (AnnualCreditReport.com)</a>
+    </div>
+    <p class="day-prompt">List each medical bill: provider, amount, whether you have the itemized bill, and whether you have asked about financial assistance. Choose one to call this week.</p>
+    <div class="reflection-area">
+      <label class="reflection-label">Your notes</label>
+      <textarea class="reflection" id="r8" placeholder="Provider / amount / itemized? / assistance asked? / the one you will call."></textarea>
+      <span class="save-status" id="s8"></span>
+    </div>
+  </div>
+</section>
+
+<!-- PLAY 9 -->
+<section class="day" id="play9">
+  <div class="day-inner">
+    <div class="day-header">
+      <div>
+        <div class="day-eyebrow">Play</div>
+        <div class="day-number-big">09</div>
+      </div>
+      <div class="day-pillar">Hard Accounts</div>
+    </div>
+    <h2 class="day-question">Are your student loans on the <em>right plan</em> for 2026?</h2>
+    <p class="day-context">Federal student loan repayment changed in 2026, and if you have not looked at your plan recently, it is worth an hour. The SAVE plan has ended. A new Repayment Assistance Plan (RAP) bases payments on 1% to 10% of your income, reduces the payment for each dependent, and waives unpaid interest. Loans taken out or consolidated on or after July 1, 2026 can use only RAP or a standard plan. Older loans may still have access to legacy plans such as IBR, while PAYE and ICR are scheduled to close in 2028.</p>
+    <p class="day-context">Many readers of this book carry Parent PLUS loans taken out for a child's education. Those are not eligible for RAP, so their options are narrower and worth confirming directly. If any federal loan is in default, know that the government has resumed collecting on defaulted loans, and that rehabilitation and consolidation are both routes back to good standing. These rules have shifted several times in recent years. Confirm your options with your servicer and the official site before you change anything.</p>
+    <div class="day-resources">
+      <div class="day-resources-label">Official source</div>
+      <a href="https://studentaid.gov/manage-loans/repayment/plans" target="_blank" rel="noopener">Repayment plans (StudentAid.gov, Federal Student Aid)</a>
+    </div>
+    <p class="day-prompt">Which loans do you have, who services them, and which plan are you on today? Write one question to ask your servicer, and the date you will ask it.</p>
+    <div class="reflection-area">
+      <label class="reflection-label">Your notes</label>
+      <textarea class="reflection" id="r9" placeholder="Loans / servicer / current plan / your question / the date."></textarea>
+      <span class="save-status" id="s9"></span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PHASE 4 INTRO -->
+<section class="pillar-intro full">
+  <div class="pillar-intro-inner">
+    <blockquote class="pillar-quote">
+      <p class="quote-text">Getting out is a project. Staying out is a system.</p>
+      <p class="quote-attr">Popcycle · Financial</p>
+    </blockquote>
+    <div class="pillar-eyebrow">Phase 4 · Plays 10-12</div>
+    <h2>Stay <em>Free</em>.</h2>
+    <p>Three plays to protect your progress: a cushion so the next surprise does not land on a card, one move on the income side, and your whole playbook on a single page.</p>
+  </div>
+</section>
+
+<!-- PLAY 10 -->
+<section class="day" id="play10">
+  <div class="day-inner">
+    <div class="day-header">
+      <div>
+        <div class="day-eyebrow">Play</div>
+        <div class="day-number-big">10</div>
+      </div>
+      <div class="day-pillar">Stay Free</div>
+    </div>
+    <h2 class="day-question">What <em>cushion</em> keeps you off the cards?</h2>
+    <p class="day-context">The most common way a payoff plan fails is not a lack of discipline. It is a transmission, a dental bill, or a week of missed work that lands on a credit card and quietly erases 3 months of progress. A starter cushion of $1,000 to $2,000, built before or alongside your extra payments, is what stops that from happening.</p>
+    <p class="day-context">Keep it in a separate savings account (a high-yield one if you can), not attached to your debit card, with a name that tells you what it is for. Once your high-interest debt is gone, grow it toward 3 to 6 months of your essential monthly costs. <a href="https://popcycleonline.github.io/Ebooks/Fin-Ebooks/the-plain-english-guide-to-building-an-emergency-fund.html" target="_blank" rel="noopener" style="color: var(--royal);">The Plain-English Guide to Building an Emergency Fund</a> walks through that second stage.</p>
+    <p class="day-prompt">How much is in your cushion today? What is your starter target, where will it live, and how much will you add each month until it is full?</p>
+    <div class="reflection-area">
+      <label class="reflection-label">Your notes</label>
+      <textarea class="reflection" id="r10" placeholder="Today's cushion / target / account / monthly amount / date it is full."></textarea>
+      <span class="save-status" id="s10"></span>
+    </div>
+  </div>
+</section>
+
+<!-- PLAY 11 -->
+<section class="day" id="play11">
+  <div class="day-inner">
+    <div class="day-header">
+      <div>
+        <div class="day-eyebrow">Play</div>
+        <div class="day-number-big">11</div>
+      </div>
+      <div class="day-pillar">Stay Free</div>
+    </div>
+    <h2 class="day-question">What is <em>one</em> income move you could make for 6 months?</h2>
+    <p class="day-context">There is a floor to how much you can cut, and you may already be standing on it. There is much less of a ceiling on what a few extra months of income can do. A temporary move, sent entirely to your current target, can shorten the whole timeline without touching your daily life: a stretch of overtime, a freelance project in a skill you already have, selling things that are taking up space, or a raise conversation you have been meaning to have.</p>
+    <p class="day-context">Decide now what happens to windfalls (a tax refund, a bonus, a gift) before they arrive. A simple split works for most people, for example half to the debt, a quarter to the cushion, and a quarter to enjoy. Deciding in advance is what keeps the money from dissolving into the month.</p>
+    <p class="day-prompt">Name one income move you could make for the next 6 months and roughly what it could add. Then write your windfall rule.</p>
+    <div class="reflection-area">
+      <label class="reflection-label">Your notes</label>
+      <textarea class="reflection" id="r11" placeholder="The income move / what it adds per month / your windfall rule."></textarea>
+      <span class="save-status" id="s11"></span>
+    </div>
+  </div>
+</section>
+
+<!-- PLAY 12 -->
+<section class="day" id="play12">
+  <div class="day-inner">
+    <div class="day-header">
+      <div>
+        <div class="day-eyebrow">Play</div>
+        <div class="day-number-big">12</div>
+      </div>
+      <div class="day-pillar">Stay Free</div>
+    </div>
+    <h2 class="day-question">Your whole playbook on <em>one page</em>.</h2>
+    <p class="day-context">Everything you have worked out comes together here. Your numbers from the ledger and the calculator are pulled in below. Add the rest in your own words: the order you chose, your attack number, your automations, the calls still to make, and how you will mark each debt that reaches zero. Celebrate every one of them, with something small and paid for in cash. Finishing a debt is worth noticing.</p>
+
+    <div class="summary-card">
+      <div class="tool-label">Your numbers</div>
+      <div id="summaryNumbers"></div>
+    </div>
+
+    <p class="day-prompt">Write your playbook. Then choose 3 check-in dates over the next 90 days, put them in your calendar before you close this page, and name the one person you will tell.</p>
+    <div class="reflection-area">
+      <label class="reflection-label">Your playbook</label>
+      <textarea class="reflection" id="r12" placeholder="Order / first target / attack number / automations / calls to make / how you will celebrate / 3 check-in dates / the person you will tell."></textarea>
+      <span class="save-status" id="s12"></span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- COMPLETION -->
+<section class="completion full">
+  <div class="completion-inner">
+    <div class="completion-eyebrow">After Play 12 · The Long Middle</div>
+    <h2>The playbook is <em>written</em>.</h2>
+    <p>You have every balance on one page, an order you chose for your own reasons, the calls and letters that lower the cost, and a system that runs whether or not you feel motivated on a given Tuesday.</p>
+    <p>Download your playbook now so you have a copy outside this browser. Print it if you like to see it on the fridge. Come back on each check-in date, update your ledger, and watch the totals fall. The middle months are the quiet ones. They are also where most of the work gets done.</p>
+    <p><em>Every month you follow the plan, the next month gets a little easier.</em></p>
+    <div class="completion-buttons">
+      <button class="btn-primary" onclick="downloadPlaybook()">Download My Playbook</button>
+      <button class="btn-secondary" onclick="window.print()">Save as PDF</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="ebook-footer">
+  <div class="footer-inner">
+    <div class="footer-eyebrow">A Popcycle Guide to Yourself</div>
+    <p class="footer-close-text">If the numbers are stirring up old feelings about money, How to Get Out of Debt Without Destroying Your Life sits right beside this book. And when the last balance reaches zero, Money Moves After 40 is waiting to help you plan what comes next.</p>
+    <div class="footer-buttons">
+      <button class="btn-primary" onclick="downloadPlaybook()">Download My Playbook</button>
+      <a class="btn-secondary" href="https://popcycleonline.github.io/Ebooks/Fin-Ebooks/how-to-get-out-of-debt-without-destroying-your-life.html" target="_blank" rel="noopener">The Mindset Half</a>
+      <a class="btn-secondary" href="https://www.popcycle.online/copy-of-improve-your-relationships">More in Financial &amp; Credit</a>
+    </div>
+    <p class="disclaimer">This workbook is for education only and is not personalized financial, legal, or tax advice. Rules on debt collection, medical debt reporting, and student loans vary by state and change over time. For serious debt, a nonprofit credit counselor or a consumer attorney can help you weigh your options.</p>
+    <p class="footer-credit">popcycle.online &nbsp;·&nbsp; Sweeten your life</p>
+  </div>
+</footer>
+
+<button class="action-btn" onclick="downloadPlaybook()">Download My Playbook</button>
+
+<script>
+  const KEY_PREFIX = 'pc-debt-playbook-';
+
+  function store(key, val) { try { localStorage.setItem(KEY_PREFIX + key, val); return true; } catch (e) { return false; } }
+  function recall(key) { try { return localStorage.getItem(KEY_PREFIX + key); } catch (e) { return null; } }
+
+  /* ---------- Reflections: auto-save per textarea ---------- */
+  const prompts = [
+    { id: 'r1', label: 'PLAY 1 · Every debt on one page' },
+    { id: 'r2', label: 'PLAY 2 · Your monthly attack number' },
+    { id: 'r3', label: 'PLAY 3 · Which debt goes first' },
+    { id: 'r4', label: 'PLAY 4 · Rate call log' },
+    { id: 'r5', label: 'PLAY 5 · Transfer or consolidation' },
+    { id: 'r6', label: 'PLAY 6 · Automations' },
+    { id: 'r7', label: 'PLAY 7 · Collections' },
+    { id: 'r8', label: 'PLAY 8 · Medical bills' },
+    { id: 'r9', label: 'PLAY 9 · Student loans' },
+    { id: 'r10', label: 'PLAY 10 · Your cushion' },
+    { id: 'r11', label: 'PLAY 11 · Income move and windfall rule' },
+    { id: 'r12', label: 'PLAY 12 · Your playbook' }
+  ];
+
+  prompts.forEach(p => {
+    const el = document.getElementById(p.id);
+    const status = document.getElementById('s' + p.id.slice(1));
+    if (!el) return;
+    const saved = recall(p.id);
+    if (saved) el.value = saved;
+    let saveTimer;
+    el.addEventListener('input', () => {
+      clearTimeout(saveTimer);
+      if (status) { status.textContent = 'Saving...'; status.classList.remove('saved'); }
+      saveTimer = setTimeout(() => {
+        const ok = store(p.id, el.value);
+        if (!status) return;
+        if (!ok) { status.textContent = 'Save unavailable'; return; }
+        status.textContent = 'Saved';
+        status.classList.add('saved');
+        setTimeout(() => { status.textContent = ''; status.classList.remove('saved'); }, 2000);
+      }, 500);
+    });
+  });
+
+  /* ---------- Ledger ---------- */
+  const ledgerBody = document.getElementById('ledgerBody');
+  const extraInput = document.getElementById('extraInput');
+  let ledger = [];
+  try { ledger = JSON.parse(recall('ledger') || '[]'); } catch (e) { ledger = []; }
+  if (!Array.isArray(ledger) || ledger.length === 0) {
+    ledger = [{ name: '', balance: '', apr: '', min: '' }, { name: '', balance: '', apr: '', min: '' }, { name: '', balance: '', apr: '', min: '' }];
+  }
+  const savedExtra = recall('extra');
+  if (savedExtra !== null) extraInput.value = savedExtra;
+
+  const money = n => '$' + Math.round(n).toLocaleString('en-US');
+  const num = v => { const n = parseFloat(v); return isFinite(n) && n > 0 ? n : 0; };
+
+  function escapeAttr(s) { return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;'); }
+  function escapeHtml(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+
+  function renderLedger() {
+    ledgerBody.innerHTML = ledger.map((d, i) => `
+      <tr>
+        <td class="col-name"><input type="text" data-i="${i}" data-k="name" value="${escapeAttr(d.name)}" placeholder="e.g. Visa, car loan" aria-label="Debt name"></td>
+        <td class="col-num"><input type="number" data-i="${i}" data-k="balance" value="${escapeAttr(d.balance)}" min="0" step="1" placeholder="Balance $" aria-label="Balance"></td>
+        <td class="col-num"><input type="number" data-i="${i}" data-k="apr" value="${escapeAttr(d.apr)}" min="0" step="0.1" placeholder="APR %" aria-label="APR"></td>
+        <td class="col-num"><input type="number" data-i="${i}" data-k="min" value="${escapeAttr(d.min)}" min="0" step="1" placeholder="Min $" aria-label="Minimum payment"></td>
+        <td><button class="ledger-remove" type="button" onclick="removeDebtRow(${i})" aria-label="Remove this debt">&times;</button></td>
+      </tr>`).join('');
+  }
+
+  ledgerBody.addEventListener('input', e => {
+    const t = e.target;
+    if (!t.dataset || t.dataset.i === undefined) return;
+    ledger[+t.dataset.i][t.dataset.k] = t.value;
+    store('ledger', JSON.stringify(ledger));
+    refresh();
+  });
+  extraInput.addEventListener('input', () => { store('extra', extraInput.value); refresh(); });
+
+  function addDebtRow() {
+    ledger.push({ name: '', balance: '', apr: '', min: '' });
+    store('ledger', JSON.stringify(ledger));
+    renderLedger();
+    const inputs = ledgerBody.querySelectorAll('input[data-k="name"]');
+    if (inputs.length) inputs[inputs.length - 1].focus();
+  }
+  function removeDebtRow(i) {
+    ledger.splice(i, 1);
+    if (ledger.length === 0) ledger.push({ name: '', balance: '', apr: '', min: '' });
+    store('ledger', JSON.stringify(ledger));
+    renderLedger();
+    refresh();
+  }
+
+  function activeDebts() {
+    return ledger
+      .map((d, i) => ({ name: (d.name || '').trim() || ('Debt ' + (i + 1)), balance: num(d.balance), apr: num(d.apr), min: num(d.min) }))
+      .filter(d => d.balance > 0);
+  }
+
+  /* ---------- Payoff simulation ---------- */
+  function simulate(debts, extra, method) {
+    const ds = debts.map(d => Object.assign({}, d, { paidMonth: null }));
+    const order = ds.slice().sort(method === 'avalanche'
+      ? (a, b) => (b.apr - a.apr) || (a.balance - b.balance)
+      : (a, b) => (a.balance - b.balance) || (b.apr - a.apr));
+    const budget = ds.reduce((s, d) => s + d.min, 0) + extra;
+    let totalInterest = 0, month = 0;
+    const MAX = 600;
+    while (ds.some(d => d.balance > 0.005) && month < MAX) {
+      month++;
+      ds.forEach(d => { if (d.balance > 0) { const i = d.balance * d.apr / 1200; d.balance += i; totalInterest += i; } });
+      let pool = budget;
+      ds.forEach(d => { if (d.balance > 0) { const p = Math.min(d.min, d.balance, pool); d.balance -= p; pool -= p; } });
+      for (const d of order) {
+        if (pool <= 0) break;
+        if (d.balance > 0) { const p = Math.min(pool, d.balance); d.balance -= p; pool -= p; }
+      }
+      ds.forEach(d => { if (d.balance <= 0.005 && d.paidMonth === null) { d.balance = 0; d.paidMonth = month; } });
+    }
+    const done = ds.every(d => d.balance <= 0.005);
+    return { months: month, done, totalInterest, order: order.map(d => ({ name: d.name, paidMonth: d.paidMonth })) };
+  }
+
+  function monthLabel(offset) {
+    const d = new Date();
+    d.setDate(1);
+    d.setMonth(d.getMonth() + offset);
+    return d.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+  }
+  function duration(m) {
+    const y = Math.floor(m / 12), r = m % 12;
+    const parts = [];
+    if (y) parts.push(y + (y === 1 ? ' year' : ' years'));
+    if (r) parts.push(r + (r === 1 ? ' month' : ' months'));
+    return parts.join(', ') || 'under a month';
+  }
+
+  let lastResults = null;
+
+  function resultCard(title, tag, r) {
+    if (!r.done) {
+      return `<div class="result-card"><div class="result-name">${title}</div><div class="result-tag">${tag}</div>
+        <div class="result-big">Not yet</div><div class="result-sub">At this payment the balances do not reach zero within 50 years.</div></div>`;
+    }
+    const list = r.order.map(o => `<li>${escapeHtml(o.name)} <span style="opacity:.7">· ${monthLabel(o.paidMonth)}</span></li>`).join('');
+    return `<div class="result-card"><div class="result-name">${title}</div><div class="result-tag">${tag}</div>
+      <div class="result-big">${monthLabel(r.months)}</div>
+      <div class="result-sub">${duration(r.months)} · about ${money(r.totalInterest)} in interest</div>
+      <div class="result-order">Payoff order<ol>${list}</ol></div></div>`;
+  }
+
+  function refresh() {
+    const debts = activeDebts();
+    const extra = num(extraInput.value);
+    const totalBal = debts.reduce((s, d) => s + d.balance, 0);
+    const totalMin = debts.reduce((s, d) => s + d.min, 0);
+
+    document.getElementById('ledgerTotals').innerHTML = debts.length
+      ? `Total owed <strong>${money(totalBal)}</strong> &nbsp;·&nbsp; Minimums <strong>${money(totalMin)}</strong>/mo`
+      : '';
+    document.getElementById('attackTotal').innerHTML = debts.length
+      ? `Your attack number: <strong>${money(totalMin + extra)}</strong> per month (${money(totalMin)} in minimums + ${money(extra)} extra)`
+      : 'Add your debts in Play 1 to see your attack number.';
+
+    const out = document.getElementById('calcResults');
+    const summary = document.getElementById('summaryNumbers');
+    if (!debts.length) {
+      out.innerHTML = '<p class="result-empty">Fill in your ledger in Play 1 and your extra in Play 2. Your results will appear here.</p>';
+      summary.innerHTML = '<p class="result-empty">Your ledger is empty so far. Your numbers will appear here once you fill in Plays 1 and 2.</p>';
+      lastResults = null;
+      return;
+    }
+    const av = simulate(debts, extra, 'avalanche');
+    const sn = simulate(debts, extra, 'snowball');
+    lastResults = { av, sn, totalBal, totalMin, extra };
+
+    let verdict = '';
+    if (av.done && sn.done) {
+      const diff = Math.round(sn.totalInterest - av.totalInterest);
+      const mdiff = sn.months - av.months;
+      const firstWin = Math.min(...sn.order.filter(o => o.paidMonth).map(o => o.paidMonth));
+      const firstWinAv = Math.min(...av.order.filter(o => o.paidMonth).map(o => o.paidMonth));
+      if (diff < 50 && mdiff <= 0) {
+        verdict = 'On your numbers the two orders land in nearly the same place. Choose the one that feels better to follow.';
+      } else {
+        verdict = `Avalanche saves about ${money(Math.max(diff, 0))} in interest${mdiff > 0 ? ' and finishes ' + mdiff + (mdiff === 1 ? ' month' : ' months') + ' sooner' : ''}. Snowball clears your first debt in month ${firstWin}${firstWin < firstWinAv ? ', versus month ' + firstWinAv + ' with avalanche' : ''}. Either one gets you there.`;
+      }
+    }
+    const minInterest = debts.reduce((s, d) => s + d.balance * d.apr / 1200, 0);
+    const warn = debts.filter(d => d.balance * d.apr / 1200 >= d.min && d.apr > 0).map(d => escapeHtml(d.name));
+    out.innerHTML = `<div class="results">${resultCard('Avalanche', 'Highest rate first', av)}${resultCard('Snowball', 'Smallest balance first', sn)}</div>`
+      + (verdict ? `<p class="result-verdict">${verdict}</p>` : '')
+      + (warn.length ? `<div class="result-warn">At its minimum payment, ${warn.join(', ')} ${warn.length === 1 ? 'does' : 'do'} not cover the monthly interest, so ${warn.length === 1 ? 'that balance' : 'those balances'} would grow on its own. This is a good candidate for the rate call in Play 4.</div>` : '')
+      + (totalMin + extra <= minInterest ? `<div class="result-warn">Your total payment is less than the interest added each month. A nonprofit credit counselor (Play 7) can help you look at options.</div>` : '');
+
+    const best = av.done ? av : (sn.done ? sn : null);
+    summary.innerHTML = `Total owed today: <strong>${money(totalBal)}</strong> across ${debts.length} ${debts.length === 1 ? 'debt' : 'debts'}<br>
+      Attack number: <strong>${money(totalMin + extra)}</strong> per month<br>
+      ${av.done ? `Avalanche: debt-free around <strong>${monthLabel(av.months)}</strong>, about ${money(av.totalInterest)} in interest<br>` : ''}
+      ${sn.done ? `Snowball: debt-free around <strong>${monthLabel(sn.months)}</strong>, about ${money(sn.totalInterest)} in interest` : ''}
+      ${best ? '' : 'At the current payment the balances do not reach zero. Revisit Plays 2 and 4.'}`;
+  }
+
+  /* ---------- Balance transfer check ---------- */
+  ['btBal', 'btFee', 'btMonths'].forEach(id => {
+    const el = document.getElementById(id);
+    const saved = recall(id);
+    if (saved !== null) el.value = saved;
+    el.addEventListener('input', () => { store(id, el.value); btCheck(); });
+  });
+  function btCheck() {
+    const bal = num(document.getElementById('btBal').value);
+    const fee = num(document.getElementById('btFee').value);
+    const months = Math.floor(num(document.getElementById('btMonths').value));
+    const out = document.getElementById('btResult');
+    if (!bal || !months) { out.style.display = 'none'; return; }
+    const feeCost = bal * fee / 100;
+    const monthly = (bal + feeCost) / months;
+    out.style.display = 'block';
+    out.innerHTML = `The fee adds about ${money(feeCost)}. To clear ${money(bal + feeCost)} in ${months} months, you would pay about <strong>${money(Math.ceil(monthly))}</strong> each month. If that fits inside your attack number, the transfer passes the test. If it does not, the balance left at the end returns to the regular rate.`;
+  }
+
+  /* ---------- Download ---------- */
+  function downloadPlaybook() {
+    const lines = [];
+    lines.push('THE DEBT-FREE PLAYBOOK');
+    lines.push('My Personal Playbook · Popcycle');
+    lines.push('Downloaded ' + new Date().toLocaleDateString());
+    lines.push('');
+    lines.push('==============================================');
+    lines.push('');
+    const debts = activeDebts();
+    lines.push('MY LEDGER');
+    lines.push('----------------------------------------------');
+    if (debts.length) {
+      debts.forEach(d => lines.push(`${d.name}: ${money(d.balance)} at ${d.apr}% APR, minimum ${money(d.min)}`));
+      if (lastResults) {
+        lines.push('');
+        lines.push(`Total owed: ${money(lastResults.totalBal)}`);
+        lines.push(`Attack number: ${money(lastResults.totalMin + lastResults.extra)} per month (${money(lastResults.extra)} extra)`);
+        [['Avalanche', lastResults.av], ['Snowball', lastResults.sn]].forEach(([n, r]) => {
+          lines.push('');
+          if (!r.done) { lines.push(`${n}: does not reach zero at this payment.`); return; }
+          lines.push(`${n}: debt-free around ${monthLabel(r.months)}, about ${money(r.totalInterest)} in interest`);
+          r.order.forEach((o, i) => lines.push(`  ${i + 1}. ${o.name} (${monthLabel(o.paidMonth)})`));
+        });
+      }
+    } else {
+      lines.push('(no debts entered yet)');
+    }
+    lines.push('');
+    lines.push('');
+    prompts.forEach(p => {
+      const el = document.getElementById(p.id);
+      lines.push(p.label);
+      lines.push('----------------------------------------------');
+      lines.push(el && el.value ? el.value : '(no response yet)');
+      lines.push('');
+      lines.push('');
+    });
+    const blob = new Blob([lines.join('\n')], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'my-debt-free-playbook.txt';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+
+  renderLedger();
+  refresh();
+  btCheck();
+
+  /* ---------- Scroll progress bar ---------- */
+  const bar = document.getElementById('progressBar');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    bar.style.width = pct + '%';
+  });
+</script>
+
+</body>
+</html>

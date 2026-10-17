@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<!--
+  MONEY MOVES AFTER 40 · A Popcycle Field Guide
+  Popcycle · Financial & Credit · Pillar: Your Big Plan
+  Palette: TRUST (Royal Blue, Royal Blue Deep, Dark Moss, Platinum, Lake Blue)
+  Format: Field Guide (Love After 40 primitives) adapted to TRUST: 5 horizons, 2-col body with 220px marginalia rail,
+  Dark Moss italic marginalia, moss-tinted field notes, Royal italic horizon closes, Dancing Script accent on cover.
+  Paired with: The 5 Money Moves You Should Have Made in Your 30s (the catching-up half).
+  All limits are 2026 figures, checked against IRS, SSA and Medicare sources in October 2026.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Money Moves After 40 | Popcycle</title>
+<meta name="description" content="A forward-looking field guide to the next 25 years of your financial life. The 2026 savings engine, the pressures of the middle years, the bridge to retirement (Social Security, Medicare, the order of withdrawals), and the plan that carries you through.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500;600;700&family=Poppins:wght@700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --royal: #0032E7;
+    --royal-deep: #162660;
+    --royal-deeper: #0E1943;
+    --moss: #525333;
+    --moss-deep: #3C3D22;
+    --platinum: #E8E7E3;
+    --platinum-soft: #F2F1ED;
+    --lake: #6D8EC5;
+    --royal-soft: rgba(0, 50, 231, 0.10);
+    --moss-soft: rgba(82, 83, 51, 0.12);
+    --lake-soft: rgba(109, 142, 197, 0.18);
+    --platinum-line: rgba(22, 38, 96, 0.14);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--platinum);
+    color: var(--royal-deep);
+    line-height: 1.7;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ============================================
+     THE POPCYCLE VOICE · FIELD GUIDE · TRUST palette
+     ============================================ */
+
+  .page { max-width: 780px; margin: 0 auto; padding: 80px 40px; }
+  .full { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+
+  /* COVER */
+  .cover {
+    background: var(--royal-deep);
+    color: var(--platinum);
+    text-align: center;
+    padding: 120px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 30%, rgba(0, 50, 231, 0.30) 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 75%, rgba(109, 142, 197, 0.20) 0%, transparent 55%);
+  }
+  .cover::after {
+    /* a quiet horizon line across the lower cover */
+    content: '';
+    position: absolute;
+    left: 0; right: 0;
+    bottom: 12%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(109, 142, 197, 0.45), transparent);
+  }
+  .cover-inner { position: relative; z-index: 2; max-width: 700px; margin: 0 auto; }
+  .cover-eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--lake);
+    margin-bottom: 56px;
+    font-weight: 500;
+  }
+  .cover-script {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    color: var(--lake);
+    font-size: clamp(3.8rem, 10vw, 6.6rem);
+    line-height: 0.95;
+    letter-spacing: 1px;
+    transform: rotate(-3deg);
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+  .cover h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 7vw, 5.4rem);
+    font-weight: 300;
+    line-height: 1.02;
+    margin-top: 12px;
+    letter-spacing: -1.2px;
+  }
+  .cover h1 em { font-style: italic; color: var(--platinum); font-weight: 400; }
+  .cover-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+    margin-top: 60px;
+    color: var(--platinum);
+    opacity: 0.9;
+    line-height: 1.5;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cover-brand {
+    margin-top: 72px;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--lake);
+    opacity: 0.85;
+  }
+
+  /* PREFACE */
+  .preface h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    font-weight: 400;
+    line-height: 1.08;
+    margin-bottom: 36px;
+    letter-spacing: -0.5px;
+  }
+  .preface h2 em { color: var(--royal); font-style: italic; }
+  .preface p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    margin-bottom: 22px;
+    line-height: 1.62;
+  }
+  .preface p em { font-style: italic; color: var(--royal); }
+  .preface .lede {
+    font-size: 24px;
+    line-height: 1.5;
+    font-style: italic;
+    margin-bottom: 32px;
+    max-width: 640px;
+  }
+
+  .map-list {
+    background: var(--royal-soft);
+    padding: 36px 32px;
+    margin: 44px 0;
+    border-left: 4px solid var(--royal);
+  }
+  .map-list h3 {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--royal);
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .map-list p {
+    font-family: 'Jost', sans-serif;
+    font-size: 15px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+  }
+  .map-list p:last-child { margin-bottom: 0; }
+  .map-list strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--royal);
+    font-weight: 500;
+    margin-right: 8px;
+  }
+
+  /* PAIR NOTE: cross-sell with audience signaling */
+  .pair-note {
+    background: var(--platinum-soft);
+    border: 1px solid var(--platinum-line);
+    border-top: 4px solid var(--moss);
+    padding: 30px 32px;
+    margin: 44px 0;
+  }
+  .pair-note-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--moss);
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  .preface .pair-note p { font-size: 18px; margin-bottom: 14px; line-height: 1.6; }
+  .preface .pair-note p:last-child { margin-bottom: 0; }
+  .pair-note a, .horizon-main a {
+    color: var(--royal);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 50, 231, 0.35);
+  }
+  .pair-note a { font-style: italic; }
+  .pair-note a:hover, .horizon-main a:hover { border-bottom-color: var(--royal); }
+
+  /* HORIZON INTRO */
+  .horizon-intro {
+    background: var(--royal-deep);
+    color: var(--platinum);
+    text-align: center;
+    padding: 100px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .horizon-intro::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 25% 60%, rgba(0, 50, 231, 0.24) 0%, transparent 55%),
+      radial-gradient(ellipse at 75% 30%, rgba(82, 83, 51, 0.22) 0%, transparent 55%);
+  }
+  .horizon-intro-inner { position: relative; z-index: 2; max-width: 620px; margin: 0 auto; }
+  .horizon-quote { max-width: 500px; margin: 0 auto 72px; }
+  .horizon-quote .quote-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.55;
+    opacity: 0.85;
+    margin-bottom: 4px;
+    text-wrap: balance;
+  }
+  .horizon-quote .quote-attr {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.2;
+    opacity: 0.8;
+    letter-spacing: 0.3px;
+    padding-left: 55%;
+  }
+  .horizon-eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--lake);
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+  .horizon-intro h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.6rem, 5.5vw, 4rem);
+    font-weight: 400;
+    line-height: 1.08;
+    margin-bottom: 28px;
+    letter-spacing: -0.5px;
+  }
+  .horizon-intro h2 em { color: var(--lake); font-style: italic; }
+  .horizon-intro p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    line-height: 1.55;
+    max-width: 540px;
+    margin: 0 auto;
+    opacity: 0.9;
+    font-style: italic;
+  }
+
+  /* HORIZON CONTENT */
+  .horizon-content { padding: 80px 40px 100px; max-width: 1100px; margin: 0 auto; }
+  .horizon-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 220px;
+    gap: 56px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: start;
+  }
+  .horizon-main {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    line-height: 1.65;
+    min-width: 0;
+  }
+  .horizon-main p { margin-bottom: 24px; }
+  .horizon-main p.lede { font-size: 24px; line-height: 1.5; font-style: italic; margin-bottom: 36px; }
+  .horizon-main strong { font-weight: 600; }
+  .horizon-main h3 {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--royal);
+    margin: 56px 0 20px;
+    font-weight: 700;
+  }
+  .horizon-main h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 36px 0 20px;
+    font-style: italic;
+    letter-spacing: -0.3px;
+  }
+  .horizon-rule {
+    text-align: center;
+    margin: 48px 0;
+    color: var(--lake);
+    letter-spacing: 8px;
+    font-size: 14px;
+  }
+
+  /* MARGINALIA: side-column notes in Dark Moss italic */
+  .marginalia-col {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--moss);
+    position: sticky;
+    top: 40px;
+  }
+  .marginalia {
+    margin-bottom: 48px;
+    padding-left: 16px;
+    border-left: 2px solid var(--lake);
+  }
+  .marginalia-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--moss);
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 8px;
+    opacity: 0.85;
+  }
+
+  /* FIELD NOTE: moss-tinted research callout */
+  .field-note {
+    background: var(--moss-soft);
+    border-left: 4px solid var(--moss);
+    padding: 22px 26px;
+    margin: 32px 0;
+    font-family: 'Jost', sans-serif;
+    font-size: 15.5px;
+    line-height: 1.65;
+  }
+  .field-note-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--moss);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .field-note cite {
+    font-style: italic;
+    opacity: 0.75;
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  .field-note cite a { color: inherit; border-bottom: 1px solid rgba(22, 38, 96, 0.3); text-decoration: none; }
+
+  /* FIGURE TABLE: the 2026 numbers */
+  .figures { width: 100%; border-collapse: collapse; margin: 6px 0 2px; }
+  .figures th, .figures td {
+    text-align: left;
+    padding: 9px 0;
+    border-bottom: 1px solid rgba(82, 83, 51, 0.22);
+    vertical-align: top;
+  }
+  .figures th {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--moss);
+    font-weight: 700;
+  }
+  .figures td.num {
+    text-align: right;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    color: var(--royal);
+    white-space: nowrap;
+    padding-left: 16px;
+  }
+  .figures th.num { text-align: right; }
+  .figures tr:last-child td { border-bottom: none; }
+
+  /* PULL QUOTE */
+  .pull-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 27px;
+    line-height: 1.4;
+    color: var(--royal);
+    text-align: center;
+    margin: 56px auto;
+    max-width: 620px;
+    padding: 0 20px;
+  }
+
+  /* RESOURCES inside the main column */
+  .resources {
+    background: var(--lake-soft);
+    border-left: 3px solid var(--lake);
+    padding: 18px 22px;
+    margin: 32px 0;
+  }
+  .resources-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--royal-deep);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .horizon-main .resources a {
+    display: block;
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 0;
+    border-bottom: none;
+  }
+  .horizon-main .resources a::after { content: ' \2192'; opacity: 0.55; }
+
+  /* PLAN LINES: the 5-line big plan */
+  .plan-lines { list-style: none; margin: 8px 0 32px; counter-reset: line; }
+  .plan-lines li {
+    counter-increment: line;
+    position: relative;
+    padding: 16px 0 16px 56px;
+    border-bottom: 1px solid var(--platinum-line);
+  }
+  .plan-lines li::before {
+    content: counter(line, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 12px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 30px;
+    line-height: 1;
+    color: var(--royal);
+  }
+  .plan-lines li strong { display: block; font-size: 21px; font-weight: 500; }
+
+  /* SIGNATURE CLOSE: Royal italic benediction per horizon */
+  .horizon-close {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 25px;
+    line-height: 1.4;
+    color: var(--royal);
+    text-align: center;
+    margin: 80px auto 40px;
+    max-width: 600px;
+    letter-spacing: 0.3px;
+  }
+  .horizon-close::before {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 2px;
+    background: var(--lake);
+    margin: 0 auto 28px;
+  }
+
+  /* PRINT BUTTON */
+  .print-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: var(--royal-deep);
+    color: var(--platinum);
+    padding: 14px 24px;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(14, 25, 67, 0.3);
+    z-index: 100;
+    transition: background 0.2s;
+  }
+  .print-btn:hover { background: var(--royal); }
+
+  /* FOOTER */
+  .ebook-footer {
+    background: var(--royal-deeper);
+    color: var(--platinum);
+    padding: 100px 40px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .ebook-footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 25% 30%, rgba(0, 50, 231, 0.18) 0%, transparent 55%),
+      radial-gradient(ellipse at 75% 70%, rgba(109, 142, 197, 0.10) 0%, transparent 55%);
+  }
+  .footer-inner { position: relative; z-index: 2; max-width: 680px; margin: 0 auto; }
+  .footer-eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--lake);
+    margin-bottom: 28px;
+    font-weight: 500;
+  }
+  .footer-close-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 23px;
+    line-height: 1.45;
+    margin-bottom: 48px;
+    opacity: 0.92;
+  }
+  .footer-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-bottom: 50px; }
+  .footer-buttons a, .footer-buttons button {
+    display: inline-block;
+    padding: 16px 30px;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    border: 2px solid;
+  }
+  .btn-primary { background: var(--royal); color: var(--platinum); border-color: var(--royal); }
+  .btn-primary:hover { background: var(--lake); border-color: var(--lake); color: var(--royal-deep); }
+  .btn-secondary { background: transparent; color: var(--platinum); border-color: rgba(232, 231, 227, 0.4); }
+  .btn-secondary:hover { border-color: var(--lake); color: var(--lake); }
+  .disclaimer {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+    opacity: 0.55;
+    max-width: 560px;
+    margin: 0 auto 28px;
+  }
+  .footer-credit {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.5;
+  }
+
+  .divider { height: 6px; background: var(--royal); }
+
+  /* MOBILE */
+  @media (max-width: 820px) {
+    .horizon-body { grid-template-columns: 1fr; gap: 32px; }
+    .marginalia-col { position: static; }
+    .marginalia {
+      padding: 18px 20px;
+      border-left: 3px solid var(--lake);
+      background: var(--lake-soft);
+      margin: 24px 0;
+    }
+  }
+  @media (max-width: 600px) {
+    body { font-size: 15px; }
+    .page { padding: 60px 24px; }
+    .cover { padding: 80px 24px; }
+    .horizon-intro { padding: 70px 24px; }
+    .horizon-content { padding: 60px 24px 80px; }
+    .horizon-main { font-size: 18px; }
+    .horizon-main p.lede { font-size: 20px; }
+    .horizon-main h4 { font-size: 22px; }
+    .horizon-quote .quote-attr { padding-left: 45%; }
+    .pull-quote { font-size: 22px; margin: 40px auto; }
+    .horizon-close { font-size: 21px; }
+    .field-note { padding: 18px 18px; }
+    .figures td.num { font-size: 18px; }
+    .print-btn { bottom: 16px; right: 16px; padding: 12px 18px; font-size: 11px; }
+    .ebook-footer { padding: 70px 24px 50px; }
+    .footer-close-text { font-size: 20px; }
+    .footer-buttons { flex-direction: column; gap: 12px; }
+    .footer-buttons a, .footer-buttons button { width: 100%; padding: 15px 20px; font-size: 11px; }
+  }
+
+  /* PRINT */
+  @media print {
+    body { background: white; color: black; font-size: 11pt; }
+    .cover, .horizon-intro { background: white; color: #162660; page-break-after: always; min-height: auto; padding: 40px 20px; }
+    .cover::after { display: none; }
+    .cover-script, .cover-eyebrow, .cover-brand, .horizon-eyebrow { color: #0032E7; }
+    .cover h1 em, .horizon-intro h2 em { color: #0032E7; }
+    .horizon-content { padding: 20px; }
+    .horizon-body { grid-template-columns: 1fr; gap: 20px; }
+    .marginalia { background: #f1f1ec; padding: 12px; border-left: 2px solid #525333; font-size: 10pt; }
+    .field-note, .resources { background: #f1f1ec; padding: 14px; page-break-inside: avoid; }
+    .horizon-main { font-size: 11pt; }
+    .horizon-main h3 { font-size: 10pt; }
+    .horizon-main h4 { font-size: 14pt; }
+    .horizon-close { font-size: 14pt; page-break-inside: avoid; }
+    .pull-quote { font-size: 13pt; page-break-inside: avoid; }
+    .print-btn, .ebook-footer, .divider { display: none; }
+    a { color: inherit; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<section class="cover full">
+  <div class="cover-inner">
+    <div class="cover-eyebrow">A Popcycle Field Guide</div>
+    <div class="cover-script">Money Moves</div>
+    <h1>After <em>40</em></h1>
+    <div class="cover-subtitle">A forward-looking field guide to the next 25 years of your financial life: the engine, the pressures, the bridge to retirement, and the plan that carries you across it.</div>
+    <div class="cover-brand">Popcycle · Financial &amp; Credit · Your Big Plan</div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PREFACE -->
+<section class="page preface">
+  <h2>Welcome to the <em>second half</em>.</h2>
+
+  <p class="lede">Somewhere after 40, the money question quietly changes. It stops being "how do I get started?" and becomes "what am I building, and how long does it need to last?"</p>
+
+  <p>Most financial writing is aimed at one of two people. The first is 26, has 40 years of compounding ahead, and is being told to open a Roth IRA before brunch. The second is 68, already retired, and wants to know how to make the money stretch. Between them sits a very large group of people who are rarely written for directly: adults in their 40s, 50s, and early 60s who are earning, saving, supporting others, and starting to see the shape of the decades ahead.</p>
+
+  <p>This is a field guide for that middle stretch. It is less about what you should have done and more about what the next 25 years can hold. It covers the savings engine as it stands in 2026, with the specific limits and windows that open only after 50. It covers the pressures that crowd this stage of life: children heading to college or out into the world, parents who are starting to need you back, and your own health and income to protect. It covers the bridge from full-time work to whatever comes after: Social Security, Medicare, and the order you draw your money down. And it ends with your Big Plan, the one page that ties it all together.</p>
+
+  <p>It is written in the Popcycle voice, which means no shame, no manufactured panic, and no pretending the math is simpler than it is. You have lived enough to be spoken to as an equal.</p>
+
+  <div class="pair-note">
+    <div class="pair-note-label">Two books, one road</div>
+    <p>If you are still laying the foundation (capturing an employer match, clearing high-interest debt, building an emergency fund, starting your first index fund), begin with <a href="https://popcycleonline.github.io/Ebooks/Fin-Ebooks/the-5-money-moves-you-should-have-made-in-your-30s.html" target="_blank" rel="noopener">The 5 Money Moves You Should Have Made in Your 30s</a>. It is the catching-up half, and it is written for exactly where you are.</p>
+    <p>If the foundation is in place, or mostly in place, and you are ready to look 10, 20, and 30 years ahead, you are in the right book. This is the forward-looking half.</p>
+  </div>
+
+  <div class="map-list">
+    <h3>The 5 Horizons</h3>
+    <p><strong>1 ·</strong> The Landscape. What actually changes about money after 40, and the 3 numbers that matter most from here.</p>
+    <p><strong>2 ·</strong> The Engine. Building the next 20 years with the 2026 limits, the catch-up windows, and the accounts most people underuse.</p>
+    <p><strong>3 ·</strong> The Crosswinds. Kids, parents, and you. How to care for the people you love without quietly sacrificing your own future.</p>
+    <p><strong>4 ·</strong> The Bridge. The decade before you stop working: Social Security, Medicare, and the order you draw your money down.</p>
+    <p><strong>5 ·</strong> The Vista. Your Big Plan. Where you live, what you leave, who helps you, and the one page that holds it together.</p>
+  </div>
+
+  <p>Read it straight through, or start with the Horizon that answers the question you are carrying today. Every limit and rule in this guide is a 2026 figure, and most of them change each year, so each field note points to the official source.</p>
+
+  <p><em>The second half is not the leftovers. It is the main course, served a little slower.</em></p>
+</section>
+
+<div class="divider"></div>
+
+<!-- HORIZON 1 INTRO -->
+<section class="horizon-intro full">
+  <div class="horizon-intro-inner">
+    <blockquote class="horizon-quote">
+      <p class="quote-text">Most money advice is drawn as if everyone started at 22. The rest of us need a map that begins where we actually stand.</p>
+      <p class="quote-attr">Field Guide note</p>
+    </blockquote>
+    <div class="horizon-eyebrow">Horizon 1</div>
+    <h2>The <em>Landscape</em>.</h2>
+    <p>What actually changes about money after 40. Why the runway is longer than it feels. And the 3 numbers worth knowing from here on.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HORIZON 1 CONTENT -->
+<section class="horizon-content">
+  <div class="horizon-body">
+    <div class="horizon-main">
+
+      <p class="lede">At 25, money is mostly about getting started. After 40, it becomes a design problem.</p>
+
+      <p>The difference is not that the rules change. Compounding still compounds. Spending less than you earn still works. The difference is that you now know a great deal more about your own life: roughly what you earn and where it is headed, who depends on you, what you actually enjoy spending on, and what kind of life you are hoping to have when work becomes optional. That knowledge is an advantage. Plans built on real information are better plans.</p>
+
+      <p>Three things tend to be true of money in this stretch of life, and each one shapes the moves that follow.</p>
+
+      <h4>These are often the peak earning years.</h4>
+
+      <p>For many people, the 40s and 50s bring the highest income of their working lives. That is not universal (careers change, industries shift, caregiving interrupts), but where it is true, it creates a window. A raise that goes to savings instead of to a bigger lifestyle does more in these years than at any other time, because the amounts are larger and the need is clearer.</p>
+
+      <h4>The runway is shorter, but it is not short.</h4>
+
+      <p>From 45 to 67 is 22 years. That is long enough for money invested today to double roughly twice at historical stock market returns. And retirement itself is not the end of the runway. A plan that begins at 65 may need to support you for 25 or 30 years, which means a meaningful share of your savings will still be invested, and still growing, well into your 70s and 80s.</p>
+
+      <div class="field-note">
+        <div class="field-note-label">Field Note · The Rule of 72</div>
+        Divide 72 by an annual rate of return to estimate how many years it takes money to double. At 7%, money doubles about every 10 years. At 5%, about every 14. The rule is a rough guide, not a promise (markets do not deliver smooth averages), but it is a useful antidote to the feeling that money saved after 40 has no time to grow.
+        <cite>A standard rule of thumb in finance; see the compound interest calculator at <a href="https://www.investor.gov/" target="_blank" rel="noopener">Investor.gov</a> (SEC) to run your own numbers</cite>
+      </div>
+
+      <h4>Other people are leaning on you.</h4>
+
+      <p>This is the decade sometimes called the sandwich years: children who still need support on one side, parents who are starting to need help on the other, and you in the middle with a job, a household, and your own future to fund. Horizon 3 is devoted to this. For now, it is enough to name it. Many of the financial decisions in this stage are not really about money. They are about love, obligation, and boundaries, expressed in money.</p>
+
+      <div class="horizon-rule">· · ·</div>
+
+      <h3>The 3 Numbers</h3>
+
+      <p>You do not need a 40-page financial plan to move forward. You need 3 numbers, written down somewhere you will see them once a year.</p>
+
+      <h4>1. Your savings rate.</h4>
+
+      <p>The percentage of your gross income that goes toward the future: retirement accounts, including any employer contributions, plus other long-term savings. This number matters more than your investment returns, more than which fund you pick, and more than how much you already have. It is also the number most directly under your control. A common target for people starting serious saving in their 40s is 15% or more. If you are below that, the goal is not to leap there overnight. It is to move toward it, 1 or 2 percentage points a year, often timed with raises.</p>
+
+      <h4>2. Your gap.</h4>
+
+      <p>The difference between what you are on track to have and what the life you want will cost. You do not need precision here. You need a rough estimate that exists. Start with what you spend today, adjust for what will change (a paid-off mortgage, no more tuition, more travel, higher healthcare costs), and compare it with your projected Social Security plus what your savings could reasonably support. Horizon 4 explains each piece. Your Social Security statement, available free online, is the place to begin.</p>
+
+      <h4>3. Your date.</h4>
+
+      <p>Not necessarily a retirement date. A <em>work-optional</em> date: the year you would like the choice to be yours. Some people will keep working well past it because they enjoy their work. Some will shift to part-time, consulting, or something entirely new. The date matters because it tells you how many years of saving remain and how many years of spending the plan must cover. Moving it by 2 or 3 years in either direction changes the math more than almost any investment decision you will make.</p>
+
+      <div class="pull-quote">"Your savings rate matters more than your returns, and it is the one number fully in your hands."</div>
+
+      <p>Everything else in this guide is in service of those 3 numbers: raising the first, closing the second, and choosing the third with your eyes open.</p>
+
+      <div class="horizon-close">
+        You are not behind.<br>
+        You are in the middle, and the middle is where the work gets done.
+      </div>
+
+    </div>
+
+    <aside class="marginalia-col">
+      <div class="marginalia">
+        <div class="marginalia-label">On "design"</div>
+        A design problem has constraints, trade-offs, and more than one good answer. That is a far better description of money after 40 than "behind" or "ahead," which assume there was a single correct path all along.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On lifestyle creep</div>
+        Nobody decides to spend every raise. It happens a little at a time. Deciding in advance where the next raise goes, before it arrives, is one of the quietest and most powerful moves in this book.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On averages</div>
+        Long-run stock returns are often quoted as averages. Real years swing well above and below. Plans built on averages should leave room for the years that are not average.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On the 15% target</div>
+        It is a planning convention, not a law. Someone with a pension needs less. Someone hoping to stop at 58 needs more. The right number is the one that closes your gap by your date.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On "work-optional"</div>
+        Many people discover that what they wanted was never to stop working. It was to stop having to.
+      </div>
+    </aside>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HORIZON 2 INTRO -->
+<section class="horizon-intro full">
+  <div class="horizon-intro-inner">
+    <blockquote class="horizon-quote">
+      <p class="quote-text">The tax code quietly assumes many people will save hardest late. It built extra room for them. Most never use it.</p>
+      <p class="quote-attr">Field Guide note</p>
+    </blockquote>
+    <div class="horizon-eyebrow">Horizon 2</div>
+    <h2>The <em>Engine</em>.</h2>
+    <p>Building the next 20 years. The 2026 limits, the catch-up windows that open at 50 and again at 60, and the accounts most people underuse.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HORIZON 2 CONTENT -->
+<section class="horizon-content">
+  <div class="horizon-body">
+    <div class="horizon-main">
+
+      <p class="lede">Contributions are the lever. Time is the multiplier. After 40, the lever gets longer every few years.</p>
+
+      <p>If you have read The 5 Money Moves, you know the foundation: take the full employer match, clear high-interest debt, keep an emergency fund, and invest steadily in low-cost funds. This Horizon picks up from there. It is about the specific room the tax code gives people in their 40s, 50s, and early 60s, and how to use it.</p>
+
+      <div class="field-note">
+        <div class="field-note-label">Field Note · The 2026 Numbers</div>
+        <table class="figures">
+          <thead><tr><th>Account</th><th class="num">2026 limit</th></tr></thead>
+          <tbody>
+            <tr><td>401(k), 403(b), most 457 plans: standard contribution</td><td class="num">$24,500</td></tr>
+            <tr><td>Catch-up, age 50 and older</td><td class="num">+ $8,000</td></tr>
+            <tr><td>Higher catch-up, ages 60 to 63 (in place of the $8,000)</td><td class="num">+ $11,250</td></tr>
+            <tr><td>IRA (traditional or Roth): standard contribution</td><td class="num">$7,500</td></tr>
+            <tr><td>IRA catch-up, age 50 and older</td><td class="num">+ $1,100</td></tr>
+            <tr><td>HSA: self-only coverage</td><td class="num">$4,400</td></tr>
+            <tr><td>HSA: family coverage</td><td class="num">$8,750</td></tr>
+            <tr><td>HSA catch-up, age 55 and older</td><td class="num">+ $1,000</td></tr>
+          </tbody>
+        </table>
+        <cite>Internal Revenue Service, 2026 limits. <a href="https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-catch-up-contributions" target="_blank" rel="noopener">Retirement topics: catch-up contributions</a>. Limits are adjusted most years; check before you set your contribution.</cite>
+      </div>
+
+      <h3>The Catch-Up Windows</h3>
+
+      <h4>At 50, the ceiling rises.</h4>
+
+      <p>From the year you turn 50, you can put an extra $8,000 into a workplace plan and an extra $1,100 into an IRA, on top of the standard limits. Together, that is up to $41,100 a year of tax-advantaged room for one person in 2026, before any employer contributions. Very few people can use all of it, and that is fine. The point is that the ceiling is high enough that, for most people, the limit is the budget and not the law.</p>
+
+      <h4>At 60, a 4-year window opens.</h4>
+
+      <p>For the years you are 60, 61, 62, and 63, the workplace catch-up rises to $11,250. It is a short window that many people do not know exists, and it often lines up with a moment when children are launched and a mortgage is shrinking. If your plan offers it and your budget allows it, these 4 years can add a meaningful amount at exactly the point when every dollar has a clear purpose.</p>
+
+      <h4>A new rule for higher earners.</h4>
+
+      <p>Starting in 2026, if your wages from your employer were above $150,000 in the prior year, your catch-up contributions to that employer's plan must go in as Roth (after-tax) contributions, provided the plan offers a Roth option. You still get the full catch-up amount. What changes is when you pay the tax: now, rather than in retirement. Check with your plan administrator so the switch does not catch you by surprise.</p>
+
+      <div class="horizon-rule">· · ·</div>
+
+      <h3>Tax Diversification</h3>
+
+      <p>Most people think about diversification in terms of investments: stocks, bonds, different markets. There is a second kind that matters more and more as retirement approaches, and that is diversification by <em>tax treatment</em>.</p>
+
+      <p><strong>Traditional (pre-tax) accounts</strong> lower your tax bill now. You pay income tax when you withdraw. <strong>Roth accounts</strong> do the reverse: no deduction now, but qualified withdrawals in retirement are tax-free. <strong>Taxable brokerage accounts</strong> have no special treatment, but long-term gains are taxed at lower rates, and the money is available at any age.</p>
+
+      <p>Nobody knows what tax rates will be in 20 years, including you. Having money in more than one of these buckets gives you choices later. In a year with large medical bills, you might draw more from the Roth. In a year with low income, you might draw from the traditional account and pay very little tax. That flexibility is hard to create once you have stopped working, and easy to build gradually now.</p>
+
+      <div class="horizon-rule">· · ·</div>
+
+      <h3>The Quiet Retirement Account</h3>
+
+      <p>If you are covered by an HSA-eligible high-deductible health plan, the Health Savings Account may be the most tax-efficient account available to you. Contributions are tax-deductible (or pre-tax through payroll). Growth is tax-free. Withdrawals for qualified medical expenses are tax-free, at any age. No other account offers all 3.</p>
+
+      <p>Most people use an HSA like a checking account for this year's medical bills. Some use it differently: they pay current medical costs out of pocket when they can, keep the receipts, invest the HSA balance for growth, and let it build for the healthcare costs of retirement, which are substantial for almost everyone. After 65, money in an HSA can also be withdrawn for non-medical purposes without penalty (it is taxed as income, like a traditional IRA).</p>
+
+      <div class="field-note">
+        <div class="field-note-label">Field Note · HSAs and Medicare</div>
+        You cannot contribute to an HSA once you are enrolled in Medicare. If you sign up for Medicare Part A after 65 (which happens automatically when you start Social Security), coverage can be applied retroactively for up to 6 months, so planners commonly suggest stopping HSA contributions 6 months before you enroll. You can keep using the money you have already saved for the rest of your life.
+        <cite>IRS Publication 969, <a href="https://www.irs.gov/publications/p969" target="_blank" rel="noopener">Health Savings Accounts and Other Tax-Favored Health Plans</a></cite>
+      </div>
+
+      <div class="horizon-rule">· · ·</div>
+
+      <h3>Keeping the Engine Clean</h3>
+
+      <h4>Invest for the money's real timeline.</h4>
+
+      <p>A common mistake after 50 is becoming too conservative too soon. Money you will spend at 85 is long-term money, even if you are 58. A sensible mix gradually shifts from stocks toward bonds and cash as retirement approaches, without abandoning growth altogether. Target-date funds do this automatically and are a reasonable default for many people, as long as their fees are low.</p>
+
+      <h4>Watch the fees.</h4>
+
+      <p>Fees feel small because they are quoted in fractions of a percent. Over decades they are not small at all.</p>
+
+      <div class="field-note">
+        <div class="field-note-label">Field Note · The 1% That Costs a Fifth</div>
+        Money growing at 7% a year for 25 years ends up about 5.4 times larger. The same money growing at 6%, because 1% a year goes to fees, ends up about 4.3 times larger. That single percentage point removes roughly a fifth of the final balance. Index funds with expense ratios well under 0.2% are widely available in most workplace plans and brokerages.
+        <cite>Compound growth arithmetic: 1.07<sup>25</sup> &#8776; 5.43; 1.06<sup>25</sup> &#8776; 4.29</cite>
+      </div>
+
+      <h4>Raise the rate when you get a raise.</h4>
+
+      <p>The easiest increase in your savings rate is the one you never feel. When a raise arrives, send half of it to savings before it reaches your checking account. Many workplace plans can do this automatically with an annual increase feature. Your life still gets better, and so does your future.</p>
+
+      <div class="horizon-close">
+        You cannot buy back the years before 40.<br>
+        You can make full use of every one after it.
+      </div>
+
+    </div>
+
+    <aside class="marginalia-col">
+      <div class="marginalia">
+        <div class="marginalia-label">On "maxing out"</div>
+        Hearing the limits can make an ordinary savings amount feel inadequate. It is not. The limits are a ceiling built for the highest savers. What counts is your rate and your consistency.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On the self-employed</div>
+        If you work for yourself, a Solo 401(k) or SEP IRA can offer far more room than an IRA alone. It is worth an hour with a tax professional to see which fits.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On Roth vs traditional</div>
+        A rough rule: if you expect your tax rate to be lower in retirement than it is now, traditional tends to win. If higher, Roth. If you honestly do not know, some of each is a perfectly good answer.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On HSA receipts</div>
+        There is currently no deadline for reimbursing yourself from an HSA for a qualified expense, as long as it was incurred after the account was opened. A folder of scanned receipts can quietly become a tax-free fund.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On checking your fees</div>
+        Look for the "expense ratio" on each fund in your plan. It is usually on the fund's fact sheet. Write it next to each holding. It takes 20 minutes and you will never look at your statement the same way.
+      </div>
+    </aside>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HORIZON 3 INTRO -->
+<section class="horizon-intro full">
+  <div class="horizon-intro-inner">
+    <blockquote class="horizon-quote">
+      <p class="quote-text">The hardest money decisions of midlife are rarely about money. They are about love, written in dollars.</p>
+      <p class="quote-attr">Field Guide note</p>
+    </blockquote>
+    <div class="horizon-eyebrow">Horizon 3</div>
+    <h2>The <em>Crosswinds</em>.</h2>
+    <p>Kids, parents, and you. How to care for the people you love without quietly giving away your own future in the process.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HORIZON 3 CONTENT -->
+<section class="horizon-content">
+  <div class="horizon-body">
+    <div class="horizon-main">
+
+      <p class="lede">Every flight attendant says the same thing: secure your own mask before helping others. It is not selfish. It is the only way you stay able to help.</p>
+
+      <p>The middle years bring requests from every direction, and nearly all of them come from people you love. A child's tuition. An adult child's rent, just for a few months. A parent's prescription, a parent's roof, a parent's care. Each one is reasonable on its own. Together, without a plan, they can absorb exactly the years when your own savings would have done the most.</p>
+
+      <p>This Horizon is not about saying no. It is about deciding in advance, with care, how much you can give and in what form, so that you remain someone others can lean on for a long time.</p>
+
+      <h3>Children and College</h3>
+
+      <h4>College can be financed. Retirement cannot.</h4>
+
+      <p>There are scholarships, grants, work-study, community college pathways, and student loans for education. There is no equivalent for retirement. Nobody offers a loan for your 70s. That is why most planners suggest funding your own retirement savings first, and then helping with college from what remains. A child who graduates with some manageable debt and a parent with a secure retirement is often a better outcome for both than the reverse, because a parent with no savings eventually becomes a financial concern for that same child.</p>
+
+      <p>If you are saving for college, a 529 plan offers tax-free growth for qualified education costs. Under a newer rule, unused 529 money can also be rolled into a Roth IRA for the beneficiary, up to a lifetime total of $35,000, if the account has been open at least 15 years and subject to the annual Roth limits. It makes overfunding a 529 a much smaller worry than it used to be.</p>
+
+      <div class="field-note">
+        <div class="field-note-label">Field Note · Parent PLUS Loans</div>
+        Federal Parent PLUS loans are taken out in the parent's name, and repayment rules changed in 2026. Parent PLUS loans are not eligible for the new Repayment Assistance Plan, which leaves fewer options than students have for their own loans. Before borrowing, compare the monthly payment against the years you have left to save, and remember that this debt can follow you into retirement.
+        <cite>Federal Student Aid, <a href="https://studentaid.gov/manage-loans/repayment/plans" target="_blank" rel="noopener">repayment plans</a>; rules current as of October 2026</cite>
+      </div>
+
+      <h4>Help adult children with an end date.</h4>
+
+      <p>Supporting an adult child through a hard stretch is one of the most natural things a parent does. What helps is shape: an amount, a time frame, and a clear understanding of whether it is a gift or a loan. If it is a loan, write it down, even between people who trust each other completely. Clarity protects the relationship. And be very cautious about co-signing. A co-signed loan is your debt in every way that matters to a lender, including on your credit report.</p>
+
+      <div class="horizon-rule">· · ·</div>
+
+      <h3>Parents Who Need You Back</h3>
+
+      <p>At some point, many of us find our parents needing help in ways they did not before. It often arrives as a crisis: a fall, a diagnosis, a phone call from a neighbor. The families who navigate it most calmly are usually the ones who had a conversation before the crisis, when it still felt slightly awkward and unnecessary.</p>
+
+      <h4>Have the conversation early.</h4>
+
+      <p>Where are the documents? Is there a will, a durable power of attorney, a healthcare proxy? Who are their doctors? What insurance do they have, and does any of it cover long-term care? What do they want if they can no longer live independently? None of these questions is about money first. All of them become about money quickly if nobody knows the answers.</p>
+
+      <h4>Understand what Medicare does not cover.</h4>
+
+      <p>Many people assume Medicare pays for nursing homes or ongoing help at home. In general, it does not cover long-term custodial care, the everyday help with bathing, dressing, and meals that many people eventually need. That care is paid for out of pocket, by long-term care insurance, or, once savings are largely spent, by Medicaid. Knowing this early gives a family time to plan rather than react.</p>
+
+      <div class="field-note">
+        <div class="field-note-label">Field Note · How Common Care Needs Are</div>
+        The federal Administration for Community Living estimates that about 60% of people will need help with everyday activities at some point in their lives. Planning for it, for your parents and for yourself, is planning for the likely case, not the rare one.
+        <cite>Administration for Community Living, <a href="https://acl.gov/ltc" target="_blank" rel="noopener">long-term care planning</a></cite>
+      </div>
+
+      <h4>Count the cost of caregiving to you.</h4>
+
+      <p>Caregiving often costs the caregiver more than the direct expenses. Reduced hours or leaving a job means lost wages, lost retirement contributions, and fewer years of earnings on your Social Security record. If you are stepping into a caregiving role, look for ways to keep at least some income and some retirement saving going, and ask whether siblings can share the cost in money if they cannot share it in time.</p>
+
+      <div class="resources">
+        <div class="resources-label">Trusted help</div>
+        <a href="https://eldercare.acl.gov/" target="_blank" rel="noopener">Eldercare Locator: local services for older adults and caregivers (ACL)</a>
+        <a href="https://acl.gov/ltc" target="_blank" rel="noopener">Long-term care planning basics (ACL)</a>
+      </div>
+
+      <div class="horizon-rule">· · ·</div>
+
+      <h3>And You</h3>
+
+      <p>The person most often left out of the middle-years budget is the one writing it. While others lean on you, three protections matter most.</p>
+
+      <p><strong>Your income.</strong> Disability insurance protects the engine that funds everything else. If you have coverage through work, check what it actually pays and for how long. <strong>The people who depend on you.</strong> Term life insurance, sized to cover the years your income is needed, is usually far less expensive than people expect. Whole life and other permanent policies sold as investments deserve real caution. <strong>Your own later years.</strong> Your mid-50s are a reasonable time to look at long-term care options for yourself, while you are healthy enough to qualify for coverage if you decide you want it.</p>
+
+      <div class="horizon-close">
+        You can love everyone in your life<br>
+        and still secure your own mask first.
+      </div>
+
+    </div>
+
+    <aside class="marginalia-col">
+      <div class="marginalia">
+        <div class="marginalia-label">On guilt</div>
+        Parents who prioritize retirement saving over full college funding often feel guilty about it. Most adult children, asked later, say they would rather have had some loans than a parent who could not retire.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On the FAFSA</div>
+        Money held in retirement accounts is generally not counted as an available asset on the federal financial aid form. Saving for retirement first does not usually hurt a child's aid eligibility.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On co-signing</div>
+        A simple test: co-sign only for an amount you could comfortably pay off yourself, because you may be asked to.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On the first conversation</div>
+        It often goes better framed as your own planning: "I am getting my documents in order and it made me wonder about yours." Parents tend to open up when they are not the subject.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On siblings</div>
+        Caregiving rarely divides evenly. A written family agreement about who does what, and who contributes what, prevents a surprising amount of resentment later.
+      </div>
+    </aside>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HORIZON 4 INTRO -->
+<section class="horizon-intro full">
+  <div class="horizon-intro-inner">
+    <blockquote class="horizon-quote">
+      <p class="quote-text">The years just before and just after you stop working shape your retirement more than any other decade. They deserve a plan of their own.</p>
+      <p class="quote-attr">Field Guide note</p>
+    </blockquote>
+    <div class="horizon-eyebrow">Horizon 4</div>
+    <h2>The <em>Bridge</em>.</h2>
+    <p>The decade before you stop working. When to claim Social Security, how Medicare begins, and the order you draw your money down.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HORIZON 4 CONTENT -->
+<section class="horizon-content">
+  <div class="horizon-body">
+    <div class="horizon-main">
+
+      <p class="lede">Saving for retirement is one skill. Spending in retirement is a different one, and it is worth learning before you need it.</p>
+
+      <p>For decades, the job is accumulation: put money in, keep it invested, leave it alone. Somewhere in your late 50s or early 60s, the job begins to change. The questions become when to stop, when to claim, how to cover healthcare, and which account to draw from first. These choices are made only once or twice, and several of them cannot be undone. That is exactly why they reward thinking ahead.</p>
+
+      <h3>Social Security</h3>
+
+      <p>For most people, Social Security is the foundation of retirement income: guaranteed, adjusted for inflation, and paid for life. You can claim as early as 62 or as late as 70, and the age you choose permanently sets the size of your monthly benefit.</p>
+
+      <div class="field-note">
+        <div class="field-note-label">Field Note · The Claiming Range</div>
+        For anyone born in 1960 or later, full retirement age is 67. Claiming at 62 reduces the monthly benefit by 30%, permanently. Each year you wait past 67 adds 8%, up to age 70. In round numbers, a benefit of $1,000 at 67 becomes $700 at 62 and $1,240 at 70.
+        <cite>Social Security Administration, <a href="https://www.ssa.gov/benefits/retirement/planner/agereduction.html" target="_blank" rel="noopener">retirement age and benefit reduction</a> and <a href="https://www.ssa.gov/benefits/retirement/planner/delayret.html" target="_blank" rel="noopener">delayed retirement credits</a></cite>
+      </div>
+
+      <p>Waiting is not always right. If your health is poor, if you need the income, or if you have reason to expect a shorter life, claiming earlier can be the sensible choice. But for many people, especially those in good health and with other savings to bridge the gap, delaying is one of the most valuable moves available, because it buys a larger, inflation-adjusted income that lasts as long as you do.</p>
+
+      <h4>For couples, the higher earner's choice matters twice.</h4>
+
+      <p>When one spouse dies, the survivor keeps the larger of the two benefits. That means the higher earner's claiming age effectively sets the income of whichever spouse lives longer. For many couples, having the higher earner delay toward 70 is as much about protecting the survivor as about the higher earner's own check.</p>
+
+      <h4>Claiming early while still working.</h4>
+
+      <p>If you claim before full retirement age and keep working, some of your benefit may be temporarily withheld when your earnings pass an annual limit. It is not lost. Your benefit is recalculated upward at full retirement age. But it surprises people, so check the current limit before you combine the two.</p>
+
+      <div class="resources">
+        <div class="resources-label">Start here</div>
+        <a href="https://www.ssa.gov/myaccount/" target="_blank" rel="noopener">my Social Security: your statement and estimated benefits at every age (SSA)</a>
+      </div>
+
+      <div class="horizon-rule">· · ·</div>
+
+      <h3>Medicare and the Gap Before It</h3>
+
+      <p>Medicare begins at 65. Your Initial Enrollment Period is 7 months long: it opens 3 months before the month you turn 65 and closes 3 months after it. If you are not covered by qualifying insurance through your own or your spouse's current job, enrolling on time matters, because signing up late for Part B can bring a penalty that is added to your premium for as long as you have Medicare.</p>
+
+      <p>If you plan to stop working before 65, the years in between need their own health coverage. The usual options are a spouse's employer plan, COBRA continuation from your former employer for a limited period, or a plan through the Health Insurance Marketplace, where premium help is based on income. Healthcare is often the single largest unknown in an early retirement plan. Price it before you set your date.</p>
+
+      <div class="resources">
+        <div class="resources-label">Official sources</div>
+        <a href="https://www.medicare.gov/basics/get-started-with-medicare/sign-up/when-does-medicare-coverage-start" target="_blank" rel="noopener">When Medicare coverage starts (Medicare.gov)</a>
+        <a href="https://www.healthcare.gov/" target="_blank" rel="noopener">Health Insurance Marketplace for coverage before 65 (HealthCare.gov)</a>
+      </div>
+
+      <div class="horizon-rule">· · ·</div>
+
+      <h3>Drawing It Down</h3>
+
+      <h4>The first years carry the most risk.</h4>
+
+      <p>A market decline in the year after you retire does more lasting damage than the same decline 15 years later, because you are selling investments to live on while prices are low. Planners call this sequence-of-returns risk. The most common protection is simple: keep roughly 1 to 2 years of planned spending in cash or short-term bonds as you approach and enter retirement, so that you can leave your stock investments alone through a bad stretch.</p>
+
+      <h4>A starting point, not a rule.</h4>
+
+      <p>You may have heard of the "4% rule," which comes from 1990s research suggesting that withdrawing 4% of your savings in the first year, then adjusting for inflation, historically lasted about 30 years. It is a reasonable starting reference for estimating how much savings a given income needs. It is not a law. Flexible spending (taking a little less after bad years) makes almost any plan more durable.</p>
+
+      <h4>The gap years can be a tax opportunity.</h4>
+
+      <p>The years after you stop working but before Social Security and required withdrawals begin can be some of the lowest-income years of your adult life. For people with large traditional (pre-tax) balances, those years can be a good window to convert some of that money to Roth, paying tax at a lower rate now to reduce taxable withdrawals later. It is worth a conversation with a tax professional.</p>
+
+      <div class="field-note">
+        <div class="field-note-label">Field Note · Required Minimum Distributions</div>
+        Traditional IRAs and most workplace plans require withdrawals to begin at age 73. For people born in 1960 or later, the starting age is 75. Roth IRAs have no required withdrawals during the owner's lifetime. Planning conversions and withdrawals before these ages can smooth your taxes across the whole of retirement.
+        <cite>SECURE 2.0 Act; see IRS guidance on required minimum distributions for your situation</cite>
+      </div>
+
+      <h4>Consider a gradual landing.</h4>
+
+      <p>Retirement does not have to be a cliff. Part-time work, consulting, seasonal work, or a phased arrangement with your current employer can reduce how much you draw from savings in the early years, let you delay Social Security, and keep structure and purpose in your week. For many people it is the most comfortable bridge of all.</p>
+
+      <div class="horizon-close">
+        A bridge is built from both sides.<br>
+        Begin yours while you can still see the far bank clearly.
+      </div>
+
+    </div>
+
+    <aside class="marginalia-col">
+      <div class="marginalia">
+        <div class="marginalia-label">On "breaking even"</div>
+        People often ask at what age delaying Social Security pays off. It is usually somewhere around the early 80s. But the better question may be which risk you would rather protect against: dying early, or living a very long time on too little.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On divorce</div>
+        If you were married for at least 10 years, you may be able to claim benefits based on an ex-spouse's record, without affecting theirs. It is worth asking SSA directly.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On the Medicare calendar</div>
+        Put your 65th birthday month, minus 3 months, in your calendar now. It is an easy date to let slide past.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On cash in retirement</div>
+        Holding 1 to 2 years of spending in cash can feel like a drag on returns. Think of it as the cost of sleeping well through the next bad market.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On the order of withdrawals</div>
+        A common default draws taxable accounts first, then traditional, then Roth. It is a starting point. Blending withdrawals to fill lower tax brackets each year is often better.
+      </div>
+    </aside>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HORIZON 5 INTRO -->
+<section class="horizon-intro full">
+  <div class="horizon-intro-inner">
+    <blockquote class="horizon-quote">
+      <p class="quote-text">Money is not the plan. It is what the plan is made of.</p>
+      <p class="quote-attr">Field Guide note</p>
+    </blockquote>
+    <div class="horizon-eyebrow">Horizon 5</div>
+    <h2>The <em>Vista</em>.</h2>
+    <p>Your Big Plan. Where you will live, what you will leave, who will help you, and the single page that holds it all together.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HORIZON 5 CONTENT -->
+<section class="horizon-content">
+  <div class="horizon-body">
+    <div class="horizon-main">
+
+      <p class="lede">The point of every move in this guide is not a number in an account. It is a life you recognize as yours.</p>
+
+      <p>The first 4 Horizons were about mechanics: the engine, the crosswinds, the bridge. This last one steps back far enough to see the whole picture, because the biggest financial decisions of the second half are not about funds or tax brackets. They are about where you live, who you take care of, what you want your days to hold, and what you leave behind.</p>
+
+      <h3>Where You Will Live</h3>
+
+      <p>For most households, housing is the largest single expense and the largest single asset. That makes it the biggest lever in a retirement plan. Staying in a paid-off home can make retirement dramatically cheaper. Downsizing can free up equity and reduce upkeep. Moving to a lower-cost area, or closer to family, can change the math entirely.</p>
+
+      <p>None of these is right for everyone, and the decision is rarely only financial. But it is worth asking early, while you have time to act on the answer. Will this home work for you at 80? Are there stairs you will not want to climb? Is it near the people and the care you may need? Making a housing decision at 62 by choice is very different from making it at 82 in a hurry.</p>
+
+      <div class="horizon-rule">· · ·</div>
+
+      <h3>What You Will Leave</h3>
+
+      <p>Estate planning sounds like something for the wealthy. It is not. It is simply making sure the people you love are not left guessing. The essentials are short.</p>
+
+      <p><strong>A will</strong>, saying where your property goes and, if you have minor children, who will care for them. <strong>A durable power of attorney</strong>, naming someone to handle your finances if you cannot. <strong>A healthcare proxy and advance directive</strong>, naming someone to make medical decisions for you and recording your wishes. And, most overlooked of all, <strong>up-to-date beneficiary designations</strong> on every retirement account and life insurance policy.</p>
+
+      <div class="field-note">
+        <div class="field-note-label">Field Note · Beneficiary Forms Come First</div>
+        Retirement accounts and life insurance generally pass to whoever is named on the account's beneficiary form, regardless of what your will says. An old form naming a former spouse, or a parent who has since died, can quietly override your current wishes. Review every beneficiary designation after any marriage, divorce, birth, or death, and at least every few years.
+        <cite>A widely recognized principle of estate planning; confirm details for your state with an estate attorney</cite>
+      </div>
+
+      <div class="horizon-rule">· · ·</div>
+
+      <h3>Who Will Help You</h3>
+
+      <p>Many people can manage the moves in this guide on their own. Others reach a point (a large rollover, a business sale, an inheritance, the retirement transition itself) where an experienced professional is worth the cost. If you hire help, look for a <strong>fee-only fiduciary</strong>: someone who is legally obligated to act in your best interest and is paid by you, not through commissions on products they sell you. Ask directly how they are paid, and ask for it in writing.</p>
+
+      <div class="resources">
+        <div class="resources-label">Finding and checking an advisor</div>
+        <a href="https://www.napfa.org/" target="_blank" rel="noopener">Find a fee-only fiduciary planner (NAPFA)</a>
+        <a href="https://brokercheck.finra.org/" target="_blank" rel="noopener">Check an advisor's background and record (FINRA BrokerCheck)</a>
+      </div>
+
+      <div class="horizon-rule">· · ·</div>
+
+      <h3>Your Big Plan</h3>
+
+      <p>Here is the whole guide on a single page. Write your answers somewhere you will see them, and set one day a year (a birthday, a new year, the first quiet Sunday of spring) as your money date: the day you sit down with these 5 lines and see how they have changed.</p>
+
+      <ol class="plan-lines">
+        <li><strong>My work-optional date.</strong> The year I want the choice to be mine, and what I imagine doing with it.</li>
+        <li><strong>My savings rate.</strong> Where it is now, where I want it next year, and which raise or freed-up payment will get it there.</li>
+        <li><strong>My Social Security plan.</strong> My estimated benefit at 62, 67, and 70, and the age I am leaning toward, with the reason.</li>
+        <li><strong>My bridge.</strong> How I will cover healthcare before 65, and how much cash I will hold as I enter retirement.</li>
+        <li><strong>My people and my papers.</strong> The conversations I need to have, and the documents and beneficiary forms I need to update this year.</li>
+      </ol>
+
+      <p>Your plan will change. Incomes rise and fall, markets move, people arrive in your life and leave it. That is not a sign the plan failed. It is the plan doing its job, giving you a place to stand while you adjust.</p>
+
+      <p><em>Popcycle's Financial &amp; Credit library calls this pillar Your Big Plan, with a subtitle that has turned out to be the truest sentence in the whole category.</em></p>
+
+      <div class="horizon-close">
+        A journey,<br>
+        not a destination.
+      </div>
+
+    </div>
+
+    <aside class="marginalia-col">
+      <div class="marginalia">
+        <div class="marginalia-label">On aging in place</div>
+        Small changes made early (a ground-floor bedroom, a walk-in shower, better lighting) often cost far less than a move later, and keep the choice to stay in your hands.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On "I am not wealthy enough"</div>
+        A will and a healthcare proxy matter most for people with modest estates, because there is less room for the delays and costs that come when nothing is written down.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On asking how they are paid</div>
+        A good advisor answers this question immediately and clearly. Hesitation is information.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On the annual money date</div>
+        Make it pleasant. A good coffee, a favorite chair, a walk afterward. A ritual you look forward to is a ritual you keep.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On the library</div>
+        No single book will change your financial life. One move, sustained for a year, will. Pick one line from your Big Plan and act on it this month.
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- EBOOK FOOTER -->
+<footer class="ebook-footer">
+  <div class="footer-inner">
+    <div class="footer-eyebrow">A Popcycle Field Guide</div>
+    <p class="footer-close-text">If any of the foundation still feels unsteady, The 5 Money Moves You Should Have Made in Your 30s will help you catch up. When you are ready to put pen to paper, Start Here! The 14 Day Financial Reset turns this field guide into your own 90-day plan.</p>
+    <div class="footer-buttons">
+      <button class="btn-primary" onclick="window.print()">Save as PDF</button>
+      <a class="btn-secondary" href="https://popcycleonline.github.io/Ebooks/Fin-Ebooks/the-5-money-moves-you-should-have-made-in-your-30s.html" target="_blank" rel="noopener">The Catching-Up Half</a>
+      <a class="btn-secondary" href="https://www.popcycle.online/copy-of-improve-your-relationships">More in Financial &amp; Credit</a>
+    </div>
+    <p class="disclaimer">This field guide is for education only and is not personalized financial, tax, legal, or investment advice. Contribution limits, Social Security rules, and Medicare rules change regularly; the figures here are for 2026. Consider a fee-only fiduciary advisor or tax professional for guidance specific to your situation.</p>
+    <p class="footer-credit">popcycle.online &nbsp;·&nbsp; Sweeten your life</p>
+  </div>
+</footer>
+
+<button class="print-btn" onclick="window.print()">Save as PDF</button>
+
+</body>
+</html>
