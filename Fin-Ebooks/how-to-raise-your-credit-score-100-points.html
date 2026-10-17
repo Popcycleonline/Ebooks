@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<!--
+  HOW TO RAISE YOUR CREDIT SCORE 100 POINTS · A Popcycle Field Guide
+  Popcycle · Financial & Credit · Pillar: Build Your Credit for Your Future
+  Palette: TRUST (Royal Blue, Royal Blue Deep, Dark Moss, Platinum, Lake Blue)
+  Format: Field Guide, matching Money Moves After 40 (5 horizons, 220px marginalia rail, Dark Moss marginalia, moss field notes, Royal horizon closes).
+  Rebranded October 2026 from the original card-style edition. Figures checked against FICO, FTC, CFPB and Experian sources in October 2026.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Raise Your Credit Score 100 Points | Popcycle</title>
+<meta name="description" content="A plain-English field guide to how credit scores are built, and the legitimate moves, in order, that raise yours. Reports and disputes, utilization, authorized users, building new credit, repairs, and the long game.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --royal: #0032E7;
+    --royal-deep: #162660;
+    --royal-deeper: #0E1943;
+    --moss: #525333;
+    --moss-deep: #3C3D22;
+    --platinum: #E8E7E3;
+    --platinum-soft: #F2F1ED;
+    --lake: #6D8EC5;
+    --royal-soft: rgba(0, 50, 231, 0.10);
+    --moss-soft: rgba(82, 83, 51, 0.12);
+    --lake-soft: rgba(109, 142, 197, 0.18);
+    --platinum-line: rgba(22, 38, 96, 0.14);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--platinum);
+    color: var(--royal-deep);
+    line-height: 1.7;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ============================================
+     THE POPCYCLE VOICE · FIELD GUIDE · TRUST palette
+     ============================================ */
+
+  .page { max-width: 780px; margin: 0 auto; padding: 80px 40px; }
+  .full { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+
+  /* COVER */
+  .cover {
+    background: var(--royal-deep);
+    color: var(--platinum);
+    text-align: center;
+    padding: 120px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 30%, rgba(0, 50, 231, 0.30) 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 75%, rgba(109, 142, 197, 0.20) 0%, transparent 55%);
+  }
+  .cover::after {
+    /* a quiet horizon line across the lower cover */
+    content: '';
+    position: absolute;
+    left: 0; right: 0;
+    bottom: 12%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(109, 142, 197, 0.45), transparent);
+  }
+  .cover-inner { position: relative; z-index: 2; max-width: 700px; margin: 0 auto; }
+  .cover-eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--lake);
+    margin-bottom: 56px;
+    font-weight: 500;
+  }
+  .cover-script {
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    color: var(--lake);
+    font-size: clamp(3.8rem, 10vw, 6.6rem);
+    line-height: 0.95;
+    letter-spacing: 1px;
+    transform: rotate(-3deg);
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+  .cover h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 7vw, 5.4rem);
+    font-weight: 300;
+    line-height: 1.02;
+    margin-top: 12px;
+    letter-spacing: -1.2px;
+  }
+  .cover h1 em { font-style: italic; color: var(--platinum); font-weight: 400; }
+  .cover-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+    margin-top: 60px;
+    color: var(--platinum);
+    opacity: 0.9;
+    line-height: 1.5;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cover-brand {
+    margin-top: 72px;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--lake);
+    opacity: 0.85;
+  }
+
+  /* PREFACE */
+  .preface h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    font-weight: 400;
+    line-height: 1.08;
+    margin-bottom: 36px;
+    letter-spacing: -0.5px;
+  }
+  .preface h2 em { color: var(--royal); font-style: italic; }
+  .preface p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    margin-bottom: 22px;
+    line-height: 1.62;
+  }
+  .preface p em { font-style: italic; color: var(--royal); }
+  .preface .lede {
+    font-size: 24px;
+    line-height: 1.5;
+    font-style: italic;
+    margin-bottom: 32px;
+    max-width: 640px;
+  }
+
+  .map-list {
+    background: var(--royal-soft);
+    padding: 36px 32px;
+    margin: 44px 0;
+    border-left: 4px solid var(--royal);
+  }
+  .map-list h3 {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--royal);
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .map-list p {
+    font-family: 'Jost', sans-serif;
+    font-size: 15px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+  }
+  .map-list p:last-child { margin-bottom: 0; }
+  .map-list strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--royal);
+    font-weight: 500;
+    margin-right: 8px;
+  }
+
+  /* PAIR NOTE: cross-sell with audience signaling */
+  .pair-note {
+    background: var(--platinum-soft);
+    border: 1px solid var(--platinum-line);
+    border-top: 4px solid var(--moss);
+    padding: 30px 32px;
+    margin: 44px 0;
+  }
+  .pair-note-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--moss);
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+  .preface .pair-note p { font-size: 18px; margin-bottom: 14px; line-height: 1.6; }
+  .preface .pair-note p:last-child { margin-bottom: 0; }
+  .pair-note a, .horizon-main a {
+    color: var(--royal);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 50, 231, 0.35);
+  }
+  .pair-note a { font-style: italic; }
+  .pair-note a:hover, .horizon-main a:hover { border-bottom-color: var(--royal); }
+
+  /* HORIZON INTRO */
+  .horizon-intro {
+    background: var(--royal-deep);
+    color: var(--platinum);
+    text-align: center;
+    padding: 100px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .horizon-intro::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 25% 60%, rgba(0, 50, 231, 0.24) 0%, transparent 55%),
+      radial-gradient(ellipse at 75% 30%, rgba(82, 83, 51, 0.22) 0%, transparent 55%);
+  }
+  .horizon-intro-inner { position: relative; z-index: 2; max-width: 620px; margin: 0 auto; }
+  .horizon-quote { max-width: 500px; margin: 0 auto 72px; }
+  .horizon-quote .quote-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.55;
+    opacity: 0.85;
+    margin-bottom: 4px;
+    text-wrap: balance;
+  }
+  .horizon-quote .quote-attr {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.2;
+    opacity: 0.8;
+    letter-spacing: 0.3px;
+    padding-left: 55%;
+  }
+  .horizon-eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--lake);
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+  .horizon-intro h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.6rem, 5.5vw, 4rem);
+    font-weight: 400;
+    line-height: 1.08;
+    margin-bottom: 28px;
+    letter-spacing: -0.5px;
+  }
+  .horizon-intro h2 em { color: var(--lake); font-style: italic; }
+  .horizon-intro p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    line-height: 1.55;
+    max-width: 540px;
+    margin: 0 auto;
+    opacity: 0.9;
+    font-style: italic;
+  }
+
+  /* HORIZON CONTENT */
+  .horizon-content { padding: 80px 40px 100px; max-width: 1100px; margin: 0 auto; }
+  .horizon-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 220px;
+    gap: 56px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: start;
+  }
+  .horizon-main {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    line-height: 1.65;
+    min-width: 0;
+  }
+  .horizon-main p { margin-bottom: 24px; }
+  .horizon-main p.lede { font-size: 24px; line-height: 1.5; font-style: italic; margin-bottom: 36px; }
+  .horizon-main strong { font-weight: 600; }
+  .horizon-main h3 {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--royal);
+    margin: 56px 0 20px;
+    font-weight: 700;
+  }
+  .horizon-main h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 36px 0 20px;
+    font-style: italic;
+    letter-spacing: -0.3px;
+  }
+  .horizon-rule {
+    text-align: center;
+    margin: 48px 0;
+    color: var(--lake);
+    letter-spacing: 8px;
+    font-size: 14px;
+  }
+
+  /* MARGINALIA: side-column notes in Dark Moss italic */
+  .marginalia-col {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--moss);
+    position: sticky;
+    top: 40px;
+  }
+  .marginalia {
+    margin-bottom: 48px;
+    padding-left: 16px;
+    border-left: 2px solid var(--lake);
+  }
+  .marginalia-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--moss);
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 8px;
+    opacity: 0.85;
+  }
+
+  /* FIELD NOTE: moss-tinted research callout */
+  .field-note {
+    background: var(--moss-soft);
+    border-left: 4px solid var(--moss);
+    padding: 22px 26px;
+    margin: 32px 0;
+    font-family: 'Jost', sans-serif;
+    font-size: 15.5px;
+    line-height: 1.65;
+  }
+  .field-note-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--moss);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .field-note cite {
+    font-style: italic;
+    opacity: 0.75;
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  .field-note cite a { color: inherit; border-bottom: 1px solid rgba(22, 38, 96, 0.3); text-decoration: none; }
+
+  /* FIGURE TABLE: the 2026 numbers */
+  .figures { width: 100%; border-collapse: collapse; margin: 6px 0 2px; }
+  .figures th, .figures td {
+    text-align: left;
+    padding: 9px 0;
+    border-bottom: 1px solid rgba(82, 83, 51, 0.22);
+    vertical-align: top;
+  }
+  .figures th {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--moss);
+    font-weight: 700;
+  }
+  .figures td.num {
+    text-align: right;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    color: var(--royal);
+    white-space: nowrap;
+    padding-left: 16px;
+  }
+  .figures th.num { text-align: right; }
+  .figures tr:last-child td { border-bottom: none; }
+
+  /* PULL QUOTE */
+  .pull-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 27px;
+    line-height: 1.4;
+    color: var(--royal);
+    text-align: center;
+    margin: 56px auto;
+    max-width: 620px;
+    padding: 0 20px;
+  }
+
+  /* RESOURCES inside the main column */
+  .resources {
+    background: var(--lake-soft);
+    border-left: 3px solid var(--lake);
+    padding: 18px 22px;
+    margin: 32px 0;
+  }
+  .resources-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--royal-deep);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .horizon-main .resources a {
+    display: block;
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 0;
+    border-bottom: none;
+  }
+  .horizon-main .resources a::after { content: ' \2192'; opacity: 0.55; }
+
+  /* PLAN LINES: the 5-line big plan */
+  .plan-lines { list-style: none; margin: 8px 0 32px; counter-reset: line; }
+  .plan-lines li {
+    counter-increment: line;
+    position: relative;
+    padding: 16px 0 16px 56px;
+    border-bottom: 1px solid var(--platinum-line);
+  }
+  .plan-lines li::before {
+    content: counter(line, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 12px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 30px;
+    line-height: 1;
+    color: var(--royal);
+  }
+  .plan-lines li strong { display: block; font-size: 21px; font-weight: 500; }
+
+  /* SIGNATURE CLOSE: Royal italic benediction per horizon */
+  .horizon-close {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 25px;
+    line-height: 1.4;
+    color: var(--royal);
+    text-align: center;
+    margin: 80px auto 40px;
+    max-width: 600px;
+    letter-spacing: 0.3px;
+  }
+  .horizon-close::before {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 2px;
+    background: var(--lake);
+    margin: 0 auto 28px;
+  }
+
+  /* PRINT BUTTON */
+  .print-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: var(--royal-deep);
+    color: var(--platinum);
+    padding: 14px 24px;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(14, 25, 67, 0.3);
+    z-index: 100;
+    transition: background 0.2s;
+  }
+  .print-btn:hover { background: var(--royal); }
+
+  /* FOOTER */
+  .ebook-footer {
+    background: var(--royal-deeper);
+    color: var(--platinum);
+    padding: 100px 40px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .ebook-footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 25% 30%, rgba(0, 50, 231, 0.18) 0%, transparent 55%),
+      radial-gradient(ellipse at 75% 70%, rgba(109, 142, 197, 0.10) 0%, transparent 55%);
+  }
+  .footer-inner { position: relative; z-index: 2; max-width: 680px; margin: 0 auto; }
+  .footer-eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--lake);
+    margin-bottom: 28px;
+    font-weight: 500;
+  }
+  .footer-close-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 23px;
+    line-height: 1.45;
+    margin-bottom: 48px;
+    opacity: 0.92;
+  }
+  .footer-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-bottom: 50px; }
+  .footer-buttons a, .footer-buttons button {
+    display: inline-block;
+    padding: 16px 30px;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    border: 2px solid;
+  }
+  .btn-primary { background: var(--royal); color: var(--platinum); border-color: var(--royal); }
+  .btn-primary:hover { background: var(--lake); border-color: var(--lake); color: var(--royal-deep); }
+  .btn-secondary { background: transparent; color: var(--platinum); border-color: rgba(232, 231, 227, 0.4); }
+  .btn-secondary:hover { border-color: var(--lake); color: var(--lake); }
+  .disclaimer {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+    opacity: 0.55;
+    max-width: 560px;
+    margin: 0 auto 28px;
+  }
+  .footer-credit {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.5;
+  }
+
+  .divider { height: 6px; background: var(--royal); }
+
+  /* MOBILE */
+  @media (max-width: 820px) {
+    .horizon-body { grid-template-columns: 1fr; gap: 32px; }
+    .marginalia-col { position: static; }
+    .marginalia {
+      padding: 18px 20px;
+      border-left: 3px solid var(--lake);
+      background: var(--lake-soft);
+      margin: 24px 0;
+    }
+  }
+  @media (max-width: 600px) {
+    body { font-size: 15px; }
+    .page { padding: 60px 24px; }
+    .cover { padding: 80px 24px; }
+    .horizon-intro { padding: 70px 24px; }
+    .horizon-content { padding: 60px 24px 80px; }
+    .horizon-main { font-size: 18px; }
+    .horizon-main p.lede { font-size: 20px; }
+    .horizon-main h4 { font-size: 22px; }
+    .horizon-quote .quote-attr { padding-left: 45%; }
+    .pull-quote { font-size: 22px; margin: 40px auto; }
+    .horizon-close { font-size: 21px; }
+    .field-note { padding: 18px 18px; }
+    .figures td.num { font-size: 18px; }
+    .print-btn { bottom: 16px; right: 16px; padding: 12px 18px; font-size: 11px; }
+    .ebook-footer { padding: 70px 24px 50px; }
+    .footer-close-text { font-size: 20px; }
+    .footer-buttons { flex-direction: column; gap: 12px; }
+    .footer-buttons a, .footer-buttons button { width: 100%; padding: 15px 20px; font-size: 11px; }
+  }
+
+  /* PRINT */
+  @media print {
+    body { background: white; color: black; font-size: 11pt; }
+    .cover, .horizon-intro { background: white; color: #162660; page-break-after: always; min-height: auto; padding: 40px 20px; }
+    .cover::after { display: none; }
+    .cover-script, .cover-eyebrow, .cover-brand, .horizon-eyebrow { color: #0032E7; }
+    .cover h1 em, .horizon-intro h2 em { color: #0032E7; }
+    .horizon-content { padding: 20px; }
+    .horizon-body { grid-template-columns: 1fr; gap: 20px; }
+    .marginalia { background: #f1f1ec; padding: 12px; border-left: 2px solid #525333; font-size: 10pt; }
+    .field-note, .resources { background: #f1f1ec; padding: 14px; page-break-inside: avoid; }
+    .horizon-main { font-size: 11pt; }
+    .horizon-main h3 { font-size: 10pt; }
+    .horizon-main h4 { font-size: 14pt; }
+    .horizon-close { font-size: 14pt; page-break-inside: avoid; }
+    .pull-quote { font-size: 13pt; page-break-inside: avoid; }
+    .print-btn, .ebook-footer, .divider { display: none; }
+    a { color: inherit; text-decoration: none; }
+  }
+</style>
+
+</head>
+<body>
+<!-- COVER -->
+<section class="cover full">
+  <div class="cover-inner">
+    <div class="cover-eyebrow">A Popcycle Field Guide</div>
+    <div class="cover-script">Raise Your</div>
+    <h1>Credit Score <em>100 Points</em></h1>
+    <div class="cover-subtitle">A plain-English guide to how the score is built, and the legitimate moves, in the right order, that bring it up.</div>
+    <div class="cover-brand">Popcycle · Financial &amp; Credit · Build Your Credit for Your Future</div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PREFACE -->
+<section class="page preface">
+  <h2>It is a formula, <em>not a verdict</em>.</h2>
+
+  <p class="lede">Your credit score is a number produced by a formula. Once you understand the formula, the path to improving it stops being mysterious and starts being a sequence.</p>
+
+  <p>Most of us were never taught how credit scoring works. We learned it the expensive way: a higher rate on a car loan, a deposit on an apartment, a mortgage quote that came back worse than expected. It is easy to come away from those moments feeling judged. You were not judged. You were measured, by a formula that weighs a short list of things you can learn and, over time, change.</p>
+
+  <p>The average FICO Score in the United States was 714 in early 2026. Tens of millions of people sit well below that, paying more for nearly everything that involves borrowing. The encouraging part is that the inputs are known, the weights are published, and the moves that help are legal, free, and available to anyone willing to take them in order.</p>
+
+  <p>Can you raise your score 100 points? Many people can, especially when the score is being held down by errors on a report or by high card balances, which respond quickly. People with recent late payments or collections usually take longer, because the formula needs time to see new behavior. This guide is honest about which is which, so you can set expectations that fit your own report.</p>
+
+  <p>No gimmicks. No credit repair company. Just the mechanics, and the order that makes them work.</p>
+
+  <div class="map-list">
+    <h3>The 5 Horizons</h3>
+    <p><strong>1 ·</strong> The Formula. What a credit score measures, the ranges lenders use, and what it does not measure at all.</p>
+    <p><strong>2 ·</strong> The Levers. The 5 factors behind your score, how much each one weighs, and how fast each one moves.</p>
+    <p><strong>3 ·</strong> The Sequence. The moves ranked by impact and effort, from your free reports to a new line of credit.</p>
+    <p><strong>4 ·</strong> The Repairs. Collections, late payments, medical bills, and why you never need to pay someone to do this for you.</p>
+    <p><strong>5 ·</strong> The Long Game. Keeping the score you build, the questions people ask most, and your credit plan on one page.</p>
+  </div>
+
+  <p>Read it straight through, or go straight to the Horizon that matches the question on your mind today. Each field note points to the source behind it.</p>
+
+  <p><em>A credit score describes recent behavior. That is exactly why it can change.</em></p>
+</section>
+
+<div class="divider"></div>
+
+<!-- HORIZON 1 INTRO -->
+<section class="horizon-intro full">
+  <div class="horizon-intro-inner">
+    <blockquote class="horizon-quote">
+      <p class="quote-text">A credit score is the GPA of your financial life. Unlike school, you are allowed to retake the class.</p>
+      <p class="quote-attr">Field Guide note</p>
+    </blockquote>
+    <div class="horizon-eyebrow">Horizon 1</div>
+    <h2>The <em>Formula</em>.</h2>
+    <p>What a credit score actually measures, where you stand on the scale, and the things it never looks at.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HORIZON 1 CONTENT -->
+<section class="horizon-content">
+  <div class="horizon-body">
+    <div class="horizon-main">
+
+      <p class="lede">A credit score answers one narrow question for a lender: how likely is this person to pay on time over the next couple of years?</p>
+
+      <p>It does not measure your worth, your intelligence, or your income. It reads the information in your credit report (your accounts, balances, payment record, and recent applications) and turns it into a number between 300 and 850. Higher numbers mean lower expected risk, and lower risk earns better rates and easier approvals.</p>
+
+      <p>There are 2 major scoring families. <strong>FICO</strong> scores are used in the large majority of lending decisions. <strong>VantageScore</strong>, created jointly by the 3 credit bureaus, is what many free monitoring apps show you. Both use the same 300 to 850 range and similar ingredients, but they weigh them a little differently, so it is normal for your 2 scores to sit 20 or more points apart. Lenders may also use different versions of each model. Watch the direction your scores are moving rather than any single number.</p>
+
+      <div class="field-note">
+        <div class="field-note-label">Field Note · The FICO Ranges</div>
+        <table class="figures">
+          <thead><tr><th>Range</th><th>What it usually means</th></tr></thead>
+          <tbody>
+            <tr><td class="num" style="text-align:left;padding-left:0;padding-right:16px;">300 to 579</td><td>Poor. Many lenders decline. Secured cards and credit-builder loans are the entry point.</td></tr>
+            <tr><td class="num" style="text-align:left;padding-left:0;padding-right:16px;">580 to 669</td><td>Fair. Approvals are possible at higher rates. Recovery is very achievable from here.</td></tr>
+            <tr><td class="num" style="text-align:left;padding-left:0;padding-right:16px;">670 to 739</td><td>Good. Approval for most products at reasonable rates.</td></tr>
+            <tr><td class="num" style="text-align:left;padding-left:0;padding-right:16px;">740 to 799</td><td>Very good. Strong approval odds and real savings on mortgages and auto loans.</td></tr>
+            <tr><td class="num" style="text-align:left;padding-left:0;padding-right:16px;">800 to 850</td><td>Exceptional. The best terms lenders offer.</td></tr>
+          </tbody>
+        </table>
+        <cite>Ranges as commonly published by FICO. The average FICO Score was 714 in the <a href="https://investors.fico.com/news-releases/news-release-details/ficor-score-credit-insights-report-average-fico-score-dips-714" target="_blank" rel="noopener">Spring 2026 FICO Score Credit Insights report</a>.</cite>
+      </div>
+
+      <h3>What It Does Not Measure</h3>
+
+      <p>Your <strong>income</strong> is not part of your credit score. Neither is your savings balance, your job title, your age, your marital status, or where you live. Someone earning $40,000 can hold an 800. Someone earning $250,000 can hold a 580. Lenders may ask about income separately when they decide how much to lend, but the score itself is purely about how you have handled credit.</p>
+
+      <p>Checking your own score does not lower it either. When you look at your own credit, that is a soft inquiry, and it has no effect. Only applications for new credit create the hard inquiries that the formula notices.</p>
+
+      <div class="pull-quote">"A credit score is not a judgment of your character. It is a measurement of recent behavior, which means you can change what it says."</div>
+
+      <p>That is the whole premise of this guide. The score is reading a record. Change the record, carefully and in order, and the score follows.</p>
+
+      <div class="horizon-close">
+        You are not your number.<br>
+        You are the person who is about to change it.
+      </div>
+
+    </div>
+
+    <aside class="marginalia-col">
+      <div class="marginalia">
+        <div class="marginalia-label">On "the" score</div>
+        You do not have one credit score. You have dozens, across models, versions, and bureaus. That is why the score in your app and the score a lender quotes rarely match exactly.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On the cost of a lower score</div>
+        The difference between fair and very good credit can be thousands of dollars over the life of a single car loan or mortgage. Points are not vanity. They are money.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On starting over</div>
+        People rebuilding after a divorce, an illness, or a business closing are often surprised how quickly a few quiet years of on-time payments restore their options.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On checking often</div>
+        Looking at your own score as often as you like is harmless. Many banks and card issuers now show it free each month.
+      </div>
+    </aside>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HORIZON 2 INTRO -->
+<section class="horizon-intro full">
+  <div class="horizon-intro-inner">
+    <blockquote class="horizon-quote">
+      <p class="quote-text">Before you can move the number, you need to know what is moving it. 2 of the 5 factors carry 65% of the weight.</p>
+      <p class="quote-attr">Field Guide note</p>
+    </blockquote>
+    <div class="horizon-eyebrow">Horizon 2</div>
+    <h2>The <em>Levers</em>.</h2>
+    <p>The 5 factors behind a FICO Score, how much each one counts, and how quickly each one responds when you act.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HORIZON 2 CONTENT -->
+<section class="horizon-content">
+  <div class="horizon-body">
+    <div class="horizon-main">
+
+      <p class="lede">Each factor has a weight and a speed. The smart sequence starts with the levers that are both heavy and fast.</p>
+
+      <div class="field-note">
+        <div class="field-note-label">Field Note · What Goes Into a FICO Score</div>
+        <table class="figures">
+          <thead><tr><th>Factor</th><th class="num">Weight</th></tr></thead>
+          <tbody>
+            <tr><td>Payment history</td><td class="num">35%</td></tr>
+            <tr><td>Amounts owed (mostly credit utilization)</td><td class="num">30%</td></tr>
+            <tr><td>Length of credit history</td><td class="num">15%</td></tr>
+            <tr><td>New credit (recent applications and accounts)</td><td class="num">10%</td></tr>
+            <tr><td>Credit mix</td><td class="num">10%</td></tr>
+          </tbody>
+        </table>
+        <cite>myFICO, <a href="https://www.myfico.com/credit-education/whats-in-your-credit-score" target="_blank" rel="noopener">What's in my FICO Scores?</a> Weights are general guides; the importance of each factor varies with your own profile.</cite>
+      </div>
+
+      <h4>1. Payment history: heavy, and slow to heal.</h4>
+
+      <p>Whether you pay on time is the single largest ingredient. A payment that is 30 or more days late can cost a strong score a great deal, often far more than it costs a weaker one, because it is a bigger surprise in a clean record. The good news is that its effect fades with time, and every on-time month you add is new evidence. The move here is simple and permanent: set every account to pay at least the minimum automatically, so a busy month never becomes a late one.</p>
+
+      <h4>2. Utilization: heavy, and fast.</h4>
+
+      <p>Utilization is the share of your available card credit you are using. A $3,000 balance on cards with $10,000 in limits is 30% utilization. Lower is better. Under 30% is a common guideline, and people with the highest scores tend to sit under 10%. It is measured both across all your cards and on each card individually, so one maxed-out card can weigh on you even if your total looks fine. Because the formula only looks at your most recent balances, utilization is the fastest lever there is. Pay it down and the change can show up within a billing cycle or 2.</p>
+
+      <h4>3. Length of history: patient.</h4>
+
+      <p>This looks at the age of your oldest account, the average age of all your accounts, and how recently you opened new ones. Time is the only real cure, but you can protect it. Keep your oldest cards open, even if you rarely use them, and use each one now and then so the issuer does not close it for inactivity.</p>
+
+      <h4>4. New credit: small and temporary.</h4>
+
+      <p>Each application for credit creates a hard inquiry, which usually trims a few points for a short while. Inquiries count for up to 12 months in a FICO Score and disappear from your report after 2 years. When you shop for a mortgage or auto loan, multiple applications for the same kind of loan within a short window are generally treated as one, so rate shopping is safe if you keep it focused.</p>
+
+      <h4>5. Credit mix: a light touch.</h4>
+
+      <p>Lenders like to see that you can handle both revolving credit (cards) and installment credit (a car loan, a mortgage, a personal or credit-builder loan). Having both helps a little. It is never worth taking on a loan you do not need just to improve your mix.</p>
+
+      <div class="horizon-rule">· · ·</div>
+
+      <h3>Where the Points Live</h3>
+
+      <p>Put the weights and speeds side by side and a strategy appears. Utilization is heavy and fast, so it is where most quick gains come from. Errors on your report can be heavy and fast too, because removing a wrongly reported late payment or collection changes the record immediately. Payment history and length of history are heavy but slow, so the work there is about protecting what you have and letting time do its part. New credit and mix are small levers for fine tuning.</p>
+
+      <div class="horizon-close">
+        Learn the weights once.<br>
+        Use them for the rest of your life.
+      </div>
+
+    </div>
+
+    <aside class="marginalia-col">
+      <div class="marginalia">
+        <div class="marginalia-label">On autopay</div>
+        Set autopay for the minimum, then pay more by hand whenever you can. The automatic minimum is the safety net, not the plan.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On the statement date</div>
+        Card issuers usually report your balance on the statement closing date, not the due date. A balance paid down before the statement closes is the one the formula sees.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On closing old cards</div>
+        If an old card carries an annual fee you no longer want, ask the issuer to switch it to a no-fee card instead of closing it. You keep the history and the limit.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On 0% utilization</div>
+        Using none of your credit is not the goal. A small balance that reports and is then paid in full shows the formula that you use credit and handle it well.
+      </div>
+    </aside>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HORIZON 3 INTRO -->
+<section class="horizon-intro full">
+  <div class="horizon-intro-inner">
+    <blockquote class="horizon-quote">
+      <p class="quote-text">Order matters. Start where the effort is small and the impact is large, and let each move set up the next.</p>
+      <p class="quote-attr">Field Guide note</p>
+    </blockquote>
+    <div class="horizon-eyebrow">Horizon 3</div>
+    <h2>The <em>Sequence</em>.</h2>
+    <p>The legitimate moves that raise a score, ranked by impact and effort. Start at the top and work your way down.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HORIZON 3 CONTENT -->
+<section class="horizon-content">
+  <div class="horizon-body">
+    <div class="horizon-main">
+
+      <p class="lede">You do not need to do everything. You need to do the right next thing, then the one after it.</p>
+
+      <h3>Move 1 · Read Your Reports and Dispute Every Error</h3>
+
+      <p>Everything starts with the record itself. You can see your reports from all 3 bureaus (Equifax, Experian, and TransUnion) for free, once a week, at AnnualCreditReport.com, the only site authorized by federal law for this. Read each one slowly. Look for accounts you do not recognize, late payments you know were on time, balances that are wrong, debts listed twice, and old negative items that should have aged off.</p>
+
+      <div class="field-note">
+        <div class="field-note-label">Field Note · How Common Errors Are</div>
+        In a study for Congress, the Federal Trade Commission found that about 1 in 5 consumers had an error on at least one of their 3 credit reports, and about 1 in 20 had an error serious enough to mean paying more for credit or insurance. Errors are not rare. Reading your reports is not paranoia.
+        <cite>Federal Trade Commission, <a href="https://www.ftc.gov/news-events/news/press-releases/2013/02/ftc-study-five-percent-consumers-had-errors-their-credit-reports-could-result-less-favorable-terms" target="_blank" rel="noopener">credit report accuracy study</a></cite>
+      </div>
+
+      <p>Dispute each error directly with the bureau reporting it, online or by mail, and include copies of anything that supports your case. The bureau generally has 30 days to investigate and must correct or remove information that cannot be verified. You can also dispute with the company that supplied the information. Keep copies of everything you send and the dates you sent it. When a genuine error is holding your score down, this single move can produce the largest and fastest gain in the whole guide.</p>
+
+      <div class="resources">
+        <div class="resources-label">Your reports and your rights</div>
+        <a href="https://www.annualcreditreport.com/" target="_blank" rel="noopener">AnnualCreditReport.com (free weekly reports from all 3 bureaus)</a>
+        <a href="https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/" target="_blank" rel="noopener">How to dispute an error on your credit report (CFPB)</a>
+      </div>
+
+      <h3>Move 2 · Bring Utilization Down, Card by Card</h3>
+
+      <p>If you carry balances, this is where to put extra money. Start with any card that is close to its limit, since high utilization on a single card weighs on your score even when your total looks reasonable. Then work toward under 30% on every card and overall, and under 10% if you can. Pay before the statement closing date so the lower balance is the one that gets reported. If you are paying down debt at the same time, The Debt-Free Playbook walks through the order that saves the most.</p>
+
+      <h3>Move 3 · Ask for a Higher Limit</h3>
+
+      <p>A higher limit lowers your utilization without you paying a dollar. If a card has a $2,000 limit and an $800 balance, you are at 40%. Raise the limit to $4,000 and the same balance is 20%. Many issuers let you request an increase online or by phone, and some can do it without a hard inquiry. Ask which kind of check they will use before you agree. This works only if the new room stays empty, so treat a higher limit as a better ratio, not more spending money.</p>
+
+      <h3>Move 4 · Borrow Someone's Good History</h3>
+
+      <p>If someone you trust has a card with a long history, low balance, and spotless payments, they can add you as an authorized user. You do not need to use the card, or even hold it. With many issuers, the account's history then appears on your report as well, which can lift your average account age and payment record. It is legal and common. It cuts both ways, though: if they miss payments or run up the balance, that shows up on your report too, so choose someone whose habits you would happily have as your own.</p>
+
+      <h3>Move 5 · Open the Right First Account</h3>
+
+      <p>If you have no open card at all, or only damaged ones, a <strong>secured credit card</strong> adds a new, positive account. You put down a deposit that usually becomes your limit, use it for one small recurring bill, and pay it in full every month. Many secured cards graduate to regular cards after 6 to 12 months of on-time payments, and the deposit comes back to you. A <strong>credit-builder loan</strong>, offered by many credit unions and community banks, works similarly on the installment side: your payments go into a savings account you receive at the end, and each on-time payment is reported. Choose an issuer that reports to all 3 bureaus and charges no or low fees.</p>
+
+      <h3>Move 6 · Count the Bills You Already Pay</h3>
+
+      <p>Experian Boost is a free tool that adds on-time payments for things like phone, internet, utilities, insurance, streaming services, and some online rent payments to your Experian credit file. It affects only scores built from Experian data, and you can remove the information whenever you like. The lift is usually modest, but it is real, quick, and costs nothing.</p>
+
+      <div class="field-note">
+        <div class="field-note-label">Field Note · What Boost Tends to Add</div>
+        Experian reports that people whose scores improved with Boost gained about 12 points on average, and that people starting at 579 or below gained about 22. Results depend on your file, and some people see no change.
+        <cite>Experian, <a href="https://www.experian.com/blogs/ask-experian/experian-boost-study/" target="_blank" rel="noopener">Experian Boost study</a> and <a href="https://www.experian.com/consumer-products/score-boost.html" target="_blank" rel="noopener">eligible bills</a></cite>
+      </div>
+
+      <div class="pull-quote">"Errors and utilization move fast. Payment history moves slowly. A good plan does the fast work now and lets time do the slow work."</div>
+
+      <div class="horizon-close">
+        Small moves, taken in order,<br>
+        add up to a different number.
+      </div>
+
+    </div>
+
+    <aside class="marginalia-col">
+      <div class="marginalia">
+        <div class="marginalia-label">On reading a report</div>
+        Give it an unhurried hour and a pen. Mark anything you do not recognize. Most people find their report is less frightening than the imagined version they had been carrying.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On disputing by mail</div>
+        Certified mail with a return receipt gives you a dated record. For complicated disputes, a paper trail is worth the trip to the post office.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On authorized users</div>
+        Agree in advance how the card will be used, if at all. Clarity keeps a favor from becoming friction.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On "pre-approved" offers</div>
+        You can opt out of most prescreened credit offers at OptOutPrescreen.com, the official site run by the bureaus. Fewer offers, fewer temptations to apply.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On spacing applications</div>
+        When you can, leave about 6 months between applications for new cards. It lets each new account settle in before the next one arrives.
+      </div>
+    </aside>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HORIZON 4 INTRO -->
+<section class="horizon-intro full">
+  <div class="horizon-intro-inner">
+    <blockquote class="horizon-quote">
+      <p class="quote-text">No one can legally remove accurate information from your report before its time. Anyone who promises otherwise is selling something.</p>
+      <p class="quote-attr">Field Guide note</p>
+    </blockquote>
+    <div class="horizon-eyebrow">Horizon 4</div>
+    <h2>The <em>Repairs</em>.</h2>
+    <p>Collections, late payments, and medical bills. What you can do yourself, what the law allows, and what to avoid paying for.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HORIZON 4 CONTENT -->
+<section class="horizon-content">
+  <div class="horizon-body">
+    <div class="horizon-main">
+
+      <p class="lede">Repair is less about erasing the past and more about making sure the record is accurate, then giving it something better to say.</p>
+
+      <h3>How Long Things Stay</h3>
+
+      <p>Most negative items, including late payments and collections, can stay on your report for up to 7 years. A Chapter 7 bankruptcy can stay for up to 10. Their weight fades long before they disappear, though. A late payment from 5 years ago matters far less than one from last spring, especially if everything since has been on time.</p>
+
+      <h3>Collections</h3>
+
+      <p>Before you pay a collection, make sure it is yours and the amount is right. You have the right to ask a collector to validate the debt, and the CFPB explains how. Newer scoring models such as FICO Score 9 and 10 and VantageScore 3.0 and 4.0 ignore collections that have been paid, though many lenders still use older models that do not. Some collectors will agree to remove an entry from your report in exchange for payment (often called pay for delete). Many will not, and the bureaus discourage it, but it costs nothing to ask. If they agree, get it in writing before you pay.</p>
+
+      <p>One more caution. In many states, paying or even acknowledging a very old debt can restart the clock on how long a collector can sue you over it. For debts more than a few years old, read up on your state's rules, or speak with a nonprofit credit counselor, before you send money.</p>
+
+      <h3>Medical Debt</h3>
+
+      <div class="field-note">
+        <div class="field-note-label">Field Note · Medical Bills on Your Report</div>
+        A 2025 federal rule that would have removed most medical debt from credit reports was struck down in court and is not in effect. The 3 bureaus still follow their own voluntary policies: medical debt is not reported until it is at least 1 year past due, paid medical debt is removed, and medical collections under $500 are not reported at all. Some states add their own protections. If you see a medical debt that breaks these rules, dispute it.
+        <cite>National Consumer Law Center, <a href="https://library.nclc.org/article/latest-keeping-medical-debt-out-credit-reports" target="_blank" rel="noopener">the latest on keeping medical debt out of credit reports</a>, updated 2025</cite>
+      </div>
+
+      <h3>Late Payments and Goodwill</h3>
+
+      <p>If you have an otherwise good record with a lender and missed a single payment for an understandable reason (a hospital stay, a move, an autopay that failed), you can write a short, polite goodwill letter asking them to remove the late mark as a courtesy. Explain what happened, note your history with them, and say plainly what you are asking for. Lenders are not required to agree, and many will not, but some do. It is worth one letter.</p>
+
+      <div class="horizon-rule">· · ·</div>
+
+      <h3>You Do Not Need a Credit Repair Company</h3>
+
+      <p>Legitimate credit repair companies do nothing you cannot do yourself for free. They dispute inaccurate items, ask for validation, and write goodwill letters. Under federal law they cannot charge you before they have done the work, and they cannot remove accurate negative information. Be wary of any company that asks for payment up front, tells you not to contact the bureaus yourself, or suggests creating a new identity to start fresh. That last one is illegal.</p>
+
+      <div class="resources">
+        <div class="resources-label">Free, trusted help</div>
+        <a href="https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/" target="_blank" rel="noopener">Credit reports and scores: guides and tools (CFPB)</a>
+        <a href="https://www.consumerfinance.gov/consumer-tools/debt-collection/" target="_blank" rel="noopener">Debt collection: your rights and how to respond (CFPB)</a>
+        <a href="https://www.nfcc.org/" target="_blank" rel="noopener">Free or low-cost nonprofit credit counseling (NFCC)</a>
+      </div>
+
+      <div class="horizon-close">
+        You can do every bit of this yourself,<br>
+        and keep what you would have paid someone else.
+      </div>
+
+    </div>
+
+    <aside class="marginalia-col">
+      <div class="marginalia">
+        <div class="marginalia-label">On "in writing"</div>
+        A phone promise from a collector is worth very little later. A letter or email on their letterhead is worth a great deal.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On old debts</div>
+        The time a debt can stay on your report and the time a collector can sue over it are 2 different clocks. Paying an old debt does not restart the 7-year reporting clock.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On a goodwill letter</div>
+        Keep it to a few sentences. Gratitude and brevity are more persuasive than a long explanation.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On hospital bills</div>
+        Before a medical bill ever reaches collections, ask the provider about financial assistance and payment plans. Many nonprofit hospitals are required to offer assistance programs.
+      </div>
+    </aside>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HORIZON 5 INTRO -->
+<section class="horizon-intro full">
+  <div class="horizon-intro-inner">
+    <blockquote class="horizon-quote">
+      <p class="quote-text">Building a good score is a season of effort. Keeping it is a handful of quiet habits.</p>
+      <p class="quote-attr">Field Guide note</p>
+    </blockquote>
+    <div class="horizon-eyebrow">Horizon 5</div>
+    <h2>The <em>Long Game</em>.</h2>
+    <p>How long it really takes, the questions people ask most, and your credit plan on a single page.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HORIZON 5 CONTENT -->
+<section class="horizon-content">
+  <div class="horizon-body">
+    <div class="horizon-main">
+
+      <p class="lede">The goal is not a perfect score. It is a score good enough that credit stops costing you extra.</p>
+
+      <h3>How Long It Takes</h3>
+
+      <p>If errors and high balances are the main things holding you back, meaningful gains in 2 to 3 months are realistic, because both respond as soon as the record changes. If recent late payments or collections are the issue, 6 to 12 months is more typical, while new on-time history builds up. Lower starting scores often rise faster at first, simply because there is more room to move. Very few people need to reach 850. Somewhere in the mid 700s, most lenders already offer their best or near-best terms.</p>
+
+      <h3>Straight Answers</h3>
+
+      <h4>Will paying off a card and closing it help?</h4>
+
+      <p>Paying it off helps. Closing it can hurt, because it removes that card's limit from your available credit (raising utilization) and, over time, its age from your history. Keep paid-off cards open unless the fees or the temptation outweigh the benefit.</p>
+
+      <h4>Should I pay my cards in full or carry a small balance?</h4>
+
+      <p>Pay in full. Carrying a balance and paying interest does nothing for your score. What helps is having a balance report on your statement and then paying it off, which happens naturally when you use a card and pay the statement in full.</p>
+
+      <h4>I am about to apply for a mortgage. What should I avoid?</h4>
+
+      <p>In the months before, avoid opening new accounts, avoid closing old ones, keep card balances low before each statement, and do not miss a single payment. Do your rate shopping within a couple of weeks so the inquiries count as one.</p>
+
+      <h4>Does my spouse's credit affect mine?</h4>
+
+      <p>Not directly. Each person has their own report. Joint accounts, and cards where one of you is an authorized user, appear on both reports, so shared accounts affect both of you.</p>
+
+      <div class="horizon-rule">· · ·</div>
+
+      <h3>Your Credit Plan</h3>
+
+      <p>Here is the guide on a single page. Write your answers somewhere you will see them, and come back to them once a month for the next 6 months.</p>
+
+      <ol class="plan-lines">
+        <li><strong>My starting point.</strong> My scores today, the date I checked, and what my reports told me.</li>
+        <li><strong>My disputes.</strong> Every error I found, the bureau I sent it to, and the date I sent it.</li>
+        <li><strong>My utilization target.</strong> My overall utilization now, the card I will bring down first, and the number I am aiming for.</li>
+        <li><strong>My safety net.</strong> Autopay set for the minimum on every account, confirmed on this date.</li>
+        <li><strong>My next account, or none.</strong> Whether I need a secured card, a credit-builder loan, or simply time, and when I will check again.</li>
+      </ol>
+
+      <p>Your score will wobble along the way. A balance reports a little high one month, an inquiry lands, a model updates. Look at the trend over 3 or 6 months, not the number on a single morning.</p>
+
+      <div class="horizon-close">
+        Credit is a tool.<br>
+        Once you know how it works, it starts working for you.
+      </div>
+
+    </div>
+
+    <aside class="marginalia-col">
+      <div class="marginalia">
+        <div class="marginalia-label">On chasing 850</div>
+        Past the mid 700s, extra points rarely change the rate you are offered. That energy is usually better spent on savings.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On freezing your credit</div>
+        A credit freeze at each bureau is free and blocks new accounts in your name. You can lift it in minutes when you want to apply for something. It is one of the best protections against identity theft.
+      </div>
+      <div class="marginalia">
+        <div class="marginalia-label">On the monthly check-in</div>
+        Pick a regular day, such as the first Sunday of the month. 10 quiet minutes with your plan beats an anxious hour every now and then.
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- EBOOK FOOTER -->
+<footer class="ebook-footer">
+  <div class="footer-inner">
+    <div class="footer-eyebrow">A Popcycle Field Guide</div>
+    <p class="footer-close-text">If card balances are what stand between you and a better score, The Debt-Free Playbook turns paying them down into a plan with dates. And if you would like to see your whole financial picture first, Start Here! The 14 Day Financial Reset is the gentlest place to begin.</p>
+    <div class="footer-buttons">
+      <button class="btn-primary" onclick="window.print()">Save as PDF</button>
+      <a class="btn-secondary" href="https://popcycleonline.github.io/Ebooks/Fin-Ebooks/the-debt-free-playbook.html" target="_blank" rel="noopener">The Debt-Free Playbook</a>
+      <a class="btn-secondary" href="https://www.popcycle.online/copy-of-improve-your-relationships">More in Financial &amp; Credit</a>
+    </div>
+    <p class="disclaimer">This field guide is for education only and is not personalized financial, credit, or legal advice. Scoring models, reporting rules, and bureau policies change; the details here were checked in October 2026. Individual results depend on your own credit file. For significant debt or collections, consider a nonprofit credit counselor.</p>
+    <p class="footer-credit">popcycle.online &nbsp;·&nbsp; Sweeten your life</p>
+  </div>
+</footer>
+
+<button class="print-btn" onclick="window.print()">Save as PDF</button>
+
+</body>
+</html>
