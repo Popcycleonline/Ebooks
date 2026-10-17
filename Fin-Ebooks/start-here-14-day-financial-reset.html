@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<!--
+  START HERE: THE 14 DAY FINANCIAL RESET
+  Popcycle · Financial & Credit
+  Palette: TRUST (Royal Blue, Royal Blue Deep, Dark Moss, Platinum, Lake Blue)
+  Structure: Lasting Love / Love After 40 workbook pattern, adapted to 14 days across 5 pillars.
+  Interactive: localStorage auto-save per prompt, download text export, print-to-PDF.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Start Here | The 14 Day Financial Reset | Popcycle</title>
+<meta name="description" content="A 14-day interactive workbook that walks you through the five pillars of a stronger financial future. One question a day. One honest answer. One plan at the end.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --royal: #0032E7;
+    --royal-deep: #162660;
+    --royal-deeper: #0E1943;
+    --moss: #525333;
+    --moss-deep: #3C3D22;
+    --platinum: #E8E7E3;
+    --platinum-warm: #DDDCD6;
+    --platinum-soft: #F2F1ED;
+    --lake: #6D8EC5;
+    --royal-soft: rgba(0, 50, 231, 0.12);
+    --moss-soft: rgba(82, 83, 51, 0.14);
+    --platinum-line: rgba(22, 38, 96, 0.14);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--platinum);
+    color: var(--royal-deep);
+    line-height: 1.7;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ============================================
+     POPCYCLE VOICE · TRUST palette adaptation
+     ============================================ */
+
+  .page { max-width: 780px; margin: 0 auto; padding: 80px 40px; }
+  .full { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+
+  /* COVER */
+  .cover {
+    background: var(--royal-deep);
+    color: var(--platinum);
+    text-align: center;
+    padding: 120px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 25% 30%, rgba(0, 50, 231, 0.28) 0%, transparent 55%),
+      radial-gradient(ellipse at 75% 70%, rgba(109, 142, 197, 0.18) 0%, transparent 55%);
+  }
+  .cover-inner { position: relative; z-index: 2; max-width: 720px; margin: 0 auto; }
+  .cover-eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--lake);
+    margin-bottom: 48px;
+    font-weight: 500;
+  }
+  .cover-start {
+    display: inline-block;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--royal-deep);
+    background: var(--platinum);
+    padding: 10px 24px;
+    border-radius: 4px;
+    margin-bottom: 36px;
+  }
+  .cover h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.6rem, 6.5vw, 5rem);
+    font-weight: 300;
+    line-height: 1.02;
+    letter-spacing: -1.2px;
+    margin-bottom: 20px;
+  }
+  .cover h1 em {
+    font-style: italic;
+    color: var(--lake);
+    font-weight: 400;
+  }
+  .cover-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+    margin-top: 36px;
+    color: var(--platinum);
+    opacity: 0.92;
+    line-height: 1.5;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cover-brand {
+    margin-top: 72px;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--lake);
+    opacity: 0.8;
+  }
+
+  /* PREFACE */
+  .preface h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 36px;
+    color: var(--royal-deep);
+    letter-spacing: -0.5px;
+  }
+  .preface h2 em { color: var(--royal); font-style: italic; }
+  .preface p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    margin-bottom: 22px;
+    color: var(--royal-deep);
+    line-height: 1.65;
+  }
+  .preface p em { font-style: italic; color: var(--royal); }
+  .preface .lede {
+    font-size: 24px;
+    line-height: 1.5;
+    font-style: italic;
+    margin-bottom: 32px;
+    color: var(--royal-deep);
+  }
+
+  .map-list {
+    background: var(--royal-soft);
+    padding: 36px 32px;
+    margin: 44px 0;
+    border-left: 4px solid var(--royal);
+  }
+  .map-list h3 {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--royal);
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  .map-list p {
+    font-family: 'Jost', sans-serif;
+    font-size: 15px;
+    margin-bottom: 12px;
+    color: var(--royal-deep);
+    line-height: 1.6;
+  }
+  .map-list p:last-child { margin-bottom: 0; }
+  .map-list strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--royal);
+    font-weight: 500;
+    margin-right: 8px;
+  }
+
+  /* PILLAR INTRO (dark full-page intro between pillars) */
+  .pillar-intro {
+    background: var(--royal-deep);
+    color: var(--platinum);
+    text-align: center;
+    padding: 100px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .pillar-intro::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 25% 60%, rgba(0, 50, 231, 0.22) 0%, transparent 55%),
+      radial-gradient(ellipse at 75% 30%, rgba(82, 83, 51, 0.18) 0%, transparent 55%);
+  }
+  .pillar-intro-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+  .pillar-quote { max-width: 500px; margin: 0 auto 68px; }
+  .pillar-quote .quote-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--platinum);
+    opacity: 0.86;
+    margin-bottom: 4px;
+    font-weight: 400;
+    text-wrap: balance;
+  }
+  .pillar-quote .quote-attr {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.2;
+    color: var(--platinum);
+    opacity: 0.82;
+    letter-spacing: 0.3px;
+    padding-left: 55%;
+  }
+  .pillar-eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--lake);
+    margin-bottom: 22px;
+    font-weight: 500;
+  }
+  .pillar-intro h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 5.5vw, 3.6rem);
+    font-weight: 400;
+    line-height: 1.08;
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
+  }
+  .pillar-intro h2 em { color: var(--lake); font-style: italic; }
+  .pillar-intro p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    line-height: 1.55;
+    max-width: 540px;
+    margin: 0 auto;
+    color: var(--platinum);
+    opacity: 0.9;
+    font-style: italic;
+  }
+
+  /* DAY */
+  .day {
+    background: var(--platinum);
+    padding: 70px 40px 90px;
+    border-bottom: 1px solid var(--platinum-line);
+  }
+  .day-inner { max-width: 720px; margin: 0 auto; }
+  .day-header {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--royal);
+  }
+  .day-eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--moss);
+    font-weight: 700;
+  }
+  .day-number-big {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 72px;
+    line-height: 1;
+    color: var(--royal);
+    font-style: italic;
+    font-weight: 400;
+  }
+  .day-pillar {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--moss);
+    font-weight: 600;
+    margin-left: auto;
+    opacity: 0.75;
+  }
+  .day-question {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--royal-deep);
+    margin: 20px 0 24px;
+    letter-spacing: -0.5px;
+  }
+  .day-question em { color: var(--moss); font-style: italic; }
+  .day-context {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18.5px;
+    line-height: 1.6;
+    color: var(--royal-deep);
+    margin-bottom: 28px;
+    max-width: 640px;
+  }
+  .day-prompt {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--royal-deep);
+    font-style: italic;
+    border-left: 3px solid var(--moss);
+    padding-left: 20px;
+    margin-bottom: 28px;
+    max-width: 640px;
+    opacity: 0.9;
+  }
+
+  .reflection-area {
+    position: relative;
+  }
+  .reflection-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--moss);
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .reflection {
+    width: 100%;
+    min-height: 180px;
+    padding: 20px 22px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--royal-deep);
+    background: var(--platinum-soft);
+    border: 1px solid var(--platinum-line);
+    border-left: 3px solid var(--royal);
+    border-radius: 4px;
+    resize: vertical;
+    outline: none;
+    transition: all 0.2s;
+  }
+  .reflection:focus {
+    border-color: var(--royal);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(0, 50, 231, 0.12);
+  }
+  .reflection::placeholder {
+    color: var(--moss);
+    opacity: 0.55;
+    font-style: italic;
+  }
+  .save-status {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--moss);
+    opacity: 0.6;
+    margin-top: 8px;
+    display: block;
+    font-weight: 600;
+    min-height: 14px;
+  }
+  .save-status.saved { color: var(--royal); opacity: 1; }
+
+  /* DAY RESOURCES — small block of trusted external links */
+  .day-resources {
+    background: var(--moss-soft);
+    border-left: 3px solid var(--moss);
+    padding: 18px 22px;
+    margin-bottom: 28px;
+    max-width: 640px;
+  }
+  .day-resources-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--moss);
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .day-resources a {
+    display: block;
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--royal);
+    text-decoration: none;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(0, 50, 231, 0);
+    transition: all 0.2s;
+  }
+  .day-resources a:hover {
+    color: var(--royal-deep);
+    border-bottom-color: var(--royal);
+  }
+  .day-resources a::after {
+    content: ' \2192';
+    opacity: 0.55;
+  }
+
+  /* COMPLETION */
+  .completion {
+    background: var(--royal-deep);
+    color: var(--platinum);
+    padding: 100px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .completion::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 50% 20%, rgba(0, 50, 231, 0.25) 0%, transparent 55%),
+      radial-gradient(ellipse at 50% 90%, rgba(109, 142, 197, 0.14) 0%, transparent 55%);
+  }
+  .completion-inner { position: relative; z-index: 2; max-width: 640px; margin: 0 auto; }
+  .completion-eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--lake);
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+  .completion h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 5.5vw, 3.6rem);
+    font-weight: 400;
+    line-height: 1.08;
+    margin-bottom: 28px;
+    letter-spacing: -0.5px;
+  }
+  .completion h2 em { color: var(--lake); font-style: italic; }
+  .completion p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--platinum);
+    opacity: 0.92;
+    margin-bottom: 20px;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .completion p em { font-style: italic; color: var(--lake); }
+
+  .completion-buttons {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 44px;
+  }
+  .completion-buttons button {
+    padding: 16px 28px;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid;
+    transition: all 0.22s;
+  }
+  .btn-primary {
+    background: var(--royal);
+    color: var(--platinum);
+    border-color: var(--royal);
+  }
+  .btn-primary:hover {
+    background: var(--lake);
+    border-color: var(--lake);
+    color: var(--royal-deep);
+  }
+  .btn-secondary {
+    background: transparent;
+    color: var(--platinum);
+    border-color: rgba(232, 231, 227, 0.4);
+  }
+  .btn-secondary:hover {
+    border-color: var(--lake);
+    color: var(--lake);
+  }
+
+  /* DIVIDER */
+  .divider {
+    height: 6px;
+    background: var(--royal);
+  }
+
+  /* FLOATING PROGRESS */
+  .progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: var(--royal);
+    width: 0%;
+    z-index: 200;
+    transition: width 0.2s;
+  }
+
+  /* FLOATING SAVE/DOWNLOAD BUTTON */
+  .action-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: var(--royal-deep);
+    color: var(--platinum);
+    padding: 14px 22px;
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(14, 25, 67, 0.3);
+    z-index: 100;
+    transition: all 0.2s;
+  }
+  .action-btn:hover { background: var(--royal); }
+
+  /* FOOTER */
+  .ebook-footer {
+    background: var(--royal-deeper);
+    color: var(--platinum);
+    padding: 90px 40px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .ebook-footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 25% 30%, rgba(0, 50, 231, 0.18) 0%, transparent 55%),
+      radial-gradient(ellipse at 75% 70%, rgba(109, 142, 197, 0.1) 0%, transparent 55%);
+  }
+  .footer-inner { position: relative; z-index: 2; max-width: 680px; margin: 0 auto; }
+  .footer-eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--lake);
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+  .footer-close-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.45;
+    color: var(--platinum);
+    margin-bottom: 44px;
+    opacity: 0.92;
+  }
+  .footer-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 50px;
+  }
+  .footer-buttons a, .footer-buttons button {
+    display: inline-block;
+    padding: 15px 28px;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    border: 2px solid;
+  }
+  .footer-buttons .btn-primary {
+    background: var(--royal);
+    color: var(--platinum);
+    border-color: var(--royal);
+  }
+  .footer-buttons .btn-primary:hover {
+    background: var(--lake);
+    border-color: var(--lake);
+    color: var(--royal-deep);
+  }
+  .footer-buttons .btn-secondary {
+    background: transparent;
+    color: var(--platinum);
+    border-color: rgba(232, 231, 227, 0.4);
+  }
+  .footer-buttons .btn-secondary:hover {
+    border-color: var(--lake);
+    color: var(--lake);
+  }
+  .footer-credit {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--platinum);
+    opacity: 0.5;
+    margin: 0;
+  }
+
+  /* MOBILE */
+  @media (max-width: 600px) {
+    body { font-size: 15px; }
+    .page { padding: 60px 24px; }
+    .cover { padding: 80px 24px; }
+    .pillar-intro { padding: 70px 24px; }
+    .day { padding: 50px 24px 70px; }
+    .day-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .day-number-big { font-size: 56px; }
+    .day-pillar { margin-left: 0; }
+    .day-question { font-size: 1.5rem; }
+    .pillar-quote .quote-attr { padding-left: 45%; }
+    .reflection { font-size: 15px; min-height: 150px; padding: 16px 18px; }
+    .action-btn { bottom: 16px; right: 16px; padding: 12px 18px; font-size: 10px; }
+    .ebook-footer { padding: 70px 24px 50px; }
+    .footer-buttons { flex-direction: column; gap: 12px; }
+    .footer-buttons a, .footer-buttons button { width: 100%; padding: 14px 20px; font-size: 11px; }
+  }
+
+  /* PRINT */
+  @media print {
+    body { background: white; color: black; font-size: 11pt; }
+    .cover, .pillar-intro, .completion, .ebook-footer {
+      background: white;
+      color: black;
+      page-break-after: always;
+      min-height: auto;
+      padding: 40px 20px;
+    }
+    .cover h1, .pillar-intro h2, .completion h2 { color: #162660; }
+    .cover h1 em, .pillar-intro h2 em, .completion h2 em { color: #0032E7; }
+    .cover-subtitle, .pillar-intro p, .completion p { color: #162660; opacity: 1; }
+    .cover-eyebrow, .cover-brand, .pillar-eyebrow, .completion-eyebrow, .footer-eyebrow { color: #525333; }
+    .day { page-break-before: auto; page-break-inside: avoid; padding: 20px; border-bottom: 1px solid #ccc; }
+    .day-question { color: #162660; font-size: 16pt; }
+    .reflection { background: white; border: 1px solid #ccc; min-height: 100px; }
+    .action-btn, .progress-bar, .completion-buttons, .footer-buttons { display: none; }
+    .divider { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- COVER -->
+<section class="cover full">
+  <div class="cover-inner">
+    <div class="cover-eyebrow">A Popcycle Guide to Yourself</div>
+    <div class="cover-start">Start Here</div>
+    <h1>The 14 Day<br><em>Financial Reset</em></h1>
+    <div class="cover-subtitle">One question a day. One honest answer. One real plan at the end. A journey, not a destination.</div>
+    <div class="cover-brand">Popcycle · Financial &amp; Credit</div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PREFACE -->
+<section class="page preface">
+  <h2>Welcome to the <em>reset</em>.</h2>
+
+  <p class="lede">Your future is just a sequence of better decisions.</p>
+
+  <p>You do not need to be wealthy, financially sophisticated, or 25 years old to improve your financial future. You need to understand where you are, know which decisions matter most, and have a plan you can actually follow. This workbook is designed to walk you through all three in 14 days, one honest question at a time.</p>
+
+  <p>There is no shame here. No guilt about the moves you did not make at 25. No pretending the math is simple. Just a sequence of 14 questions, grouped under five pillars, designed to produce real clarity by the end of two weeks.</p>
+
+  <p>Each day asks one question that matters. Each day gives you context so you know why it matters. Each day gives you a prompt and a place to write your honest answer. Your answers save automatically in your browser. At the end of 14 days you have a complete, personal map of your financial life, and a 90-day plan built from your own words.</p>
+
+  <p><em>You cannot change what you cannot see. These 14 days are about seeing clearly.</em></p>
+
+  <div class="map-list">
+    <h3>The Five Pillars</h3>
+    <p><strong>Days 1-3 —</strong> See Clearly. Where your money is, where it goes, what you owe, what you have.</p>
+    <p><strong>Days 4-6 —</strong> Plan Wisely. The leaks, the priorities, and the real monthly floor.</p>
+    <p><strong>Days 7-9 —</strong> Build Your Credit for Your Future. Your score, your report, your next big borrow.</p>
+    <p><strong>Days 10-11 —</strong> Make the Necessary Repairs. The damage you carry and the first piece to address.</p>
+    <p><strong>Days 12-14 —</strong> Your Big Plan. The vision, the move, the 90-day commitment.</p>
+  </div>
+
+  <p>Set aside 10 to 15 minutes each day. The workbook will remember your answers between sessions, so you can come back where you left off. If you miss a day, you have not failed. Just come back tomorrow.</p>
+
+  <p><em>Let us begin.</em></p>
+</section>
+
+<div class="divider"></div>
+
+<!-- PILLAR ONE INTRO -->
+<section class="pillar-intro full">
+  <div class="pillar-intro-inner">
+    <blockquote class="pillar-quote">
+      <p class="quote-text">You cannot improve what you cannot see. The first move in every financial plan is honest visibility about where you actually are.</p>
+      <p class="quote-attr">Popcycle · Financial</p>
+    </blockquote>
+    <div class="pillar-eyebrow">Pillar One · Days 1-3</div>
+    <h2>See <em>Clearly</em>.</h2>
+    <p>Three days of looking at your money the way it actually is, not the way you have been imagining it.</p>
+  </div>
+</section>
+
+<!-- DAY 1 -->
+<section class="day">
+  <div class="day-inner">
+    <div class="day-header">
+      <div>
+        <div class="day-eyebrow">Day One</div>
+        <div class="day-number-big">01</div>
+      </div>
+      <div class="day-pillar">See Clearly</div>
+    </div>
+    <h2 class="day-question">Where did your money <em>actually</em> go last month?</h2>
+    <p class="day-context">Not the budget you planned at the start of the month. The money that actually left your account. Pull up your last two months of bank and credit card statements and scan them honestly. This is not a judgment exercise. It is a visibility exercise.</p>
+    <p class="day-prompt">What are the three biggest spending categories you saw? What surprised you? What was bigger than you thought it would be, and what was smaller?</p>
+    <div class="reflection-area">
+      <label class="reflection-label">Your reflection</label>
+      <textarea class="reflection" id="r1" placeholder="Write your honest answer here. Your words save automatically."></textarea>
+      <span class="save-status" id="s1"></span>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 2 -->
+<section class="day">
+  <div class="day-inner">
+    <div class="day-header">
+      <div>
+        <div class="day-eyebrow">Day Two</div>
+        <div class="day-number-big">02</div>
+      </div>
+      <div class="day-pillar">See Clearly</div>
+    </div>
+    <h2 class="day-question">What do you <em>actually</em> owe?</h2>
+    <p class="day-context">Everything. Credit cards, car loan, mortgage, student loans, medical debt, money owed to family, buy-now-pay-later balances you may have forgotten about. Each with its interest rate and minimum payment. This is uncomfortable. It is also the single most powerful visibility move most adults never make.</p>
+    <p class="day-prompt">List every debt with its balance, interest rate, and minimum payment. Add it all up at the bottom. Note which debt costs you the most per month in interest, not in minimum payment.</p>
+    <div class="reflection-area">
+      <label class="reflection-label">Your reflection</label>
+      <textarea class="reflection" id="r2" placeholder="Write every debt. The specificity is the whole point."></textarea>
+      <span class="save-status" id="s2"></span>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 3 -->
+<section class="day">
+  <div class="day-inner">
+    <div class="day-header">
+      <div>
+        <div class="day-eyebrow">Day Three</div>
+        <div class="day-number-big">03</div>
+      </div>
+      <div class="day-pillar">See Clearly</div>
+    </div>
+    <h2 class="day-question">What do you <em>actually</em> have?</h2>
+    <p class="day-context">The other side of the ledger. Savings, checking, retirement accounts (401k, IRA, pension), investment accounts, home equity, any other assets of real value. Do not guess. Pull the actual numbers from your accounts today.</p>
+    <p class="day-prompt">List every account and balance. Add it all up. Then subtract total debt from Day 2. The result is your net worth. It is a number, not a judgment.</p>
+    <div class="reflection-area">
+      <label class="reflection-label">Your reflection</label>
+      <textarea class="reflection" id="r3" placeholder="Every asset, every balance. The honest number at the end is where you start from."></textarea>
+      <span class="save-status" id="s3"></span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PILLAR TWO INTRO -->
+<section class="pillar-intro full">
+  <div class="pillar-intro-inner">
+    <blockquote class="pillar-quote">
+      <p class="quote-text">A plan is not a budget. A plan is knowing what matters most to you and spending accordingly.</p>
+      <p class="quote-attr">Popcycle · Financial</p>
+    </blockquote>
+    <div class="pillar-eyebrow">Pillar Two · Days 4-6</div>
+    <h2>Plan <em>Wisely</em>.</h2>
+    <p>Three days of looking at the leaks, the priorities you have not named, and the real monthly floor your life rests on.</p>
+  </div>
+</section>
+
+<!-- DAY 4 -->
+<section class="day">
+  <div class="day-inner">
+    <div class="day-header">
+      <div>
+        <div class="day-eyebrow">Day Four</div>
+        <div class="day-number-big">04</div>
+      </div>
+      <div class="day-pillar">Plan Wisely</div>
+    </div>
+    <h2 class="day-question">What is <em>leaking</em> money that you did not notice?</h2>
+    <p class="day-context">Subscriptions you forgot about. Streaming services you no longer use. Gym memberships gathering digital dust. Bank fees you have accepted as inevitable. Service contracts on autorenew. These add up to real money over a year, often $500 to $2,000 that disappears invisibly from your life.</p>
+    <p class="day-prompt">List five things leaking money that you could cut without missing them. Cancel at least one before you close this page.</p>
+    <div class="reflection-area">
+      <label class="reflection-label">Your reflection</label>
+      <textarea class="reflection" id="r4" placeholder="Five leaks. One canceled today."></textarea>
+      <span class="save-status" id="s4"></span>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 5 -->
+<section class="day">
+  <div class="day-inner">
+    <div class="day-header">
+      <div>
+        <div class="day-eyebrow">Day Five</div>
+        <div class="day-number-big">05</div>
+      </div>
+      <div class="day-pillar">Plan Wisely</div>
+    </div>
+    <h2 class="day-question">If you had an extra <em>$500</em> this month, where would it go?</h2>
+    <p class="day-context">Not what you should do with it. What you would actually do with it. Your instinctive answer tells you what you have been quietly worried about. If the money goes to debt, you know. If it goes to savings, you know. If it goes to a specific repair or expense you have been putting off, you know.</p>
+    <p class="day-prompt">Where would the $500 go? What does that answer tell you about your real financial priority right now?</p>
+    <div class="reflection-area">
+      <label class="reflection-label">Your reflection</label>
+      <textarea class="reflection" id="r5" placeholder="Your instinct is the information. Trust it."></textarea>
+      <span class="save-status" id="s5"></span>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 6 -->
+<section class="day">
+  <div class="day-inner">
+    <div class="day-header">
+      <div>
+        <div class="day-eyebrow">Day Six</div>
+        <div class="day-number-big">06</div>
+      </div>
+      <div class="day-pillar">Plan Wisely</div>
+    </div>
+    <h2 class="day-question">What is your actual monthly <em>floor</em>?</h2>
+    <p class="day-context">The smallest amount you would need to cover housing, utilities, food, transportation, insurance, and minimum debt payments. Not what you want to spend. What you need to survive one month without catastrophe. This number is important because it is what your emergency fund has to multiply.</p>
+    <p class="day-prompt">Write your real floor number. How does it compare to what you currently spend? And how many months would your current savings cover it if income stopped tomorrow?</p>
+    <div class="reflection-area">
+      <label class="reflection-label">Your reflection</label>
+      <textarea class="reflection" id="r6" placeholder="The floor number. The gap. The runway."></textarea>
+      <span class="save-status" id="s6"></span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PILLAR THREE INTRO -->
+<section class="pillar-intro full">
+  <div class="pillar-intro-inner">
+    <blockquote class="pillar-quote">
+      <p class="quote-text">Your credit score is not a report card. It is a tool. Fifty points can mean tens of thousands of dollars on your next mortgage.</p>
+      <p class="quote-attr">Popcycle · Financial</p>
+    </blockquote>
+    <div class="pillar-eyebrow">Pillar Three · Days 7-9</div>
+    <h2>Build Your Credit <em>for Your Future</em>.</h2>
+    <p>Three days on the one number that quietly controls what every major financial decision will cost you over the next decade.</p>
+  </div>
+</section>
+
+<!-- DAY 7 -->
+<section class="day">
+  <div class="day-inner">
+    <div class="day-header">
+      <div>
+        <div class="day-eyebrow">Day Seven</div>
+        <div class="day-number-big">07</div>
+      </div>
+      <div class="day-pillar">Build Credit</div>
+    </div>
+    <h2 class="day-question">Do you know your <em>actual</em> credit score?</h2>
+    <p class="day-context">Not the educational score some apps show. The FICO score that lenders actually see when they pull your credit. If you do not know it, you cannot plan for it. Free sources are a fine starting point.</p>
+    <div class="day-resources">
+      <div class="day-resources-label">Free score sources</div>
+      <a href="https://www.experian.com/consumer-products/free-credit-score.html" target="_blank" rel="noopener">Experian Free Score (real FICO 8)</a>
+      <a href="https://www.creditkarma.com/" target="_blank" rel="noopener">Credit Karma (VantageScore from two bureaus)</a>
+      <a href="https://www.myfico.com/products/one-time-report" target="_blank" rel="noopener">myFICO (paid, for mortgage prep)</a>
+      <a href="https://www.chase.com/personal/credit-cards/education/credit-score/free-credit-score-chase" target="_blank" rel="noopener">Chase Credit Journey (free, no account needed)</a>
+    </div>
+    <p class="day-prompt">Check your score today. Write it down. Is it where you thought it was? If it is lower, do you know what is dragging it down?</p>
+    <div class="reflection-area">
+      <label class="reflection-label">Your reflection</label>
+      <textarea class="reflection" id="r7" placeholder="The number. Your reaction to it. What you suspect is dragging it down."></textarea>
+      <span class="save-status" id="s7"></span>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 8 -->
+<section class="day">
+  <div class="day-inner">
+    <div class="day-header">
+      <div>
+        <div class="day-eyebrow">Day Eight</div>
+        <div class="day-number-big">08</div>
+      </div>
+      <div class="day-pillar">Build Credit</div>
+    </div>
+    <h2 class="day-question">What is on your <em>credit report</em>?</h2>
+    <p class="day-context">You are legally entitled to one free credit report per year from each of the three bureaus (Equifax, Experian, TransUnion) at AnnualCreditReport.com. Pull one. Scan it. Note anything that looks wrong, any accounts you do not recognize, any late payments reported in error. Errors on credit reports are common and legally disputable for free.</p>
+    <div class="day-resources">
+      <div class="day-resources-label">Free resources</div>
+      <a href="https://www.annualcreditreport.com/" target="_blank" rel="noopener">AnnualCreditReport.com (federally authorized free report)</a>
+      <a href="https://www.consumerfinance.gov/ask-cfpb/how-do-i-get-and-read-my-credit-report-en-5/" target="_blank" rel="noopener">How to read your credit report (CFPB guide)</a>
+      <a href="https://www.consumerfinance.gov/consumer-tools/credit-reports-and-scores/consumer-credit-reports/" target="_blank" rel="noopener">Dispute errors on your report (CFPB)</a>
+    </div>
+    <p class="day-prompt">What accounts show on your report? Anything you do not recognize? Any items that look incorrect that you could dispute?</p>
+    <div class="reflection-area">
+      <label class="reflection-label">Your reflection</label>
+      <textarea class="reflection" id="r8" placeholder="What you found. What looks wrong. What you plan to dispute."></textarea>
+      <span class="save-status" id="s8"></span>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 9 -->
+<section class="day">
+  <div class="day-inner">
+    <div class="day-header">
+      <div>
+        <div class="day-eyebrow">Day Nine</div>
+        <div class="day-number-big">09</div>
+      </div>
+      <div class="day-pillar">Build Credit</div>
+    </div>
+    <h2 class="day-question">What are you preparing to borrow for in the next <em>2 to 3 years</em>?</h2>
+    <p class="day-context">Mortgage, refinance, auto loan, HELOC, business loan, student loan for a child. If any of these are on your horizon, your credit score is literally money. 50 points can mean tens of thousands of dollars in interest over the life of a loan.</p>
+    <p class="day-prompt">What is your next big borrowing need? What would 50 extra credit points save you on it, roughly, over the life of the loan?</p>
+    <div class="reflection-area">
+      <label class="reflection-label">Your reflection</label>
+      <textarea class="reflection" id="r9" placeholder="The borrow. The current rate reality. The potential savings."></textarea>
+      <span class="save-status" id="s9"></span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PILLAR FOUR INTRO -->
+<section class="pillar-intro full">
+  <div class="pillar-intro-inner">
+    <blockquote class="pillar-quote">
+      <p class="quote-text">The financial damage you carry quietly is heavier than the damage you have named. Naming is the first repair.</p>
+      <p class="quote-attr">Popcycle · Financial</p>
+    </blockquote>
+    <div class="pillar-eyebrow">Pillar Four · Days 10-11</div>
+    <h2>Make the <em>Necessary Repairs</em>.</h2>
+    <p>Two days on the old financial wounds you have been carrying and the one piece you can actually address this year.</p>
+  </div>
+</section>
+
+<!-- DAY 10 -->
+<section class="day">
+  <div class="day-inner">
+    <div class="day-header">
+      <div>
+        <div class="day-eyebrow">Day Ten</div>
+        <div class="day-number-big">10</div>
+      </div>
+      <div class="day-pillar">Repairs</div>
+    </div>
+    <h2 class="day-question">What financial damage are you still <em>carrying</em> from the past?</h2>
+    <p class="day-context">Old collections you have been avoiding. A bankruptcy. A divorce settlement that cleaned you out. Student loans that have grown. Medical debt that spiraled. A business failure. Tax trouble. (This is important: no one will ever see this. Your answers stay on your device, we cannot see them. Nobody can see them but you.) Name it specifically, no one will ever see this but you, and no one needs to see it more than ... you. The specificity is the beginning of release.</p>
+    <p class="day-prompt">Write it. In detail. What happened, when, and how much it still affects you today, both in dollars and in how it makes you feel about money.</p>
+    <div class="reflection-area">
+      <label class="reflection-label">Your reflection</label>
+      <textarea class="reflection" id="r10" placeholder="The damage, in your own words. This page is only yours."></textarea>
+      <span class="save-status" id="s10"></span>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 11 -->
+<section class="day">
+  <div class="day-inner">
+    <div class="day-header">
+      <div>
+        <div class="day-eyebrow">Day Eleven</div>
+        <div class="day-number-big">11</div>
+      </div>
+      <div class="day-pillar">Repairs</div>
+    </div>
+    <h2 class="day-question">What is <em>one</em> piece of that damage you could actually address this year?</h2>
+    <p class="day-context">Not all of it. One piece. The one that would make the biggest difference per hour of attention. Maybe disputing an old collection. Maybe setting up a payment plan on a tax debt. Maybe refinancing to a lower rate. Maybe filing paperwork for a loan forgiveness program you qualify for.</p>
+    <p class="day-prompt">Which piece? What is the first concrete step? When this year, specifically, will you take it?</p>
+    <div class="reflection-area">
+      <label class="reflection-label">Your reflection</label>
+      <textarea class="reflection" id="r11" placeholder="One repair. One first step. One date."></textarea>
+      <span class="save-status" id="s11"></span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PILLAR FIVE INTRO -->
+<section class="pillar-intro full">
+  <div class="pillar-intro-inner">
+    <blockquote class="pillar-quote">
+      <p class="quote-text">Vague retirement goals produce vague retirement plans. Specific vision produces specific action.</p>
+      <p class="quote-attr">Popcycle · Financial</p>
+    </blockquote>
+    <div class="pillar-eyebrow">Pillar Five · Days 12-14</div>
+    <h2>Your <em>Big Plan</em>.</h2>
+    <p>Three days to turn everything you have seen in the first 11 days into a vision, a move, and a 90-day commitment you can actually keep.</p>
+  </div>
+</section>
+
+<!-- DAY 12 -->
+<section class="day">
+  <div class="day-inner">
+    <div class="day-header">
+      <div>
+        <div class="day-eyebrow">Day Twelve</div>
+        <div class="day-number-big">12</div>
+      </div>
+      <div class="day-pillar">Big Plan</div>
+    </div>
+    <h2 class="day-question">What does "<em>comfortable</em>" at 70 look like to you?</h2>
+    <p class="day-context">Be specific. Where are you living? With whom? What does your week look like? What activities fill your days? What does it cost to maintain this life, per month, in today's dollars? Vague retirement goals produce vague retirement plans. Specific vision produces specific action.</p>
+    <p class="day-prompt">Describe your comfortable 70 in detail. Then estimate the monthly cost of that life, in today's dollars. The number does not need to be exact. It needs to exist.</p>
+    <div class="reflection-area">
+      <label class="reflection-label">Your reflection</label>
+      <textarea class="reflection" id="r12" placeholder="The specific life you want. The monthly number that supports it."></textarea>
+      <span class="save-status" id="s12"></span>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 13 -->
+<section class="day">
+  <div class="day-inner">
+    <div class="day-header">
+      <div>
+        <div class="day-eyebrow">Day Thirteen</div>
+        <div class="day-number-big">13</div>
+      </div>
+      <div class="day-pillar">Big Plan</div>
+    </div>
+    <h2 class="day-question">What is the <em>single most important</em> move for your next 90 days?</h2>
+    <p class="day-context">Based on the previous 12 days of reflection, you probably already know. The highest-leverage move for your specific situation, not a general one from a book. The one thing that, if you did it in the next three months, would move you forward more than any other single thing.</p>
+    <p class="day-prompt">Write the move. Then write the first step toward it. Then write the second step.</p>
+    <div class="reflection-area">
+      <label class="reflection-label">Your reflection</label>
+      <textarea class="reflection" id="r13" placeholder="The move. Step one. Step two."></textarea>
+      <span class="save-status" id="s13"></span>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 14 -->
+<section class="day">
+  <div class="day-inner">
+    <div class="day-header">
+      <div>
+        <div class="day-eyebrow">Day Fourteen</div>
+        <div class="day-number-big">14</div>
+      </div>
+      <div class="day-pillar">Big Plan</div>
+    </div>
+    <h2 class="day-question">Your <em>90-day plan</em>. Three moves. Three check-ins.</h2>
+    <p class="day-context">This is where the workbook ends and your life begins again. Three concrete moves you are committing to over the next 90 days. Three monthly dates to sit back down with yourself and see how it is going. Three measures of whether this made a difference.</p>
+    <p class="day-prompt">Write your three moves. Write the three monthly check-in dates. Write how you will know this made a difference. Then open your calendar and mark the three dates before you close this page.</p>
+    <div class="reflection-area">
+      <label class="reflection-label">Your plan</label>
+      <textarea class="reflection" id="r14" placeholder="Move 1 / Move 2 / Move 3. Check-in dates. Measures of success."></textarea>
+      <span class="save-status" id="s14"></span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- COMPLETION -->
+<section class="completion full">
+  <div class="completion-inner">
+    <div class="completion-eyebrow">Day Fifteen · The Rest of Your Life</div>
+    <h2>The reset is <em>complete</em>.</h2>
+    <p>You have done something most adults never do. You looked at your money honestly, named what you had been avoiding, and committed to three specific moves over the next 90 days.</p>
+    <p>Download your reflections now so you have a copy outside this browser. Print them if that helps you keep them in view. Share the plan with your partner, your accountant, or the one trusted person who will ask you how it is going at the first check-in.</p>
+    <p><em>Your future is a sequence of better decisions. The next one is yours to make.</em></p>
+    <div class="completion-buttons">
+      <button class="btn-primary" onclick="downloadReflections()">Download My Plan</button>
+      <button class="btn-secondary" onclick="window.print()">Save as PDF</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="ebook-footer">
+  <div class="footer-inner">
+    <div class="footer-eyebrow">A Popcycle Guide to Yourself</div>
+    <p class="footer-close-text">Keep going. The Popcycle library has more guidance for every step of your financial future.</p>
+    <div class="footer-buttons">
+      <button class="btn-primary" onclick="downloadReflections()">Download My Plan</button>
+      <a class="btn-secondary" href="https://www.popcycle.online">Visit Popcycle</a>
+      <a class="btn-secondary" href="https://www.popcycle.online/financial-credit">More in Financial &amp; Credit</a>
+    </div>
+    <p class="footer-credit">popcycle.online &nbsp;·&nbsp; Sweeten your life</p>
+  </div>
+</footer>
+
+<button class="action-btn" onclick="downloadReflections()">Download My Plan</button>
+
+<script>
+  // Auto-save per textarea to localStorage
+  const prompts = [
+    { id: 'r1', label: 'DAY 1 — Where did your money actually go?' },
+    { id: 'r2', label: 'DAY 2 — What do you actually owe?' },
+    { id: 'r3', label: 'DAY 3 — What do you actually have?' },
+    { id: 'r4', label: 'DAY 4 — What is leaking money?' },
+    { id: 'r5', label: 'DAY 5 — Extra $500 would go to...' },
+    { id: 'r6', label: 'DAY 6 — Your monthly floor' },
+    { id: 'r7', label: 'DAY 7 — Your actual credit score' },
+    { id: 'r8', label: 'DAY 8 — What is on your credit report' },
+    { id: 'r9', label: 'DAY 9 — Your next big borrow' },
+    { id: 'r10', label: 'DAY 10 — Financial damage you carry' },
+    { id: 'r11', label: 'DAY 11 — The one repair this year' },
+    { id: 'r12', label: 'DAY 12 — Your comfortable 70' },
+    { id: 'r13', label: 'DAY 13 — Your single most important 90-day move' },
+    { id: 'r14', label: 'DAY 14 — Your 90-day plan' }
+  ];
+
+  const KEY_PREFIX = 'pc-fin-reset-';
+
+  prompts.forEach(p => {
+    const el = document.getElementById(p.id);
+    const status = document.getElementById('s' + p.id.slice(1));
+    if (!el) return;
+    // Restore saved value
+    try {
+      const saved = localStorage.getItem(KEY_PREFIX + p.id);
+      if (saved) el.value = saved;
+    } catch(e) {}
+
+    let saveTimer;
+    el.addEventListener('input', () => {
+      clearTimeout(saveTimer);
+      if (status) {
+        status.textContent = 'Saving...';
+        status.classList.remove('saved');
+      }
+      saveTimer = setTimeout(() => {
+        try {
+          localStorage.setItem(KEY_PREFIX + p.id, el.value);
+          if (status) {
+            status.textContent = 'Saved';
+            status.classList.add('saved');
+            setTimeout(() => {
+              status.textContent = '';
+              status.classList.remove('saved');
+            }, 2000);
+          }
+        } catch(e) {
+          if (status) status.textContent = 'Save unavailable';
+        }
+      }, 500);
+    });
+  });
+
+  // Download all reflections as text file
+  function downloadReflections() {
+    const lines = [];
+    lines.push('THE 14 DAY FINANCIAL RESET');
+    lines.push('My Personal Plan · Popcycle');
+    lines.push('Downloaded ' + new Date().toLocaleDateString());
+    lines.push('');
+    lines.push('==============================================');
+    lines.push('');
+    prompts.forEach(p => {
+      const el = document.getElementById(p.id);
+      lines.push(p.label);
+      lines.push('----------------------------------------------');
+      lines.push(el && el.value ? el.value : '(no response yet)');
+      lines.push('');
+      lines.push('');
+    });
+    const blob = new Blob([lines.join('\n')], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'my-14-day-financial-reset.txt';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+
+  // Scroll progress bar
+  const bar = document.getElementById('progressBar');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    bar.style.width = pct + '%';
+  });
+</script>
+
+</body>
+</html>
