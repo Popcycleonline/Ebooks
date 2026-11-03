@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>14 Days to Launch Your Business | Popcycle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Dancing+Script:wght@600;700&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sage: #5C745F;
+  --sage-deep: #3F5243;
+  --gold: #BB8D17;
+  --moss: #90A747;
+  --platinum: #F7F7F7;
+  --ink: #2A2F2A;
+  --soft: #E8E6DC;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--platinum);
+  color: var(--ink);
+  line-height: 1.65;
+  font-weight: 400;
+}
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* COVER */
+.cover {
+  min-height: 100vh;
+  background: linear-gradient(140deg, var(--sage) 0%, var(--sage-deep) 100%);
+  color: var(--platinum);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 40px;
+  position: relative;
+}
+.cover-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--moss);
+  margin-bottom: 48px;
+  font-weight: 500;
+}
+.cover-accent {
+  font-family: 'Dancing Script', cursive;
+  font-size: 48px;
+  color: var(--gold);
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.cover-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 68px;
+  line-height: 1.1;
+  font-weight: 500;
+  margin-bottom: 32px;
+  letter-spacing: -1px;
+}
+.cover-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-style: italic;
+  color: rgba(247, 247, 247, 0.75);
+  max-width: 520px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+.cover-byline {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.cover-byline-mark {
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  color: var(--platinum);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  text-transform: lowercase;
+}
+.cover-byline-tagline {
+  font-family: 'Dancing Script', cursive;
+  font-size: 22px;
+  color: var(--moss);
+  font-weight: 700;
+  margin-top: -8px;
+  line-height: 1.4;
+}
+
+/* PREFACE */
+.preface {
+  padding: 100px 0 80px;
+  background: var(--platinum);
+}
+.preface-eyebrow {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.preface-lede {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  line-height: 1.35;
+  color: var(--sage-deep);
+  font-weight: 500;
+  margin-bottom: 40px;
+  font-style: italic;
+}
+.preface p {
+  font-size: 17px;
+  color: var(--ink);
+  margin-bottom: 20px;
+  line-height: 1.75;
+}
+
+/* PILLAR INTRO */
+.pillar-intro {
+  padding: 180px 0 160px;
+  background: var(--sage);
+  color: var(--platinum);
+  margin-top: 60px;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.pillar-eyebrow {
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 44px;
+  font-weight: 500;
+}
+.pillar-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 58px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+.pillar-days {
+  font-family: 'Dancing Script', cursive;
+  font-size: 22px;
+  color: var(--moss);
+  margin-bottom: 48px;
+  font-weight: 700;
+}
+.pillar-body {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  line-height: 1.65;
+  color: rgba(247, 247, 247, 0.82);
+  font-style: italic;
+  font-weight: 400;
+  max-width: 540px;
+}
+
+/* DAY PAGE */
+.day {
+  padding: 100px 0 60px;
+  background: var(--platinum);
+}
+.day-eyebrow {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+.day-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px;
+  line-height: 1.15;
+  color: var(--sage-deep);
+  margin-bottom: 24px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+.day-title em {
+  color: var(--moss);
+  font-style: italic;
+  font-weight: 500;
+}
+.day-question {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-style: italic;
+  color: var(--sage);
+  line-height: 1.5;
+  margin-bottom: 24px;
+  padding-left: 20px;
+  border-left: 3px solid var(--gold);
+}
+.day-body {
+  font-size: 17px;
+  color: var(--ink);
+  line-height: 1.75;
+  margin-bottom: 32px;
+}
+.day-body p { margin-bottom: 16px; }
+.day-prompt {
+  background: var(--soft);
+  padding: 24px 28px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--sage-deep);
+  font-style: italic;
+}
+
+/* TEXTAREA */
+.day-textarea-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.day-textarea {
+  width: 100%;
+  min-height: 180px;
+  padding: 20px;
+  border: 1px solid var(--sage);
+  border-radius: 4px;
+  background: #FBFBF7;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink);
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s;
+  margin-bottom: 32px;
+}
+.day-textarea:focus { border-color: var(--gold); }
+.day-textarea::placeholder {
+  color: rgba(42, 47, 42, 0.38);
+  font-style: italic;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+}
+.day-textarea::-webkit-input-placeholder {
+  color: rgba(42, 47, 42, 0.38);
+  font-style: italic;
+  font-size: 14px;
+}
+.day-textarea::-moz-placeholder {
+  color: rgba(42, 47, 42, 0.38);
+  font-style: italic;
+  font-size: 14px;
+  opacity: 1;
+}
+
+/* TIPS / CHECKLIST */
+.day-tips {
+  background: rgba(187, 141, 23, 0.07);
+  border-left: 3px solid var(--gold);
+  padding: 22px 28px;
+  border-radius: 2px;
+  margin: 0 0 28px;
+}
+.day-tips-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+.day-tips-intro {
+  font-size: 15px;
+  color: var(--ink);
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.day-tips ul {
+  list-style: none;
+  padding: 0;
+}
+.day-tips li {
+  padding: 6px 0 6px 22px;
+  font-size: 15px;
+  color: var(--ink);
+  line-height: 1.6;
+  position: relative;
+}
+.day-tips li:before {
+  content: "→";
+  color: var(--gold);
+  font-weight: 500;
+  position: absolute;
+  left: 0;
+  font-size: 14px;
+  top: 7px;
+}
+.day-tips li strong {
+  color: var(--sage-deep);
+  font-weight: 600;
+}
+
+/* RESOURCES */
+.day-resources {
+  background: rgba(92, 116, 95, 0.08);
+  border-left: 3px solid var(--moss);
+  padding: 20px 24px;
+  border-radius: 2px;
+  margin-top: 16px;
+}
+.day-resources-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.day-resources a {
+  display: block;
+  color: var(--sage-deep);
+  text-decoration: none;
+  padding: 6px 0;
+  font-size: 15px;
+  border-bottom: 1px solid rgba(92, 116, 95, 0.15);
+  transition: color 0.2s;
+}
+.day-resources a:last-child { border-bottom: none; }
+.day-resources a:hover { color: var(--gold); }
+
+/* COMPLETION DAY 15 */
+.completion {
+  min-height: 90vh;
+  background: linear-gradient(140deg, var(--sage) 0%, var(--sage-deep) 100%);
+  color: var(--platinum);
+  padding: 180px 40px 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.completion-eyebrow {
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 44px;
+  font-weight: 500;
+}
+.completion-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 58px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+.completion-title em {
+  color: var(--moss);
+  font-style: italic;
+}
+.completion-subtitle {
+  font-family: 'Dancing Script', cursive;
+  font-size: 22px;
+  color: var(--gold);
+  margin-bottom: 48px;
+  font-weight: 700;
+}
+.completion-body {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  line-height: 1.65;
+  color: rgba(247, 247, 247, 0.82);
+  font-style: italic;
+  font-weight: 400;
+  max-width: 540px;
+  margin: 0 auto;
+}
+.completion-body p { margin-bottom: 20px; }
+.completion-signoff {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-style: italic;
+  color: var(--moss);
+  margin-top: 48px;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* GUIDE CLOSE */
+.guide-close {
+  background: var(--platinum);
+  padding: 100px 0 48px;
+  text-align: center;
+}
+.guide-close-eyebrow {
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+.guide-close-message {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-style: italic;
+  color: var(--sage-deep);
+  max-width: 480px;
+  margin: 0 auto 48px;
+  line-height: 1.5;
+}
+.guide-close-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.btn-primary, .btn-secondary {
+  display: inline-block;
+  padding: 14px 32px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 2px;
+  cursor: pointer;
+  border: 1px solid var(--sage);
+  transition: all 0.2s;
+  background: transparent;
+  color: var(--sage-deep);
+}
+.btn-primary {
+  background: var(--gold);
+  color: var(--platinum);
+  border-color: var(--gold);
+}
+.btn-primary:hover { background: var(--sage); border-color: var(--sage); }
+.btn-secondary:hover { background: var(--sage); color: var(--platinum); }
+
+/* SIGN OFF */
+.signoff {
+  background: var(--platinum);
+  padding: 24px 20px 80px;
+  text-align: center;
+}
+.signoff-mark {
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  color: var(--sage-deep);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  text-transform: lowercase;
+}
+.signoff-tagline {
+  font-family: 'Dancing Script', cursive;
+  font-size: 22px;
+  color: var(--gold);
+  font-weight: 700;
+  margin-top: -8px;
+  line-height: 1.4;
+}
+
+/* PRINT */
+@media print {
+  .guide-close-buttons, .signoff { page-break-inside: avoid; }
+  .cover, .pillar-intro, .completion {
+    background: var(--sage) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .day { page-break-after: always; }
+}
+
+@media (max-width: 640px) {
+  .cover-title { font-size: 44px; }
+  .cover-accent { font-size: 36px; }
+  .preface-lede { font-size: 24px; }
+  .pillar-title { font-size: 40px; }
+  .day-title { font-size: 36px; }
+  .completion-title { font-size: 44px; }
+  .guide-close-buttons { flex-direction: column; align-items: stretch; padding: 0 32px; }
+  .btn-primary, .btn-secondary { text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<section class="cover">
+  <div class="cover-eyebrow">A Popcycle Guide to Your New Business</div>
+  <div class="cover-accent">14 Days to</div>
+  <h1 class="cover-title">Launch Your Business</h1>
+  <p class="cover-subtitle">A workbook for the person who has been thinking about this long enough. Fourteen days from idea to a business with its first dollar in the account.</p>
+  <div class="cover-byline">
+    <div class="cover-byline-mark">popcycle</div>
+    <div class="cover-byline-tagline">sweeten your life</div>
+  </div>
+</section>
+
+<!-- PREFACE -->
+<section class="preface">
+  <div class="container">
+    <div class="preface-eyebrow">Before you begin</div>
+    <p class="preface-lede">A business starts the day you stop planning it and start building it.</p>
+    <p>Not a complete business. Just enough of one to be real. A legal shell. A product or service with a price. A first customer who has handed you money. From that point forward, you are not someone with an idea. You are an owner, and the work changes shape.</p>
+    <p>The next 14 days are built to get you from here to there. Five pillars, three or so days each, one small decision at a time. The pace is deliberate. Nothing on any day asks for more than 20 or 30 minutes of real thought.</p>
+    <p>Everything you write stays on your device, saved locally in your browser. Popcycle does not see it. No account to make, no email to collect. On Day 14, you can download your entire plan as a single file, print it, and share it with whoever you want to be accountable to. Or keep it to yourself.</p>
+    <p>If a day asks a question you cannot answer honestly, write that down. The gap is more useful than a guess.</p>
+  </div>
+</section>
+
+<!-- PILLAR 1 INTRO -->
+<section class="pillar-intro">
+  <div class="container">
+    <div class="pillar-eyebrow">Pillar One</div>
+    <h2 class="pillar-title">Validate the Idea</h2>
+    <div class="pillar-days">Days 1 to 3</div>
+    <p class="pillar-body">Before you form the LLC, before you buy the domain, before you tell a single person, there is one thing worth checking: whether the idea actually solves a problem a real person will pay to remove. The next three days are a quiet, honest audit of what you have been carrying around in your head.</p>
+  </div>
+</section>
+
+<!-- DAY 1 -->
+<section class="day">
+  <div class="container">
+    <div class="day-eyebrow">Day One</div>
+    <h3 class="day-title">What problem are you <em>actually</em> solving?</h3>
+    <div class="day-question">What specific pain are you promising to remove, reduce, or replace?</div>
+    <div class="day-body">
+      <p>Every business that works is in the business of making a specific pain smaller. The pain can be practical (my laundry is piling up), emotional (I feel out of control with money), or aspirational (I want to look polished at the pitch meeting). It needs to be real, specific, and felt by someone other than you.</p>
+      <p>A problem and a complaint are not the same thing. A complaint is noise. A problem is something people are already spending money, time, or energy trying to solve, however badly. If nobody has ever tried to solve it, it is probably not a problem worth building a business around. It may be a theory you have about what people should want, which is a very different and much lonelier thing.</p>
+      <p>Try to write the problem in one sentence. If it takes three paragraphs, you do not have the sentence yet. Keep going until the sentence is simple enough that your least business-savvy friend would understand it without asking a follow-up question. Specificity beats scope at this stage. "Help busy parents organize their mornings" is better than "simplify family life."</p>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">Signs you've found a real problem</div>
+      <ul>
+        <li>Someone has described this pain to you in the last 90 days <strong>without you prompting them</strong></li>
+        <li>You can describe how they currently try to solve it, even if the current solution is a workaround or a complaint</li>
+        <li>They would rather have the problem solved than keep the money the solution would cost</li>
+        <li>You can name three other specific people who have the same problem, not just "people like them"</li>
+      </ul>
+    </div>
+    <div class="day-prompt">In one sentence, write the specific pain your business removes, reduces, or replaces. Then name one real person you know who has that pain today.</div>
+    <div class="day-textarea-label">Your response</div>
+    <textarea class="day-textarea" data-key="day1" placeholder="One sentence, then one name. Write what comes out, not what sounds right."></textarea>
+    <div class="day-resources">
+      <div class="day-resources-label">Free resources</div>
+      <a href="https://www.momtestbook.com/" target="_blank" rel="noopener">The Mom Test (book summary and principles)</a>
+      <a href="https://www.strategyzer.com/library/the-value-proposition-canvas" target="_blank" rel="noopener">Value Proposition Canvas (Strategyzer)</a>
+      <a href="https://www.ideou.com/blogs/inspiration/how-to-define-a-problem-worth-solving" target="_blank" rel="noopener">How to Define a Problem Worth Solving (IDEO)</a>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 2 -->
+<section class="day">
+  <div class="container">
+    <div class="day-eyebrow">Day Two</div>
+    <h3 class="day-title">Who <em>pays</em> for the solution?</h3>
+    <div class="day-question">Not who it helps. Who writes the check?</div>
+    <div class="day-body">
+      <p>These two groups are often different. A parenting coach helps the child but gets paid by the parent. A B2B software helps the end user but gets paid by the company. The person paying for the solution has to be able and willing to spend money on this specific problem, right now, from their own budget or their business's budget.</p>
+      <p>"Everyone could use this" is a death sentence disguised as an opportunity. A business with no specific buyer in mind spends year one trying to find one, which is a tax most first-time owners cannot afford. The faster you can picture a specific person, the faster the rest of the plan becomes concrete.</p>
+      <p>Picture three specific people. First names, where they live, what they do, how old they are, what their day looks like. If you cannot picture them yet, the problem is upstream. You may need another day in Day 1's thinking, or you may need to go have a conversation with someone who might be in that group. Specificity shortens the path from idea to income more than anything else in this workbook.</p>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">The three ability-to-pay tests</div>
+      <p class="day-tips-intro">Apply all three to your first customer picture. If any one fails, the picture is probably not your buyer.</p>
+      <ul>
+        <li><strong>Past spending:</strong> Have they paid for an adjacent solution to this problem in the last 12 months? Previous spending is the strongest predictor of future spending.</li>
+        <li><strong>Decision authority:</strong> Can they say yes without needing to ask someone else? If it's a spouse decision, a boss decision, or a committee decision, you are selling to the wrong person.</li>
+        <li><strong>Cost of the problem:</strong> Is the problem costing them more (in money, time, or sanity) than your solution? If not, you are selling a nice-to-have, which is a slower, harder sale.</li>
+      </ul>
+    </div>
+    <div class="day-prompt">Name three specific people (first names, situations) you can picture handing you money for this. If you cannot name three, name one. If you cannot name one, note what information you need.</div>
+    <div class="day-textarea-label">Your response</div>
+    <textarea class="day-textarea" data-key="day2" placeholder="Three specific people. First names and situations, not demographics."></textarea>
+    <div class="day-resources">
+      <div class="day-resources-label">Free resources</div>
+      <a href="https://www.strategyzer.com/library/" target="_blank" rel="noopener">Customer segmentation basics (Strategyzer library)</a>
+      <a href="https://jtbd.info/jobs-to-be-done-framework-fcf1cad6487d" target="_blank" rel="noopener">Jobs to Be Done framework (intro)</a>
+      <a href="https://sidehustleschool.com/" target="_blank" rel="noopener">Side Hustle School (daily case studies)</a>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 3 -->
+<section class="day">
+  <div class="container">
+    <div class="day-eyebrow">Day Three</div>
+    <h3 class="day-title">What is the <em>smallest</em> version you could launch?</h3>
+    <div class="day-question">If you had to open for business this Saturday, what is the minimum you would need?</div>
+    <div class="day-body">
+      <p>Not what you would want. Not what would be ideal. Just the minimum. What single service, product, or deliverable could you take money for in five days, assuming you ignored every nice-to-have? The honest answer is almost always a smaller thing than you first imagined.</p>
+      <p>Most first businesses do not launch because the owner is waiting for everything to be ready. Nothing is ever ready. The job of the next 11 days is to build the smallest version that can take money, then let the business tell you what to add next. The customer, not the market research or the business plan, becomes the compass that steers everything that follows.</p>
+      <p>The point of a minimum version is not to build less. The point is to learn faster. Every assumption you shipped untested is a small debt. Every assumption the real customer tested for you is a shortcut to the next decision. Keep the version small enough that you could rebuild it entirely in a week if the first ten customers tell you something you did not expect. That optionality is the real reason for starting small.</p>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">What to cut from the first version</div>
+      <p class="day-tips-intro">If you catch yourself adding any of the following to the minimum version, strike it. These belong to month six, not day one.</p>
+      <ul>
+        <li>Any feature a competitor has that you were adding only because they have it</li>
+        <li>Any step beyond "customer gives you the thing they want, you deliver it, they pay"</li>
+        <li>Any automation, integration, or dashboard. The first ten customers can be handled manually</li>
+        <li>Any marketing channel beyond direct outreach to your existing contacts</li>
+        <li>A logo, a brand, or a full website if a one-page site with a phone number would get the job done</li>
+      </ul>
+    </div>
+    <div class="day-prompt">Describe the smallest version of your business that could legitimately take a payment from a customer by this Saturday. One service, one product, one deliverable. Be strict.</div>
+    <div class="day-textarea-label">Your response</div>
+    <textarea class="day-textarea" data-key="day3" placeholder="Minimum, not ideal. The honest answer is usually smaller than you think."></textarea>
+    <div class="day-resources">
+      <div class="day-resources-label">Free resources</div>
+      <a href="https://100startup.com/" target="_blank" rel="noopener">The $100 Startup (Chris Guillebeau)</a>
+      <a href="https://theleanstartup.com/principles" target="_blank" rel="noopener">The Lean Startup principles</a>
+      <a href="https://www.ycombinator.com/library/4A-a-minimum-viable-product-that-s-not" target="_blank" rel="noopener">A Minimum Viable Product (Y Combinator)</a>
+    </div>
+  </div>
+</section>
+
+<!-- PILLAR 2 INTRO -->
+<section class="pillar-intro">
+  <div class="container">
+    <div class="pillar-eyebrow">Pillar Two</div>
+    <h2 class="pillar-title">Set the Foundation</h2>
+    <div class="pillar-days">Days 4 to 6</div>
+    <p class="pillar-body">Every business is built on a few boring things nobody wants to think about: a legal structure, a bank account, and a way to track money moving in and out. The next three days get those boxes checked. The sooner you handle them, the sooner they stop running in your head and the sooner you can focus on building something people want.</p>
+  </div>
+</section>
+
+<!-- DAY 4 -->
+<section class="day">
+  <div class="container">
+    <div class="day-eyebrow">Day Four</div>
+    <h3 class="day-title">Business <em>structure</em> decision</h3>
+    <div class="day-question">LLC, Sole Proprietor, or wait a few months?</div>
+    <div class="day-body">
+      <p>You do not legally need an LLC to start a business. For many first-year side hustles, operating as a Sole Proprietor using your own Social Security Number is perfectly fine, perfectly legal, and costs nothing. The IRS treats the income as yours on Schedule C. A DBA, which is a "doing business as" filing with your county, lets you operate under a business name without forming an LLC at all.</p>
+      <p>An LLC becomes useful when you want personal liability protection (property, inventory, higher-risk services), when you want to open a dedicated business bank account more easily, or when the business will have revenue significant enough to matter. The cost is one state filing fee ($50 to $500 depending on state) plus annual compliance, often a $50 to $800 annual report.</p>
+      <p>No single right answer. There is only your situation and the right choice for it. The structure can also change as the business grows. Many legitimate businesses start as Sole Props and convert to LLCs in year two once there is cashflow worth protecting. Rather than overthink the perfect structure, pick the one that fits now and plan to revisit it at the first annual review.</p>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">Quick decision guide</div>
+      <ul>
+        <li><strong>Stay a Sole Proprietor if:</strong> You are testing an idea, revenue will be under $20K in year one, the service has low liability risk (writing, consulting, coaching), and you have no employees</li>
+        <li><strong>Form an LLC if:</strong> You will deliver physical products, work in client homes or on client property, carry inventory, use contractors, or expect revenue above $30K in year one</li>
+        <li><strong>Wait and watch if:</strong> You have not yet made a dollar, you are not sure the idea has legs, and the business is a side project running under $500 a month</li>
+      </ul>
+    </div>
+    <div class="day-prompt">Which structure fits where you are right now? LLC, Sole Proprietor, or wait? Write the choice and the honest reason behind it. If LLC, note the state you plan to file in.</div>
+    <div class="day-textarea-label">Your response</div>
+    <textarea class="day-textarea" data-key="day4" placeholder="The honest reason, not the one that sounds smart."></textarea>
+    <div class="day-resources">
+      <div class="day-resources-label">Free resources</div>
+      <a href="https://www.sba.gov/business-guide/launch-your-business/choose-business-structure" target="_blank" rel="noopener">Choose a Business Structure (SBA.gov)</a>
+      <a href="https://www.irs.gov/businesses/small-businesses-self-employed/business-structures" target="_blank" rel="noopener">Business Structures (IRS)</a>
+      <a href="https://www.northwestregisteredagent.com/" target="_blank" rel="noopener">Northwest Registered Agent (quality LLC filing, no upsells)</a>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 5 -->
+<section class="day">
+  <div class="container">
+    <div class="day-eyebrow">Day Five</div>
+    <h3 class="day-title">Bank account and <em>EIN</em></h3>
+    <div class="day-question">Can you separate business money from personal money this week?</div>
+    <div class="day-body">
+      <p>Mixing personal and business money is the single most common cause of first-year tax headaches, lost deductions, and audit anxiety. Separating them takes two moves: an EIN (Employer Identification Number, free from the IRS, 10 minutes online) and a dedicated business bank account.</p>
+      <p>You can get an EIN even as a Sole Proprietor. It is a free federal ID number that lets you open a business account under the business name instead of your Social Security Number. Most banks accept EINs with no business license required. The IRS website handles the application without a login, without an email signup, and without any marketing.</p>
+      <p>For the bank account, you have two legitimate paths. Traditional banks (Chase, Bank of America, Wells Fargo, local credit unions) offer in-person service and physical check deposits but may require minimum balances. Fintech banks (Mercury, Novo, Bluevine, Relay) offer better digital interfaces, no minimum balance, and faster setup, but no cash deposit option. For most first-year online businesses, fintech wins. For businesses handling physical cash, traditional banking is still the right fit. The best choice depends on how money actually moves into your business.</p>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">EIN application in 10 minutes</div>
+      <ul>
+        <li>Go to IRS.gov and search "Apply for EIN online." The service is open Monday to Friday, 7 AM to 10 PM Eastern</li>
+        <li>Select your structure (LLC, Sole Prop, etc.) and your state</li>
+        <li>Enter the "Responsible Party" details. This is you. Your Social Security Number is required</li>
+        <li>Enter the business name, address (home address is fine), and start date</li>
+        <li>Describe what the business does in one line (keep it general)</li>
+        <li>Submit. Your EIN appears immediately on screen. Save the PDF. Print one copy</li>
+      </ul>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">What to bring to the bank</div>
+      <ul>
+        <li>Driver's license or passport</li>
+        <li>The EIN confirmation letter you just downloaded</li>
+        <li>If LLC: your Articles of Organization from the state</li>
+        <li>If Sole Prop: a DBA ("doing business as") certificate from your county, if your state requires one</li>
+        <li>Initial deposit (usually $25-$100 depending on the bank)</li>
+      </ul>
+    </div>
+    <div class="day-prompt">What is your plan to get an EIN and open a dedicated bank account this week? Which bank, which day, what you need to bring.</div>
+    <div class="day-textarea-label">Your response</div>
+    <textarea class="day-textarea" data-key="day5" placeholder="Which bank, which day, what you'll bring with you."></textarea>
+    <div class="day-resources">
+      <div class="day-resources-label">Free resources</div>
+      <a href="https://www.irs.gov/businesses/small-businesses-self-employed/apply-for-an-employer-identification-number-ein-online" target="_blank" rel="noopener">Apply for an EIN online (IRS, free, 10 minutes)</a>
+      <a href="https://www.waveapps.com/" target="_blank" rel="noopener">Wave (free business accounting and invoicing)</a>
+      <a href="https://gusto.com/" target="_blank" rel="noopener">Gusto (payroll for when you add employees or contractors)</a>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 6 -->
+<section class="day">
+  <div class="container">
+    <div class="day-eyebrow">Day Six</div>
+    <h3 class="day-title">Legal and <em>compliance</em> basics</h3>
+    <div class="day-question">What legal thing scares you most about starting?</div>
+    <div class="day-body">
+      <p>Common first-year legal needs: business license (city or county), general liability insurance (if you deal with customers or property), basic contracts (service agreement, NDA, independent contractor agreement), and sales tax registration (if you sell physical products or taxable services).</p>
+      <p>Not all of these apply to every business. A freelance writer needs almost none. A caterer needs most of them. Make an honest list of what applies to your specific case. Address one this week.</p>
+      <p>A note on liability fear. Many first-year owners spend significant mental energy worrying about being sued. Statistically, small businesses are sued far less often than owners expect. The real risk is not a dramatic lawsuit but a quiet compliance miss: an unregistered DBA, an unpaid state fee, a sales tax that was supposed to be collected and was not. Fix the small compliance things on the list before you build out legal defenses against unlikely dramatic events. Insurance is cheap at $400 to $700 a year for most service businesses. Buy it, carry it, and spend the rest of your attention on building the thing people are paying you for.</p>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">What applies to which business</div>
+      <ul>
+        <li><strong>Service business, remote (writing, coaching, consulting):</strong> Nothing beyond EIN and business account. Maybe general liability insurance if you consult on decisions that cost clients real money</li>
+        <li><strong>Service business, in-person (handyman, cleaner, trainer):</strong> General liability insurance (around $400 to $700 a year), city or county business license, auto insurance update if using a personal vehicle for business</li>
+        <li><strong>Physical product business:</strong> Sales tax registration in your home state, resale certificate if buying wholesale, product liability insurance, possibly a seller's permit</li>
+        <li><strong>Food, child care, health, finance:</strong> Industry-specific licensing. Check your state's Department of Health, Education, or Insurance before you spend another dollar</li>
+      </ul>
+    </div>
+    <div class="day-prompt">List the three to five legal and compliance items that actually apply to your business. Pick one to finish this week. Note which it is and when.</div>
+    <div class="day-textarea-label">Your response</div>
+    <textarea class="day-textarea" data-key="day6" placeholder="What actually applies to your business. Pick one, commit to a day."></textarea>
+    <div class="day-resources">
+      <div class="day-resources-label">Free resources</div>
+      <a href="https://www.sba.gov/business-guide/launch-your-business/apply-licenses-permits" target="_blank" rel="noopener">Apply for Licenses and Permits (SBA.gov)</a>
+      <a href="https://www.score.org/" target="_blank" rel="noopener">SCORE (free business mentors and workshops)</a>
+      <a href="https://www.rocketlawyer.com/" target="_blank" rel="noopener">Rocket Lawyer (contracts and ongoing legal access)</a>
+    </div>
+  </div>
+</section>
+
+<!-- PILLAR 3 INTRO -->
+<section class="pillar-intro">
+  <div class="container">
+    <div class="pillar-eyebrow">Pillar Three</div>
+    <h2 class="pillar-title">Build the Front Door</h2>
+    <div class="pillar-days">Days 7 to 9</div>
+    <p class="pillar-body">Customers find you through something: a word-of-mouth mention, a Google search, an Instagram post, a referral from a friend. That something has to lead somewhere credible. The next three days build that somewhere, even if it starts as one page with a name, a promise, and a way to contact you.</p>
+  </div>
+</section>
+
+<!-- DAY 7 -->
+<section class="day">
+  <div class="container">
+    <div class="day-eyebrow">Day Seven</div>
+    <h3 class="day-title">Name the <em>business</em></h3>
+    <div class="day-question">What do you want it called?</div>
+    <div class="day-body">
+      <p>A good first-year business name is easy to say, easy to spell, available as a domain, and does not conflict with an existing trademark. It does not have to be perfect. Many successful businesses started with placeholder names and evolved. Do not let naming paralysis stop you from launching.</p>
+      <p>Three naming philosophies work. Descriptive names say what the business does (Bay Area Legal Services). Invented names are unique coined words (Zappos, Spotify). Metaphorical names use an image or an object (Blue Apron, Patagonia). None is better than another. The right pick depends on your industry, your voice, and what feels right when you say it out loud for the thousandth time.</p>
+      <p>Try three candidates. Say each out loud. Picture it on a receipt, in an email signature, written at the top of a contract. Check the domain. A quick USPTO trademark search catches the obvious conflicts. If the perfect name feels locked up, remember that most businesses in year five are not the name their founder was obsessed with in year one. The point of the first name is to get you into business, not to be the final answer. Pick the one you can live with for 24 months and move on.</p>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">Name quality checklist</div>
+      <ul>
+        <li><strong>Easy to say out loud</strong> on the phone, no clarifying needed</li>
+        <li><strong>Spells the way it sounds.</strong> If people need to ask how to spell it, you lose them</li>
+        <li><strong>.com available</strong> or a reasonable .co alternative. Social handles ideally match</li>
+        <li><strong>Not too narrow</strong> for where the business might go in year three</li>
+        <li><strong>No federal trademark conflict</strong> in your product category (USPTO quick search)</li>
+        <li><strong>Google test:</strong> search the name in quotes. First page of results should not be another business in your category or anything unfortunate</li>
+      </ul>
+    </div>
+    <div class="day-prompt">Write three business name candidates. For your top choice, note whether the .com (or .co) is available and whether a quick trademark search turns up anything concerning.</div>
+    <div class="day-textarea-label">Your response</div>
+    <textarea class="day-textarea" data-key="day7" placeholder="Three candidates. Say each out loud before you write it down."></textarea>
+    <div class="day-resources">
+      <div class="day-resources-label">Free resources</div>
+      <a href="https://www.name.com/" target="_blank" rel="noopener">Name.com (domain search and registration)</a>
+      <a href="https://tmsearch.uspto.gov/" target="_blank" rel="noopener">USPTO Trademark Search (basic federal check)</a>
+      <a href="https://namelix.com/" target="_blank" rel="noopener">Namelix (AI name generator for brainstorming)</a>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 8 -->
+<section class="day">
+  <div class="container">
+    <div class="day-eyebrow">Day Eight</div>
+    <h3 class="day-title">Logo and brand <em>basics</em></h3>
+    <div class="day-question">What is the one visual thing you need to look real?</div>
+    <div class="day-body">
+      <p>You do not need a brand identity. You need a wordmark. One typeface, one color, one treatment that is used consistently everywhere. That is enough for the first year. Agencies will tell you otherwise. They are selling what agencies sell. A real brand grows out of what you actually do, how you talk to customers, and what people say about you when you are not in the room. None of that is designed. All of it is earned.</p>
+      <p>Canva has thousands of free templates that will get you a usable wordmark in 20 minutes. Fiverr can turn one around for $25 to $100 if you want a person's hand on it. Resist the urge to spend $2,000 on a brand identity before you have a single customer. The design agencies that charge $2,000 and up are selling a brand book that assumes the business already has traction. In year one, you are the brand.</p>
+      <p>What matters most in year one is consistency, not uniqueness. The same wordmark on your invoices, your website, your signature, and your social profile. Boring consistency beats clever once-only treatments. Pick one thing. Use it everywhere. The time you save on brand decisions is time you can spend on something that matters more right now, like the first customer conversation.</p>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">Minimum brand kit for year one</div>
+      <ul>
+        <li><strong>One typeface</strong> used consistently in your wordmark, website, invoices, and emails</li>
+        <li><strong>One primary color</strong> plus black and white. Three total. Any more and consistency breaks</li>
+        <li><strong>Wordmark in two versions:</strong> horizontal (for headers) and stacked (for social avatars). Same font, same color</li>
+        <li><strong>Works at tiny sizes.</strong> If a 32x32 pixel favicon is unreadable, the wordmark is too fussy</li>
+        <li><strong>SVG and PNG files</strong> you own. Avoid formats you can only edit inside Canva's cloud</li>
+      </ul>
+    </div>
+    <div class="day-prompt">What is your plan for a wordmark this week? Design it yourself in Canva, hire $50 on Fiverr, or ask a friend who designs? Pick one path and set a deadline.</div>
+    <div class="day-textarea-label">Your response</div>
+    <textarea class="day-textarea" data-key="day8" placeholder="DIY, hire, or ask a friend. Pick a path and a deadline."></textarea>
+    <div class="day-resources">
+      <div class="day-resources-label">Free resources</div>
+      <a href="https://www.canva.com/" target="_blank" rel="noopener">Canva (free logo and brand templates)</a>
+      <a href="https://www.fiverr.com/categories/graphics-design/creative-logo-design" target="_blank" rel="noopener">Fiverr logo design (budget option, filter by reviews)</a>
+      <a href="https://fonts.google.com/" target="_blank" rel="noopener">Google Fonts (free professional typefaces)</a>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 9 -->
+<section class="day">
+  <div class="container">
+    <div class="day-eyebrow">Day Nine</div>
+    <h3 class="day-title">Website or <em>landing</em> page</h3>
+    <div class="day-question">Can someone find you online and contact you in under 60 seconds?</div>
+    <div class="day-body">
+      <p>Build the simplest possible page. One hero (what you do and for whom), one offer (what someone can buy and for how much), one contact method (email, phone, or a form). That is the entire first website. Anything more is procrastination.</p>
+      <p>Wix, Squarespace, or Carrd will get you there in an afternoon. If you plan to sell physical products, Shopify is a better long-term platform. If you plan to write a lot, WordPress gives you the most flexibility. If you want the fastest path to live, Carrd at $19 a year handles the one-page case cleanly and does not try to upsell you into anything you do not need yet.</p>
+      <p>Most new-business websites waste 80% of the real estate. The hero image is too big, the About page is too long, the services are described in abstractions that mean nothing to a stranger. Strip everything to what a stranger needs in 10 seconds: what you do, for whom, and how to hire you. That is it. The pages you want to add later are easier to add when the foundation page is clean. Treat the one-page site as a down payment on a longer site that only gets built if customers prove the business is worth it.</p>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">What has to be on the one-page site</div>
+      <ul>
+        <li><strong>One hero sentence:</strong> what you do, for whom, in under 15 words. Above the fold</li>
+        <li><strong>The offer:</strong> what someone can actually buy, including the price</li>
+        <li><strong>One contact method:</strong> email, phone, form, or a scheduler like Calendly. Not all five</li>
+        <li><strong>One proof element:</strong> a testimonial, a logo of a past employer, a credential, or a mention of past work</li>
+        <li><strong>Policies, if selling:</strong> short refund, privacy, and terms sections. Templates are fine for year one</li>
+      </ul>
+    </div>
+    <div class="day-prompt">What is your plan for a one-page site this week? Platform, URL, deadline. Draft the hero sentence (what you do, for whom) in the box below.</div>
+    <div class="day-textarea-label">Your response</div>
+    <textarea class="day-textarea" data-key="day9" placeholder="Platform, URL, deadline, and the hero sentence."></textarea>
+    <div class="day-resources">
+      <div class="day-resources-label">Free resources</div>
+      <a href="https://www.wix.com/" target="_blank" rel="noopener">Wix (all-in-one site builder, free tier)</a>
+      <a href="https://carrd.co/" target="_blank" rel="noopener">Carrd (one-page sites, $19/year for the full version)</a>
+      <a href="https://www.shopify.com/" target="_blank" rel="noopener">Shopify (if you are selling physical products)</a>
+    </div>
+  </div>
+</section>
+
+<!-- PILLAR 4 INTRO -->
+<section class="pillar-intro">
+  <div class="container">
+    <div class="pillar-eyebrow">Pillar Four</div>
+    <h2 class="pillar-title">Prepare to Sell</h2>
+    <div class="pillar-days">Days 10 to 12</div>
+    <p class="pillar-body">Nothing happens until something gets sold. The next three days design the offer in detail, name the first ten people who will hear about it, and write what you will actually say when you ask them for money. Everything in these three days is specific. Vague does not sell.</p>
+  </div>
+</section>
+
+<!-- DAY 10 -->
+<section class="day">
+  <div class="container">
+    <div class="day-eyebrow">Day Ten</div>
+    <h3 class="day-title">The <em>offer</em></h3>
+    <div class="day-question">What exactly are you selling, for how much, and what does the buyer get?</div>
+    <div class="day-body">
+      <p>Write it as a one-paragraph description that someone could read and understand without asking a follow-up. Include the price. Include what the buyer receives, how long it takes, and what happens if they are not satisfied. Resist the urge to list features. Lead with the outcome.</p>
+      <p>On pricing: most first-year businesses underprice. If your offer costs $75 and the competition is $200 to $500, you are signaling that the work is worth less, which it almost certainly is not. Price based on the value to the customer, not the hours it takes you. The customer does not care that the deliverable took you four hours. They care that it saved them a weekend, closed a client, or solved a problem they had been carrying around for months.</p>
+      <p>A working offer answers three questions in order. What do I get? (The deliverable, specific and tangible.) How does it work? (The process, in one or two sentences.) Why should I believe you? (The proof, which can be a credential, a testimonial, past work, or just the specific confidence of someone who has thought this through.) Most first-year offers answer only the first question and then wonder why nobody buys.</p>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">Signs you are underpricing</div>
+      <ul>
+        <li>You feel slightly uncomfortable saying the price out loud</li>
+        <li>Multiple people respond with "that's it?" or "that's a steal"</li>
+        <li>You compared your price to the cheapest competitor, not the best one</li>
+        <li>Clients buy with no hesitation and no questions. A little friction means you are closer to right</li>
+        <li>You can only break even at full capacity. There is no margin for a bad week</li>
+      </ul>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">The offer paragraph structure</div>
+      <ul>
+        <li><strong>Opening:</strong> the outcome the buyer gets, in one sentence</li>
+        <li><strong>Middle:</strong> what the buyer gives you (money, time, a few decisions) and what they receive in return (specific deliverable, specific timeline)</li>
+        <li><strong>Close:</strong> what happens if they are not satisfied. A guarantee or a stated refund policy</li>
+      </ul>
+    </div>
+    <div class="day-prompt">Write your one-paragraph offer. Include price, deliverable, timeline, and what the buyer gets. Read it out loud. If it sounds vague, specify it.</div>
+    <div class="day-textarea-label">Your response</div>
+    <textarea class="day-textarea" data-key="day10" placeholder="Read it out loud. If it sounds vague, specify it."></textarea>
+    <div class="day-resources">
+      <div class="day-resources-label">Free resources</div>
+      <a href="https://www.acquisition.com/books/100m-offers" target="_blank" rel="noopener">$100M Offers (Alex Hormozi, principles)</a>
+      <a href="https://buildingastorybrand.com/" target="_blank" rel="noopener">Building a StoryBrand (Donald Miller)</a>
+      <a href="https://basecamp.com/gettingreal" target="_blank" rel="noopener">Getting Real (Basecamp, free online)</a>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 11 -->
+<section class="day">
+  <div class="container">
+    <div class="day-eyebrow">Day Eleven</div>
+    <h3 class="day-title">Your first <em>ten</em> people</h3>
+    <div class="day-question">Who are the ten most likely to say yes to the first ask?</div>
+    <div class="day-body">
+      <p>The first ten customers almost never come from marketing. They come from the network you already have. Former colleagues, old friends, neighbors, people you have done past work for, members of groups you are already in. Make the list before you need it.</p>
+      <p>"I do not have a network" is one of the most common sentences first-time business owners tell themselves. It is almost never true. If you have had a job, lived in a town, raised a child, or had any kind of career, you have a network. The question is whether you are willing to look at it as a network rather than as a list of people you have been meaning to catch up with. The decade rule is useful here. The last 10 years of your professional and personal life contain somewhere between 200 and 1,000 people who could, in theory, be a customer or know one.</p>
+      <p>Name them specifically. Phone or email next to each name. One sentence next to each one about why you think they are a fit. The next day's work is writing what you will say to them.</p>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">Where to find the first ten</div>
+      <ul>
+        <li><strong>Former colleagues</strong> from the last 10 years of jobs. Scroll your LinkedIn and your old email contacts</li>
+        <li><strong>People in groups you belong to:</strong> gym, church, parent groups, alumni networks, hobby clubs, volunteer organizations</li>
+        <li><strong>People you have paid in the last year.</strong> They may reciprocate when they see you launched</li>
+        <li><strong>Friends of friends.</strong> Ask three close friends each for three introductions. That is nine conversations already</li>
+        <li><strong>Past clients</strong> from any previous business, side hustle, or consulting work. Even if the connection is cold, warm it up</li>
+        <li><strong>Neighbors and parents at your kid's school.</strong> Proximity networks are underused</li>
+      </ul>
+    </div>
+    <div class="day-prompt">List ten specific people with contact info, and one line each about why they fit the offer. If you can only name five, name five, and note where you need to grow the list.</div>
+    <div class="day-textarea-label">Your response</div>
+    <textarea class="day-textarea" data-key="day11" placeholder="Ten names, or five, or three. Just stop editing and name them."></textarea>
+    <div class="day-resources">
+      <div class="day-resources-label">Free resources</div>
+      <a href="https://sidehustleschool.com/" target="_blank" rel="noopener">Side Hustle School (daily case studies on first customers)</a>
+      <a href="https://www.linkedin.com/mynetwork/" target="_blank" rel="noopener">LinkedIn network view (rediscover old contacts)</a>
+      <a href="https://nickloper.com/the-side-hustle-show/" target="_blank" rel="noopener">The Side Hustle Show (Nick Loper)</a>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 12 -->
+<section class="day">
+  <div class="container">
+    <div class="day-eyebrow">Day Twelve</div>
+    <h3 class="day-title">The <em>script</em></h3>
+    <div class="day-question">What do you say when you ask?</div>
+    <div class="day-body">
+      <p>You need two scripts. One for people who already know what you do (short, direct, personal: "I am launching this thing on Monday, you came to mind, here is the one-line description, interested?"). One for people who do not yet know (slightly longer, with context: "You might remember I used to work on X. I am starting a business that helps people with Y. Here is the one-paragraph version. If this is relevant to you or someone you know, I would love to talk").</p>
+      <p>Do not write a sales pitch. Write a message a human would send to another human. Read it aloud twice. If it sounds like a brochure, rewrite it. If it starts with "I hope this finds you well," rewrite it. If it ends with "please let me know if you have any questions," rewrite it. Those phrases are tells that the message is templated. People can smell templates in two sentences.</p>
+      <p>The structure that works: a specific hook (something only this person would notice), a short description of what you are offering as a human outcome, and one clear ask. Keep each under 100 words. The whole point of a short message is that it respects the reader's time, which signals that you will also respect their money. Overlong first messages are the most common reason a warm contact never responds. Short, specific, personal. In that order.</p>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">Script writing principles</div>
+      <ul>
+        <li><strong>Lead with their name</strong> and one specific detail. Generic templates get caught by spam filters and by instinct</li>
+        <li><strong>Describe the outcome,</strong> not the process. "I help X get Y" is clearer than "I use the Z methodology"</li>
+        <li><strong>Make the ask explicit.</strong> "Would you like to try this?" is better than "Let me know if interested"</li>
+        <li><strong>Under 100 words</strong> for the first message. Mobile reads cut off anything longer</li>
+        <li><strong>One clear next step</strong> at the end. A link, a calendar, a reply question. Not three options</li>
+        <li><strong>Written like a human sent it,</strong> not like it was generated. Read it out loud</li>
+      </ul>
+    </div>
+    <div class="day-prompt">Draft both scripts in the box below. One for warm contacts. One for medium-warm. Keep each under 100 words.</div>
+    <div class="day-textarea-label">Your response</div>
+    <textarea class="day-textarea" data-key="day12" placeholder="Written like a human sent it. Under 100 words each."></textarea>
+    <div class="day-resources">
+      <div class="day-resources-label">Free resources</div>
+      <a href="https://www.gong.io/blog/sales-email-templates/" target="_blank" rel="noopener">Sales email templates that actually get responses</a>
+      <a href="https://blog.hubspot.com/sales/sales-outreach" target="_blank" rel="noopener">HubSpot sales outreach guide (free)</a>
+      <a href="https://buildingastorybrand.com/" target="_blank" rel="noopener">StoryBrand messaging framework</a>
+    </div>
+  </div>
+</section>
+
+<!-- PILLAR 5 INTRO -->
+<section class="pillar-intro">
+  <div class="container">
+    <div class="pillar-eyebrow">Pillar Five</div>
+    <h2 class="pillar-title">Launch</h2>
+    <div class="pillar-days">Days 13 to 14</div>
+    <p class="pillar-body">You have done the thinking, the setup, and the prep. The remaining two days exist to collapse the gap between a business on paper and a business that has sold something. Even one dollar changes everything. Once the account has received real money, you are no longer someone with an idea. You are an owner.</p>
+  </div>
+</section>
+
+<!-- DAY 13 -->
+<section class="day">
+  <div class="container">
+    <div class="day-eyebrow">Day Thirteen</div>
+    <h3 class="day-title">The first <em>ask</em></h3>
+    <div class="day-question">Who are you reaching out to today?</div>
+    <div class="day-body">
+      <p>Pick three names from Day 11. Send the message you wrote on Day 12. Today. Not tomorrow. The thing most new business owners get wrong is treating outreach as something to prepare for forever. The outreach is the business. Everything before it is scaffolding.</p>
+      <p>Three sends. That is the entire task of Day 13. If you get a response, great. If you get silence, that is useful information. If you get a no, write down what they said and what you learned. You will not land every ask, especially early. The job is to generate responses, not to generate yeses on the first try.</p>
+      <p>The emotional cost of silence is real and worth preparing for. First outreach is uncomfortable. You will refresh your inbox more than you intend to. You will tell yourself the lack of a response is a referendum on the business. It is not. People are busy, your email landed at the wrong moment, their reply is drafted but unsent. Three sends per day, consistent for the next 30 days, is the sustainable rhythm. More than that burns out most people before the business has had time to breathe.</p>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">How to handle each response</div>
+      <ul>
+        <li><strong>Yes:</strong> Send the payment link or scheduler link immediately. The gap between yes and payment is where deals die</li>
+        <li><strong>Yes, but later:</strong> Set a specific follow-up date in writing, with their consent. "I will check back on the 15th" is better than "whenever works"</li>
+        <li><strong>Maybe or questions:</strong> Answer the specific question, do not over-explain. End with a single clear next step</li>
+        <li><strong>No:</strong> Thank them. Ask who else they know who might be a fit. Note what they said about why. The "why" is the most valuable response you will get this week</li>
+        <li><strong>Silence:</strong> One polite follow-up at day 7 ("Just circling back"). After that, let it rest. Energy on new sends beats energy chasing non-responders</li>
+      </ul>
+    </div>
+    <div class="day-prompt">Who are the three people you will reach out to today? Write their names below. After you send each message, come back and note the response (even if the response is silence).</div>
+    <div class="day-textarea-label">Your response</div>
+    <textarea class="day-textarea" data-key="day13" placeholder="Three sends today. Note the responses, even the silences."></textarea>
+    <div class="day-resources">
+      <div class="day-resources-label">Free resources</div>
+      <a href="https://sivers.org/do" target="_blank" rel="noopener">Derek Sivers on just doing (short, free, real)</a>
+      <a href="https://seths.blog/" target="_blank" rel="noopener">Seth's Blog (ongoing shipping encouragement)</a>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 14 -->
+<section class="day">
+  <div class="container">
+    <div class="day-eyebrow">Day Fourteen</div>
+    <h3 class="day-title">The first <em>dollar</em></h3>
+    <div class="day-question">What is the first transaction worth closing this week?</div>
+    <div class="day-body">
+      <p>From the responses you got on Day 13, which conversation is closest to becoming money? What is the specific next step to move it from interest to a signed invoice or a completed Stripe transaction?</p>
+      <p>A payment of any size, from any source, does something structural to a business. It makes the thing real. It makes you accountable. It makes the next sale easier because you are no longer selling an idea, you are selling something that one person already bought. Do what it takes to get the first dollar in this week, even if the number is small.</p>
+      <p>A small first dollar is strategic, not a consolation prize. A customer who paid $50 is less risky than a customer who may pay $5,000. The $50 customer gave you a signal (they will spend money on this), gave you a testimonial opportunity (if they are happy), and gave you something tangible to show the next five prospects (a case, a quote, a before-and-after). The first dollar is not the business. It is the proof that the business exists. Everything that comes after, from your pricing confidence to your messaging to your energy on the next outreach, improves once that proof is sitting in your account.</p>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">What you need to collect money this week</div>
+      <ul>
+        <li><strong>A payment method the buyer can actually use:</strong> Stripe or Square for invoices, PayPal or Venmo for small amounts, Gumroad for digital products</li>
+        <li><strong>A written deliverable:</strong> what the buyer gets, in a sentence or two, in email or in your invoice</li>
+        <li><strong>An expected timeline:</strong> when you will deliver. Keep it conservative. Delivering early feels like a gift</li>
+        <li><strong>A written confirmation:</strong> an email reply, a signed proposal, even a DM screenshot. Verbal "yes" is not yet an agreement</li>
+        <li><strong>A place to record the transaction:</strong> Wave is free and takes 5 minutes to set up. Clean bookkeeping from dollar one saves you a 1099 panic in April</li>
+      </ul>
+    </div>
+    <div class="day-prompt">Which conversation is closest to becoming money? What is the specific next step to close it? Who do you need to send what to, by when?</div>
+    <div class="day-textarea-label">Your response</div>
+    <textarea class="day-textarea" data-key="day14" placeholder="The specific next step. Who, what, by when."></textarea>
+    <div class="day-resources">
+      <div class="day-resources-label">Free resources</div>
+      <a href="https://www.waveapps.com/invoicing" target="_blank" rel="noopener">Wave (free invoicing)</a>
+      <a href="https://stripe.com/" target="_blank" rel="noopener">Stripe (payment processing for services)</a>
+      <a href="https://gumroad.com/" target="_blank" rel="noopener">Gumroad (fastest path to selling anything digital)</a>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 15 COMPLETION -->
+<section class="completion">
+  <div class="container">
+    <div class="completion-eyebrow">Day Fifteen</div>
+    <h2 class="completion-title">The launch is <em>complete</em>.</h2>
+    <div class="completion-subtitle">the rest of your business</div>
+    <div class="completion-body">
+      <p>You have done something most adults never do. You moved from imagining a business to building one. The idea became specific. The structure became real. The first conversations happened. If a dollar came in, it is already changing how you think about this.</p>
+      <p>Download your plan now so you have a copy outside this browser. Print it if that helps you keep it in view. Share it with your partner, your accountant, your old mentor, or the one person who will ask you how it is going at the first check-in.</p>
+      <p>Three things to carry forward. The offer you refined on Day 10 is yours now, keep refining it in public with real customers. The list of ten people from Day 11 is a start, not a finish, keep adding to it. And the first dollar, once it lands, is the beginning of a longer sequence of decisions. Each one is yours to make.</p>
+    </div>
+    <p class="completion-signoff">Your business is a sequence of better decisions. The next one is yours to make.</p>
+  </div>
+</section>
+
+<!-- GUIDE CLOSE -->
+<section class="guide-close">
+  <div class="container">
+    <div class="guide-close-eyebrow">A Popcycle Guide to Your New Business</div>
+    <p class="guide-close-message">Keep going. The Popcycle library has more guidance for every step of your business journey.</p>
+    <div class="guide-close-buttons">
+      <button class="btn-primary" onclick="downloadPlan()">Download My Plan</button>
+      <a class="btn-secondary" href="https://www.popcycle.online" target="_blank" rel="noopener">Visit Popcycle</a>
+      <a class="btn-secondary" href="https://www.popcycle.online/business-side-hustle" target="_blank" rel="noopener">More in Business &amp; Side Hustle</a>
+      <a class="btn-secondary" href="https://www.popcycle.online/popcycle-library" target="_blank" rel="noopener">Explore the Popcycle Library</a>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNOFF -->
+<section class="signoff">
+  <div class="signoff-mark">popcycle</div>
+  <div class="signoff-tagline">sweeten your life</div>
+</section>
+
+<script>
+// Save textarea values to localStorage
+const textareas = document.querySelectorAll('.day-textarea');
+textareas.forEach(ta => {
+  const key = ta.getAttribute('data-key');
+  const saved = localStorage.getItem('biz-launch-' + key);
+  if (saved) ta.value = saved;
+  ta.addEventListener('input', () => {
+    localStorage.setItem('biz-launch-' + key, ta.value);
+  });
+});
+
+// Download plan as text file
+function downloadPlan() {
+  const dayTitles = {
+    day1: 'DAY 1: What problem are you actually solving?',
+    day2: 'DAY 2: Who pays for the solution?',
+    day3: 'DAY 3: What is the smallest version you could launch?',
+    day4: 'DAY 4: Business structure decision',
+    day5: 'DAY 5: Bank account and EIN',
+    day6: 'DAY 6: Legal and compliance basics',
+    day7: 'DAY 7: Name the business',
+    day8: 'DAY 8: Logo and brand basics',
+    day9: 'DAY 9: Website or landing page',
+    day10: 'DAY 10: The offer',
+    day11: 'DAY 11: Your first ten people',
+    day12: 'DAY 12: The script',
+    day13: 'DAY 13: The first ask',
+    day14: 'DAY 14: The first dollar'
+  };
+  let plan = '14 DAYS TO LAUNCH YOUR BUSINESS\n';
+  plan += 'A Popcycle Guide to Your New Business\n';
+  plan += 'popcycle.online · sweeten your life\n';
+  plan += '===================================\n\n';
+  Object.keys(dayTitles).forEach(key => {
+    const value = localStorage.getItem('biz-launch-' + key) || '(no response yet)';
+    plan += dayTitles[key] + '\n';
+    plan += '-----------------------------------\n';
+    plan += value + '\n\n';
+  });
+  const blob = new Blob([plan], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'my-business-launch-plan.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+</script>
+
+</body>
+</html>

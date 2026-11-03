@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your First $100 Side Hustle | Popcycle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Dancing+Script:wght@600;700&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sage: #5C745F;
+  --sage-deep: #3F5243;
+  --gold: #BB8D17;
+  --moss: #90A747;
+  --platinum: #F7F7F7;
+  --ink: #2A2F2A;
+  --soft: #E8E6DC;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--platinum);
+  color: var(--ink);
+  line-height: 1.65;
+  font-weight: 400;
+}
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* COVER */
+.cover {
+  min-height: 100vh;
+  background: linear-gradient(140deg, var(--sage) 0%, var(--sage-deep) 100%);
+  color: var(--platinum);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 40px;
+  position: relative;
+}
+.cover-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--moss);
+  margin-bottom: 48px;
+  font-weight: 500;
+}
+.cover-accent {
+  font-family: 'Dancing Script', cursive;
+  font-size: 48px;
+  color: var(--gold);
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.cover-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 68px;
+  line-height: 1.1;
+  font-weight: 500;
+  margin-bottom: 32px;
+  letter-spacing: -1px;
+}
+.cover-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-style: italic;
+  color: rgba(247, 247, 247, 0.75);
+  max-width: 520px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+.cover-byline {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.cover-byline-mark {
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  color: var(--platinum);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  text-transform: lowercase;
+}
+.cover-byline-tagline {
+  font-family: 'Dancing Script', cursive;
+  font-size: 22px;
+  color: var(--moss);
+  font-weight: 700;
+  margin-top: -8px;
+  line-height: 1.4;
+}
+
+/* PREFACE */
+.preface {
+  padding: 100px 0 80px;
+  background: var(--platinum);
+}
+.preface-eyebrow {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.preface-lede {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  line-height: 1.35;
+  color: var(--sage-deep);
+  font-weight: 500;
+  margin-bottom: 40px;
+  font-style: italic;
+}
+.preface p {
+  font-size: 17px;
+  color: var(--ink);
+  margin-bottom: 20px;
+  line-height: 1.75;
+}
+
+/* PILLAR INTRO */
+.pillar-intro {
+  padding: 180px 0 160px;
+  background: var(--sage);
+  color: var(--platinum);
+  margin-top: 60px;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.pillar-eyebrow {
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 44px;
+  font-weight: 500;
+}
+.pillar-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 58px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+.pillar-days {
+  font-family: 'Dancing Script', cursive;
+  font-size: 22px;
+  color: var(--moss);
+  margin-bottom: 48px;
+  font-weight: 700;
+}
+.pillar-body {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  line-height: 1.65;
+  color: rgba(247, 247, 247, 0.82);
+  font-style: italic;
+  font-weight: 400;
+  max-width: 540px;
+}
+
+/* DAY PAGE */
+.day {
+  padding: 100px 0 60px;
+  background: var(--platinum);
+}
+.day-eyebrow {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+.day-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px;
+  line-height: 1.15;
+  color: var(--sage-deep);
+  margin-bottom: 24px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+.day-title em {
+  color: var(--moss);
+  font-style: italic;
+  font-weight: 500;
+}
+.day-question {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-style: italic;
+  color: var(--sage);
+  line-height: 1.5;
+  margin-bottom: 24px;
+  padding-left: 20px;
+  border-left: 3px solid var(--gold);
+}
+.day-body {
+  font-size: 17px;
+  color: var(--ink);
+  line-height: 1.75;
+  margin-bottom: 32px;
+}
+.day-body p { margin-bottom: 16px; }
+.day-prompt {
+  background: var(--soft);
+  padding: 24px 28px;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--sage-deep);
+  font-style: italic;
+}
+
+/* TEXTAREA */
+.day-textarea-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.day-textarea {
+  width: 100%;
+  min-height: 180px;
+  padding: 20px;
+  border: 1px solid var(--sage);
+  border-radius: 4px;
+  background: #FBFBF7;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink);
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s;
+  margin-bottom: 32px;
+}
+.day-textarea:focus { border-color: var(--gold); }
+.day-textarea::placeholder {
+  color: rgba(42, 47, 42, 0.38);
+  font-style: italic;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+}
+.day-textarea::-webkit-input-placeholder {
+  color: rgba(42, 47, 42, 0.38);
+  font-style: italic;
+  font-size: 14px;
+}
+.day-textarea::-moz-placeholder {
+  color: rgba(42, 47, 42, 0.38);
+  font-style: italic;
+  font-size: 14px;
+  opacity: 1;
+}
+
+/* TIPS / CHECKLIST */
+.day-tips {
+  background: rgba(187, 141, 23, 0.07);
+  border-left: 3px solid var(--gold);
+  padding: 22px 28px;
+  border-radius: 2px;
+  margin: 0 0 28px;
+}
+.day-tips-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+.day-tips-intro {
+  font-size: 15px;
+  color: var(--ink);
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.day-tips ul {
+  list-style: none;
+  padding: 0;
+}
+.day-tips li {
+  padding: 6px 0 6px 22px;
+  font-size: 15px;
+  color: var(--ink);
+  line-height: 1.6;
+  position: relative;
+}
+.day-tips li:before {
+  content: "→";
+  color: var(--gold);
+  font-weight: 500;
+  position: absolute;
+  left: 0;
+  font-size: 14px;
+  top: 7px;
+}
+.day-tips li strong {
+  color: var(--sage-deep);
+  font-weight: 600;
+}
+
+/* RESOURCES */
+.day-resources {
+  background: rgba(92, 116, 95, 0.08);
+  border-left: 3px solid var(--moss);
+  padding: 20px 24px;
+  border-radius: 2px;
+  margin-top: 16px;
+}
+.day-resources-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.day-resources a {
+  display: block;
+  color: var(--sage-deep);
+  text-decoration: none;
+  padding: 6px 0;
+  font-size: 15px;
+  border-bottom: 1px solid rgba(92, 116, 95, 0.15);
+  transition: color 0.2s;
+}
+.day-resources a:last-child { border-bottom: none; }
+.day-resources a:hover { color: var(--gold); }
+
+/* COMPLETION DAY 15 */
+.completion {
+  min-height: 90vh;
+  background: linear-gradient(140deg, var(--sage) 0%, var(--sage-deep) 100%);
+  color: var(--platinum);
+  padding: 180px 40px 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.completion-eyebrow {
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 44px;
+  font-weight: 500;
+}
+.completion-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 58px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+.completion-title em {
+  color: var(--moss);
+  font-style: italic;
+}
+.completion-subtitle {
+  font-family: 'Dancing Script', cursive;
+  font-size: 22px;
+  color: var(--gold);
+  margin-bottom: 48px;
+  font-weight: 700;
+}
+.completion-body {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  line-height: 1.65;
+  color: rgba(247, 247, 247, 0.82);
+  font-style: italic;
+  font-weight: 400;
+  max-width: 540px;
+  margin: 0 auto;
+}
+.completion-body p { margin-bottom: 20px; }
+.completion-signoff {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-style: italic;
+  color: var(--moss);
+  margin-top: 48px;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* GUIDE CLOSE */
+.guide-close {
+  background: var(--platinum);
+  padding: 100px 0 48px;
+  text-align: center;
+}
+.guide-close-eyebrow {
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+.guide-close-message {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-style: italic;
+  color: var(--sage-deep);
+  max-width: 480px;
+  margin: 0 auto 48px;
+  line-height: 1.5;
+}
+.guide-close-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.btn-primary, .btn-secondary {
+  display: inline-block;
+  padding: 14px 32px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 2px;
+  cursor: pointer;
+  border: 1px solid var(--sage);
+  transition: all 0.2s;
+  background: transparent;
+  color: var(--sage-deep);
+}
+.btn-primary {
+  background: var(--gold);
+  color: var(--platinum);
+  border-color: var(--gold);
+}
+.btn-primary:hover { background: var(--sage); border-color: var(--sage); }
+.btn-secondary:hover { background: var(--sage); color: var(--platinum); }
+
+/* SIGN OFF */
+.signoff {
+  background: var(--platinum);
+  padding: 24px 20px 80px;
+  text-align: center;
+}
+.signoff-mark {
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  color: var(--sage-deep);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  text-transform: lowercase;
+}
+.signoff-tagline {
+  font-family: 'Dancing Script', cursive;
+  font-size: 22px;
+  color: var(--gold);
+  font-weight: 700;
+  margin-top: -8px;
+  line-height: 1.4;
+}
+
+/* PRINT */
+@media print {
+  .guide-close-buttons, .signoff { page-break-inside: avoid; }
+  .cover, .pillar-intro, .completion {
+    background: var(--sage) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .day { page-break-after: always; }
+}
+
+@media (max-width: 640px) {
+  .cover-title { font-size: 44px; }
+  .cover-accent { font-size: 36px; }
+  .preface-lede { font-size: 24px; }
+  .pillar-title { font-size: 40px; }
+  .day-title { font-size: 36px; }
+  .completion-title { font-size: 44px; }
+  .guide-close-buttons { flex-direction: column; align-items: stretch; padding: 0 32px; }
+  .btn-primary, .btn-secondary { text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<section class="cover">
+  <div class="cover-eyebrow">A Popcycle Guide to Your First Side Hustle</div>
+  <div class="cover-accent">14 Days to</div>
+  <h1 class="cover-title">Your First $100</h1>
+  <p class="cover-subtitle">A side hustle workbook for the person ready to prove it. Fourteen days from an idea to the first hundred dollars in your account.</p>
+  <div class="cover-byline">
+    <div class="cover-byline-mark">popcycle</div>
+    <div class="cover-byline-tagline">sweeten your life</div>
+  </div>
+</section>
+
+<!-- PREFACE -->
+<section class="preface">
+  <div class="container">
+    <div class="preface-eyebrow">Before you begin</div>
+    <p class="preface-lede">The first hundred dollars changes the story more than the first fifty thousand will.</p>
+    <p>Not because it is a lot of money. Because it is proof. Proof that the thing in your head can take a form another person will trade real money for. Everything that comes later, the second hundred, the first thousand, the possible leap, builds on top of that first proof.</p>
+    <p>The next 14 days are a side hustle, not a full launch. No LLC required. No separate bank account. No logo. The money will come in through an app you already have, or set up in 10 minutes. The paperwork is a line on next April's tax return. The goal is small on purpose. A small goal that lands is more useful than a big one that stalls.</p>
+    <p>Five pillars, two or three days each, one small decision at a time. The pace is designed to fit around a job and a life. No day asks for more than 20 or 30 minutes of real thought.</p>
+    <p>Everything you write stays on your device, saved locally in your browser. Popcycle does not see it. No account to make, no email to collect. On Day 14, you can download your entire plan as a single file, print it, keep it, or share it with the one person who will ask how it is going.</p>
+    <p>If a day asks a question you cannot answer honestly, write that down. The gap is more useful than a guess.</p>
+  </div>
+</section>
+
+<!-- PILLAR 1 INTRO -->
+<section class="pillar-intro">
+  <div class="container">
+    <div class="pillar-eyebrow">Pillar One</div>
+    <h2 class="pillar-title">Pick Your Lane</h2>
+    <div class="pillar-days">Days 1 to 3</div>
+    <p class="pillar-body">Before you build the hustle, pick what it is. Not what sounds impressive at a dinner party. What you could realistically start this weekend using what you already know. The next three days are a quiet, honest audit of what you have in hand and the smallest first version it could take.</p>
+  </div>
+</section>
+
+<!-- DAY 1 -->
+<section class="day">
+  <div class="container">
+    <div class="day-eyebrow">Day One</div>
+    <h3 class="day-title">What are you already <em>good</em> at?</h3>
+    <div class="day-question">What have people asked you for help with, formally or informally, in the last year?</div>
+    <div class="day-body">
+      <p>The best first side hustle uses skills you already have. New skills take months to monetize. Existing skills can monetize this week. The exercise today is not a resume audit, which lists credentials. It is a reality audit, which lists what people have actually asked you for. That signal is cheaper than market research and almost always more accurate.</p>
+      <p>Scan the last 12 months. Did a friend ask you to look at their resume? Help with a spreadsheet? Watch their kids? Build them a shelf? Review their contract? Pick a color palette? Train their dog? Those are hints. They are the market telling you where you already have a reputation, even if it feels too small to count. "People already ask me for this" is a competitive moat most first-time hustlers overlook, because the skill in question feels obvious to them.</p>
+      <p>Write three things people have asked you for in the last year. Not what you think you should offer. What has already landed in your lap. The strongest first side hustle usually sits in that list. Resist picking the one that sounds most impressive. Pick the one people are already requesting. That request is the first customer signal, and it is free.</p>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">Signs the skill is ready to monetize</div>
+      <ul>
+        <li>You have delivered it informally to at least three different people in the last year</li>
+        <li>Someone has offered to pay you for it, even if you refused</li>
+        <li>You can point to a specific piece of past work as proof</li>
+        <li>A friend has mentioned they would hire a stranger for exactly this</li>
+        <li>Doing the thing feels <strong>less hard for you</strong> than for the people you help</li>
+      </ul>
+    </div>
+    <div class="day-prompt">Three things people have asked you for lately. Pick the one most likely to turn into money this month.</div>
+    <div class="day-textarea-label">Your response</div>
+    <textarea class="day-textarea" data-key="day1" placeholder="Three things people asked you for. Not what you wish they'd ask for."></textarea>
+    <div class="day-resources">
+      <div class="day-resources-label">Free resources</div>
+      <a href="https://sidehustleschool.com/" target="_blank" rel="noopener">Side Hustle School (daily side hustle case studies)</a>
+      <a href="https://nickloper.com/the-side-hustle-show/" target="_blank" rel="noopener">The Side Hustle Show (Nick Loper)</a>
+      <a href="https://100startup.com/" target="_blank" rel="noopener">The $100 Startup (Chris Guillebeau)</a>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 2 -->
+<section class="day">
+  <div class="container">
+    <div class="day-eyebrow">Day Two</div>
+    <h3 class="day-title"><em>Service</em> or product?</h3>
+    <div class="day-question">Will the money come from your time or from something you can sell more than once?</div>
+    <div class="day-body">
+      <p>A service earns money from your time. You do something for someone, they pay you. The ceiling is the hours you have. The floor is zero when you are not working. A product earns money from something you built once and can sell again. The ceiling is much higher. The floor is also zero until the first copy sells, which is often weeks later than a service's first dollar.</p>
+      <p>For a first $100 side hustle, services almost always win. The reason is simple: services can be sold today. The customer gives you money, you deliver, you have proof the thing works. A product takes longer to build, longer to position, longer to find buyers for. The quickest path to the first hundred is almost always a service someone is willing to buy right now. The product version can come later, once the service has proven that people pay for help with this specific thing.</p>
+      <p>Pick service or product and write the choice with the honest reason behind it. If you pick product, the next steps shift. You will spend more days on the build, less on the ask. If you pick service, the next steps compress. You may be delivering by Day 7. Neither is more legitimate than the other. The right pick is the one that fits the week you actually have, not the week you wish you had.</p>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">Service vs product, decided by your situation</div>
+      <ul>
+        <li><strong>Service wins if:</strong> you need the first dollar fast, you have skills but no inventory, you want to validate before you build</li>
+        <li><strong>Product wins if:</strong> you have something already built or nearly built, you have time to iterate, you want income that is not tied to hours</li>
+        <li><strong>Hybrid wins if:</strong> a done-for-you service funds the slow build of a product version of the same thing. Many side hustles end up here</li>
+      </ul>
+    </div>
+    <div class="day-prompt">Service or product? Write the choice and one real reason behind it.</div>
+    <div class="day-textarea-label">Your response</div>
+    <textarea class="day-textarea" data-key="day2" placeholder="The faster path, not the sexier one."></textarea>
+    <div class="day-resources">
+      <div class="day-resources-label">Free resources</div>
+      <a href="https://upwork.com/work" target="_blank" rel="noopener">Upwork (freelance service marketplace)</a>
+      <a href="https://sidehustleschool.com/" target="_blank" rel="noopener">Side Hustle School (service and product case studies)</a>
+      <a href="https://www.shopify.com/" target="_blank" rel="noopener">Shopify (if you are selling physical products)</a>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 3 -->
+<section class="day">
+  <div class="container">
+    <div class="day-eyebrow">Day Three</div>
+    <h3 class="day-title">One hour, one hundred <em>dollars</em></h3>
+    <div class="day-question">How many hours of your time will the first hundred take?</div>
+    <div class="day-body">
+      <p>The math on a side hustle is simple and honest. If your rate is $100 an hour, you need one buyer. If your rate is $50, you need two. If your rate is $25, you need four. If your rate is $10, the business is already broken. The question is not just what you can charge. The question is what the math requires of your week to make this worth doing at all.</p>
+      <p>Most first side hustlers underprice because the number feels big. "Who am I to charge $75 an hour?" is the sentence that keeps the first hundred out of reach. The honest reframe: you are not charging $75 for one hour of time. You are charging $75 for the years that made the hour possible. A friend who writes well charges for the decade of reading and writing it took to be able to write well in one hour. A friend who fixes computers charges for the thousand small debugging sessions that make this one go fast.</p>
+      <p>Write your rate. Multiply by hours. Confirm the first hundred is reachable in one week or less. If it is not, the rate is probably too low. Side hustle math only works when the rate reflects the skill underneath it. A rate chosen out of modesty is one you will quit before it has had a chance to work.</p>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">Rate-setting rules of thumb</div>
+      <ul>
+        <li>If every potential buyer says yes immediately, your rate is probably too low</li>
+        <li>Rates ending in 7 or 9 ($47, $89) signal discount pricing. Round numbers feel more professional for first offers</li>
+        <li>Early-career professional rate in your field, divided by two, is a decent floor for a side hustle</li>
+        <li>If you are competing with Fiverr commodity pricing, you have picked the wrong niche, not the wrong rate</li>
+      </ul>
+    </div>
+    <div class="day-prompt">What is your opening hourly rate? How many hours will $100 take? Is that reachable this week?</div>
+    <div class="day-textarea-label">Your response</div>
+    <textarea class="day-textarea" data-key="day3" placeholder="Rate times hours equals one hundred. The honest number."></textarea>
+    <div class="day-resources">
+      <div class="day-resources-label">Free resources</div>
+      <a href="https://jtbd.info/jobs-to-be-done-framework-fcf1cad6487d" target="_blank" rel="noopener">Jobs to Be Done framework (intro)</a>
+      <a href="https://upwork.com/work" target="_blank" rel="noopener">Upwork (compare rates in your category)</a>
+      <a href="https://www.fiverr.com/categories/graphics-design/creative-logo-design" target="_blank" rel="noopener">Fiverr (floor pricing for commodity work)</a>
+    </div>
+  </div>
+</section>
+
+<!-- PILLAR 2 INTRO -->
+<section class="pillar-intro">
+  <div class="container">
+    <div class="pillar-eyebrow">Pillar Two</div>
+    <h2 class="pillar-title">Set It Up Small</h2>
+    <div class="pillar-days">Days 4 to 6</div>
+    <p class="pillar-body">Setting up a side hustle is boring and quick. You do not need an LLC. You do not need a logo. You need a way to get paid, a place to be found, and permission from yourself to start. The next three days handle those three things, nothing more.</p>
+  </div>
+</section>
+
+<!-- DAY 4 -->
+<section class="day">
+  <div class="container">
+    <div class="day-eyebrow">Day Four</div>
+    <h3 class="day-title">The paperwork you <em>don't</em> need</h3>
+    <div class="day-question">What is the smallest legal footprint you can start with?</div>
+    <div class="day-body">
+      <p>For most first-$100 side hustles, no paperwork is required to start. If you deliver services and get paid under your own name, you are operating as a Sole Proprietor by default. The IRS treats the income as yours. You will report it on Schedule C with your personal tax return in April. No LLC, no state filing, no EIN, nothing to apply for before Day 14.</p>
+      <p>The question people stall on is "but should I form an LLC first for liability?" For a side hustle under $5,000 a year in low-risk service work (writing, coaching, tutoring, light consulting), the LLC adds cost and compliance without much benefit yet. Form the LLC when the business has revenue worth protecting and risk worth hedging. Both happen after the first $100, not before.</p>
+      <p>The one move worth making today is a note about April. When you file next year, you will report side hustle income on Schedule C. You will keep rough records of what you earned and what you spent on the hustle. A spreadsheet or a Wave account is enough. Clean enough that you are not scrambling in March, not so detailed that you are doing bookkeeping instead of selling.</p>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">The one-page tax note for your first side hustle year</div>
+      <ul>
+        <li>Keep every receipt for anything you buy specifically for the hustle (software, supplies, mileage)</li>
+        <li>Track every payment that comes in: date, amount, from whom, for what</li>
+        <li>Over $600 from any single payer in a year? They may send you a 1099. Under that, you still have to report it</li>
+        <li>At $400 of net profit for the year, self-employment tax (15.3%) kicks in. Set aside roughly 25-30% of profits for taxes</li>
+      </ul>
+    </div>
+    <div class="day-prompt">Confirm: starting as a sole proprietor under your own name. Write the one tax-related note you will remember for April.</div>
+    <div class="day-textarea-label">Your response</div>
+    <textarea class="day-textarea" data-key="day4" placeholder="Yes or no. Then one line about April."></textarea>
+    <div class="day-resources">
+      <div class="day-resources-label">Free resources</div>
+      <a href="https://www.irs.gov/businesses/small-businesses-self-employed/business-structures" target="_blank" rel="noopener">Business Structures (IRS)</a>
+      <a href="https://www.sba.gov/business-guide/launch-your-business/choose-business-structure" target="_blank" rel="noopener">Choose a Business Structure (SBA.gov)</a>
+      <a href="https://www.waveapps.com/" target="_blank" rel="noopener">Wave (free bookkeeping for side hustles)</a>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 5 -->
+<section class="day">
+  <div class="container">
+    <div class="day-eyebrow">Day Five</div>
+    <h3 class="day-title">Get <em>paid</em>, now</h3>
+    <div class="day-question">Where will the first hundred dollars actually land?</div>
+    <div class="day-body">
+      <p>You need one way to receive money. Not three. Not five. One, chosen and tested today. The options sort cleanly: Venmo for peer-to-peer in the US, PayPal for international or more formal transactions, Stripe for online checkout and invoices, Square for in-person card payments, Zelle for direct bank-to-bank. For a service-based first hustle, Venmo and Stripe together cover about 90% of cases.</p>
+      <p>Set one up today. Then test it with a $1 send to a friend who sends it back. That tiny bit of friction surfaces real problems: an unverified business profile, a missing identity step, a limit on first transactions. Better to catch those on a $1 test than on the first $75 invoice. The 10 minutes you spend testing pays back ten times when the first real payment lands without a hiccup.</p>
+      <p>One tax note: starting in 2025, Venmo, PayPal, and Stripe report payments over $5,000 a year to the IRS on Form 1099-K. Below that, nothing automatic. Either way, you report your side hustle income on your taxes. The 1099-K is just a copy to the IRS of money the government already expects you to self-report. Clean records make this a non-event.</p>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">One payment method, picked for your case</div>
+      <ul>
+        <li><strong>Service work, local or peer-based:</strong> Venmo. Instant, free, no account creation on the buyer's side</li>
+        <li><strong>Online checkout or invoiced work:</strong> Stripe. $100 in, keeps about $3.20, you keep the rest</li>
+        <li><strong>In-person service</strong> (haircuts, tutoring at a cafe): Square. Reader is free, 2.6% + 10 cents per swipe</li>
+        <li><strong>International clients:</strong> PayPal is still the smoothest option, if slower</li>
+      </ul>
+    </div>
+    <div class="day-prompt">Which payment method will you set up today? Test it with a $1 transfer and note the date.</div>
+    <div class="day-textarea-label">Your response</div>
+    <textarea class="day-textarea" data-key="day5" placeholder="One method. Tested with a dollar. Note the date."></textarea>
+    <div class="day-resources">
+      <div class="day-resources-label">Free resources</div>
+      <a href="https://venmo.com/about/us" target="_blank" rel="noopener">Venmo (peer-to-peer payments, US)</a>
+      <a href="https://stripe.com/" target="_blank" rel="noopener">Stripe (online checkout and invoices)</a>
+      <a href="https://www.waveapps.com/invoicing" target="_blank" rel="noopener">Wave (free invoicing)</a>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 6 -->
+<section class="day">
+  <div class="container">
+    <div class="day-eyebrow">Day Six</div>
+    <h3 class="day-title">Where you'll show <em>up</em></h3>
+    <div class="day-question">On which single platform will people find you?</div>
+    <div class="day-body">
+      <p>Pick one platform. Not three, not five, not every account you have logged into this year. One. The one your buyer already scrolls, not the one that feels modern. LinkedIn for B2B services. Instagram for visual work. Nextdoor and local Facebook groups for in-home services. Etsy for handmade goods. Fiverr and Upwork for defined freelance gigs. Each one has a different vibe, a different buyer, and a different pace.</p>
+      <p>The temptation is to be everywhere. The reality is that one strong platform presence beats five weak ones every time. Being on one platform means you can write for its audience, learn its conventions, and build real traction. Being on five means you post the same thing five times, nobody engages, and you burn out by week three. Pick the one where you can show up well for 90 days without touching the others.</p>
+      <p>The right pick is where your buyer already is, not where you prefer to be. If your buyer is a working parent in your city, Nextdoor beats LinkedIn. If your buyer is a startup founder, LinkedIn beats everything else. Picture your buyer's phone. Which app do they open 10 times a day? That is where your side hustle needs to live.</p>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">Which platform fits which hustle</div>
+      <ul>
+        <li><strong>LinkedIn:</strong> consulting, resume help, career coaching, B2B services, anything targeting professionals</li>
+        <li><strong>Instagram:</strong> visual work, lifestyle, food, fashion, home services with a visual output</li>
+        <li><strong>Nextdoor and local Facebook:</strong> handyman, cleaning, tutoring, pet care, in-home services</li>
+        <li><strong>Etsy:</strong> handmade physical products, printables, digital downloads</li>
+        <li><strong>Fiverr and Upwork:</strong> defined freelance gigs where buyers come to you with specs</li>
+        <li><strong>Your own newsletter:</strong> writing, teaching, thought leadership that compounds slowly</li>
+      </ul>
+    </div>
+    <div class="day-prompt">Which single platform fits your hustle? Write the platform and the one reason it's where your buyer already is.</div>
+    <div class="day-textarea-label">Your response</div>
+    <textarea class="day-textarea" data-key="day6" placeholder="One place. The reason has to be where your buyer actually is."></textarea>
+    <div class="day-resources">
+      <div class="day-resources-label">Free resources</div>
+      <a href="https://www.linkedin.com/mynetwork/" target="_blank" rel="noopener">LinkedIn network view (for B2B hustles)</a>
+      <a href="https://sidehustleschool.com/" target="_blank" rel="noopener">Side Hustle School (platform case studies)</a>
+      <a href="https://www.fiverr.com/categories/graphics-design/creative-logo-design" target="_blank" rel="noopener">Fiverr (defined freelance gigs)</a>
+    </div>
+  </div>
+</section>
+
+<!-- PILLAR 3 INTRO -->
+<section class="pillar-intro">
+  <div class="container">
+    <div class="pillar-eyebrow">Pillar Three</div>
+    <h2 class="pillar-title">Make It Real</h2>
+    <div class="pillar-days">Days 7 to 9</div>
+    <p class="pillar-body">The thing has to look like a thing. Not polished, just present. A price. A link. A piece of proof. Three days to turn an idea into something another person can see, click, and decide on.</p>
+  </div>
+</section>
+
+<!-- DAY 7 -->
+<section class="day">
+  <div class="container">
+    <div class="day-eyebrow">Day Seven</div>
+    <h3 class="day-title"><em>Price</em> the thing</h3>
+    <div class="day-question">What is your opening number, and what does it include?</div>
+    <div class="day-body">
+      <p>Pricing is less about picking the right number and more about the research behind it. Spend 30 minutes looking at three comparable providers. What are they charging? What is included in that price? Where do you fit on that spectrum? Starting at the midpoint of three comparables is a defensible first number. Starting at the lowest is a signal that your work is worth less than it actually is.</p>
+      <p>The second move is to be specific about what the price includes. Vague prices scare buyers. "I write website copy, $300" is less legible than "A 500-word homepage copy rewrite, delivered in 5 business days, one round of revisions included, $300." Buyers do not want to negotiate what is in the box. They want to know what they are buying, exactly, before they decide.</p>
+      <p>Round numbers feel professional. $75 is better than $73. $300 is better than $299. The exception is price-anchoring at $97 or $47, which signals discount mode. For a first offer, pick a clean round number. You can get more clever with pricing in year two, after the service has sold ten times and you know what the market will bear.</p>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">Pricing checklist for a first offer</div>
+      <ul>
+        <li>Research three comparable providers. Note what they charge and what is included</li>
+        <li>Pick a number at or near the midpoint, not the floor</li>
+        <li>Define what the price includes in specific, buyer-facing language</li>
+        <li>Add one guarantee, policy, or revisions note. Clarity removes friction</li>
+        <li>Say the price out loud. If it embarrasses you, raise it 20%. If it makes you panic, you may have picked the right number</li>
+      </ul>
+    </div>
+    <div class="day-prompt">What are three comparable providers charging? What is your opening price, and what exactly does it include?</div>
+    <div class="day-textarea-label">Your response</div>
+    <textarea class="day-textarea" data-key="day7" placeholder="Three numbers from the market. Then your own, and what it includes."></textarea>
+    <div class="day-resources">
+      <div class="day-resources-label">Free resources</div>
+      <a href="https://www.acquisition.com/books/100m-offers" target="_blank" rel="noopener">$100M Offers (Alex Hormozi, principles)</a>
+      <a href="https://www.fiverr.com/categories/graphics-design/creative-logo-design" target="_blank" rel="noopener">Fiverr (compare commodity pricing in your niche)</a>
+      <a href="https://sidehustleschool.com/" target="_blank" rel="noopener">Side Hustle School (real pricing examples)</a>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 8 -->
+<section class="day">
+  <div class="container">
+    <div class="day-eyebrow">Day Eight</div>
+    <h3 class="day-title">One <em>link</em>, one line</h3>
+    <div class="day-question">Can a stranger find you and understand what you do in 30 seconds?</div>
+    <div class="day-body">
+      <p>You do not need a website. You need one link. A Carrd page, a Beacons page, a well-written LinkedIn profile, even an Instagram bio with a scheduler link. One link that answers three questions: what you do, who it is for, how to hire you. Everything else is procrastination disguised as polish.</p>
+      <p>Write the hero sentence first. Format: "I help [who] [get what outcome]." Example: "I help busy founders write resumes that stop sounding like job descriptions." That sentence has to appear on your one link, above everything else, in text big enough that a 50-year-old can read it on a phone. If someone leaves after three seconds, that sentence is what they remember. Nothing else on the page matters as much.</p>
+      <p>The one link lives in two places: your social media bio and your email signature. When someone wants to know what you do, they click. That is the full web presence for a first $100 hustle. The time you would have spent on a full site becomes time spent on outreach, which is where the first hundred actually comes from.</p>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">What the one link has to show</div>
+      <ul>
+        <li><strong>Hero sentence:</strong> what you do, for whom, in under 15 words. At the top</li>
+        <li><strong>Price or price range</strong> (or "starting at $X")</li>
+        <li><strong>One contact method:</strong> email, DM, calendar link, phone. Not all four</li>
+        <li><strong>One piece of proof:</strong> testimonial, past work, credential, or a specific "I did this for this person" line</li>
+        <li>That is everything. No About page. No blog. Not yet</li>
+      </ul>
+    </div>
+    <div class="day-prompt">What is the one link people will click? Write the hero sentence (what you do, for whom) that will sit above everything on it.</div>
+    <div class="day-textarea-label">Your response</div>
+    <textarea class="day-textarea" data-key="day8" placeholder="The link URL. The hero sentence under it."></textarea>
+    <div class="day-resources">
+      <div class="day-resources-label">Free resources</div>
+      <a href="https://carrd.co/" target="_blank" rel="noopener">Carrd (one-page sites, $19/year)</a>
+      <a href="https://beacons.ai/" target="_blank" rel="noopener">Beacons (free link-in-bio for creators)</a>
+      <a href="https://www.canva.com/" target="_blank" rel="noopener">Canva (free hero image templates)</a>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 9 -->
+<section class="day">
+  <div class="container">
+    <div class="day-eyebrow">Day Nine</div>
+    <h3 class="day-title"><em>Proof</em> you can point at</h3>
+    <div class="day-question">What have you already done that proves you can do this?</div>
+    <div class="day-body">
+      <p>Proof beats polish in the first $100 side hustle. A screenshot of past work, a quick testimonial from one friend who has used your skill, a before-and-after photo, a credential from a past job, or even a sample made this week. One strong piece of proof per prospective buyer is enough. Collect it before you need it, so you can send it in a reply instead of scrambling to find it.</p>
+      <p>If you have no past work in this skill specifically, make a sample. A writer makes a sample post. A designer makes a sample layout. A coach does one free session in exchange for a testimonial. The sample is not giving away the work. The sample is paying for proof, which is cheaper than most other kinds of marketing. One well-made sample can book your first five clients.</p>
+      <p>Store the proof somewhere you can grab it in 30 seconds. A folder on your phone, a note in your contacts, a Google Drive link that lives in your email signature draft. The first customer conversation moves faster when you can send three pieces of proof during the DM thread, not after a day of looking for them. Speed in the first reply often closes the first deal.</p>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">Types of proof that work for a side hustle</div>
+      <ul>
+        <li>Screenshots of past work (anonymize client names if needed, keep the content)</li>
+        <li>A single testimonial, even from one friend who has used the skill</li>
+        <li>A credential or past job title that signals this skill (LinkedIn is enough)</li>
+        <li>A sample made this week to show the work you deliver</li>
+        <li>A before-and-after (common for visual work, cleaning, organization, copy editing)</li>
+      </ul>
+    </div>
+    <div class="day-prompt">What are three pieces of proof you can show a prospect this week? Where are they stored so you can grab them in 30 seconds?</div>
+    <div class="day-textarea-label">Your response</div>
+    <textarea class="day-textarea" data-key="day9" placeholder="Three pieces of proof. Already yours, or made this week."></textarea>
+    <div class="day-resources">
+      <div class="day-resources-label">Free resources</div>
+      <a href="https://www.canva.com/" target="_blank" rel="noopener">Canva (quick sample mockups and screenshots)</a>
+      <a href="https://www.linkedin.com/mynetwork/" target="_blank" rel="noopener">LinkedIn (ask one past colleague for a recommendation)</a>
+      <a href="https://sidehustleschool.com/" target="_blank" rel="noopener">Side Hustle School (how early hustlers built proof fast)</a>
+    </div>
+  </div>
+</section>
+
+<!-- PILLAR 4 INTRO -->
+<section class="pillar-intro">
+  <div class="container">
+    <div class="pillar-eyebrow">Pillar Four</div>
+    <h2 class="pillar-title">Find Your First Buyer</h2>
+    <div class="pillar-days">Days 10 to 12</div>
+    <p class="pillar-body">The hard part is not building the hustle. The hard part is the ask. Three days to pick who, write what, and decide whether you are announcing publicly or messaging privately. All of it specific, none of it generic.</p>
+  </div>
+</section>
+
+<!-- DAY 10 -->
+<section class="day">
+  <div class="container">
+    <div class="day-eyebrow">Day Ten</div>
+    <h3 class="day-title">Who already <em>needs</em> this?</h3>
+    <div class="day-question">Who in your life has mentioned this problem recently?</div>
+    <div class="day-body">
+      <p>Side hustle customers are rarely strangers. They are already in your phone, your old email threads, your group chats, your Slack, your gym. Someone has mentioned the problem your hustle solves within the last 90 days, probably casually, probably without knowing you could help. That person is customer number one. The question is whether you remember the conversation.</p>
+      <p>Scan the last 90 days of your text messages, DMs, and email threads. Who complained about something that fits your hustle? Who mentioned they were looking for someone to help with X? Who said "I keep meaning to figure out this thing I'm bad at"? Those are not acquaintances. They are the warmest leads you will ever have. The ask on Day 11 is easier because you are responding to a complaint, not interrupting a stranger.</p>
+      <p>Write five names. Full names, with the specific complaint next to each. If you cannot name five, name three. If you cannot name three, name one. The point of the list is not length. The point is specificity. One real conversation beats ten imagined ones.</p>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">Where the first warm leads usually live</div>
+      <ul>
+        <li>The last 90 days of your text messages. Scroll back, look for complaints</li>
+        <li>People in groups you are already in (gym, church, parent group, alumni network)</li>
+        <li>Former colleagues from the last 10 years of work</li>
+        <li>Friends who have mentioned being busy, overwhelmed, or stuck on something</li>
+        <li>People you have seen post about the problem on social media</li>
+      </ul>
+    </div>
+    <div class="day-prompt">List five people who have mentioned this problem recently. Include the specific complaint they shared.</div>
+    <div class="day-textarea-label">Your response</div>
+    <textarea class="day-textarea" data-key="day10" placeholder="Five names. Even the half-remembered ones."></textarea>
+    <div class="day-resources">
+      <div class="day-resources-label">Free resources</div>
+      <a href="https://www.linkedin.com/mynetwork/" target="_blank" rel="noopener">LinkedIn network view (rediscover old contacts)</a>
+      <a href="https://sidehustleschool.com/" target="_blank" rel="noopener">Side Hustle School (how real hustlers found customer one)</a>
+      <a href="https://nickloper.com/the-side-hustle-show/" target="_blank" rel="noopener">The Side Hustle Show (first-customer stories)</a>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 11 -->
+<section class="day">
+  <div class="container">
+    <div class="day-eyebrow">Day Eleven</div>
+    <h3 class="day-title">The <em>friendly</em> ask</h3>
+    <div class="day-question">What do you say that doesn't sound like a sales pitch?</div>
+    <div class="day-body">
+      <p>Side hustle outreach is different from business sales. It is a friend telling a friend. The template that works is short: a specific hook (something only this person would notice), a short description of what you are offering as a human outcome, and one clear ask. Under 60 words. No sales language. No "I hope this finds you well."</p>
+      <p>An example: "Hey Sarah, I remembered you mentioned the resume disaster last month. I just started helping people with exactly that. One hour, $75, you'd walk away with a resume that doesn't sound like a job description. If this is still a thing, I'm around this week. No pressure if the moment passed." That is the whole message. Specific hook. Specific offer with a specific price. Soft ask. Permission to say no.</p>
+      <p>Write your version. Address it to one specific person from Day 10. Read it out loud. If it sounds like a brochure, rewrite it. If it starts with "I hope this finds you well," rewrite it. If it ends with "please let me know if you have any questions," rewrite it. Write it like a text to a friend, because that is what it is.</p>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">Message checklist before you send</div>
+      <ul>
+        <li>Under 60 words</li>
+        <li>A specific hook only this person would notice (what they said, what they are working on, who you both know)</li>
+        <li>The offer with the price. No "let's hop on a call to discuss"</li>
+        <li>One clear ask. "If you want this, reply yes." Not three options</li>
+        <li>A permission-to-decline sentence. "No pressure if the timing is off"</li>
+      </ul>
+    </div>
+    <div class="day-prompt">Draft the message to the first person on Day 10's list. Keep it under 60 words. Read it out loud before you move on.</div>
+    <div class="day-textarea-label">Your response</div>
+    <textarea class="day-textarea" data-key="day11" placeholder="Under 60 words. Written to one specific person."></textarea>
+    <div class="day-resources">
+      <div class="day-resources-label">Free resources</div>
+      <a href="https://www.momtestbook.com/" target="_blank" rel="noopener">The Mom Test (how to ask honest questions)</a>
+      <a href="https://buildingastorybrand.com/" target="_blank" rel="noopener">Building a StoryBrand (clear messaging framework)</a>
+      <a href="https://blog.hubspot.com/sales/sales-outreach" target="_blank" rel="noopener">HubSpot sales outreach guide (free)</a>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 12 -->
+<section class="day">
+  <div class="container">
+    <div class="day-eyebrow">Day Twelve</div>
+    <h3 class="day-title">The <em>post</em> or the DM?</h3>
+    <div class="day-question">Public announcement or quiet message?</div>
+    <div class="day-body">
+      <p>Two outreach strategies for a side hustle, both legitimate. The public post is one Instagram or LinkedIn update that says, "I am now doing X. DM if interested." It casts wide, builds some social proof, and lets interested people self-identify. The private DM is one-at-a-time, higher-touch, and respects the relationship. Most first-$100 side hustles start with the DM.</p>
+      <p>Pick one for this week. Not both. If you post publicly, you need a plan for who to tag, how to make it sound genuine rather than promotional, and how to follow up with the people who react. If you DM, you need the list from Day 10 and the script from Day 11. The public post is more leveraged (one post, many eyes) but more exposed (everyone you know sees you launching). The DM is quieter and higher-conversion but takes more days to reach 10 people.</p>
+      <p>Pick the one that fits your personality and your buyer. If you have been quietly building and want the social moment, post publicly. If you are more comfortable launching one conversation at a time, DM. If the buyer is in professional networks, LinkedIn posts win. If the buyer is a close contact, DMs win. Pick, and move.</p>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">Public post vs DM, decided by your situation</div>
+      <ul>
+        <li><strong>DM wins if:</strong> your buyers are specific people in your network, your service is personal, you want to practice saying it before announcing</li>
+        <li><strong>Public post wins if:</strong> your buyers are a broad category you want to filter for, you have social proof already, you want to signal to many people at once</li>
+        <li><strong>Combine next week if:</strong> the first path works. Not before. One at a time</li>
+      </ul>
+    </div>
+    <div class="day-prompt">Are you starting with a public post or private DMs? Write the choice and the one reason that fits your buyer.</div>
+    <div class="day-textarea-label">Your response</div>
+    <textarea class="day-textarea" data-key="day12" placeholder="Public or private. One reason that fits your buyer."></textarea>
+    <div class="day-resources">
+      <div class="day-resources-label">Free resources</div>
+      <a href="https://seths.blog/" target="_blank" rel="noopener">Seth's Blog (daily shipping encouragement)</a>
+      <a href="https://sidehustleschool.com/" target="_blank" rel="noopener">Side Hustle School (public vs private launch patterns)</a>
+      <a href="https://www.linkedin.com/mynetwork/" target="_blank" rel="noopener">LinkedIn (for public B2B announcements)</a>
+    </div>
+  </div>
+</section>
+
+<!-- PILLAR 5 INTRO -->
+<section class="pillar-intro">
+  <div class="container">
+    <div class="pillar-eyebrow">Pillar Five</div>
+    <h2 class="pillar-title">Earn the Hundred</h2>
+    <div class="pillar-days">Days 13 to 14</div>
+    <p class="pillar-body">Two days to collapse the gap between a hustle on paper and a hustle with money in it. The first hundred is strategic, not symbolic. It proves the thing exists, and it makes the second hundred easier than this one was.</p>
+  </div>
+</section>
+
+<!-- DAY 13 -->
+<section class="day">
+  <div class="container">
+    <div class="day-eyebrow">Day Thirteen</div>
+    <h3 class="day-title"><em>Three</em> sends today</h3>
+    <div class="day-question">Which three people will hear from you today?</div>
+    <div class="day-body">
+      <p>Pick three names from Day 10. Send the message you drafted on Day 11. Today. Not tomorrow. Not "when the mood is right." Today, before noon ideally, so you are not negotiating with yourself all afternoon. The thing most first-time hustlers get wrong is treating the ask as something to prepare for forever. The ask is the business. Everything before it is scaffolding.</p>
+      <p>Three sends is the whole task of Day 13. If you get a response, great. If you get silence, that is data. If you get a no, write down what they said and what you learned. You will not land every ask, especially early. The job today is to generate responses, not to generate yeses. Silence from a warm contact usually means "wrong time," not "wrong person." A polite follow-up seven days later catches many of them.</p>
+      <p>Three sends a day, consistent for the next 30 days, is a sustainable rhythm. More than that and you burn out. Fewer and the first $100 takes longer than it needs to. Three today, three tomorrow, three the day after. By end of week, you have reached 15 to 21 warm contacts. One of them says yes. That is the first $100.</p>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">How to handle each response, in order of frequency</div>
+      <ul>
+        <li><strong>Silence:</strong> Normal. Send one polite follow-up at day 7, then let it rest</li>
+        <li><strong>Yes:</strong> Send the payment link or scheduler immediately. The gap between yes and payment is where deals die</li>
+        <li><strong>Yes, but later:</strong> Set a specific follow-up date in writing. "I'll check back on the 15th" beats "whenever works"</li>
+        <li><strong>Maybe:</strong> Answer the specific question in one short reply. One clear next step at the end</li>
+        <li><strong>No:</strong> Thank them, ask who they know. "No, but my friend might" is more common than people expect</li>
+      </ul>
+    </div>
+    <div class="day-prompt">Three names, three send times, all today. Add the responses below as they come in, even if the response is silence.</div>
+    <div class="day-textarea-label">Your response</div>
+    <textarea class="day-textarea" data-key="day13" placeholder="Three names. Three send times. Today."></textarea>
+    <div class="day-resources">
+      <div class="day-resources-label">Free resources</div>
+      <a href="https://sivers.org/do" target="_blank" rel="noopener">Derek Sivers on just doing (short, free, real)</a>
+      <a href="https://seths.blog/" target="_blank" rel="noopener">Seth's Blog (ongoing shipping encouragement)</a>
+      <a href="https://nickloper.com/the-side-hustle-show/" target="_blank" rel="noopener">The Side Hustle Show (first-customer momentum)</a>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 14 -->
+<section class="day">
+  <div class="container">
+    <div class="day-eyebrow">Day Fourteen</div>
+    <h3 class="day-title">The first <em>hundred</em></h3>
+    <div class="day-question">Which conversation is closest to becoming money?</div>
+    <div class="day-body">
+      <p>From the responses you got on Day 13, which conversation is closest to the first $100? The one closest wins the day's attention. Everything else can wait. The specific next step to close that one conversation is more valuable than any new outreach today. Focus beats breadth when the first dollar is this close.</p>
+      <p>Close with speed and clarity. Send the payment link. Send the scheduler. Send the invoice. Confirm the deliverable in writing. Set the delivery date. Deliver early if you can. The first customer is where the business becomes real, and small things done well in the first transaction set the tone for everything after. Overdeliver on the first one. The testimonial it earns is worth more than the margin.</p>
+      <p>Once the hundred lands, do two things in the next 48 hours. First, deliver the work with care. The first customer is also the first reference. Second, write down what you learned. What question did they ask that you did not expect? What objection came up? What piece of proof got them to yes? That is the hustle talking to you. Every answer makes the next sale easier.</p>
+    </div>
+    <div class="day-tips">
+      <div class="day-tips-label">What you need to collect the first hundred this week</div>
+      <ul>
+        <li><strong>A payment method the buyer can use:</strong> Venmo, Stripe, Zelle, whichever you tested on Day 5</li>
+        <li><strong>A written deliverable:</strong> one or two sentences in email or on the invoice</li>
+        <li><strong>A delivery date:</strong> keep it conservative, delivering early feels like a gift</li>
+        <li><strong>A written confirmation:</strong> an email reply, a signed proposal, even a DM screenshot. Verbal yes is not yet an agreement</li>
+        <li><strong>A place to record it:</strong> Wave, a Google Sheet, or a note on your phone. Clean records from dollar one saves April pain</li>
+      </ul>
+    </div>
+    <div class="day-prompt">Which conversation is closest to becoming money this week? What is the specific next step to close it, and when will you do it?</div>
+    <div class="day-textarea-label">Your response</div>
+    <textarea class="day-textarea" data-key="day14" placeholder="The closest conversation. The specific next step. Today or tomorrow."></textarea>
+    <div class="day-resources">
+      <div class="day-resources-label">Free resources</div>
+      <a href="https://stripe.com/" target="_blank" rel="noopener">Stripe (payment processing for services)</a>
+      <a href="https://gumroad.com/" target="_blank" rel="noopener">Gumroad (fastest path to selling anything digital)</a>
+      <a href="https://www.waveapps.com/invoicing" target="_blank" rel="noopener">Wave (free invoicing)</a>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 15 COMPLETION -->
+<section class="completion">
+  <div class="container">
+    <div class="completion-eyebrow">Day Fifteen</div>
+    <h2 class="completion-title">The hundred is <em>earned</em>.</h2>
+    <div class="completion-subtitle">the rest of your side hustle</div>
+    <div class="completion-body">
+      <p>You did something most people never do. You moved from thinking about a side hustle to running one. The skill from Day 1 found a buyer. The person from Day 10 said yes. The money from Day 14 is sitting in your account. The thing is real now, and the version of you who sent the first ask knew something the earlier version did not.</p>
+      <p>Download your plan now so you have a copy outside this browser. Keep it for the next time you want to repeat the arc. Share it with the one person who will ask how it is going at the first check-in.</p>
+      <p>Three things to carry forward. The skill from Day 1 is yours to keep refining. The list from Day 10 is a start, not a finish, keep adding to it. And the hundred, once it lands, is the first in a longer sequence. The second is easier than the first. The tenth is easier than the ninth. The muscle you built this week is the one that compounds.</p>
+    </div>
+    <p class="completion-signoff">The first hundred proves the thing exists. Everything after is just doing it again.</p>
+  </div>
+</section>
+
+<!-- GUIDE CLOSE -->
+<section class="guide-close">
+  <div class="container">
+    <div class="guide-close-eyebrow">A Popcycle Guide to Your First Side Hustle</div>
+    <p class="guide-close-message">Keep going. The next hundred is faster than the first. The Popcycle library has guidance for every step of your side hustle.</p>
+    <div class="guide-close-buttons">
+      <button class="btn-primary" onclick="downloadPlan()">Download My Plan</button>
+      <a class="btn-secondary" href="https://www.popcycle.online" target="_blank" rel="noopener">Visit Popcycle</a>
+      <a class="btn-secondary" href="https://www.popcycle.online/business-side-hustle" target="_blank" rel="noopener">More in Business &amp; Side Hustle</a>
+      <a class="btn-secondary" href="https://www.popcycle.online/popcycle-library" target="_blank" rel="noopener">Explore the Popcycle Library</a>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNOFF -->
+<section class="signoff">
+  <div class="signoff-mark">popcycle</div>
+  <div class="signoff-tagline">sweeten your life</div>
+</section>
+
+<script>
+// Save textarea values to localStorage
+const textareas = document.querySelectorAll('.day-textarea');
+textareas.forEach(ta => {
+  const key = ta.getAttribute('data-key');
+  const saved = localStorage.getItem('side-hustle-' + key);
+  if (saved) ta.value = saved;
+  ta.addEventListener('input', () => {
+    localStorage.setItem('side-hustle-' + key, ta.value);
+  });
+});
+
+// Download plan as text file
+function downloadPlan() {
+  const dayTitles = {
+    day1: 'DAY 1: What are you already good at?',
+    day2: 'DAY 2: Service or product?',
+    day3: 'DAY 3: One hour, one hundred dollars',
+    day4: 'DAY 4: The paperwork you don\'t need',
+    day5: 'DAY 5: Get paid, now',
+    day6: 'DAY 6: Where you\'ll show up',
+    day7: 'DAY 7: Price the thing',
+    day8: 'DAY 8: One link, one line',
+    day9: 'DAY 9: Proof you can point at',
+    day10: 'DAY 10: Who already needs this?',
+    day11: 'DAY 11: The friendly ask',
+    day12: 'DAY 12: The post or the DM?',
+    day13: 'DAY 13: Three sends today',
+    day14: 'DAY 14: The first hundred'
+  };
+  let plan = 'YOUR FIRST $100 SIDE HUSTLE\n';
+  plan += 'A Popcycle Guide to Your First Side Hustle\n';
+  plan += 'popcycle.online · sweeten your life\n';
+  plan += '===================================\n\n';
+  Object.keys(dayTitles).forEach(key => {
+    const value = localStorage.getItem('side-hustle-' + key) || '(no response yet)';
+    plan += dayTitles[key] + '\n';
+    plan += '-----------------------------------\n';
+    plan += value + '\n\n';
+  });
+  const blob = new Blob([plan], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'my-first-100-side-hustle-plan.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+</script>
+
+</body>
+</html>
