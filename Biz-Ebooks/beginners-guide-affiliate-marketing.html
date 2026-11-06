@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Beginner's Guide to Honest Affiliate Marketing | Popcycle</title>
+<meta name="description" content="A Popcycle guide to affiliate marketing done honestly: how the model works, how to pick products you actually believe in, and how to build content that compounds.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Dancing+Script:wght@600;700&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sage: #5C745F;
+  --sage-deep: #3F5243;
+  --gold: #BB8D17;
+  --moss: #90A747;
+  --platinum: #F7F7F7;
+  --ink: #2A2F2A;
+  --soft: #E8E6DC;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--platinum);
+  color: var(--ink);
+  line-height: 1.65;
+  font-weight: 400;
+}
+.container {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.container-wide {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* COVER */
+.cover {
+  min-height: 100vh;
+  background: linear-gradient(140deg, var(--sage) 0%, var(--sage-deep) 100%);
+  color: var(--platinum);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 40px;
+  position: relative;
+}
+.cover-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--moss);
+  margin-bottom: 48px;
+  font-weight: 500;
+}
+.cover-accent {
+  font-family: 'Dancing Script', cursive;
+  font-size: 42px;
+  color: var(--gold);
+  margin-bottom: 10px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.cover-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 66px;
+  line-height: 1.08;
+  font-weight: 500;
+  margin-bottom: 32px;
+  letter-spacing: -1px;
+}
+.cover-title em {
+  color: var(--moss);
+  font-style: italic;
+  font-weight: 500;
+}
+.cover-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-style: italic;
+  color: rgba(247, 247, 247, 0.78);
+  max-width: 580px;
+  margin: 0 auto;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.cover-byline {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.cover-byline-mark {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  color: var(--platinum);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  text-transform: lowercase;
+}
+.cover-byline-tagline {
+  font-family: 'Dancing Script', cursive;
+  font-size: 21px;
+  color: var(--moss);
+  font-weight: 700;
+  letter-spacing: 0;
+  margin-top: -6px;
+  line-height: 1.4;
+}
+
+/* PREFACE */
+.preface {
+  padding: 100px 0 80px;
+  background: var(--platinum);
+}
+.preface-eyebrow {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.preface-lede {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  line-height: 1.35;
+  color: var(--sage-deep);
+  font-weight: 500;
+  margin-bottom: 40px;
+  font-style: italic;
+}
+.preface p {
+  font-size: 17px;
+  color: var(--ink);
+  margin-bottom: 20px;
+  line-height: 1.75;
+}
+.preface-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 1px solid var(--soft);
+}
+.preface-stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 44px;
+  font-weight: 600;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.preface-stat-label {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--sage);
+  font-weight: 500;
+}
+
+/* DARK BAND */
+.dark-band {
+  padding: 140px 0 120px;
+  background: var(--sage);
+  color: var(--platinum);
+  margin-top: 40px;
+}
+.dark-band-eyebrow {
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 36px;
+  font-weight: 500;
+}
+.dark-band-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+.dark-band-title em {
+  color: var(--moss);
+  font-style: italic;
+  font-weight: 500;
+}
+.dark-band-intro {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  line-height: 1.65;
+  color: rgba(247, 247, 247, 0.82);
+  font-style: italic;
+  font-weight: 400;
+  max-width: 580px;
+  margin-bottom: 56px;
+}
+.truth-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.truth-item {
+  background: rgba(247, 247, 247, 0.06);
+  border-left: 3px solid var(--gold);
+  padding: 24px 24px 26px;
+  border-radius: 2px;
+}
+.truth-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--platinum);
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+.truth-desc {
+  font-size: 14px;
+  color: rgba(247, 247, 247, 0.78);
+  line-height: 1.7;
+}
+
+/* SECTION */
+.section {
+  padding: 100px 0 60px;
+  background: var(--platinum);
+}
+.section-eyebrow {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px;
+  line-height: 1.15;
+  color: var(--sage-deep);
+  margin-bottom: 24px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+.section-title em {
+  color: var(--moss);
+  font-style: italic;
+  font-weight: 500;
+}
+.section-intro {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-style: italic;
+  color: var(--sage);
+  line-height: 1.5;
+  margin-bottom: 44px;
+  padding-left: 20px;
+  border-left: 3px solid var(--gold);
+}
+.section-body {
+  font-size: 17px;
+  color: var(--ink);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+/* SUB-BAND */
+.sub-band {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 48px 0 28px;
+}
+.sub-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--sage-deep);
+  white-space: nowrap;
+  font-weight: 600;
+}
+.sub-label.secondary { color: var(--sage); font-weight: 500; }
+.sub-line {
+  flex: 1;
+  height: 1px;
+  background: var(--soft);
+}
+
+/* KEY CONCEPT */
+.key-concept {
+  background: var(--sage-deep);
+  color: var(--platinum);
+  border-radius: 4px;
+  padding: 36px 40px;
+  margin: 40px 0;
+}
+.kc-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.key-concept h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--platinum);
+  margin-bottom: 16px;
+  line-height: 1.25;
+}
+.key-concept h3 em {
+  color: var(--moss);
+  font-style: italic;
+}
+.key-concept p {
+  font-size: 16px;
+  color: rgba(247, 247, 247, 0.82);
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+.key-concept ul {
+  margin-top: 14px;
+  padding-left: 0;
+  list-style: none;
+}
+.key-concept ul li {
+  font-size: 15px;
+  color: rgba(247, 247, 247, 0.82);
+  line-height: 1.7;
+  padding: 6px 0 6px 22px;
+  position: relative;
+}
+.key-concept ul li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-weight: 500;
+}
+
+/* PULL QUOTE */
+.pull-quote {
+  background: var(--soft);
+  border-left: 3px solid var(--gold);
+  padding: 28px 32px;
+  margin: 40px 0;
+  border-radius: 0 4px 4px 0;
+}
+.pull-quote p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--sage-deep);
+  line-height: 1.5;
+  margin: 0;
+}
+.pull-quote cite {
+  display: block;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 14px;
+}
+
+/* CRITERIA / CONTENT CARDS */
+.criteria-card {
+  background: #FBFBF7;
+  border: 1px solid var(--soft);
+  border-left: 3px solid var(--gold);
+  border-radius: 4px;
+  padding: 32px 36px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 88px;
+  gap: 32px;
+  align-items: start;
+}
+.criteria-tagline {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.criteria-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--sage-deep);
+  margin-bottom: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+}
+.criteria-title em {
+  color: var(--moss);
+  font-style: italic;
+  font-weight: 600;
+}
+.criteria-desc {
+  font-size: 16px;
+  color: var(--ink);
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+.criteria-takeaway {
+  background: rgba(144, 167, 71, 0.1);
+  border-left: 3px solid var(--moss);
+  padding: 16px 20px;
+  border-radius: 0 3px 3px 0;
+  font-size: 15px;
+  color: var(--sage-deep);
+  line-height: 1.65;
+}
+.criteria-takeaway strong {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+.criteria-num-block {
+  text-align: center;
+  padding-top: 4px;
+}
+.criteria-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 54px;
+  font-weight: 600;
+  color: var(--gold);
+  line-height: 1;
+}
+.criteria-num-label {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+/* STEP CARDS */
+.step-card {
+  background: #FBFBF7;
+  border: 1px solid var(--soft);
+  border-left: 3px solid var(--gold);
+  border-radius: 4px;
+  padding: 32px 36px;
+  margin-bottom: 20px;
+}
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+.step-num-circle {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--sage-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.step-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--sage-deep);
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+}
+.step-title em {
+  color: var(--moss);
+  font-style: italic;
+  font-weight: 600;
+}
+.step-body {
+  font-size: 16px;
+  color: var(--ink);
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+.step-example {
+  background: rgba(144, 167, 71, 0.1);
+  border-left: 3px solid var(--moss);
+  padding: 18px 22px;
+  border-radius: 0 3px 3px 0;
+  font-size: 15px;
+  color: var(--sage-deep);
+  line-height: 1.7;
+}
+.step-example strong {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+/* REFRAME BAND */
+.reframe-band {
+  background: var(--sage-deep);
+  padding: 80px 0;
+  text-align: center;
+  color: var(--platinum);
+}
+.reframe-band-label {
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.reframe-band p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--platinum);
+  max-width: 740px;
+  margin: 0 auto;
+  line-height: 1.4;
+  padding: 0 32px;
+}
+
+/* FAQ */
+.faq-item {
+  border-bottom: 1px solid var(--soft);
+  padding: 28px 0;
+}
+.faq-item:last-child { border-bottom: none; }
+.faq-q {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--sage-deep);
+  margin-bottom: 14px;
+  line-height: 1.35;
+}
+.faq-q em {
+  color: var(--gold);
+  font-style: italic;
+  margin-right: 10px;
+}
+.faq-a {
+  font-size: 16px;
+  color: var(--ink);
+  line-height: 1.75;
+}
+
+/* CLOSING (carries integrated signoff) */
+.closing {
+  background: linear-gradient(140deg, var(--sage) 0%, var(--sage-deep) 100%);
+  color: var(--platinum);
+  padding: 140px 40px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.closing-eyebrow {
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 36px;
+  font-weight: 500;
+}
+.closing-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.closing-title em {
+  color: var(--moss);
+  font-style: italic;
+}
+.closing-body {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  line-height: 1.6;
+  color: rgba(247, 247, 247, 0.82);
+  font-style: italic;
+  max-width: 560px;
+  margin: 0 auto 48px;
+}
+.closing-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto 72px;
+}
+.btn-primary, .btn-secondary {
+  display: inline-block;
+  padding: 14px 32px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 2px;
+  cursor: pointer;
+  border: 1px solid var(--platinum);
+  transition: all 0.2s;
+  background: transparent;
+  color: var(--platinum);
+}
+.btn-primary {
+  background: var(--gold);
+  color: var(--platinum);
+  border-color: var(--gold);
+}
+.btn-primary:hover { background: var(--moss); border-color: var(--moss); }
+.btn-secondary:hover { background: var(--platinum); color: var(--sage-deep); }
+
+.closing-signoff {
+  margin-top: 16px;
+  text-align: center;
+}
+.closing-signoff-mark {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  color: var(--platinum);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  text-transform: lowercase;
+}
+.closing-signoff-tagline {
+  font-family: 'Dancing Script', cursive;
+  font-size: 21px;
+  color: var(--moss);
+  font-weight: 700;
+  letter-spacing: 0;
+  margin-top: -4px;
+  line-height: 1.4;
+}
+
+@media (max-width: 720px) {
+  .cover-title { font-size: 44px; }
+  .cover-accent { font-size: 32px; }
+  .preface-lede { font-size: 24px; }
+  .dark-band-title { font-size: 38px; }
+  .section-title { font-size: 36px; }
+  .closing-title { font-size: 36px; }
+  .reframe-band p { font-size: 22px; }
+  .truth-grid { grid-template-columns: 1fr; }
+  .criteria-card { grid-template-columns: 1fr; gap: 20px; }
+  .criteria-num-block { text-align: left; border-top: 1px solid var(--soft); padding-top: 16px; }
+  .step-header { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .closing-buttons { flex-direction: column; align-items: stretch; padding: 0 32px; }
+}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<section class="cover">
+  <div class="cover-eyebrow">A Popcycle Guide to Affiliate Marketing</div>
+  <div class="cover-accent">The Beginner's Guide to</div>
+  <h1 class="cover-title">Honest <em>Affiliate</em> Marketing</h1>
+  <p class="cover-subtitle">How to earn commissions recommending products you actually believe in. Honestly, sustainably, without an audience of millions.</p>
+  <div class="cover-byline">
+    <div class="cover-byline-mark">popcycle</div>
+    <div class="cover-byline-tagline">sweeten your life</div>
+  </div>
+</section>
+
+<!-- PREFACE -->
+<section class="preface">
+  <div class="container">
+    <div class="preface-eyebrow">Before you begin</div>
+    <p class="preface-lede">Affiliate marketing is one of the most misunderstood income streams online.</p>
+    <p>Strip away the hype (the dropshipping gurus, the "passive income in 30 days" videos, the Twitter threads promising six figures by Christmas) and underneath is a genuinely viable model. The people making real money with it are not the ones posting the loudest. They are the ones producing honest, deeply useful content about products they actually use, over years, for an audience that trusts them.</p>
+    <p>The ground has shifted in 2024 and 2025. Google's Helpful Content updates systematically devalued low-quality affiliate content, including AI-generated reviews from people who clearly never touched the product. The affiliate sites that collapsed were the ones built on volume without substance. The ones that grew were the ones built on actual experience, specific opinions, and real trust.</p>
+    <p>This guide covers how the model actually works, how to pick products you can stand behind, how to build content that converts without being manipulative, and what realistic income timelines look like in 2026. No hype. No shortcuts. Just the version that holds up over the next five years.</p>
+    <div class="preface-stats">
+      <div>
+        <div class="preface-stat-num">$14B+</div>
+        <div class="preface-stat-label">Industry size</div>
+      </div>
+      <div>
+        <div class="preface-stat-num">20-50%</div>
+        <div class="preface-stat-label">Typical commissions</div>
+      </div>
+      <div>
+        <div class="preface-stat-num">6-18</div>
+        <div class="preface-stat-label">Months to real income</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUTH BAND (DARK) -->
+<section class="dark-band">
+  <div class="container">
+    <div class="dark-band-eyebrow">Three things most affiliate advice gets wrong</div>
+    <h2 class="dark-band-title">You recommend. They buy. <em>You earn.</em></h2>
+    <p class="dark-band-intro">The mechanics are simple. The reason most people fail at affiliate marketing is not the mechanics. It is the posture behind them. Three reframes come first.</p>
+    <div class="truth-grid">
+      <div class="truth-item">
+        <div class="truth-title">It is word of mouth at scale</div>
+        <div class="truth-desc">At its core, affiliate marketing is the same thing a friend does when they recommend a restaurant: refer someone to something you believe in and get credit for the referral. The complexity is in building the trust that makes referrals convert.</div>
+      </div>
+      <div class="truth-item">
+        <div class="truth-title">Most people do it wrong</div>
+        <div class="truth-desc">Spammy link-dropping, promoting anything with a high commission, AI-generated "reviews" of products nobody has used. These are the failure modes. The success mode is slower, more honest, and far more durable in the era of Helpful Content updates.</div>
+      </div>
+      <div class="truth-item">
+        <div class="truth-title">It compounds over time</div>
+        <div class="truth-desc">Affiliate content earns while you sleep, compounds with age in search and newsletter discovery, and does not require trading time for money the way service work does. The compounding is quiet. Then it is substantial.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: THE HONEST MODEL -->
+<section class="section">
+  <div class="container">
+    <div class="section-eyebrow">What affiliate marketing actually is</div>
+    <h2 class="section-title">The honest model, <em>stripped of hype</em></h2>
+    <div class="section-intro">The gap between "anyone can do affiliate marketing" and "most people who try it make almost nothing" is explained by posture, not effort.</div>
+    <p class="section-body">The people who fail at affiliate marketing usually did too much promoting and too little serving. The people who succeed inverted that ratio. Affiliate marketing works the same way word of mouth always has, except with a referral code and a cookie attached. The money is downstream of the trust. The trust is downstream of actually knowing the product.</p>
+    <p class="section-body">In 2026, there is a clearer divide than ever between content that compounds and content that gets quietly buried. Google's updates over the last two years have systematically favored firsthand experience and sent the rest to page five. Which is the best possible development for a person willing to actually use the products they recommend, and the worst possible development for the dropshipping-adjacent affiliate industry that dominated the previous decade.</p>
+
+    <div class="pull-quote">
+      <p>"Affiliate marketing works the same way word of mouth always has. The difference is scale, and the need to be honest about the relationship."</p>
+      <cite>The Popcycle Reframe</cite>
+    </div>
+
+    <div class="key-concept">
+      <div class="kc-label">The honest economics</div>
+      <h3>What affiliate marketing actually pays, and <em>when</em>.</h3>
+      <p>Commission rates range from 1% (Amazon on some categories) to 50% plus (digital products, SaaS recurring). Recurring SaaS commissions are the most compelling: refer 50 customers to a $99 a month tool at 30% recurring and you have $1,485 a month ongoing. But recurring income assumes you have built the authority and traffic that generates consistent referrals, which is a 12 to 18 month project before it looks like real money.</p>
+      <ul>
+        <li>Physical products: Amazon 1 to 4%, specialty retailers 5 to 15%</li>
+        <li>Digital products (courses, ebooks): 20 to 50% per sale</li>
+        <li>SaaS and software: 20 to 40% recurring monthly, the best long-term income</li>
+        <li>Financial products: $50 to $200 plus per qualified lead</li>
+        <li>Health and wellness: varies widely, vet carefully before promoting</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PART ONE: PICKING PRODUCTS -->
+<section class="section" style="padding-top: 20px;">
+  <div class="container-wide">
+    <div class="sub-band">
+      <span class="sub-label">Part One</span>
+      <div class="sub-line"></div>
+      <span class="sub-label secondary">Picking the Right Products</span>
+    </div>
+    <div class="section-eyebrow">The foundation decision</div>
+    <h2 class="section-title">How to choose what to promote, <em>and what to avoid</em></h2>
+    <div class="section-intro">The products you promote define your reputation. Commission rate is the last thing you should consider, not the first.</div>
+
+    <!-- CRITERION 01 -->
+    <div class="criteria-card">
+      <div>
+        <div class="criteria-tagline">Non-negotiable</div>
+        <h3 class="criteria-title">You have <em>used it</em> or genuinely vetted it</h3>
+        <p class="criteria-desc">The simplest filter: would you recommend this to a friend who asked your opinion, even if you were not being paid? If no, because you have not used it, do not believe in it, or know it has significant problems, do not promote it regardless of commission. The short-term income from promoting a weak product is almost always outweighed by the long-term trust damage. In the current Google era, it is also almost always outweighed by the ranking damage. The algorithm has gotten very good at spotting reviews written by people who have never touched the thing.</p>
+        <div class="criteria-takeaway">
+          <strong>The trust test</strong>
+          If this product fails the person you recommended it to, how do you feel? If "fine, it is their problem" is the honest answer, do not promote it. If you would feel genuinely bad, you are in the right territory.
+        </div>
+      </div>
+      <div class="criteria-num-block">
+        <div class="criteria-num">01</div>
+        <div class="criteria-num-label">Criteria</div>
+      </div>
+    </div>
+
+    <!-- CRITERION 02 -->
+    <div class="criteria-card">
+      <div>
+        <div class="criteria-tagline">High priority</div>
+        <h3 class="criteria-title">It solves a <em>real problem</em> your audience has</h3>
+        <p class="criteria-desc">The most valuable affiliate relationships are the ones where the product solves a problem your audience is already experiencing and already spending money trying to solve. Recommending a project management tool to freelancers struggling with client chaos converts. Recommending a random productivity app because it offers a 40% commission does not. Product-audience fit is the multiplier on everything else: the review, the roundup, the email, the SEO.</p>
+        <div class="criteria-takeaway">
+          <strong>The map</strong>
+          Map your content topics to your audience's real problems. Then find the best products that solve each one. That list is your affiliate roster. Not the one sorted by highest commission available.
+        </div>
+      </div>
+      <div class="criteria-num-block">
+        <div class="criteria-num">02</div>
+        <div class="criteria-num-label">Criteria</div>
+      </div>
+    </div>
+
+    <!-- CRITERION 03 -->
+    <div class="criteria-card">
+      <div>
+        <div class="criteria-tagline">Strong preference</div>
+        <h3 class="criteria-title"><em>Recurring</em> commissions beat one-time</h3>
+        <p class="criteria-desc">A one-time $50 commission feels good. A recurring $20 monthly commission for 24 months is $480, and it compounds as your referral base grows. SaaS tools almost universally offer recurring commissions. When you have the choice between one-time and recurring commission products of comparable quality, prefer the recurring. The math is not close over any time horizon longer than a year. Three years into a disciplined practice, recurring commissions become the kind of income that insulates you from any single month going sideways.</p>
+        <div class="criteria-takeaway">
+          <strong>Strong recurring examples</strong>
+          Kit (30% lifetime), Kajabi (30% lifetime), Teachable (30% recurring), Shopify partner program for ongoing merchants, and most project-management and marketing SaaS tools.
+        </div>
+      </div>
+      <div class="criteria-num-block">
+        <div class="criteria-num">03</div>
+        <div class="criteria-num-label">Criteria</div>
+      </div>
+    </div>
+
+    <!-- CRITERION 04 -->
+    <div class="criteria-card">
+      <div>
+        <div class="criteria-tagline">Consider carefully</div>
+        <h3 class="criteria-title">Commission rate <em>and</em> cookie window</h3>
+        <p class="criteria-desc">A cookie window is how long after a click you receive credit for a purchase. Amazon's 24-hour window is notoriously short. Many programs offer 30 to 90 day windows. For considered purchases, a longer cookie matters because people research before buying. A 30% commission with a 90-day cookie is worth more than a 40% commission with a 24-hour window for most higher-value products. Also check payment schedule and threshold. Programs paying monthly with a $50 to $100 threshold are better for cashflow than those with $500 minimums and quarterly payouts.</p>
+        <div class="criteria-takeaway">
+          <strong>What to check before applying</strong>
+          Commission rate, cookie duration, payment threshold, payment schedule, approval requirements, and whether the program allows paid traffic. Those five answers tell you most of what you need to know.
+        </div>
+      </div>
+      <div class="criteria-num-block">
+        <div class="criteria-num">04</div>
+        <div class="criteria-num-label">Criteria</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PART TWO: CONTENT -->
+<section class="section" style="padding-top: 20px;">
+  <div class="container-wide">
+    <div class="sub-band">
+      <span class="sub-label">Part Two</span>
+      <div class="sub-line"></div>
+      <span class="sub-label secondary">Building Content That Converts</span>
+    </div>
+    <div class="section-eyebrow">The content strategy</div>
+    <h2 class="section-title">What types of content <em>drive affiliate revenue</em></h2>
+    <div class="section-intro">Affiliate links do not generate income sitting on a blank page. The content around them (its quality, its honesty, its match to search intent) determines whether anyone clicks and buys.</div>
+
+    <!-- CONTENT 01 -->
+    <div class="criteria-card">
+      <div>
+        <div class="criteria-tagline">Highest converting</div>
+        <h3 class="criteria-title">Product reviews and <em>comparisons</em></h3>
+        <p class="criteria-desc">People searching "best [product type]" or "[A] versus [B]" are deep in the buying process. A thorough, honest review that covers what works, what does not, who it is best for, and who should look elsewhere converts at a dramatically higher rate than generic promotional content. The key is genuine depth, which means information they cannot get from the product's own website. In the Helpful Content era, this is also the content Google rewards most strongly, because it is the hardest kind to fake.</p>
+        <div class="criteria-takeaway">
+          <strong>Structure that converts</strong>
+          Intro (who this is for), what I tested, what I liked, what I did not, who should buy it, who should look elsewhere, verdict. Honest negatives increase trust and conversions. Hiding the negatives is a signal, and readers can smell it.
+        </div>
+      </div>
+      <div class="criteria-num-block">
+        <div class="criteria-num">01</div>
+        <div class="criteria-num-label">Content</div>
+      </div>
+    </div>
+
+    <!-- CONTENT 02 -->
+    <div class="criteria-card">
+      <div>
+        <div class="criteria-tagline">Strong performance</div>
+        <h3 class="criteria-title">Best-of and <em>roundup posts</em></h3>
+        <p class="criteria-desc">"Best email marketing tools for small businesses." These posts capture people at the research stage and naturally accommodate multiple affiliate links. The best roundups are genuinely opinionated, not just lists of everything available. Your recommendation carries weight when you have a clear first choice and explain why. Generic "here are 10 options" roundups convert poorly and increasingly get buried by the algorithm, because the algorithm is now explicitly looking for a point of view backed by experience.</p>
+        <div class="criteria-takeaway">
+          <strong>The opinionated roundup</strong>
+          Lead with your genuine top pick. Explain decision criteria up front. For each option, state who it is best for, not just what features it has. People want recommendations, not feature lists.
+        </div>
+      </div>
+      <div class="criteria-num-block">
+        <div class="criteria-num">02</div>
+        <div class="criteria-num-label">Content</div>
+      </div>
+    </div>
+
+    <!-- CONTENT 03 -->
+    <div class="criteria-card">
+      <div>
+        <div class="criteria-tagline">Sustained value</div>
+        <h3 class="criteria-title">Tutorial and <em>how-to content</em></h3>
+        <p class="criteria-desc">"How to set up [tool]" or "how I use [tool] to do [specific thing]." Tutorial content targets people who have already decided to use a product and need help getting there. Conversion is high because intent is established. These posts also quietly build authority as someone who actually uses and understands the tools you recommend, which is exactly the signal Google's helpful content system is now trained to reward.</p>
+        <div class="criteria-takeaway">
+          <strong>The rule</strong>
+          Do not make the tutorial conditional on using your link. Help the reader genuinely. The conversion happens naturally when they trust you enough to use your referral link on the next purchase.
+        </div>
+      </div>
+      <div class="criteria-num-block">
+        <div class="criteria-num">03</div>
+        <div class="criteria-num-label">Content</div>
+      </div>
+    </div>
+
+    <!-- CONTENT 04 -->
+    <div class="criteria-card">
+      <div>
+        <div class="criteria-tagline">Email channel</div>
+        <h3 class="criteria-title">Newsletter <em>recommendations</em></h3>
+        <p class="criteria-desc">An email list of engaged subscribers converts affiliate offers at rates that typically dwarf website traffic. A recommendation to 2,000 engaged subscribers can generate more revenue than 50,000 page views of generic affiliate content. Build the list, serve it genuinely, recommend products occasionally (not every email). When you do recommend, explain specifically why and for whom. Kit, Beehiiv, and Substack all support affiliate links in sends, with Beehiiv explicitly built around a monetization model that includes affiliate tracking.</p>
+        <div class="criteria-takeaway">
+          <strong>The Popcycle model</strong>
+          Trusted curation to an engaged list. The recommendation carries weight because the brand has earned it, not because it paid for reach.
+        </div>
+      </div>
+      <div class="criteria-num-block">
+        <div class="criteria-num">04</div>
+        <div class="criteria-num-label">Content</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REFRAME BAND -->
+<section class="reframe-band">
+  <div class="container">
+    <div class="reframe-band-label">The key distinction</div>
+    <p>"Affiliate marketing that serves the audience first generates more revenue than affiliate marketing that serves the commission first. This is not idealism. It is observed mechanics."</p>
+  </div>
+</section>
+
+<!-- PART THREE: GETTING STARTED -->
+<section class="section">
+  <div class="container-wide">
+    <div class="sub-band">
+      <span class="sub-label">Part Three</span>
+      <div class="sub-line"></div>
+      <span class="sub-label secondary">Your First 90 Days</span>
+    </div>
+    <div class="section-eyebrow">Getting started</div>
+    <h2 class="section-title">What to actually do, <em>in order</em></h2>
+    <div class="section-intro">Four moves, done in sequence, that get you from zero to a working affiliate operation. None of them is fast. All of them compound.</div>
+
+    <!-- STEP 1 -->
+    <div class="step-card">
+      <div class="step-header">
+        <div class="step-num-circle">1</div>
+        <h3 class="step-title">Choose your niche and <em>audience first</em></h3>
+      </div>
+      <p class="step-body">Before you pick any affiliate products, decide who you are serving and what topic area you are building authority in. The more specific, the better. "Personal finance" is too broad. "Budgeting tools for single parents" is a niche. Niches that convert well have a clear audience with a specific problem, enough purchasing power to buy the products you would recommend, and at least a few reasonable affiliate programs in the category. All three are required. One or two is not enough.</p>
+      <div class="step-example">
+        <strong>Niche evaluation</strong>
+        Does this audience have a problem I understand? Are there quality products that solve it? Do those products have affiliate programs? Is there enough search or newsletter interest to find them at scale? All four yes equals a viable niche.
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step-card">
+      <div class="step-header">
+        <div class="step-num-circle">2</div>
+        <h3 class="step-title">Apply to programs <em>before you need them</em></h3>
+      </div>
+      <p class="step-body">Most affiliate programs require an application. Amazon Associates requires at least some sales within 180 days or they close your account. Apply to your target programs before you launch content, so your links are ready when the first posts go live. Impact, ShareASale, CJ Affiliate, and PartnerStack are the major networks hosting many programs. Direct programs (Kit, Kajabi, Shopify) often pay better and are worth applying to individually.</p>
+      <div class="step-example">
+        <strong>Application essentials</strong>
+        Most applications ask for your website URL, your traffic, and how you plan to promote. Be honest and specific. A clear content plan beats a vague "I will write reviews." A live site with even a few posts outperforms a coming-soon page every time.
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step-card">
+      <div class="step-header">
+        <div class="step-num-circle">3</div>
+        <h3 class="step-title">Publish ten pieces of <em>firsthand content first</em></h3>
+      </div>
+      <p class="step-body">Before worrying about commissions, publish ten pieces of content that genuinely help your target audience, regardless of affiliate opportunity. In the current algorithm era, Google weights firsthand experience heavily. The acronym Google uses is E-E-A-T: Experience, Expertise, Authoritativeness, Trust. The first E is the one that moved into the formula recently and is now what separates the content that ranks from the content that disappears. Writing about what you actually use beats writing about what you think people might want to read. Every time.</p>
+      <div class="step-example">
+        <strong>Content to start with</strong>
+        Look at Reddit, YouTube comments, and niche forums in your category and find questions nobody is answering well. Write the best answer that exists, based on your own experience. Do that ten times. You will have traffic and trust before you have a single affiliate link.
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="step-card">
+      <div class="step-header">
+        <div class="step-num-circle">4</div>
+        <h3 class="step-title">Disclose clearly <em>and specifically</em></h3>
+      </div>
+      <p class="step-body">FTC regulations require disclosure when you have a material relationship with a product you are recommending. Beyond legal compliance, disclosure is good business: readers who know you earn a commission and choose to use your link anyway are expressing more trust, not less. Be specific, at the top of every post: "This post contains affiliate links. If you purchase through them, I earn a commission at no additional cost to you." Bury it in a footer and you are in gray territory legally and losing trust points you did not need to lose.</p>
+      <div class="step-example">
+        <strong>The rule</strong>
+        If you would be embarrassed if a reader found out you were earning a commission without knowing, you have not disclosed adequately. The standard is proactive transparency, not technical compliance.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PART FOUR: FAQ -->
+<section class="section">
+  <div class="container">
+    <div class="sub-band">
+      <span class="sub-label">Part Four</span>
+      <div class="sub-line"></div>
+      <span class="sub-label secondary">Straight Answers</span>
+    </div>
+    <div class="section-eyebrow">Real questions</div>
+    <h2 class="section-title">What people <em>actually want to know</em></h2>
+    <div class="section-intro">The questions that come up most often from people considering this seriously, answered honestly.</div>
+
+    <div class="faq-item">
+      <div class="faq-q"><em>Q.</em>How long does it take to make real money with affiliate marketing?</div>
+      <div class="faq-a">For content-based affiliate marketing, expect 6 to 18 months before meaningful, consistent income. Search authority and audience trust both compound slowly. The people earning significant affiliate income spent most of year one producing quality content without much return. If you need income in 30 days, start a service business instead. If you can invest 12 to 18 months building something that compounds, affiliate marketing is worth considering, and the people who stuck with it in 2024 and 2025 through the algorithm shifts are the ones whose income accelerated in 2026.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q"><em>Q.</em>Do I need a large audience to earn affiliate commissions?</div>
+      <div class="faq-a">No, you need a relevant and trusting audience, not a large one. A newsletter with 500 highly engaged subscribers in a specific niche can out-earn a blog with 50,000 monthly visitors of mixed intent. Conversion on affiliate offers is driven by trust and relevance, not raw numbers. Depth of relationship beats breadth of reach almost every time in the long term.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q"><em>Q.</em>Won't AI-generated affiliate content outcompete me?</div>
+      <div class="faq-a">The opposite, actually, which is one of the stranger good news stories of the last two years. Google's 2024 and 2025 Helpful Content updates systematically devalued low-quality AI content, including affiliate reviews that read like they were written by someone who never used the product. The people losing their rankings and income are the ones who went all-in on AI volume. The people doing well are the ones producing genuinely used, personally vetted, deeply opinionated content that an AI cannot replicate because it has not been there. Position your affiliate work around the AI-proof moat: you used this thing, you have a real opinion, you are honest about the trade-offs. That is now the competitive advantage.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q"><em>Q.</em>Should I build a website, YouTube channel, or newsletter?</div>
+      <div class="faq-a">Start with whichever one you are most likely to produce consistently. Consistency beats platform every time. YouTube and blog content compounds in search, producing passive traffic over months and years. Newsletters require active production but convert at much higher rates per impression. Many of the strongest affiliate operations use all three, but they almost always started with one and added the others later. Picking the one you will not quit in month three is the most important decision here.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q"><em>Q.</em>Can I do affiliate marketing without a website?</div>
+      <div class="faq-a">Yes, though it limits your options. Affiliate marketing through a newsletter (Kit, Beehiiv, Substack), YouTube, a podcast, or a well-built social presence is entirely viable in 2026. Disclosure requirements are the same regardless of platform. If you are starting with nothing, a newsletter is the easiest entry point: lowest tech setup, you own the audience, and the conversion rates are the strongest of any channel. A website can follow once you have proof of concept.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q"><em>Q.</em>What's different about Popcycle's approach?</div>
+      <div class="faq-a">Most affiliate sites optimize for commission rate and search volume. Popcycle optimizes for product quality and audience trust. The PopScore is based on effectiveness, review quality, value, and trustworthiness, not on what the company pays us. A product can have a high commission and a low PopScore, and it will not make the list. It is the "they pay us so you do not have to" model: the mission decides the recommendations, not the economics. Over a long enough time horizon, that discipline is also what builds the audience that makes the economics work.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING (with integrated signoff) -->
+<section class="closing">
+  <div class="closing-eyebrow">A Popcycle Guide to Affiliate Marketing</div>
+  <h2 class="closing-title">The best affiliate income comes from the most <em>genuinely useful</em> recommendations.</h2>
+  <p class="closing-body">Popcycle is built on that principle. The Business &amp; Side Hustle category reviews affiliate programs, platforms, and resources for people building content-based income, scored by what the product actually does in the hands of its users.</p>
+  <div class="closing-buttons">
+    <a class="btn-primary" href="https://www.popcycle.online" target="_blank" rel="noopener">Visit Popcycle</a>
+    <a class="btn-secondary" href="https://www.popcycle.online/business-side-hustle" target="_blank" rel="noopener">More in Business &amp; Side Hustle</a>
+  </div>
+  <div class="closing-signoff">
+    <div class="closing-signoff-mark">popcycle</div>
+    <div class="closing-signoff-tagline">sweeten your life</div>
+  </div>
+</section>
+
+</body>
+</html>
